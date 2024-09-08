@@ -1,11 +1,11 @@
 import * as React from "react";
-import HeroImage from "../src/rassets/hero-image.png";
+import Cesar_Cover2Image from "../assets/Cesar_Cover2.png";
 
 const Hero = () => {
   return (
     <div className="bg-black text-white text-center py-16">
       <img
-        src={HeroImage}
+        src={Cesar_Cover2Image}
         alt=""
         className="mx-auto mb-8 w-48 h-48 rounded-full object-cover transform 
         transition-transform duration-300 hover:scale-105"
@@ -13,7 +13,7 @@ const Hero = () => {
       <h1 className="text-4xl font-bold">
         I'm{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-          Mohammad Yousof
+          Cesar Adrian Aguilar
         </span>
         , Full-Stack Developer
       </h1>
