@@ -1,13 +1,13 @@
 import "./App.css";
 import "./main.jsx";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import GlowButton from "./components/GlowButton";
-import About from "./components/About";
+import Navbar from "./components/Navbar.jsx";
+import Hero from "./components/Hero.jsx";
+import GlowButton from "./components/GlowButton.jsx";
+import About from "./components/About.jsx";
 import Service from "./components/Service.jsx";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Projects from "./components/Projects.jsx";
+import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (

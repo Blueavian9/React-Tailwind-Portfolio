@@ -11,4 +11,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 document.body.innerHTML = '<div id="app"></div>';
 
-// Render your React;
+// Render React
