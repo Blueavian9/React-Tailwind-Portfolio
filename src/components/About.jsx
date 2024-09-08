@@ -1,9 +1,10 @@
 import * as React from "react";
 
-export default function Service() {
+function About() {
   return (
     <div>
-      <Service />
+      <About />
     </div>
   );
 }
+export default About;

@@ -1,9 +1,10 @@
 import * as React from "react";
 
-export default function Navbar() {
+function Footer() {
   return (
     <div>
-      <Navbar />
+      <Footer />
     </div>
   );
 }
+export default Footer;

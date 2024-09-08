@@ -1,9 +1,10 @@
 import * as React from "react";
 
-export default function Hero() {
+function Contact() {
   return (
     <div>
-      <Hero />
+      <Contact />
     </div>
   );
 }
+export default Contact;

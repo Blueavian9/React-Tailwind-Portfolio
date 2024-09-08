@@ -1,5 +1,6 @@
 import "./App.css";
 import "./main.jsx";
+import * as React from "react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import GlowButton from "./components/GlowButton.jsx";
@@ -9,7 +10,7 @@ import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
-export default function App() {
+function App() {
   return (
     <div>
       <Navbar />
@@ -23,3 +24,4 @@ export default function App() {
     </div>
   );
 }
+export default App;

@@ -1,9 +1,10 @@
 import * as React from "react";
 
-export default function Footer() {
+function Hero() {
   return (
     <div>
-      <Footer />
+      <Hero />
     </div>
   );
 }
+export default Hero;

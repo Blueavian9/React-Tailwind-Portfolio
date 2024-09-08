@@ -1,9 +1,10 @@
 import * as React from "react";
 
-export default function GlowButton() {
+function GlowButton() {
   return (
     <div>
       <GlowButton />
     </div>
   );
 }
+export default GlowButton;
