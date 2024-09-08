@@ -42,4 +42,5 @@
         animation: ["hover", "group-hover"],
       },
     },
+    plugins: [],
   };

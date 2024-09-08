@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./main.css"; // Assuming this is where your Tailwind CSS is set up
@@ -11,4 +11,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 document.body.innerHTML = '<div id="app"></div>';
 
-// Render React
+// // Render React
