@@ -15,8 +15,9 @@ const Contact = () => {
               Let's Talk
             </h3>
             <p>
-              I'm open to discussing web development prjectgs or partnership
-              opportunities.
+              I'm open to discussing Employent Opportunities and helping build
+              in my specialty of Full Stack Software Development and web
+              development projects or partnership opportunities.
             </p>
             <div className="mb-4 mt-8">
               <FaEnvelope className="inline-block text-green-400 mr-2"></FaEnvelope>
@@ -24,16 +25,16 @@ const Contact = () => {
                 href="mailto:youremail@example.com"
                 className="hover:underline"
               >
-                youremail@exmple.com
+                Blueavian9@gmail.com
               </a>
             </div>
             <div className="mb-4">
               <FaPhone className="inline-block text-green-400 mr-2"></FaPhone>
-              <span>+9828839922</span>
+              <span>+1.626.360.5860</span>
             </div>
             <div className="mb-4">
               <FaMapMarkedAlt className="inline-block text-green-400 mr-2"></FaMapMarkedAlt>
-              <span>sreet, city, pronice, country</span>
+              <span>Greater Los Angeles County area, United States</span>
             </div>
           </div>
           <div className="flex-1 w-full">
