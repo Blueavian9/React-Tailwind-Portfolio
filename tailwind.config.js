@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -40,5 +40,8 @@ ule.exports = {
       animation: ["hover", "group-hover"],
     },
   },
-  plugins: [],
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
 };
