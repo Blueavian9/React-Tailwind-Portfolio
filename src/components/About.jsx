@@ -14,10 +14,22 @@ const About = () => {
           />
           <div className="flex-1">
             <p className="text-lg mb-8">
-              I am a passionate full-stack developer with a focus on building
+              {/* I am a passionate full-stack developer with a focus on building
               modern and responsive web applications. With a strong foundation
               in both frontend and backend technologies, I strive to create
-              seamless and efficient user experiences.
+              seamless and efficient user experiences. */}
+              I am a passionate Full-Stack Software Engineer with over three
+              years of experience in creating secure, dynamic web applications.
+              My expertise includes React, Node.js, Express, and AI integration,
+              as demonstrated by my work with `Groq's Whisper`. At `talkanimate
+              Inc.` I led the development of a Full-Stack Asylum Report
+              Generator, implementing robust security and Auth0 authentication.
+              My skills encompass building RESTful APIs, performing CRUD
+              operations, and designing efficient database schemas, ensuring
+              scalable, high-quality solutions. I excel in collaborative,
+              fast-paced environments, with a strong focus on security and
+              compliance. My diverse skill set and proactive approach make me a
+              valuable asset to any software
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
