@@ -1,5 +1,4 @@
 import "./App.css";
-import "./main.jsx";
 import * as React from "react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
