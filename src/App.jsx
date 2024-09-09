@@ -3,7 +3,6 @@ import "./main.jsx";
 import * as React from "react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
-import GlowButton from "./components/GlowButton.jsx";
 import About from "./components/About.jsx";
 import Service from "./components/Service.jsx";
 import Projects from "./components/Projects.jsx";
@@ -15,7 +14,6 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <GlowButton />
       <About />
       <Service />
       <Projects />
