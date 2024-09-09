@@ -1,11 +1,10 @@
 import * as React from "react";
 
-
 const GlowButton = ({ children }) => {
   return (
     <div className="relative inline-block">
-      <a 
-        href="#" 
+      <a
+        href="#"
         className="
           relative inline-block px-5 py-2.5 
           text-[#03e9f4] text-base uppercase no-underline
@@ -21,6 +20,9 @@ const GlowButton = ({ children }) => {
         <span className="absolute bottom-[-100%] left-0 w-0.5 h-full bg-gradient-to-t from-transparent to-[#03e9f4] animate-[btn-anim4_1s_linear_infinite_0.75s]"></span>
         {children}
       </a>
+      <div>
+        <button class="bg-sky-500 hover:bg-sky-700 ...">Save changes</button>
+      </div>
     </div>
   );
 };
