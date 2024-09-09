@@ -1,5 +1,5 @@
 import * as React from "react";
-import cesarCoverImg from "../assets/Cesar-Cover.png";
+import CesarCoverImg from "../assets/Cesar-Cover.png";
 import projImg1 from "../assets/projImg1.png";
 import projImg2 from "../assets/projImg2.png";
 import projImg3 from "../assets/projImg3.png";

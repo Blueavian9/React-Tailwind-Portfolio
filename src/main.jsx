@@ -9,6 +9,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </React.StrictMode>
 );
 
-document.body.innerHTML = '<div id="app"></div>';
+// document.body.innerHTML = '<div id="app"></div>';
 
 // // Render React
