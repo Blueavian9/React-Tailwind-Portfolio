@@ -1,11 +1,11 @@
 import * as React from "react";
-import Cesar_Cover2Image from "../assets/Cesar_Cover2.png";
+import CesarCoverImg from "../assets/Cesar-Cover.png";
 
 const Hero = () => {
   return (
     <div className="bg-black text-white text-center py-16">
       <img
-        src={Cesar_Cover2Image}
+        src={CesarCoverImg}
         alt=""
         className="mx-auto mb-8 w-48 h-48 rounded-full object-cover transform 
         transition-transform duration-300 hover:scale-105"

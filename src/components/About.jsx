@@ -1,5 +1,5 @@
 import * as React from "react";
-import Cesar_Cover2 from "../assets/Cesar_Cover2.png";
+import CesarCover2Img from "../assets/Cesar_Cover2.png";
 
 const About = () => {
   return (
@@ -8,7 +8,7 @@ const About = () => {
         <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <img
-            src={Cesar_Cover2.png}
+            src={CesarCover2Img}
             alt="CesarCover2"
             className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
           />
