@@ -1,32 +1,77 @@
 import * as React from "react";
-import CesarCoverImg from "../assets/Cesar-Cover.png";
+// import CesarCoverImg from "../assets/Cesar-Cover.png";
 import projImg1 from "../assets/projImg1.png";
 import projImg2 from "../assets/projImg2.png";
 import projImg3 from "../assets/projImg3.png";
-
-// import employeeMSImage from "../assets/employee-ms.png";
-// import bookMSImage from "../assets/admin-dashboard.png";
+import projImg4 from "../assets/projImg4.png";
+import projImg5 from "../assets/projImg5.png";
+import projImg6 from "../assets/projImg6.png";
+import projImg7 from "../assets/projImg7.png";
+import projImg8 from "../assets/projImg8.png";
+import projImg9 from "../assets/projImg9.png";
 
 const projects = [
   {
     id: 1,
-    name: "projImg1.png",
+    name: "Project 1",
     technologies: "MERN Stack",
-    image: projImg1.png,
+    image: projImg1,
     github: "https://github.com/Blueavian9",
   },
   {
     id: 2,
-    name: "Blog App",
+    name: "Project 2",
     technologies: "MERN Stack",
-    image: projImg2.png,
+    image: projImg2,
     github: "https://github.com/Blueavian9",
   },
   {
     id: 3,
-    name: "Book MS",
+    name: "Project 3",
     technologies: "MERN Stack",
-    image: projImg3.png,
+    image: projImg3,
+    github: "https://github.com/Blueavian9",
+  },
+  {
+    id: 4,
+    name: "Project 4",
+    technologies: "MERN Stack",
+    image: projImg4,
+    github: "https://github.com/Blueavian9",
+  },
+  {
+    id: 5,
+    name: "Project 5",
+    technologies: "MERN Stack",
+    image: projImg5,
+    github: "https://github.com/Blueavian9",
+  },
+  {
+    id: 6,
+    name: "Project 6",
+    technologies: "MERN Stack",
+    image: projImg6,
+    github: "https://github.com/Blueavian9",
+  },
+  {
+    id: 7,
+    name: "Project 7",
+    technologies: "MERN Stack",
+    image: projImg7,
+    github: "https://github.com/Blueavian9",
+  },
+  {
+    id: 8,
+    name: "Project 8",
+    technologies: "MERN Stack",
+    image: projImg8,
+    github: "https://github.com/Blueavian9",
+  },
+  {
+    id: 9,
+    name: "Project 9",
+    technologies: "MERN Stack",
+    image: projImg9,
     github: "https://github.com/Blueavian9",
   },
 ];
