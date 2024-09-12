@@ -27,7 +27,7 @@ const Hero = () => {
         > */}
         <button
           type="button"
-          class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-orange-500 hover:to-pink-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+          class="bg-gradient-to-r from-yellow-300 to-yellow-700 hover:from-pink-200 hover:to-red-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
         >
           <strong>Github</strong>
         </button>
@@ -38,14 +38,20 @@ const Hero = () => {
         > */}
         <button
           type="button"
-          class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-orange-500 hover:to-pink-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+          class="bg-gradient-to-r from-teal-200 to-green-700 hover:from-pink-500 hover:to-red-700 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
         >
           <strong>Download CV</strong>
         </button>
 
-        <button
-          className="bg-gradient-to-r from-cyan-400 to-blue-800 text-white
+        {/* original Linkein-btn:
+         <button
+          className="bg-gradient-to-r from-blue-400 to-green-700 text-white
             transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+        > */}
+
+        <button
+          type="button"
+          class="bg-gradient-to-r from-blue-400 to-blue-800 hover:from-purple-200 hover:to-violet-700 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
         >
           <strong>LinkedIn</strong>
         </button>
