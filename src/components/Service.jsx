@@ -4,17 +4,17 @@ const services = [
   {
     id: 1,
     title: "Strong Foundation in Web Technologies",
-    description: "Creating visually appealing and user-friendly web designs.",
+    description:
+      "Proficient in HTML, CSS, and JavaScript fundamentals. Understands web protocols, APIs, and responsive design principles. Keeps up-to-date with evolving web standards and technologies.",
   },
   {
     id: 2,
     title: "Full-Stack JS & React Expertise",
-    description:
-      "JS: Developed both Fron-End and Back-End using JavaScript. Worked with Node.js for server-side programming. Integrated various JS frameworks and libraries for complete webapplications. React: Built complex user interfaces with React. Managed State and Props effectively. Implemented performance optimizations and best practices in React development.",
+    description: "Developed end-to-end web applications using JavaScript, with Node.js for back-end and React for front-end. Built complex user interfaces, efficiently managing state and props in React. Implemented performance optimizations and integrated various JS frameworks and libraries for comprehensive web solutions.",
   },
   {
     id: 3,
-    title: "Database SKills",
+    title: "Database Skills",
     description:
       "Design and optimized database structures. Wrote complex queries and managed data efficiently. Worked with both SQL and NoSQL databases.",
   },
