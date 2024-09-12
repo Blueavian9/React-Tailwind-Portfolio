@@ -3,35 +3,88 @@ import React from "react";
 const services = [
   {
     id: 1,
-    title: "Web Design",
+    title: "Strong Foundation in Web Technologies",
     description: "Creating visually appealing and user-friendly web designs.",
   },
   {
     id: 2,
-    title: "Frontend Development",
-    description: "Building responsive and interactive user interfaces.",
+    title: "Full-Stack JS & React Expertise",
+    description:
+      "JS: Developed both Fron-End and Back-End using JavaScript. Worked with Node.js for server-side programming. Integrated various JS frameworks and libraries for complete webapplications. React: Built complex user interfaces with React. Managed State and Props effectively. Implemented performance optimizations and best practices in React development.",
   },
   {
     id: 3,
-    title: "Backend Development",
-    description: "Developing robust server-side logic and databases.",
+    title: "Database SKills",
+    description:
+      "Design and optimized database structures. Wrote complex queries and managed data efficiently. Worked with both SQL and NoSQL databases.",
   },
   {
     id: 4,
-    title: "Full-Stack Development",
-    description: "Combining both frontend and backend development skills.",
+    title: "Version Control, Collaboration & Tool Control",
+    description:
+      "Managed code versions using systems like Git. Facilitated team collaboration through platforms such as Github or GitLab. Implemented and Maintained development tools and workflows.",
   },
   {
     id: 5,
-    title: "Content Writing",
-    description: "Writing content for your business and companies.",
+    title: "Cloud Computing",
+    description:
+      "Designed and managed cloud infrastructure. Optimized resources for performance and cost. Implemented security and scalable solutions.",
   },
   {
     id: 6,
-    title: "Digital Marketing",
-    description: "Promote your business with our digital marketing team.",
+    title: "DevOps CI/CD",
+    description:
+      "Automated software development and deployment processes. Built and maintained CI/CD piplelines. Improved system efficiency & software delivery quality.",
   },
 ];
+
+// const services = [
+//   {
+//     id: 1,
+//     title: "Web Design",
+//     description: "Creating visually appealing and user-friendly web designs.",
+//   },
+//   {
+//     id: 2,
+//     title: "Frontend Development",
+//     description: "Building responsive and interactive user interfaces.",
+//   },
+//   {
+//     id: 3,
+//     title: "Backend Development",
+//     description: "Developing robust server-side logic and databases.",
+//   },
+//   {
+//     id: 4,
+//     title: "Full-Stack Development",
+//     description: "Combining both frontend and backend development skills.",
+//   },
+//   {
+//     id: 5,
+//     title: "Content Writing",
+//     description: "Writing content for your business and companies.",
+//   },
+//   {
+//     id: 6,
+//     title: "Digital Marketing",
+//     description: "Promote your business with our digital marketing team.",
+//   },
+//   {
+//     id: 7,
+//     title: "Full-Stack Development",
+//     description: "Combining both frontend and backend development skills.",
+//   },
+//   {
+//     id: 8,
+//     title: "Content Writing",
+//     description: "Writing content for your business and companies.",
+//   },
+//   {
+//     id: 9,
+//     title: "Digital Marketing",
+//     description: "Promote your business with our digital marketing team.",
+//   },
+// ];
 const Service = () => {
   return (
     <div className="bg-black text-white py-20" id="service">
