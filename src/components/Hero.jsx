@@ -27,7 +27,7 @@ const Hero = () => {
         > */}
         <button
           type="button"
-          class="bg-gradient-to-r from-yellow-300 to-orange-600 hover:from-pink-200 hover:to-red-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+          className="bg-gradient-to-r from-yellow-300 to-orange-600 hover:from-pink-200 hover:to-red-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
         >
           <strong>Github</strong>
         </button>
@@ -38,7 +38,7 @@ const Hero = () => {
         > */}
         <button
           type="button"
-          class="bg-gradient-to-r from-teal-200 to-green-700 hover:from-purple-200 hover:to-purple-700 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+          className="bg-gradient-to-r from-teal-200 to-green-700 hover:from-purple-200 hover:to-purple-700 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
         >
           <strong>Download CV</strong>
         </button>
@@ -51,7 +51,7 @@ const Hero = () => {
 
         <button
           type="button"
-          class="bg-gradient-to-r from-blue-400 to-blue-800 hover:from-red-400 hover:to-red-800 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+          className="bg-gradient-to-r from-blue-400 to-blue-800 hover:from-red-400 hover:to-red-800 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
         >
           <strong>LinkedIn</strong>
         </button>
