@@ -1,9 +1,16 @@
 import * as React from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import CesarCover2Img from "../assets/Cesar_Cover2.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8 role=contentinfo">
+    <footer className="bg-black text-white py-8">
+      <img
+        src={CesarCover2Img}
+        alt="Cesar-Cover.png"
+        className="mx-auto mb-8 w-48 h-48 rounded-full object-cover transform 
+        transition-transform duration-300 hover:scale-105"
+      />
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
           <div className="flex-1 mb-4 md:mb-0">
@@ -58,24 +65,40 @@ const Footer = () => {
         <div className="flex space-x-4">
           <ul>
             <li>
-              <a target="_blank" href="#" className="text-gray-400 hover:text-white">
+              <a
+                target="_blank"
+                href="#"
+                className="text-gray-400 hover:text-white"
+              >
                 Privacy
               </a>
             </li>
             <li>
-              <a  target="_blank" href="#" className="text-gray-400 hover:text-white">
+              <a
+                target="_blank"
+                href="#"
+                className="text-gray-400 hover:text-white"
+              >
                 Terms of Service
               </a>
             </li>
 
             <li>
-              <a target="_blank" href="#" className="text-gray-400 hover:text-white">
+              <a
+                target="_blank"
+                href="#"
+                className="text-gray-400 hover:text-white"
+              >
                 Accessibility
               </a>
             </li>
 
             <li>
-              <a target="_blank" href="#" className="text-gray-400 hover:text-white">
+              <a
+                target="_blank"
+                href="#"
+                className="text-gray-400 hover:text-white"
+              >
                 Business Proposition VC Funding
               </a>
             </li>

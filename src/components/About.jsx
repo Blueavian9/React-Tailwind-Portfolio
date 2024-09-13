@@ -1,5 +1,5 @@
 import * as React from "react";
-import CesarCover2Img from "../assets/Cesar_Cover2.png";
+// import CesarCover2Img from "../assets/Cesar_Cover2.png";
 
 const About = () => {
   return (
@@ -7,11 +7,11 @@ const About = () => {
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <div className="flex-1">
-            <img
+            {/* <img
               src={CesarCover2Img}
               alt="CesarCover2"
               className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
-            />
+            /> */}
             <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
             <p className="text-lg mb-8">
               {/* I am a passionate full-stack developer with a focus on building
