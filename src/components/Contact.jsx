@@ -5,14 +5,18 @@ const Contact = () => {
   return (
     <div className="bg-black text-white py-20" id="contact">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">Contact Me</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">
+          <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+            Contact
+          </span>
+        </h2>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <div className="flex-1">
             <h3
               className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
-            from-green-400 to-blue-500 mb-4"
+            from-cyan-400 to-green-400 mb-4"
             >
-              Let's Talk
+              Talk to Me!
             </h3>
             <p>
               I'm open to discussing Employent Opportunities and helping build
