@@ -1,5 +1,4 @@
 import * as React from "react";
-// import CesarCover2Img from "../assets/Cesar_Cover2.png";
 
 const About = () => {
   return (
@@ -7,17 +6,13 @@ const About = () => {
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <div className="flex-1">
-            {/* <img
-              src={CesarCover2Img}
-              alt="CesarCover2"
-              className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
-            /> */}
-            <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
+            <h2 className="text-4xl font-bold text-center mb-12">
+              <strong>
+                <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">About Me
+                </span>
+                </strong>
+            </h2>
             <p className="text-lg mb-8">
-              {/* I am a passionate full-stack developer with a focus on building
-              modern and responsive web applications. With a strong foundation
-              in both frontend and backend technologies, I strive to create
-              seamless and efficient user experiences. */}
               I am a passionate Full-Stack Software Engineer with over three
               years of experience in creating secure, dynamic web applications.
               My expertise includes React, Node.js, Express, and AI integration,
@@ -33,7 +28,11 @@ const About = () => {
             </p>
 
             <div className="text-4xl font-bold text-center mb-12">
-              <strong> Front End:</strong>
+              <strong>
+                <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+                  Front End:
+                </span>
+              </strong>
             </div>
 
             <div className="space-y-4">
@@ -94,7 +93,11 @@ const About = () => {
 
               <div className="space-y-4">
                 <div className="text-4xl font-bold text-center mb-12">
-                  <strong> Back End:</strong>
+                  <strong>
+                    <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+                      Back End:
+                    </span>
+                  </strong>
                 </div>
 
                 <div className="space-y-4">
@@ -218,7 +221,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="unit-test" className="w-2/12">
-                    <strong>DOM</strong>
+                    <strong>DOM.js</strong>
                   </label>
 
                   <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -290,7 +293,11 @@ const About = () => {
               <br />
               <br />
               <div className="text-4xl font-bold text-center mb-12">
-                <strong> Full Stack:</strong>
+                <strong>
+                  <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+                    Full Stack:
+                  </span>
+                </strong>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -306,7 +313,7 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="javascript" className="w-2/12">
-                      <strong>Debugging</strong>
+                      <strong>Debug</strong>
                     </label>
 
                     <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -392,7 +399,11 @@ const About = () => {
               </div>
 
               <div className="text-4xl font-bold text-center mb-12">
-                <strong> Additional:</strong>
+                <strong>
+                  <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+                    Additional:
+                  </span>
+                </strong>
               </div>
 
               <div className="space-y-4">
@@ -449,50 +460,55 @@ const About = () => {
               <br />
               <hr />
 
-              <div className="space-y-4">
-                <div className="mt-12 flex justify-between text-center">
-                  <div>
-                    <h3
-                      className="text-2xl font-bold text-transparent bg-clip-text 
+              <div className="mt-8 flex justify-between text-center">
+                <div>
+                  <h3
+                    className="text-2xl font-bold text-transparent bg-clip-text 
                       bg-gradient-to-r from-green-400 to-blue-500"
-                    >
-                      3+
-                    </h3>
-                    <p>Years Experience</p>
-                  </div>
-                  <div>
-                    <h3
-                      className="text-2xl font-bold text-transparent bg-clip-text 
+                  >
+                    3+
+                  </h3>
+                  <p className="mt-2">
+                    <strong>Years Experience</strong>
+                  </p>
+                </div>
+                <div>
+                  <h3
+                    className="text-2xl font-bold text-transparent bg-clip-text 
                       bg-gradient-to-r from-green-400 to-blue-500"
-                    >
-                      100+
-                    </h3>
-                    <p>Projects Completed</p>
-                  </div>
-                  <div>
-                    <h3
-                      className="text-2xl font-bold text-transparent bg-clip-text 
+                  >
+                    100+
+                  </h3>
+                  <p className="mt-2">
+                    <strong>Projects Completed</strong>
+                  </p>
+                </div>
+                <div>
+                  <h3
+                    className="text-2xl font-bold text-transparent bg-clip-text 
                       bg-gradient-to-r from-green-400 to-blue-500"
-                    >
-                      30+
-                    </h3>
-                    <p>Happy Clients</p>
-                  </div>
-                  <div>
-                    <h3
-                      className="text-2xl font-bold text-transparent bg-clip-text 
+                  >
+                    30+
+                  </h3>
+                  <p className="mt-2">
+                    <strong>Happy Clients</strong>
+                  </p>
+                </div>
+                <div>
+                  <h3
+                    className="text-2xl font-bold text-transparent bg-clip-text 
                       bg-gradient-to-r from-green-400 to-blue-500"
-                    >
-                      700+
-                    </h3>
-                    <p>Total Contributions </p>
-                  </div>
+                  >
+                    700+
+                  </h3>
+                  <p className="mt-2">
+                    <strong>Total Contributions</strong>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <br />
         <br />
         <hr />
       </div>

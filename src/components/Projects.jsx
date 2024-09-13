@@ -10,6 +10,7 @@ import projImg7 from "../assets/projImg7.png";
 import projImg8 from "../assets/projImg8.png";
 import projImg9 from "../assets/projImg9.png";
 
+
 const projects = [
   {
     id: 1,

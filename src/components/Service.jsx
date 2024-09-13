@@ -10,7 +10,8 @@ const services = [
   {
     id: 2,
     title: "Full-Stack JS & React Expertise",
-    description: "Developed end-to-end web applications using JavaScript, with Node.js for back-end and React for front-end. Built complex user interfaces, efficiently managing state and props in React. Implemented performance optimizations and integrated various JS frameworks and libraries for comprehensive web solutions.",
+    description:
+      "Developed end-to-end web applications using JavaScript, with Node.js for back-end and React for front-end. Built complex user interfaces, efficiently managing state and props in React. Implemented performance optimizations and integrated various JS frameworks and libraries for comprehensive web solutions.",
   },
   {
     id: 3,
@@ -42,7 +43,11 @@ const Service = () => {
   return (
     <div className="bg-black text-white py-20" id="service">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">My Services</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">
+          <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+            My Services
+          </span>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <div

@@ -34,7 +34,7 @@ const Contact = () => {
             </div>
             <div className="mb-4">
               <FaPhone className="inline-block text-green-400 mr-2"></FaPhone>
-              <span>+1.626.360.5860</span>
+              <span>1+333.333.3333</span>
             </div>
             <div className="mb-4">
               <FaMapMarkedAlt className="inline-block text-green-400 mr-2"></FaMapMarkedAlt>
