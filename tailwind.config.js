@@ -3,6 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      "gradient-heading":
+        "linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)",
       colors: {
         "glow-blue": "#03e9f4",
       },
