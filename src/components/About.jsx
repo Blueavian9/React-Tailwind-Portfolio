@@ -99,6 +99,18 @@ const About = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-center">
+                    <label htmlFor="unit-test" className="w-2/12">
+                      <strong>MYSQL</strong>
+                    </label>
+
+                    <div className="grow bg-gray-800 rounded-full h-2.5">
+                      <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-center">
                     <label htmlFor="htmlandcss" className="w-2/12">
                       <strong>JQuery</strong>
                     </label>
@@ -125,6 +137,30 @@ const About = () => {
 
                   <div className="space-y-4">
                     <div className="flex items-center">
+                      <label htmlFor="unit-test" className="w-2/12">
+                        <strong>State Management</strong>
+                      </label>
+
+                      <div className="grow bg-gray-800 rounded-full h-2.5">
+                        <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center">
+                      <label htmlFor="unit-test" className="w-2/12">
+                        <strong>HTTP/AJAX</strong>
+                      </label>
+
+                      <div className="grow bg-gray-800 rounded-full h-2.5">
+                        <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center">
                       <label htmlFor="nodejs" className="w-2/12">
                         <strong>TypeScript</strong>
                       </label>
@@ -141,38 +177,125 @@ const About = () => {
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <label htmlFor="react-js" className="w-2/12">
-                        <strong>Amazon Polly V3 AWS-SDK</strong>
+                        <strong>AWS-SDK </strong>
                       </label>
 
                       <div className="grow bg-gray-800 rounded-full h-2.5">
                         <div
                           className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
+                          transform transition-transform duration-300 hover:scale-105 w-9/12"
                         ></div>
-                        <div className="space-y-4">
-                          <div className="flex items-center">
-                            <label htmlFor="htmlandcss" className="w-2/12">
-                              <strong>Unit Testing</strong>
-                            </label>
-
-                            <div className="grow bg-gray-800 rounded-full h-2.5">
-                              <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>Unit Testing</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>Next.js</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>DOM</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>Cypress</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>Postman</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>Sanity</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>AWS KEY</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>Context API</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
+              <br />
+              <br />
               <div className="text-4xl font-bold text-center mb-12">
                 <strong> Full Stack:</strong>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
-                    <strong></strong>
+                    <strong>SASS</strong>
                   </label>
 
                   <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -183,7 +306,7 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="javascript" className="w-2/12">
-                      <strong></strong>
+                      <strong>Debugging</strong>
                     </label>
 
                     <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -198,7 +321,7 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="nodejs" className="w-2/12">
-                      <strong></strong>
+                      <strong>DSA's</strong>
                     </label>
 
                     <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -213,7 +336,7 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="react-js" className="w-2/12">
-                      <strong></strong>
+                      <strong>Problem Solving</strong>
                     </label>
 
                     <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -229,7 +352,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="nodejs" className="w-2/12">
-                    <strong></strong>
+                    <strong>Project Management</strong>
                   </label>
 
                   <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -244,7 +367,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="react-js" className="w-2/12">
-                    <strong></strong>
+                    <strong>SCRUM</strong>
                   </label>
 
                   <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -256,9 +379,46 @@ const About = () => {
                 </div>
               </div>
 
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>Systems Architecture</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
               <div className="text-4xl font-bold text-center mb-12">
                 <strong> Additional:</strong>
               </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>A.I.</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <label htmlFor="unit-test" className="w-2/12">
+                    <strong>Agents</strong>
+                  </label>
+
+                  <div className="grow bg-gray-800 rounded-full h-2.5">
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  </div>
+                </div>
+              </div>
+
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
@@ -288,6 +448,7 @@ const About = () => {
               <br />
               <br />
               <hr />
+
               <div className="space-y-4">
                 <div className="mt-12 flex justify-between text-center">
                   <div>

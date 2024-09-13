@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="bg-black text-green-400 px-8 md:px-16 lg:px-24">
       <div className="container py-2 flex justify-center md:justify-between items-center">
         <div className="text-2xl font-bold hidden md:inline">
-          {/* Cesar Adrian Aguilar */}
+          {/* Logo goes here CA */}
         </div>
         <div className="space-x-6">
           <a href="#home" className="hover:text-gray-400">

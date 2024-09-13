@@ -53,16 +53,15 @@ const Footer = () => {
           justify-between items-center"
       >
         <p className="text-gray-400">
-          &copy; {new Date().getFullYear()} Cesar Adrian Aguilar. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Cesar Adrian Aguilar.
         </p>
         <div className="flex space-x-4 my-4 md:my-0">
           <a href="#" className="text-gray-400 hover:text-white">
             <FaFacebook />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white">
+          {/* <a href="#" className="text-gray-400 hover:text-white">
             <FaTwitter />
-          </a>
+          </a> */}
           <a href="#" className="text-gray-400 hover:text-white">
             <FaLinkedin />
           </a>
