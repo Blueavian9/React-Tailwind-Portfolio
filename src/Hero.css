@@ -1,0 +1,118 @@
+
+body {
+    background: #e0e5ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.frame {
+    text-align: center;
+}
+
+button {
+    margin: 20px;
+}
+
+.custom-btn {
+    width: 150px;
+    height: 45px;
+    color: #fff;
+    border-radius: 50px;
+    /* Rounder corners for fitting circles */
+    padding: 12px 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.5),
+        7px 7px 20px rgba(0, 0, 0, 0.1),
+        4px 4px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* Add button hover animations */
+.custom-btn:hover {
+    background: #0b57d0;
+    /* Color fits with your design */
+    color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 91, 234, 0.6);
+}
+
+.custom-btn span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #6b9cff, #2042d0);
+    /* Original */
+    transform: translate(10px, 20px);
+
+    /* Add vendor prefixes */
+    -webkit-transform: translate(10px, 20px);
+    /* Safari, Chrome */
+    -moz-transform: translate(10px, 20px);
+    /* Firefox */
+    -ms-transform: translate(10px, 20px);
+    /* Internet Explorer 9 */
+    -o-transform: translate(10px, 20px);
+    /* Older Opera */
+    transform: translate(10px, 20px);
+    /* Standard */
+
+    color: transparent;
+    text-align: center;
+}
+
+/* Effects before hover */
+.custom-btn:before,
+.custom-btn:after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    border-radius: 50px;
+    background: rgba(0, 91, 234, 0.4);
+    transition: all 0.4s ease;
+}
+
+.custom-btn:before {
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.custom-btn:after {
+    height: 0;
+    width: 2px;
+    top: 0;
+    right: 0;
+}
+
+/* Hover state with smooth transitions */
+.custom-btn:hover:before {
+    width: 100%;
+}
+
+.custom-btn:hover:after {
+    height: 100%;
+}
+
+/* Specific button style for example 9 */
+.btn-9 {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.btn-9:hover {
+    background: #2042d0;
+    color: #ffffff;
+    transition: all 0.4s ease-in-out;
+}

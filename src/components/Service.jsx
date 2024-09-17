@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 const services = [
   {
@@ -67,7 +67,7 @@ const Service = () => {
               >
                 {service.title}
               </h3>
-              <p className="mt-2 text-gray-300">{service.description}</p>
+              <p className=" font-mono mt-2 text-gray-300">{service.description}</p>
               <a
                 href="#"
                 className="mt-4 inline-block text-green-400 hover:text-blue-500"
