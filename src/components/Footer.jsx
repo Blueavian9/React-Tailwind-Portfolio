@@ -20,7 +20,7 @@ const Footer = () => {
               </span>
             </h3>
 
-            <p className="text-white-400" algin-text="justify-lef">
+            <p className="text-white-400 font-mono" algin-text="justify-lef">
               is a passionate and dedicated Full Stack Software Engineer with
               over 3 years of professional experience, currently specializing in
               Full Stack Software Development and AI prompt testing at

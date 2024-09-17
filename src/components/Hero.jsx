@@ -23,11 +23,11 @@ const Hero = () => {
         I specialize in building modern and responsive web applications.
       </p>
       <div className="mt-8 space-x-4">
-      <div class="frame">
-  <button class="custom-btn btn-9">
-    <span>Click Me</span>
-  </button>
-</div>
+        <div class="frame">
+          <button class="custom-btn btn-9">
+            <span>Click Me</span>
+          </button>
+        </div>
         {/* original Github-btn:
           <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white
             transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"

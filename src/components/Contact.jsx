@@ -18,7 +18,7 @@ const Contact = () => {
             >
               Talk to Me!
             </h3>
-            <p>
+            <p className="font-mono">
               I'm open to discussing Employent Opportunities and helping build
               in my specialty of Full Stack Software Development and web
               development projects or partnership opportunities.
@@ -38,7 +38,7 @@ const Contact = () => {
             </div>
             <div className="mb-4">
               <FaMapMarkedAlt className="inline-block text-green-400 mr-2"></FaMapMarkedAlt>
-              <span>Greater Los Angeles County area, United States</span>
+              <span className="font-mono">Greater Los Angeles County area, United States</span>
             </div>
           </div>
           <div className="flex-1 w-full">
