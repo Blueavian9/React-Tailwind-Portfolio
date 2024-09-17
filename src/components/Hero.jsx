@@ -1,5 +1,6 @@
 import * as React from "react";
 import CesarCoverImg from "../assets/Cesar-Cover.png";
+// import "../components/NeonButton.css";
 
 const Hero = () => {
   return (
@@ -17,7 +18,7 @@ const Hero = () => {
         </span>
         , Full-Stack Developer
       </h1>
-      <p className="mt-4 text-lg text-gray-300">
+      <p className="mt-4 text-lg text-gray-300 font-mono">
         I specialize in building modern and responsive web applications.
       </p>
       <div className="mt-8 space-x-4">
@@ -42,12 +43,6 @@ const Hero = () => {
         >
           <strong>Download CV</strong>
         </button>
-
-        {/* original Linkein-btn:
-         <button
-          className="bg-gradient-to-r from-blue-400 to-green-700 text-white
-            transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
-        > */}
 
         <button
           type="button"

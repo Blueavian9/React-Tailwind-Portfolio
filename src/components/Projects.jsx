@@ -10,6 +10,7 @@ import projImg6 from "../assets/projImg6.png";
 import projImg7 from "../assets/projImg7.png";
 import projImg8 from "../assets/projImg8.png";
 import projImg9 from "../assets/projImg9.png";
+import "../components/NeonButton.css";
 
 const projects = [
   {
@@ -88,10 +89,22 @@ const Projects = () => {
     return () => window.removeEventListener("pointermove", updateCursor);
   }, []);
 
+  // CSS variables for the neon effect
+  const neonStyles = `
+  :root {
+  --clr neon: hsl(317 100% 54%);
+  --clr-bg: hsl(323 21% 16%);
+  }
+  `;
+
   return (
     <div className="bg-black text-white py-20" id="project">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">
+          <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+            My Projects
+          </span>
+        </h2>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0">
           {projects.map((project) => (
             <li
@@ -102,38 +115,62 @@ const Projects = () => {
                 "--active": "0",
               }}
             >
+              <div className="absolute inset-0 bg-gray-900 z-0"></div>
               <div
-                className="absolute inset-0 bg-cover bg-center z-0"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-cover bg-center z-10"
                 style={{ backgroundImage: `url(${project.image})` }}
               ></div>
-              <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-              <div className="relative z-20 p-6 h-full flex flex-col justify-between">
+              <div className="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+              <div className="relative z-30 p-6 h-full flex flex-col justify-between">
                 <div>
                   <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
                   <p className="text-gray-400 mb-4">{project.technologies}</p>
                 </div>
-                <a
-                  href={project.github}
-                  className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
+                {/* previous button style 1:
+                   <a
+                   href={project.github}
+                   className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:scale-105"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   >
+                   GitHub
+                   </a> */}
+                {/* previous button style 2: 
+                  <a
+                    href={project.github}
+                    className="neon-button relative inline-block cursor-pointer text-decoration-none text-[length:var(--clr-neon)] border-[color:var(--clr-neon)] border-[0.125em] solid px-4 py-2 rounded-[0.25em] text-shadow-[0_0_0.125em_hsla(0,0%,100%,0.3),0_0_0.45em_currentColor] box-shadow-[inset_0_0_0.5em_0_var(--clr-neon),0_0_0.5em_0_var(--clr-neon)] transition-all duration-100"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      "--clr-neon": "hsl(317, 100%, 54%)",
+                      "--clr-bg": "hsl(323, 21%, 16%)",
+                      fontFamily: '"Balsamiq Sans", cursive',
+                      }}
+                      > */}
+                <div className="flex justify-center">
+                  <a
+                    href={project.github}
+                    className="relative inline-block cursor-pointer bg-gradient-to-br from-gray-300 via-gray-400 to-gray-600 text-white border border-gray-400 px-4 py-2 rounded-md text-sm font-semibold shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-30"
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-40"
                 style={{
                   background:
-                    "radial-gradient(circle at var(--x) var(--y), hsla(0, 0%, 100%, 0.3), transparent 20vmin)",
+                    "radial-gradient(circle at var(--x) var(--y), hsla(0, 0%, 100%, 0.3), transparent 30vmin)",
                   backgroundAttachment: "fixed",
                 }}
               ></div>
               <div
-                className="absolute inset-0 pointer-events-none z-40"
+                className="absolute inset-0 pointer-events-none z-50"
                 style={{
                   background:
-                    "radial-gradient(circle at var(--x) var(--y), hsla(0, 0%, 100%, 0.7), transparent 20vmin), transparent",
+                    "radial-gradient(circle at var(--x) var(--y), hsla(0, 0%, 100%, 0.7), transparent 30vmin), transparent",
                   backgroundAttachment: "fixed",
                   mask: `
                     linear-gradient(white, white) 50% 0 / 100% 4px no-repeat,
@@ -152,6 +189,7 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
 // this is my previous code before adding the card:hover spotlight effect w/ background-attachment
 // const projects = [

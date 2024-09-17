@@ -13,7 +13,7 @@ const About = () => {
                 </span>
               </strong>
             </h2>
-            <p className="text-lg mb-8">
+            <p className="text-lg mb-8 font-mono">
               I am a passionate Full-Stack Software Engineer with over three
               years of experience in creating secure, dynamic web applications.
               My expertise includes React, Node.js, Express, and AI integration,
@@ -39,25 +39,24 @@ const About = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
-                  <strong>HTML, CSS</strong>
+                  <span className="font-bold">HTML, CSS </span>
                 </label>
 
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                {/* Moonlight glowing effect bar */}
+                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="javascript" className="w-2/12">
-                    <strong>JavaScript</strong>
+                    <span className="font-bold">JavaScript</span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div
-                      className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                    ></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
@@ -65,14 +64,12 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="nodejs" className="w-2/12">
-                    <strong>Node JS</strong>
+                    <span className="font-bold">Node JS</span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div
-                      className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                    ></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
@@ -80,14 +77,12 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="react-js" className="w-2/12">
-                    <strong>React JS</strong>
+                    <span className="font-bold">React JS</span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div
-                      className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                    ></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
@@ -95,28 +90,28 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="javascript" className="w-2/12">
-                    <strong>BootStrap</strong>
+                    <span className="font-bold">BootStrap</span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div
-                      className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                    ></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
-                    <strong>SASS</strong>
+                    <span className="font-bold">SASS</span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
 
+                {/* original DOM 
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="unit-test" className="w-2/12">
@@ -127,16 +122,17 @@ const About = () => {
                       <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="unit-test" className="w-2/12">
-                      <strong>API</strong>
+                      <span className="font-bold">DOM</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -144,11 +140,25 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="unit-test" className="w-2/12">
-                      <strong>Next.js</strong>
+                      <span className="font-bold">API</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <label htmlFor="unit-test" className="w-2/12">
+                      <span className="font-bold">Next.js</span>
+                    </label>
+
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -156,36 +166,32 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="nodejs" className="w-2/12">
-                      <strong>TypeScript</strong>
+                      <span className="font-bold">TypeScript</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div
-                        className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                      ></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
-
                 <br />
                 <div className="space-y-4">
                   <div className="text-4xl font-bold text-center mb-12">
-                    <strong>
-                      <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-                        Back End:
-                      </span>
-                    </strong>
+                    <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+                      Back End:
+                    </span>
                   </div>
 
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <label htmlFor="unit-test" className="w-2/12">
-                        <strong>MYSQL</strong>
+                        <span className="font-bold">MYSQL</span>
                       </label>
 
-                      <div className="grow bg-gray-800 rounded-full h-2.5">
-                        <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                      {/* Moonlight glowing effect bar */}
+                      <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                       </div>
                     </div>
                   </div>
@@ -193,22 +199,24 @@ const About = () => {
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <label htmlFor="htmlandcss" className="w-2/12">
-                        <strong>JQuery</strong>
+                        <span className="font-bold">JQUERY</span>
                       </label>
 
-                      <div className="grow bg-gray-800 rounded-full h-2.5">
-                        <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                      {/* Moonlight glowing effect bar */}
+                      <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                       </div>
                     </div>
 
                     <div className="space-y-4">
                       <div className="flex items-center">
                         <label htmlFor="unit-test" className="w-2/12">
-                          <strong>HTTP/AJAX</strong>
+                          <span className="font-bold">HTTP/AJAX</span>
                         </label>
 
-                        <div className="grow bg-gray-800 rounded-full h-2.5">
-                          <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                        {/* Moonlight glowing effect bar */}
+                        <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                         </div>
                       </div>
                     </div>
@@ -216,14 +224,12 @@ const About = () => {
                     <div className="space-y-4">
                       <div className="flex items-center">
                         <label htmlFor="react-js" className="w-2/12">
-                          <strong>AWS-SDK Polly V3 </strong>
+                          <span className="font-bold">AWS-SDK Polly V3 </span>
                         </label>
 
-                        <div className="grow bg-gray-800 rounded-full h-2.5">
-                          <div
-                            className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                          transform transition-transform duration-300 hover:scale-105 w-9/12"
-                          ></div>
+                        {/* Moonlight glowing effect bar */}
+                        <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                         </div>
                       </div>
                     </div>
@@ -233,11 +239,12 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="unit-test" className="w-2/12">
-                      <strong>Unit Testing</strong>
+                      <span className="font-bold">Unit Testing</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -245,11 +252,12 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="unit-test" className="w-2/12">
-                      <strong>Cypress</strong>
+                      <span className="font-bold">Cypress</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -257,11 +265,12 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="unit-test" className="w-2/12">
-                      <strong>Postman</strong>
+                      <span className="font-bold">Postman</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -269,11 +278,12 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="unit-test" className="w-2/12">
-                      <strong>Sanity</strong>
+                      <span className="font-bold">Sanity</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -281,11 +291,12 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="unit-test" className="w-2/12">
-                      <strong>AWS API KEY </strong>
+                      <span className="font-bold">AWS API KEY </span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -302,14 +313,12 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="javascript" className="w-2/12">
-                      <strong>Debugging</strong>
+                      <span className="font-bold">Debugging</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div
-                        className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                      ></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -317,14 +326,15 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="nodejs" className="w-2/12">
-                      <strong> Data Structures & Algorithms </strong>
+                      <span className="font-bold">
+                        {" "}
+                        Data Structures & Algorithms{" "}
+                      </span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div
-                        className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                      ></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -332,14 +342,12 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="react-js" className="w-2/12">
-                      <strong>Problem Solving</strong>
+                      <span className="font-bold">Problem Solving</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div
-                        className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                      ></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -348,14 +356,11 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="nodejs" className="w-2/12">
-                    <strong>Project Management</strong>
+                    <span className="font-bold">Project Management</span>
                   </label>
-
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div
-                      className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                    ></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
@@ -363,14 +368,12 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="react-js" className="w-2/12">
-                    <strong>SCRUM w/ Trello</strong>
+                    <span className="font-bold">SCRUM w/ Trello</span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div
-                      className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                    ></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
@@ -378,11 +381,12 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="unit-test" className="w-2/12">
-                    <strong>Systems Architecture</strong>
+                    <span className="font-bold">Systems Architecture</span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
@@ -398,11 +402,12 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="unit-test" className="w-2/12">
-                    <strong>ChatGPT </strong>
+                    <span className="font-bold">ChatGPT </span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
@@ -410,22 +415,24 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="unit-test" className="w-2/12">
-                    <strong> Agents </strong>
+                    <span className="font-bold"> Agents </span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="unit-test" className="w-2/12">
-                    <strong>Prompt Testing </strong>
+                    <span className="font-bold">Prompt Testing </span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
@@ -433,11 +440,12 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="unit-test" className="w-2/12">
-                    <strong>Claude</strong>
+                    <span className="font-bold">Claude</span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
               </div>
@@ -453,25 +461,24 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
-                    <strong>Spanish</strong>
+                    <span className="font-bold">Spanish</span>
                   </label>
 
-                  <div className="grow bg-gray-800 rounded-full h-2.5">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                  {/* Moonlight glowing effect bar */}
+                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="javascript" className="w-2/12">
-                      <strong>Hindi</strong>
+                      <span className="font-bold">Hindi</span>
                     </label>
 
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div
-                        className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                      ></div>
+                    {/* Moonlight glowing effect bar */}
+                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
                     </div>
                   </div>
                 </div>
@@ -489,7 +496,7 @@ const About = () => {
                     3+
                   </h3>
                   <p className="mt-2">
-                    <strong>Years Experience</strong>
+                    <span className="font-bold">Years Experience</span>
                   </p>
                 </div>
                 <div>
