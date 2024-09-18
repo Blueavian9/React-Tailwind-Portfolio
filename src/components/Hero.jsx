@@ -22,35 +22,35 @@ const Hero = () => {
       <p className="mt-4 text-lg text-gray-300 font-mono">
         I specialize in building modern and responsive web applications.
       </p>
-      <div className="mt-8 space-x-4">
-        <div class="frame">
-          <button class="custom-btn btn-9">
-            <span>Click Me</span>
-          </button>
-        </div>
+          
         {/* original Github-btn:
           <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white
-            transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
-        > */}
+          transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+          > */}
 
         {/* original sample cv-btn 2:
  <button className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white
-    transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
-> */}
+ transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+ > */}
 
         {/*
         second original sample btn 3:
         <button
-          type="button"
-          className="bg-gradient-to-r from-yellow-300 to-orange-600 hover:from-pink-200 hover:to-red-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+        type="button"
+        className="bg-gradient-to-r from-yellow-300 to-orange-600 hover:from-pink-200 hover:to-red-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
         >
-          <strong>Github</strong>
+        <strong>Github</strong>
         </button> */}
+        
+
+        {/* <div class="frame">
+            <button type="button" className=""></button>
+            </div> */}
 
         <button
           type="button"
-          className="bg-gradient-to-r from-teal-200 to-green-700 hover:from-purple-200 hover:to-purple-700 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
-        >
+          
+          >
           <strong>Download CV</strong>
         </button>
 
@@ -61,7 +61,6 @@ const Hero = () => {
           <strong>LinkedIn</strong>
         </button>
       </div>
-    </div>
   );
 };
 
