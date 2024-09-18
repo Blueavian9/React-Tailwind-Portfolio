@@ -1,5 +1,4 @@
 import * as React from "react";
-import "../Hero.css";
 import CesarCoverImg from "../assets/Cesar-Cover.png";
 // import "../components/NeonButton.css";
 
