@@ -2,12 +2,11 @@ import * as React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-900 text-white p-4 shadow-md fixed w-full z-10">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">
-          <a href="#home" className="hover:text-green-400">
-            My Portfolio
-          </a>
+    <nav className="bg-gray-900 text-white p-4 shadow-md w-full z-10">
+      <div className="container mx-auto flex justify-center items-center">
+        <div className="space-x-8">
+          {/* <div className="text-2xl font-bold"> */}
+          <a href="#home" className="hover:text-green-400"></a>
         </div>
         <div className="space-x-8">
           <a href="#home" className="hover:text-green-400">

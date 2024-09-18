@@ -21,35 +21,36 @@ const Hero = () => {
       <p className="mt-4 text-lg text-gray-300 font-mono">
         I specialize in building modern and responsive web applications.
       </p>
-          
-        {/* original Github-btn:
+
+      {/* original Github-btn:
           <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white
           transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
           > */}
 
-        {/* original sample cv-btn 2:
+      {/* original sample cv-btn 2:
  <button className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white
  transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
  > */}
 
-        {/*
+      {/*
         second original sample btn 3:
-        <button
-        type="button"
-        className="bg-gradient-to-r from-yellow-300 to-orange-600 hover:from-pink-200 hover:to-red-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
-        >
-        <strong>Github</strong>
-        </button> */}
-        
-
-        {/* <div class="frame">
+        */}
+      {/* <div class="frame">
             <button type="button" className=""></button>
             </div> */}
+            
+      <div className="mt-8 flex justify-center space-x-4">
+        <button
+          type="button"
+          className="bg-gradient-to-r from-yellow-300 to-orange-600 hover:from-pink-200 hover:to-red-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+        >
+          <strong>Github</strong>
+        </button>
 
         <button
           type="button"
-          
-          >
+          className="bg-gradient-to-r from-orange-400 to-red-800 hover:from-red-400 hover:to-pink-800 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+        >
           <strong>Download CV</strong>
         </button>
 
@@ -60,6 +61,7 @@ const Hero = () => {
           <strong>LinkedIn</strong>
         </button>
       </div>
+    </div>
   );
 };
 
