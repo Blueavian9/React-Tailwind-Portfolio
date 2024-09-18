@@ -10,7 +10,7 @@ import projImg6 from "../assets/projImg6.png";
 import projImg7 from "../assets/projImg7.png";
 import projImg8 from "../assets/projImg8.png";
 import projImg9 from "../assets/projImg9.png";
-import "../components/NeonButton.css";
+
 
 const projects = [
   {
@@ -189,7 +189,6 @@ const Projects = () => {
 };
 
 export default Projects;
-
 
 // this is my previous code before adding the card:hover spotlight effect w/ background-attachment
 // const projects = [
