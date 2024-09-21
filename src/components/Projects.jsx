@@ -11,21 +11,20 @@ import projImg7 from "../assets/projImg7.png";
 import projImg8 from "../assets/projImg8.png";
 import projImg9 from "../assets/projImg9.png";
 
-
 const projects = [
   {
     id: 1,
-    name: "Project 1",
+    name: "Text2SpeechAPIPollyV3",
     technologies: "MERN Stack",
     image: projImg1,
-    github: "https://github.com/Blueavian9",
+    github: "https://github.com/Blueavian9/Text2SpeechAPIPollyV3",
   },
   {
     id: 2,
-    name: "Project 2",
+    name: "bookLibraryDocumentation",
     technologies: "MERN Stack",
     image: projImg2,
-    github: "https://github.com/Blueavian9",
+    github: "https://github.com/Blueavian9/bookLibraryDocumentation",
   },
   {
     id: 3,
@@ -102,7 +101,7 @@ const Projects = () => {
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12">
           <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-            My Projects
+            Projects
           </span>
         </h2>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0">
