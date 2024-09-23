@@ -36,18 +36,23 @@ const ContactForm = () => {
                 Talk to Me
               </span>
             </h2>
+            <p className="font-mono">
+              // I'm open to discussing employment opportunities, helping build
+              web // development projects, or partnership opportunities in Full
+              Stack // Software Development. //{" "}
+            </p>
             <div className="space-y-4">
               <div className="flex items-center text-white">
                 <FaPhone className="mr-3" />
-                <span>+123 456 7890</span>
+                <span className="font-mono">+123 456 7890</span>
               </div>
               <div className="flex items-center text-white">
                 <FaEnvelope className="mr-3" />
-                <span>email@example.com</span>
+                <span className="font-mono">email@example.com</span>
               </div>
               <div className="flex items-center text-white">
                 <FaMapMarkedAlt className="mr-3" />
-                <span>123 Street, City, Country</span>
+                <span className="font-mono">123 Street, City, Country</span>
               </div>
             </div>
           </div>
@@ -102,20 +107,20 @@ const ContactForm = () => {
               </div>
 
               <div className="relative overflow-hidden group">
-                <button
-    type="submit"
-    className="w-2/5 py-2 text-cyan-100 font-semibold uppercase tracking-wider bg-cyan-400 shadow-lg shadow-cyan-500/50 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out
-               relative z-1 bg-[#00ffff] text-white hover:bg-transparent hover:text-[#00ffff] border-2 border-transparent
-               hover:border-[#00ffff] shadow-[0_0_10px_rgba(0,255,255,0.5),0_0_20px_rgba(0,255,255,0.5),0_0_30px_rgba(0,255,255,0.5),0_0_40px_rgba(0,255,255,0.7)]
-               hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8),0_0_45px_rgba(0,255,255,1)]"
-  >
                 {/* <button
                   type="submit"
                   className="w-2/5 py-2 text-cyan-100 font-semibold uppercase tracking-wider bg-cyan-400 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out
-               relative z-1 bg-[#00ffff] text-white hover:bg-transparent hover:text-[#00ffff] border-2 border-transparent
-               hover:border-[#00ffff] shadow-[0_0_10px_rgba(0,255,255,0.5),0_0_20px_rgba(0,255,255,0.5),0_0_30px_rgba(0,255,255,0.5),0_0_40px_rgba(0,255,255,0.7)]
-               hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8),0_0_45px_rgba(0,255,255,1)]"
-                > */}
+                  relative z-1 bg-[#00ffff] text-white hover:bg-transparent hover:text-[#00ffff] border-2 border-transparent
+                  hover:border-[#00ffff] shadow-[0_0_10px_rgba(0,255,255,0.5),0_0_20px_rgba(0,255,255,0.5),0_0_30px_rgba(0,255,255,0.5),0_0_40px_rgba(0,255,255,0.7)]
+                  hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8),0_0_45px_rgba(0,255,255,1)]"
+                  > */}
+                <button
+                  type="submit"
+                  className="w-2/5 py-2 text-cyan-100 font-semibold uppercase tracking-wider bg-cyan-400 shadow-lg shadow-cyan-500/50 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out
+                 relative z-1 bg-[#00ffff] text-white hover:bg-transparent hover:text-[#00ffff] border-2 border-transparent
+                 hover:border-[#00ffff] shadow-[0_0_10px_rgba(0,255,255,0.5),0_0_20px_rgba(0,255,255,0.5),0_0_30px_rgba(0,255,255,0.5),0_0_40px_rgba(0,255,255,0.7)]
+                 hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8),0_0_45px_rgba(0,255,255,1)]"
+                >
                   Send
                 </button>
                 <div className="absolute hover:sepia-0 flex">
@@ -134,8 +139,6 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
-
 
 // Updated talk to Me and Contact Form without border bacground color
 // const ContactForm = () => {
