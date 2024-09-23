@@ -27,32 +27,43 @@ const ContactForm = () => {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#243b55] to-[#141e30]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
           {/* Talk to Me Section */}
-          <div className="bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
+          <div className="max-w-lg mx-auto bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)] mb-8">
             <h2 className="text-3xl text-center font-bold text-white mb-4">
-              <span
-                className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
-             from-cyan-200 to-blue-400 mb-4"
-              >
+              <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-blue-400">
                 Talk to Me
               </span>
             </h2>
-            <p className="font-mono">
-              // I'm open to discussing employment opportunities, helping build
-              web // development projects, or partnership opportunities in Full
-              Stack // Software Development. //{" "}
+
+            <p className="text-white text-lg mb-6 text-center">
+              I'm open to discussing employment opportunities, helping build web
+              development projects, or partnership opportunities in Full Stack
+              Software Development.
             </p>
+
             <div className="space-y-4">
-              <div className="flex items-center text-white">
-                <FaPhone className="mr-3" />
-                <span className="font-mono">+123 456 7890</span>
+              {/* Contact Details */}
+              <div className="flex items-center justify-center text-white">
+                <FaPhone className="mr-3 text-cyan-400" />
+                <span className="font-mono text-lg">
+                  <strong>+123 456 7890</strong>
+                </span>
               </div>
-              <div className="flex items-center text-white">
-                <FaEnvelope className="mr-3" />
-                <span className="font-mono">email@example.com</span>
+
+              <div className="flex items-center justify-center text-white">
+                <FaEnvelope className="mr-3 text-cyan-400" />
+                <span className="font-mono text-lg">
+                  <strong>email@example.com</strong>
+                </span>
               </div>
-              <div className="flex items-center text-white">
-                <FaMapMarkedAlt className="mr-3" />
-                <span className="font-mono">123 Street, City, Country</span>
+
+              <div className="flex items-center justify-center text-white">
+                <FaMapMarkedAlt className="mr-3 text-cyan-400" />
+                <span className="font-mono text-lg">
+                  <strong>
+                    123 W. BloomTech St. Los Angeles County, United States of
+                    America
+                  </strong>
+                </span>
               </div>
             </div>
           </div>
@@ -61,11 +72,12 @@ const ContactForm = () => {
           <div className="bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
             <h2 className="text-3xl font-bold text-center text-white mb-8">
               <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-                Contact Me
+                Contact
               </span>
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Input field */}
               <div className="relative">
                 <input
                   type="text"
@@ -76,7 +88,7 @@ const ContactForm = () => {
                   className="w-full px-0 py-2 text-base text-white bg-transparent border-b border-white focus:outline-none focus:border-[#03e9f4] peer"
                 />
                 <label className="absolute left-0 top-2 text-white text-base transition-all duration-300 -z-1 origin-0 peer-focus:text-[#03e9f4] peer-focus:text-xs peer-focus:-translate-y-6 peer-valid:text-xs peer-valid:-translate-y-6">
-                  Your Full Name
+                  Full Name
                 </label>
               </div>
               <div className="relative">
@@ -118,6 +130,7 @@ const ContactForm = () => {
                   type="submit"
                   className="w-2/5 py-2 text-cyan-100 font-semibold uppercase tracking-wider bg-cyan-400 shadow-lg shadow-cyan-500/50 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out
                  relative z-1 bg-[#00ffff] text-white hover:bg-transparent hover:text-[#00ffff] border-2 border-transparent
+                 
                  hover:border-[#00ffff] shadow-[0_0_10px_rgba(0,255,255,0.5),0_0_20px_rgba(0,255,255,0.5),0_0_30px_rgba(0,255,255,0.5),0_0_40px_rgba(0,255,255,0.7)]
                  hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8),0_0_45px_rgba(0,255,255,1)]"
                 >
