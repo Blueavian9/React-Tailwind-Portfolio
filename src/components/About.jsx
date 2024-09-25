@@ -37,20 +37,6 @@ const About = () => {
               </strong>
             </div>
 
-            {/* // original moonlight effect
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  <span className="font-bold">HTML, CSS </span>
-                </label>
-
-                // Moonlight glowing effect bar 
-                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                </div>
-              </div> */}
-            {/*updated moonlight percentage effect */}
-
             <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
@@ -76,21 +62,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* 
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="javascript" className="w-2/12">
-                  <span className="font-bold">JavaScript</span>
-                </label>
-
-                 Moonlight glowing effect bar  
-                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                </div>
-              </div>
-            </div> */}
-
-            <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
                   <span className="font-bold"> JavaScript </span>
@@ -115,7 +86,6 @@ const About = () => {
               </div>
             </div>
 
-            <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
                   <span className="font-bold"> Node.js </span>
@@ -140,20 +110,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="javascript" className="w-2/12">
-                  <span className="font-bold">BootStrap</span>
-                </label>
-
-                // Moonlight glowing effect bar 
-                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                </div>
-              </div>
-            </div> */}
-
-            <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
                   <span className="font-bold"> BootStrap </span>
@@ -177,19 +133,7 @@ const About = () => {
                 </div>
               </div>
 
-              {/* <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  <span className="font-bold">SASS</span>
-                </label>
-
-                // Moonlight glowing effect bar 
-                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-80 rounded-full animate-glow" />
-                </div>
-              </div> */}
-
-              <div className="space-y-4">
+              
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> SASS </span>
@@ -214,34 +158,7 @@ const About = () => {
                 </div>
               </div>
 
-              {/* original DOM 
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="unit-test" className="w-2/12">
-                      <strong>DOM</strong>
-                    </label>
-
-                    <div className="grow bg-gray-800 rounded-full h-2.5">
-                      <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
-                    </div>
-                  </div>
-                </div> */}
-
-              {/* semi original DOM
-               <div className="space-y-4">
-                <div className="flex items-center">
-                  <label htmlFor="unit-test" className="w-2/12">
-                    <span className="font-bold">DOM</span>
-                  </label>
-
-                  // Moonlight glowing effect bar 
-                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                  </div>
-                </div>
-              </div>  */}
-
-              <div className="space-y-4">
+             
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> DOM </span>
@@ -266,20 +183,6 @@ const About = () => {
                 </div>
               </div>
 
-              {/* <div className="space-y-4">
-                <div className="flex items-center">
-                  <label htmlFor="unit-test" className="w-2/12">
-                    <span className="font-bold">API</span>
-                  </label>
-
-                  // Moonlight glowing effect bar 
-                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                  </div>
-                </div>
-              </div> */}
-
-              <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> API </span>
@@ -304,20 +207,6 @@ const About = () => {
                 </div>
               </div>
 
-              {/* <div className="space-y-4">
-                <div className="flex items-center">
-                  <label htmlFor="unit-test" className="w-2/12">
-                    <span className="font-bold">Next.js</span>
-                  </label>
-
-                  // Moonlight glowing effect bar 
-                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                  </div>
-                </div>
-              </div> */}
-
-              <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> NEXT.JS </span>
@@ -341,21 +230,8 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              {/* 
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <label htmlFor="nodejs" className="w-2/12">
-                    <span className="font-bold">TypeScript</span>
-                  </label>
 
-                  // Moonlight glowing effect bar 
-                  <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                  </div>
-                </div>
-              </div> */}
-
-              <div className="space-y-4">
+            
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> TypeScript </span>
@@ -387,54 +263,100 @@ const About = () => {
                   </span>
                 </div>
 
-                <div className="space-y-4">
+              
                   <div className="flex items-center">
-                    <label htmlFor="unit-test" className="w-2/12">
-                      <span className="font-bold">MYSQL</span>
+                    <label htmlFor="htmlandcss" className="w-2/12">
+                      <span className="font-bold"> MYSQL </span>
                     </label>
 
-                    {/* Moonlight glowing effect bar */}
-                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
+                    {/* Moonlight glowing effect bar with percentage */}
+                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
+                      {/* The background glowing effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-80 rounded-full animate-glow" />
+
+                      {/* Progress bar representing 90% */}
+                      <div
+                        className="absolute top-0 left-0 h-full bg-[#A7FF19] rounded-full"
+                        style={{ width: "95%" }}
+                      />
+
+                      {/* Percentage label inside the progress bar */}
+                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
+                        95%
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
+        
                   <div className="flex items-center">
                     <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">JQUERY</span>
+                      <span className="font-bold"> JQUERY </span>
                     </label>
 
-                    {/* Moonlight glowing effect bar */}
-                    <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
+                    {/* Moonlight glowing effect bar with percentage */}
+                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
+                      {/* The background glowing effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-80 rounded-full animate-glow" />
+
+                      {/* Progress bar representing 90% */}
+                      <div
+                        className="absolute top-0 left-0 h-full bg-[#A7FF19] rounded-full"
+                        style={{ width: "95%" }}
+                      />
+
+                      {/* Percentage label inside the progress bar */}
+                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
+                        95%
+                      </span>
                     </div>
                   </div>
 
-                  <div className="space-y-4">
+                 
                     <div className="flex items-center">
-                      <label htmlFor="unit-test" className="w-2/12">
-                        <span className="font-bold">HTTP/AJAX</span>
+                      <label htmlFor="htmlandcss" className="w-2/12">
+                        <span className="font-bold"> HTTP/AJAX </span>
                       </label>
 
-                      {/* Moonlight glowing effect bar */}
-                      <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
+                      {/* Moonlight glowing effect bar with percentage */}
+                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
+                        {/* The background glowing effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-80 rounded-full animate-glow" />
+
+                        {/* Progress bar representing 90% */}
+                        <div
+                          className="absolute top-0 left-0 h-full bg-[#A7FF19] rounded-full"
+                          style={{ width: "95%" }}
+                        />
+
+                        {/* Percentage label inside the progress bar */}
+                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
+                          95%
+                        </span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="react-js" className="w-2/12">
-                        <span className="font-bold">AWS-SDK Polly V3 </span>
-                      </label>
+                  <div className="flex items-center">
+                    <label htmlFor="htmlandcss" className="w-2/12">
+                      <span className="font-bold">
+                          AWS-SDK Polly V3</span></label>
 
-                      {/* Moonlight glowing effect bar */}
-                      <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                      </div>
+                    {/* Moonlight glowing effect bar with percentage */}
+                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
+                      {/* The background glowing effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-80 rounded-full animate-glow" />
+
+                      {/* Progress bar representing 90% */}
+                      <div
+                        className="absolute top-0 left-0 h-full bg-[#A7FF19] rounded-full"
+                        style={{ width: "95%" }}
+                      />
+
+                      {/* Percentage label inside the progress bar */}
+                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
+                        95%
+                      </span>
                     </div>
                   </div>
                 </div>
