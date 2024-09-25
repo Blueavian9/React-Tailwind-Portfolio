@@ -45,7 +45,7 @@ const Footer = () => {
         className="bg-[#141e30] border-t border-gray-600 pt-4 flex flex-col md:flex-row
           justify-between items-center"
       >
-        <p className="text-gray-400 mt-2 ml-4 text-sm leading-6 text-slate-500">
+        <p className="text-grey-400 hover:text-white mt-2 ml-4 text-sm leading-6 text-slate-500">
           &copy; {new Date().getFullYear()} Cesar Labs Inc. All rights reserved.
         </p>
         <div className="flex space-x-4 my-4 md:my-0">
