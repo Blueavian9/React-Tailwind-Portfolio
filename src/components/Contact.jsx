@@ -42,21 +42,21 @@ const ContactForm = () => {
 
             <div className="space-y-4">
               {/* Contact Details */}
-              <div className="flex items-center justify-center text-white">
+              {/* <div className="flex items-center justify-center text-white">
                 <FaPhone className="mr-3 text-cyan-400" />
                 <span className="font-mono text-lg">
                   <strong>+123 456 7890</strong>
                 </span>
-              </div>
+              </div> */}
 
               <div className="flex items-center justify-center text-white">
                 <FaEnvelope className="mr-3 text-cyan-400" />
                 <span className="font-mono text-lg">
-                  <strong>email@example.com</strong>
+                  <strong>blueavian9@gmail.com</strong>
                 </span>
               </div>
 
-              <div className="flex items-center justify-center text-white">
+              {/* <div className="flex items-center justify-center text-white">
                 <FaMapMarkedAlt className="mr-3 text-cyan-400" />
                 <span className="font-mono text-lg">
                   <strong>
@@ -64,7 +64,7 @@ const ContactForm = () => {
                     America
                   </strong>
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
 
