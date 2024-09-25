@@ -1,20 +1,27 @@
 import React from "react";
 import CesarCoverImg from "../assets/Cesar-Cover.png";
-
-const GlowingButton = ({ children, className }) => (
+const GlowingButton = ({ children, className, gradientFrom, gradientTo }) => (
   <button
     type="button"
     className={`
-      px-6 py-3 rounded-full font-bold text-white
-      bg-opacity-20 backdrop-filter backdrop-blur-lg
-      border border-white border-opacity-20
-      shadow-lg transform transition-all duration-300
-      hover:scale-105 hover:bg-opacity-30 hover:border-opacity-50
-      focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50
+      relative px-6 py-3 rounded-full font-bold text-white
+      overflow-hidden group
       ${className}
     `}
   >
-    {children}
+    <span
+      className="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br group-hover:opacity-100 blur-lg"
+      style={{
+        background: `linear-gradient(to bottom right, ${gradientFrom}, ${gradientTo})`,
+      }}
+    ></span>
+    <span
+      className="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br group-hover:opacity-70"
+      style={{
+        background: `linear-gradient(to bottom right, ${gradientFrom}, ${gradientTo})`,
+      }}
+    ></span>
+    <span className="relative">{children}</span>
   </button>
 );
 
@@ -22,7 +29,7 @@ export default function Hero() {
   return (
     <div className="bg-gradient-to-b from-[#243b55] to-[#141e30] min-h-screen flex flex-col items-center justify-center text-white p-4">
       <div className="relative group">
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
         <img
           src={CesarCoverImg}
           alt="Cesar-Cover.png"
@@ -37,18 +44,19 @@ export default function Hero() {
         </span>
         , Full-Stack Developer
       </h1>
-      <p className="mt-4 text-lg text-gray-300 font-mono max-w-2xl text-center">
+      <p className="mt-4 text-lg text-white-300 font-mono max-w-2xl text-center">
         I specialize in building modern and responsive web applications.
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <GlowingButton className="bg-yellow-500 hover:bg-yellow-600">
-          GitHub
+        <GlowingButton className="bg-gradient-to-r from-green-300 via-green-600 to-green-900">
+          Github
         </GlowingButton>
-        <GlowingButton className="bg-red-500 hover:bg-red-600">
+        <GlowingButton className="bg-gradient-to-r from-orange-300 via-orange-600 to-orange-00">
           Download CV
         </GlowingButton>
-        <GlowingButton className="bg-blue-500 hover:bg-blue-600">
+
+        <GlowingButton className="bg-gradient-to-r from-blue-300 via-blue-600 to-blue-900">
           LinkedIn
         </GlowingButton>
       </div>
