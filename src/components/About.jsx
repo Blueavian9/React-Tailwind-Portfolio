@@ -62,6 +62,7 @@ const About = () => {
               </div>
             </div>
 
+            <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
                   <span className="font-bold"> JavaScript </span>
@@ -86,6 +87,7 @@ const About = () => {
               </div>
             </div>
 
+            <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
                   <span className="font-bold"> Node.js </span>
@@ -110,6 +112,7 @@ const About = () => {
               </div>
             </div>
 
+            <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
                   <span className="font-bold"> BootStrap </span>
@@ -133,7 +136,7 @@ const About = () => {
                 </div>
               </div>
 
-              
+              <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> SASS </span>
@@ -158,7 +161,7 @@ const About = () => {
                 </div>
               </div>
 
-             
+              <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> DOM </span>
@@ -183,6 +186,7 @@ const About = () => {
                 </div>
               </div>
 
+              <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> API </span>
@@ -207,6 +211,7 @@ const About = () => {
                 </div>
               </div>
 
+              <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> NEXT.JS </span>
@@ -231,7 +236,7 @@ const About = () => {
                 </div>
               </div>
 
-            
+              <div className="space-y-4">
                 <div className="flex items-center">
                   <label htmlFor="htmlandcss" className="w-2/12">
                     <span className="font-bold"> TypeScript </span>
@@ -263,7 +268,7 @@ const About = () => {
                   </span>
                 </div>
 
-              
+                <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="htmlandcss" className="w-2/12">
                       <span className="font-bold"> MYSQL </span>
@@ -288,7 +293,7 @@ const About = () => {
                   </div>
                 </div>
 
-        
+                <div className="space-y-4">
                   <div className="flex items-center">
                     <label htmlFor="htmlandcss" className="w-2/12">
                       <span className="font-bold"> JQUERY </span>
@@ -312,7 +317,7 @@ const About = () => {
                     </div>
                   </div>
 
-                 
+                  <div className="space-y-4">
                     <div className="flex items-center">
                       <label htmlFor="htmlandcss" className="w-2/12">
                         <span className="font-bold"> HTTP/AJAX </span>
@@ -339,8 +344,8 @@ const About = () => {
 
                   <div className="flex items-center">
                     <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">
-                          AWS-SDK Polly V3</span></label>
+                      <span className="font-bold">AWS-SDK Polly V3</span>
+                    </label>
 
                     {/* Moonlight glowing effect bar with percentage */}
                     <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
