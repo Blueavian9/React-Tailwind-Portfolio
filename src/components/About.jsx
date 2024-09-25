@@ -201,7 +201,7 @@ const About = () => {
                     <div
                       className="absolute top-0 left-0 h-full bg-[#A7FF19] rounded-full"
                       style={{ width: "85%" }}
-                    />
+                      />
 
                     {/* Percentage label inside the progress bar */}
                     <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
@@ -210,6 +210,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
+          
 
               <div className="space-y-4">
                 <div className="flex items-center">
