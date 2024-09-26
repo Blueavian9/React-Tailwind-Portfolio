@@ -48,15 +48,15 @@ export default function Hero() {
         I specialize in building modern and responsive web applications.
       </p>
 
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <GlowingButton className="bg-gradient-to-r from-green-300 via-green-600 to-green-900">
+      <div className="mt-8 flex flex-wrap justify-center gap-4 space-x-[50px]">
+        <GlowingButton className="bg-gradient-to-r from-green-300 via-green-600 to-green-900 outline hover:outline-offset-4">
           Github
         </GlowingButton>
-        <GlowingButton className="bg-gradient-to-r from-orange-300 via-orange-600 to-orange-00">
+        <GlowingButton className="bg-gradient-to-r from-orange-300 via-orange-600 to-orange-900 outline hover:outline-offset-4">
           Download CV
         </GlowingButton>
 
-        <GlowingButton className="bg-gradient-to-r from-blue-300 via-blue-600 to-blue-900">
+        <GlowingButton className="bg-gradient-to-r from-blue-300 via-blue-600 to-blue-900 outline hover:outline-offset-4">
           LinkedIn
         </GlowingButton>
       </div>
