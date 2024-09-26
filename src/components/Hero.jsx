@@ -42,7 +42,7 @@ export default function Hero() {
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
           Cesar Adrian Aguilar
         </span>
-        , Full-Stack Developer
+        , a Full-Stack Developer
       </h1>
       <p className="mt-4 text-lg text-white-300 font-mono max-w-2xl text-center">
         I specialize in building modern and responsive web applications.
