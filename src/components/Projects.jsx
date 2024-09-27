@@ -30,7 +30,7 @@ const projects = [
     name: "Project 3",
     technologies: "MERN Stack",
     image: projImg3,
-    github: "https://github.com/Blueavian9",
+    github: "https://github.com/Blueavian9/nasa-photo-of-the-day",
   },
   {
     id: 4,
