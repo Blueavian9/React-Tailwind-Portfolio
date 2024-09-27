@@ -8,7 +8,7 @@ import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
-function App() {
+export default function App() {
   return (
     <div>
       <Navbar />
@@ -21,4 +21,3 @@ function App() {
     </div>
   );
 }
-export default App;

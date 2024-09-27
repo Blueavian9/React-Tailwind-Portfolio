@@ -664,19 +664,6 @@ const About = () => {
               </strong>
             </div>
 
-            {/* <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="unit-test" className="w-2/12">
-                  <span className="font-bold">ChatGPT </span>
-                </label>
-
-                 Moonlight glowing effect bar 
-                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                </div>
-              </div>
-            </div> */}
-
             <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
@@ -701,19 +688,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-
-            {/* <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="unit-test" className="w-2/12">
-                  <span className="font-bold"> Agents </span>
-                </label>
-
-                 Moonlight glowing effect bar 
-                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                </div>
-              </div>
-            </div> */}
 
             <div className="space-y-4">
               <div className="flex items-center">
@@ -740,19 +714,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="unit-test" className="w-2/12">
-                  <span className="font-bold">Prompt Testing </span>
-                </label>
-
-                 Moonlight glowing effect bar 
-                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                </div>
-              </div>
-            </div> */}
-
             <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
@@ -777,19 +738,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-
-            {/* <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="unit-test" className="w-2/12">
-                  <span className="font-bold">Claude</span>
-                </label>
-
-                 Moonlight glowing effect bar 
-                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                </div>
-              </div>
-            </div> */}
 
             <div className="space-y-4">
               <div className="flex items-center">
@@ -849,17 +797,6 @@ const About = () => {
               </strong>
             </div>
 
-            {/* <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  <span className="font-bold">Spanish</span>
-                </label>
-
-                 Moonlight glowing effect bar 
-                <div className="grow bg-gray-800 rounded-full h-2.5 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 rounded-full animate-glow" />
-                </div>
-              </div> */}
             <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
@@ -958,7 +895,125 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <br />
+
+            <div className="mt-8 flex justify-between text-center border-4 border-gradient-to-r from-green-400 to-blue-500 p-6 rounded-lg">
+              <div>
+                <h3
+                  className="text-2xl font-bold text-transparent bg-clip-text 
+      bg-gradient-to-r from-green-400 to-blue-500"
+                >
+                  3+
+                </h3>
+                <p className="mt-2">
+                  <span className="font-bold">Years Experience</span>
+                </p>
+              </div>
+              <div>
+                <h3
+                  className="text-2xl font-bold text-transparent bg-clip-text 
+      bg-gradient-to-r from-green-400 to-blue-500"
+                >
+                  100+
+                </h3>
+                <p className="mt-2">
+                  <strong>Projects Completed</strong>
+                </p>
+              </div>
+              <div>
+                <h3
+                  className="text-2xl font-bold text-transparent bg-clip-text 
+      bg-gradient-to-r from-green-400 to-blue-500"
+                >
+                  30+
+                </h3>
+                <p className="mt-2">
+                  <strong>Happy Clients</strong>
+                </p>
+              </div>
+              <div>
+                <h3
+                  className="text-2xl font-bold text-transparent bg-clip-text 
+      bg-gradient-to-r from-green-400 to-blue-500"
+                >
+                  700+
+                </h3>
+                <p className="mt-2">
+                  <strong>Total Contributions</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default About;
+
+{
+  /*
+            <div className="mt-8 flex justify-between text-center border-4 border-gradient-to-r from-green-400 to-blue-500 p-6 rounded-lg">
+              <div>
+                <h3
+                  className="text-2xl font-bold text-transparent bg-clip-text 
+                  bg-gradient-to-r from-green-400 to-blue-500"
+                  >
+                  3+
+                </h3>
+                <p className="mt-2">
+                  <span className="font-bold">Years Experience</span>
+                </p>
+              </div>
+              <div>
+                <h3
+                  className="text-2xl font-bold text-transparent bg-clip-text 
+                  bg-gradient-to-r from-green-400 to-blue-500"
+                  >
+                  100+
+                </h3>
+                <p className="mt-2">
+                  <strong>Projects Completed</strong>
+                </p>
+              </div>
+              <div>
+                <h3
+                  className="text-2xl font-bold text-transparent bg-clip-text 
+                  bg-gradient-to-r from-green-400 to-blue-500"
+                  >
+                  30+
+                </h3>
+                <p className="mt-2">
+                  <strong>Happy Clients</strong>
+                </p>
+              </div>
+              <div>
+                <h3
+                  className="text-2xl font-bold text-transparent bg-clip-text 
+                  bg-gradient-to-r from-green-400 to-blue-500"
+                  >
+                  700+
+                </h3>
+                <p className="mt-2">
+                  <strong>Total Contributions</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+  };
+  
+  export default About;
+  
+
+
+
+  
+   original percentage bar 1:
+             <br />
             <br />
             <hr />
 
@@ -1012,9 +1067,7 @@ const About = () => {
         </div>
       </div>
       <br />
+      <br />
       <hr />
-    </div>
-  );
-};
-
-export default About;
+    </div> */
+}
