@@ -1,12 +1,12 @@
 import "./App.css";
 import * as React from "react";
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import Service from "./components/Service.jsx";
-import Projects from "./components/Projects.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
+import Navbar from "../src/components/Navbar.jsx";
+import Hero from "../src/components/Hero.jsx";
+import About from "../src/components/About.jsx";
+import Service from "../src/components/Service.jsx";
+import Projects from "../src/components/Projects.jsx";
+import Contact from "../src/components/Contact.jsx";
+import Footer from "../src/components/Footer.jsx";
 
 export default function App() {
   return (
