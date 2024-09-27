@@ -37,7 +37,7 @@ const projects = [
     name: "Project 4",
     technologies: "MERN Stack",
     image: projImg4,
-    github: "https://github.com/Blueavian9",
+    github: "https://github.com/Blueavian9/ai-groq-rpg",
   },
   {
     id: 5,
@@ -124,7 +124,7 @@ const Projects = () => {
                   <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
                   <p className="text-gray-400 mb-4">{project.technologies}</p>
                 </div>
-                
+
                 <div className="flex justify-center">
                   <a
                     href={project.github}
