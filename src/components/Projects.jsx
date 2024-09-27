@@ -35,7 +35,7 @@ const projects = [
   {
     id: 4,
     name: "Project 4",
-    technologies: "MERN Stack",
+    technologies: "GROQ_AI",
     image: projImg4,
     github: "https://github.com/Blueavian9/ai-groq-rpg",
   },
