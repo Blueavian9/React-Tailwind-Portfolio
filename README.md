@@ -22,11 +22,12 @@ Multilingual Support: Information available in English, with potential for Spani
 
 
 <h3>Technologies Utilized </h3>
- **React** JavaScript library for building user interfaces.- **Tailwind CSS:** Utility-first CSS framework for styling.
- **Vite** Frontend tooling for fast builds and development.
- **Chart.js:** JavaScript charting library for data visualizations.
- **React Icons:** Collection of popular icons for React.
- **ESLint:** Linter for enforcing code quality and consistency.
+ [**React:**(https://react.dev/)] JavaScript library for building user interfaces.
+ [**Tailwind CSS:**(https://tailwindcss.com/)] Utility-first CSS framework for styling.
+ [**Vite**(https://vite.dev/config/)] Frontend tooling for fast builds and development.
+ [**Chart.js:**(https://www.chartjs.org/docs/latest/)] JavaScript charting library for data visualizations.
+ [**React Icons:**(https://react-icons.github.io/react-icons/)] Collection of popular icons for React.
+ [**ESLint:**(https://eslint.org/)] Linter for enforcing code quality and consistency.
 
 
 
