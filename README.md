@@ -26,28 +26,28 @@ Multilingual Support: Information available in English, with potential for Spani
  <strong>
   <a href="https://react.dev/">React:</a>
  </strong>
- <span>JavaScript library for building user interfaces. </span>
+ <span>JavaScript library for building user interfaces. </span> |
  
  <strong>
   <a href="https://tailwindcss.com/">Tailwind CSS:</a>
  </strong>
- <span>Utility-first CSS framework for styling. </span>
+ <span>Utility-first CSS framework for styling. </span> |
     <strong>
     <a  href="https://vite.dev/config/">Vite:</a> 
    </strong>
-  <span>Frontend tooling for fast builds and development. </span>
+  <span>Frontend tooling for fast builds and development. </span> |
   <strong>
    <a href="">Chart.js:</a>
   </strong>
-  <span> JavaScript charting library for data visualizations. </span>
+  <span> JavaScript charting library for data visualizations. </span> |
  <strong>
    <a href="https://react-icons.github.io/react-icons/">React Icons:</a>
  </strong>
- <span>Collection of popular icons for React. </span>
+ <span>Collection of popular icons for React. </span> |
  <strong>
    <a href="https://eslint.org/">ESLint:</a>
  </strong>
- <span>Linter for enforcing code quality and consistency. </span>
+ <span>Linter for enforcing code quality and consistency. </span> |
 
 
 
