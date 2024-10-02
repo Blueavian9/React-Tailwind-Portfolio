@@ -4,7 +4,7 @@
 
 <h2>REACT TAILWIND CSS PORTFOLIO </h2>
 
-<p>This is a personal portfolio project built using React, Tailwind CSS, and Vite. The portfolio showcases my skills, projects, and experience as a Full Stack Software Engineer specializing in AI integration and web development.
+<p class="font-mono">This is a personal portfolio project built using React, Tailwind CSS, and Vite. The portfolio showcases my skills, projects, and experience as a Full Stack Software Engineer specializing in AI integration and web development.
 Features
 
 **Interactive UI:** Developed with React.js and styled using Tailwind CSS for a responsive design
