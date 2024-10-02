@@ -23,17 +23,15 @@ Multilingual Support: Information available in English, with potential for Spani
 
 <h3>Technologies Utilized </h3>
 
- <strong>
+| [<strong>
   <a href="https://react.dev/">React:</a>
 </strong>
- <span>JavaScript library for building user interfaces. </span>
- 
- <strong>
+ <span>JavaScript library for building user interfaces. </span>] |
+[ <strong>
   <a href="https://tailwindcss.com/">Tailwind CSS:</a>
  </strong>
-   <span>Utility-first CSS framework for styling. </span>
-
-   <strong>
+   <span>Utility-first CSS framework for styling. </span>] |
+    <strong>
  <a  href="https://vite.dev/config/">Vite:</a> 
  </strong>
   <span>Frontend tooling for fast builds and development. </span>
