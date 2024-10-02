@@ -22,7 +22,13 @@ Multilingual Support: Information available in English, with potential for Spani
 
 
 <h3>Technologies Utilized </h3>
-<a href="https://react.dev/"> **React:**</a> JavaScript library for building user interfaces.
+  <strong>
+<a href="https://react.dev/">React:</a>
+</strong>
+
+
+
+JavaScript library for building user interfaces.
  **Tailwind CSS:** (https://tailwindcss.com/) Utility-first CSS framework for styling.
  **Vite**(https://vite.dev/config/) Frontend tooling for fast builds and development.
  **Chart.js:**(https://www.chartjs.org/docs/latest/) JavaScript charting library for data visualizations.
