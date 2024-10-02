@@ -21,7 +21,7 @@ Multilingual Support: Information available in English, with potential for Spani
 **Multi-lingual:** English, Spanish, Hindi.
 
 
- |<h3>Technologies Utilized:</h3> 
+ |<h3>Technologies Utilized:</h3> |
 
 |<strong>
   <a href="https://react.dev/">React:</a>
