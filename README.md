@@ -23,7 +23,7 @@ Multilingual Support: Information available in English, with potential for Spani
 
  <h3>Technologies Utilized:</h3> 
 
-|[<strong>
+![<strong>
   <a href="https://react.dev/">React:</a>
  </strong>
  <span>JavaScript library for building user interfaces. </span> ]|
