@@ -8,7 +8,7 @@ const Footer = () => {
       <img
         src={CesarCover2Img}
         alt="Cesar-Cover.png"
-        className="mx-auto mb-8 w-48 h-48 rounded-full object-cover transform 
+        className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover transform 
         transition-transform duration-300 hover:scale-105"
       />
       <div className="container mx-auto px-8 md:px-16 lg:px-24">

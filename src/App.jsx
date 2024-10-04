@@ -1,4 +1,5 @@
 import "./App.css";
+import "./index.css";
 import * as React from "react";
 import Navbar from "../src/components/Navbar.jsx";
 import Hero from "../src/components/Hero.jsx";
