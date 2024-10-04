@@ -41,10 +41,10 @@ const projects = [
   },
   {
     id: 5,
-    name: "Project 5",
-    technologies: "MERN Stack",
+    name: "React-Router-Movies",
+    technologies: "React-Router",
     image: projImg5,
-    github: "https://github.com/Blueavian9",
+    github: "https://github.com/Blueavian9/React-Router-Movies",
   },
   {
     id: 6,
