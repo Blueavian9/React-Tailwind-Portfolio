@@ -951,8 +951,12 @@ const About = () => {
 
 export default About;
 
-{
-  /*
+
+
+
+
+
+  {/*
             <div className="mt-8 flex justify-between text-center border-4 border-gradient-to-r from-green-400 to-blue-500 p-6 rounded-lg">
               <div>
                 <h3
@@ -1069,5 +1073,4 @@ export default About;
       <br />
       <br />
       <hr />
-    </div> */
-}
+    </div> */}

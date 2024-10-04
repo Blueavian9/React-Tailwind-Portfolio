@@ -87,6 +87,13 @@ const Service = () => {
 
 export default Service;
 
+
+
+
+
+
+
+
 // original code before animated gradient border
 //import * as React from "react";
 
