@@ -42,16 +42,16 @@ const projects = [
   {
     id: 5,
     name: "React-Router-Movies",
-    technologies: "React-Router",
+    technologies: "React-Router, Link, NavLink",
     image: projImg5,
     github: "https://github.com/Blueavian9/React-Router-Movies",
   },
   {
     id: 6,
-    name: "Project 6",
-    technologies: "MERN Stack",
+    name: "Asylum Report Generator",
+    technologies: "Full Stack, Auth0",
     image: projImg6,
-    github: "https://github.com/Blueavian9",
+    github: "https://github.com/Blueavian9/asylum-rg-fe-starter",
   },
   {
     id: 7,
