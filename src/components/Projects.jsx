@@ -56,9 +56,10 @@ const projects = [
   {
     id: 7,
     name: "HTTP-Todo App",
-    technologies: "React, Tailwind, Testing, API Backend Routes, CRUD, React TransitionGroup, Node, ",
+    technologies:
+      "React, Tailwind, Testing, API Backend Routes, CRUD, React TransitionGroup, Node, ",
     image: projImg7,
-    github: "https://github.com/Blueavian9",
+    github: "https://github.com/Blueavian9/web-guided-project-HTTP",
   },
   {
     id: 8,
