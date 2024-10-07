@@ -55,8 +55,8 @@ const projects = [
   },
   {
     id: 7,
-    name: "Project 7",
-    technologies: "MERN Stack",
+    name: "HTTP-Todo App",
+    technologies: "React, Tailwind, Testing, API Backend Routes, CRUD, React TransitionGroup, Node, ",
     image: projImg7,
     github: "https://github.com/Blueavian9",
   },
