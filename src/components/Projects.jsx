@@ -55,7 +55,7 @@ const projects = [
   },
   {
     id: 7,
-    name: "HTTP-Todo App",
+    name: "HTTP Todo App",
     technologies:
       "React, Tailwind, Testing, API Backend Routes, CRUD, React TransitionGroup, Node, ",
     image: projImg7,
