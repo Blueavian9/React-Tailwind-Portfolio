@@ -38,30 +38,55 @@ const About = () => {
               </strong>
             </div>
 
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div className="flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
                   <span className="font-bold"> HTML, CSS </span>
                 </label>
 
-                {/* Moonlight glowing effect bar with percentage */}
+                 Moonlight glowing effect bar with percentage 
                 <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                  {/* The background glowing effect */}
+                   The background glowing effect 
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-80 rounded-full animate-glow" />
 
-                  {/* Progress bar representing status % */}
+                   Progress bar representing status % 
                   <div
                     className="absolute top-0 left-0 h-full bg-[#A7FF19] rounded-full"
                     style={{ width: "95%" }}
                   />
 
-                  {/* Percentage label inside the progress bar */}
+                   Percentage label inside the progress bar 
                   <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
                     95%
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
+            <div className="space-y-4">
+  <div className="flex items-center">
+    <label htmlFor="htmlandcss" className="w-2/12">
+      <span className="font-bold"> HTML, CSS </span>
+    </label>
+
+    {/* Moonlight glowing effect bar with percentage */}
+    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
+      {/* The background glowing effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
+
+      {/* Progress bar representing status % */}
+      <div
+        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
+        style={{ width: "95%" }}
+      />
+
+      {/* Percentage label inside the progress bar */}
+      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
+        95%
+      </span>
+    </div>
+  </div>
+</div>
+
 
             <div className="space-y-4">
               <div className="flex items-center">
