@@ -66,7 +66,7 @@ const projects = [
     name: "Project 8",
     technologies: "MERN Stack",
     image: projImg8,
-    github: "https://github.com/Blueavian9",
+    github: "https://github.com/Blueavian9/Morocco-Website",
   },
   {
     id: 9,
