@@ -63,17 +63,17 @@ const projects = [
   },
   {
     id: 8,
-    name: "Project 8",
-    technologies: "MERN Stack",
+    name: "User-Onboarding",
+    technologies: "Full Stack, Advanced React Hooks",
     image: projImg8,
-    github: "https://github.com/Blueavian9/Morocco-Website",
+    github: "https://github.com/Blueavian9/User-Onboarding",
   },
   {
     id: 9,
-    name: "Project 9",
+    name: "Website",
     technologies: "MERN Stack",
     image: projImg9,
-    github: "https://github.com/Blueavian9",
+    github: "https://github.com/Blueavian9/",
   },
 ];
 

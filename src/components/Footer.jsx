@@ -45,20 +45,20 @@ const Footer = () => {
         className="blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row
           justify-between items-center"
       >
-        <p className="text-gray-400 mt-2 ml-4 text-sm leading-6 text-slate-500">
+        <p className="text-gray-400 hover:text-white mt-2 ml-4 text-sm leading-6 text-slate-500">
           &copy; {new Date().getFullYear()} Cesar Labs Inc. All rights reserved.
         </p>
         <div className="flex space-x-4 my-4 md:my-0">
-          <a href="#" className="text-gray-400 hover:text-white">
+          <a href="https://www.facebook.com/cesar.aguilar.712/" className="text-gray-400 hover:text-white">
             <FaFacebook />
           </a>
           <a href="#" className="text-gray-400 hover:text-white">
             <FaTwitter />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white">
+          <a href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/" className="text-gray-400 hover:text-white">
             <FaLinkedin />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white">
+          <a href="https://github.com/Blueavian9" className="text-gray-400 hover:text-white">
             <FaGithub />
           </a>
         </div>
