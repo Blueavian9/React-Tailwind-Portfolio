@@ -4,7 +4,7 @@ import * as React from "react";
 import Navbar from "../src/components/Navbar.jsx";
 import Hero from "../src/components/Hero.jsx";
 import About from "../src/components/About.jsx";
-import Services from "./components/Services.jsx";
+import Service from "../src/components/Services.jsx";
 import Projects from "../src/components/Projects.jsx";
 import Contact from "../src/components/Contact.jsx";
 import Footer from "../src/components/Footer.jsx";
