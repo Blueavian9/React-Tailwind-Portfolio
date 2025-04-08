@@ -8,7 +8,7 @@ import Services from "./components/Services.jsx";
 import Projects from "../src/components/Projects.jsx";
 import Contact from "../src/components/Contact.jsx";
 import Footer from "../src/components/Footer.jsx";
-import
+
 export default function App() {
   return (
     <div>
