@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Defined CSS Custome Variables */
+
+:root {
+    --neon-pink: 317 100% 54%;
+    --neon-green: 133 100% 54%;
+    --neon-orange: 30 100% 54%;
+  }
+  
+  .neon-button-pink {
+    --neon: var(--neon-pink);
+  }
+  .neon-button-green {
+    --neon: var(--neon-green);
+  }
+  .neon-button-orange {
+    --neon: var(--neon-orange);
+  }
+  
+
+
+
 @keyframes btn-anim1 {
     0% {
         left: -100%;
