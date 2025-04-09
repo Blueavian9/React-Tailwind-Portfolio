@@ -17,6 +17,12 @@ const NeonButton = ({ children, color = "pink" }) => {
     >
       {children}
     </a>
+
+<section className="text-center mt-10">
+<NeonButton color="pink">Neon Pink</NeonButton>
+<NeonButton color="green">Neon Green</NeonButton>
+<NeonButton color="orange">Neon Orange</NeonButton>
+</section>
   );
 };
 
