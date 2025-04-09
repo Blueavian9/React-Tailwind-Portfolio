@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import CesarCover2Img from "../assets/Cesar_Cover2.png";
 
 const Footer = () => {
@@ -20,7 +20,7 @@ const Footer = () => {
               </span>
             </h3>
 
-            <p className="text-white-400 font-mono" algin-text="justify-lef">
+            <p className="text-white-400 font-mono" algin="justify-left">
               is a passionate and dedicated Full Stack Software Engineer with
               over 3 years of professional experience, currently specializing in
               Full Stack Software Development and AI prompt testing at
@@ -41,24 +41,31 @@ const Footer = () => {
         </div>
       </div>
 
-      <div
-        className="blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row
-          justify-between items-center"
-      >
-        <p className="text-gray-400 hover:text-white mt-2 ml-4 text-sm leading-6 text-slate-500">
+      <div className="bg-blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
+        <p className="text-grey-400 hover:text-white mt-2 ml-4 text-sm leading-6 text-slate-500">
           &copy; {new Date().getFullYear()} Cesar Labs Inc. All rights reserved.
         </p>
         <div className="flex space-x-4 my-4 md:my-0">
-          <a href="https://www.facebook.com/cesar.aguilar.712/" className="text-gray-400 hover:text-white">
+          <a
+            href="https://www.facebook.com/cesar.aguilar.712/"
+            className="text-gray-400 hover:text-white"
+          >
             <FaFacebook />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white">
-            <FaTwitter />
+          {/* <a href="#" className="text-gray-400 hover:text-white">
+            <FaTwitter /> 
           </a>
-          <a href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/" className="text-gray-400 hover:text-white">
+            */}
+          <a
+            href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/"
+            className="text-gray-400 hover:text-white"
+          >
             <FaLinkedin />
           </a>
-          <a href="https://github.com/Blueavian9" className="text-gray-400 hover:text-white">
+          <a
+            href="https://github.com/Blueavian9"
+            className="text-gray-400 hover:text-white"
+          >
             <FaGithub />
           </a>
         </div>
