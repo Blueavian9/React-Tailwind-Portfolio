@@ -199,15 +199,16 @@ const ContactForm = () => {
               </div>
 
 
+
 {/* 
              original button mock 1: 
               <button
                   type="submit"
                   className="w-2/5 py-2 text-cyan-100 font-semibold uppercase tracking-wider bg-cyan-400 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out
-                  relative z-1 bg-[#00ffff] text-white hover:bg-transparent hover:text-[#00ffff] border-2 border-transparent
+                  relative z-1  hover:bg-transparent hover:text-[#00ffff] border-2 border-transparent
                   hover:border-[#00ffff] shadow-[0_0_10px_rgba(0,255,255,0.5),0_0_20px_rgba(0,255,255,0.5),0_0_30px_rgba(0,255,255,0.5),0_0_40px_rgba(0,255,255,0.7)]
                   hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8),0_0_45px_rgba(0,255,255,1)]"
-                  > */}
+                  > 6
 
               {/* <div className="relative overflow-hidden group">
                 <button className="text-white border-2 hover:bg-cyan-500 hover:border-cyan-500 px-4 py-3 my-8 mx-auto flex items-center rounded-md relative overflow-hidden transition-all duration-300 ease-in-out">
