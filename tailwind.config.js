@@ -42,9 +42,9 @@ export default {
       },
       colors: {
         "glow-blue": "#03e9f4",
-        'neon-pink': 'hsl(330, 100%, 70%)',
-        'neon-green': 'hsl(140, 100%, 60%)',
-        'neon-orange': 'hsl(35, 100%, 65%)',
+        pink: "hsl(var(--neon-pink))",
+        green: "hsl(var(--neon-gree))",
+        orange: "hsl(var(--neon-orange))",
       },
     },
   },
