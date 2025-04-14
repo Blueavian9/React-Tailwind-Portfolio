@@ -1,15 +1,13 @@
-{/* Mock 3: Hero.jsx */}
-
-import React from "react";
+/* Mock 3: Hero.jsx */
+import * as React from "react";
 import CesarCoverImg from "../assets/Cesar-Cover.png";
 import GlowingButton from "./GlowingButton";
 
 export default function Hero() {
   return (
     <section className="bg-gradient-to-b from-[#243b55] to-[#141e30] min-h-screen flex flex-col items-center justify-center text-white px-4 py-12">
-
-      {/* Profile Image with Glow Effect */}
-      <div className="relative group mb-6">
+      {/* Profile Glow */}
+      <div className="relative group mb-8">
         <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt"></div>
         <img
           src={CesarCoverImg}
@@ -18,40 +16,51 @@ export default function Hero() {
         />
       </div>
 
-      {/* Title and Tagline */}
-      <h1 className="text-4xl md:text-6xl font-bold text-center mb-4">
+      {/* Name & Title */}
+      <h1 className="text-4xl md:text-6xl font-bold text-center">
         I'm{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
           Cesar Adrian Aguilar
         </span>
-        , Full-Stack Developer
+        , a Full-Stack Developer
       </h1>
-      <p className="text-lg text-gray-300 font-mono text-center max-w-2xl mb-8">
+
+      {/* Bio */}
+      <p className="mt-4 text-lg text-gray-300 font-mono max-w-2xl text-center">
         I specialize in building modern and responsive web applications.
       </p>
 
-      {/* Buttons */}
-      <div className="flex flex-wrap justify-center gap-6">
-        <GlowingButton gradientFrom="#10B981" gradientTo="#3B82F6">
+      {/* Glowing Buttons */}
+      <div className="mt-8 flex flex-wrap justify-center gap-6">
+        <GlowingButton
+          color="green"
+          href="https://github.com/blueavian9"
+          target="_blank"
+        >
           GitHub
         </GlowingButton>
-        <GlowingButton gradientFrom="#F59E0B" gradientTo="#EF4444">
+
+        <GlowingButton
+          color="orange"
+          href="/CesarAguilar_Resume.pdf"
+          target="_blank"
+        >
           Download CV
         </GlowingButton>
-        <GlowingButton gradientFrom="#6366F1" gradientTo="#8B5CF6">
+
+        <GlowingButton
+          color="pink"
+          href="https://www.linkedin.com/in/cesaradrianaguilar/"
+          target="_blank"
+        >
           LinkedIn
         </GlowingButton>
       </div>
-      
     </section>
   );
 }
 
-
-
-
-{
-  /* Mock 2 Hero.jsx:
+/* Mock 2 Hero.jsx:
   import React from "react";
   import CesarCoverImg from "../assets/Cesar-Cover.png"
   import GlowingButton from './GlowingButton'; // adjust path if needed
@@ -142,10 +151,9 @@ export default function Hero() {
            </div>
            </section>
            );
-           */}
+           */
 
-           
-{/* 
+/* 
      // Mock 1 Hero Component
      const Hero = () => { 
       return (
@@ -191,4 +199,4 @@ export default function Hero() {
   }
 
   
-  export default Hero; */}
+  export default Hero; */
