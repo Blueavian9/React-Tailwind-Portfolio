@@ -15,28 +15,31 @@ import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+      <h1 className="text-4xl font-bold text-neon-green-500">
+        Tailwind is Working!
+      </h1>
       <Navbar />
       <main>
-        <section id="#home">
+        <section id="home">
           <Hero />
         </section>
-        <section id="#about">
+        <section id="about">
           <About />
         </section>
-        <section id="#services">
+        <section id="services">
           <Services />
         </section>
-        <section id="#projects">
+        <section id="projects">
           <Projects />
         </section>
-        <section id="#contact">
+        <section id="contact">
           <Contact />
         </section>
-        <section id="#section">
+        <section id="section">
           <Blog />
         </section>
-        <section id="#footer">
+        <section id="footer">
           <Footer />
         </section>
       </main>
