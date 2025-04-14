@@ -1,61 +1,62 @@
-import * as React from "react";
+// import * as React from "react";
 
-const Navbar = () => {
-  return (
-    <nav className="bg-gray-900 text-white p-4 shadow-md w-full z-10">
-      <div className="container mx-auto flex justify-center items-center border-round">
-        <div className="space-x-8">
-          {/* Logo area with actual text */}
-          <div className="text-2xl font-bold">
-            <a
-              href="#home"
-              className="hover:text-cyan-400 transition duration-300"
-            ></a>
-          </div>
+// const Navbar = () => {
+//   return (
+//     <nav className="bg-gray-900 text-white p-4 shadow-md w-full z-10">
+//       <div className="container mx-auto flex justify-center items-center border-round">
+//         <div className="space-x-8">
+//           {/* Logo area with actual text */}
+//           <div className="text-2xl font-bold">
+//             <a
+//               href="#home"
+//               className="hover:text-cyan-400 transition duration-300"
+//             ></a>
+//           </div>
 
-          {/* Navigation Links */}
-          <div className="space-x-8">
-            <a
-              href="#home"
-              className="hover:text-cyan-400 transition duration-300"
-            >
-              <strong>Home</strong>
-            </a>
-            <a
-              href="#about"
-              className="hover:text-cyan-400 transition duration-300"
-            >
-              <strong>About</strong>
-            </a>
-            <a
-              href="#services"
-              className="hover:text-cyan-400 transition duration-300"
-            >
-              <strong>Services</strong>
-            </a>
-            <a
-              href="#projects"
-              className="hover:text-cyan-400 transition duration-300"
-            >
-              <strong>Projects</strong>
-            </a>
-            <a
-              href="#contact"
-              className="hover:text-cyan-400 transition duration-300"
-            >
-              <strong>Contact</strong>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
+//           {/* Navigation Links */}
+//           <div className="space-x-8">
+//             <a
+//               href="#home"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>Home</strong>
+//             </a>
+//             <a
+//               href="#about"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>About</strong>
+//             </a>
+//             <a
+//               href="#services"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>Services</strong>
+//             </a>
+//             <a
+//               href="#projects"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>Projects</strong>
+//             </a>
+//             <a
+//               href="#contact"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>Contact</strong>
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
 
-export default Navbar;
+// export default Navbar;
 
-/*
- Mock 2:
+{
+  /* Mock 2: */
+}
 import * as React from "react";
 
 const Navbar = () => {
@@ -64,7 +65,7 @@ const Navbar = () => {
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            {/* <!-- Mobile menu button--> 
+            {/* <!-- Mobile menu button--> */}
             <button
               type="button"
               class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
@@ -77,7 +78,7 @@ const Navbar = () => {
             Icon when menu is closed.
 
             Menu open: "hidden", Menu closed: "block"
-          --> 
+          --> */}
               <svg
                 class="block size-6"
                 fill="none"
@@ -97,7 +98,7 @@ const Navbar = () => {
             Icon when menu is open.
 
             Menu open: "block", Menu closed: "hidden"
-          --> 
+          --> */}
               <svg
                 class="hidden size-6"
                 fill="none"
@@ -125,7 +126,7 @@ const Navbar = () => {
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
-                {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> 
+                {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                 <a
                   href="#about"
                   class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
@@ -161,7 +162,7 @@ const Navbar = () => {
                   href="#footer"
                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
-                 Footer
+                  Footer
                 </a>
               </div>
             </div>
@@ -190,7 +191,7 @@ const Navbar = () => {
               </svg>
             </button>
 
-            {/* <!-- Profile dropdown --> 
+            {/* <!-- Profile dropdown --> */}
             <div class="relative ml-3">
               <div>
                 <button
@@ -219,7 +220,7 @@ const Navbar = () => {
             Leaving: "transition ease-in duration-75"
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95"
-          --> 
+          --> */}
               <div
                 class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-hidden"
                 role="menu"
@@ -227,7 +228,7 @@ const Navbar = () => {
                 aria-labelledby="user-menu-button"
                 tabindex="-1"
               >
-                {/* <!-- Active: "bg-gray-100 outline-hidden", Not Active: "" --> 
+                {/* <!-- Active: "bg-gray-100 outline-hidden", Not Active: "" --> */}
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm text-gray-700"
@@ -261,10 +262,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu, show/hide based on menu state.
+      {/* Mobile menu, show/hide based on menu state. */}
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pt-2 pb-3">
-          {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" 
+          {/* 
+          Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" 
+          */}
           <a
             href="#"
             class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
@@ -296,43 +299,38 @@ const Navbar = () => {
   );
 };
 
+{
+  /* */
+}
+
+<nav className="bg-gray-900 text-white p-4 shadow-md w-full z-10">
+  <div className="container mx-auto flex justify-center items-center border-round">
+    <div className="space-x-8">
+      <div className="text-2xl font-bold">
+        <a href="#home" className="hover:text-cyan-400"></a>
+      </div>
+      <div className="space-x-8">
+        <a href="#home" className="hover:text-cyan-400">
+          <strong>Home</strong>
+        </a>
+        <a href="#about" className="hover:text-cyan-400">
+          <strong>About</strong>
+        </a>
+        <hr />
+        <a href="#services" className="hover:text-cyan-400">
+          <strong>Services</strong>
+        </a>
+        <hr />
+        <a href="#projects" className="hover:text-cyan-400">
+          <strong>Projects</strong>
+        </a>
+        <hr />
+        <a href="#contact" className="hover:text-cyan-400">
+          <strong>Contact</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>;
+
 export default Navbar;
-
-{/*
-    <nav className="bg-gray-900 text-white p-4 shadow-md w-full z-10">
-      <div className="container mx-auto flex justify-center items-center border-round">
-        <div className="space-x-8">
-          <div className="text-2xl font-bold">
-            <a href="#home" className="hover:text-cyan-400"></a>
-          </div>
-           <div className="space-x-8">
-            <a href="#home" className="hover:text-cyan-400">
-              <strong>Home</strong>
-            </a>
-            <a href="#about" className="hover:text-cyan-400">
-            <strong>About</strong>
-            </a>
-            <hr />
-            <a href="#services" className="hover:text-cyan-400">
-            <strong>Services</strong>
-            </a>
-            <hr />
-            <a href="#projects" className="hover:text-cyan-400">
-            <strong>Projects</strong>
-            </a>
-            <hr />
-            <a href="#contact" className="hover:text-cyan-400">
-            <strong>Contact</strong>
-            </a>
-            </div>
-            </div>
-            </div>
-            </nav>
-          }
-        }         
-      }
-    }
-  }
-} 
-
-*/
