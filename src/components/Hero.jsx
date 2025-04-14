@@ -8,31 +8,34 @@ const GlowingButton = ({ children, className, gradientFrom, gradientTo }) => (
                 transition-all duration-300 ease-in-out shadow-[0_0_15px_2px_rgba(255,255,255,0.2)] 
                 group hover:scale-105 ${className}`}
   >
-    {/* Glowing animated ring */}
+    {/* Glowing background effect */}
     <span
-      className="absolute inset-0 blur-md opacity-30 group-hover:opacity-80 transition duration-500 animate-pulse"
+      className="absolute inset-0 w-full h-full opacity-0 blur-lg group-hover:opacity-100 transition duration-300 ease-out"
       style={{
-        background: `radial-gradient(circle at center, ${gradientFrom}, ${gradientTo})`,
+        background: `linear-gradient(to bottom right, ${gradientFrom}, ${gradientTo})`,
         zIndex: 0,
       }}
     ></span>
 
-    {/* Button content */}
-    <span className="relative z-10">{children}</span>
-  </button>
-);
+    {/* Subtle gradient overlay */}
     <span
-      className="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 blur-lg group-hover:opacity-100"
+      className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-70 transition duration-300 ease-out"
       style={{
         background: `linear-gradient(to bottom right, ${gradientFrom}, ${gradientTo})`,
+        zIndex: 1,
       }}
     ></span>
+
+    {/* Pulse ring animation */}
     <span
-      className="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 group-hover:opacity-70"
+      className="absolute inset-0 blur-md opacity-30 group-hover:opacity-80 transition duration-500 animate-pulse"
       style={{
-        background: `linear-gradient(to bottom right, ${gradientFrom}, ${gradientTo})`,
+        background: `radial-gradient(circle at center, ${gradientFrom}, ${gradientTo})`,
+        zIndex: 2,
       }}
     ></span>
+
+    {/* Button text */}
     <span className="relative z-10">{children}</span>
   </button>
 );
@@ -63,9 +66,9 @@ export default function Hero() {
       <p className="mt-4 text-lg text-gray-300 font-mono max-w-2xl text-center">
         I specialize in building modern and responsive web applications.
       </p>
- 
+
       {/* Glowing Buttons */}
-       <div className="mt-8 flex flex-wrap justify-center gap-6">
+      <div className="mt-8 flex flex-wrap justify-center gap-6">
         <GlowingButton
           className="bg-gradient-to-r from-green-300 via-green-600 to-green-900 outline hover:outline-offset-4"
           gradientFrom="#6EE7B7"
@@ -75,8 +78,8 @@ export default function Hero() {
         </GlowingButton>
         <GlowingButton
           className="bg-gradient-to-r from-orange-300 via-orange-600 to-orange-900 outline hover:outline-offset-4"
-          gradientFrom="#FDBA74"
-          gradientTo="#EF4444"
+          gradientFrom="#EF4444"
+          gradientTo="#FDBA74"
         >
           Download CV
         </GlowingButton>
@@ -90,9 +93,10 @@ export default function Hero() {
       </div>
     </section>
   );
-} 
+}
 
-{/* 
+{
+  /* 
  // original Hero Component
 
  const Hero = () => { 
@@ -137,4 +141,5 @@ export default function Hero() {
      </div>
    );
  }
- export default Hero; */}
+ export default Hero; */
+}
