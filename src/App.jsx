@@ -7,17 +7,19 @@ import About from "./components/About.jsx";
 import Services from "./components/Services.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
+import Blog from "./components/Blog.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
       <About />
+      <Hero />
       <Services />
       <Projects />
       <Contact />
+      <Blog />
       <Footer />
     </div>
   );
