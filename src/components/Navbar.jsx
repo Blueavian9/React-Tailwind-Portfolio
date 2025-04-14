@@ -7,26 +7,42 @@ const Navbar = () => {
         <div className="space-x-8">
           {/* Logo area with actual text */}
           <div className="text-2xl font-bold">
-            <a href="#home" className="hover:text-cyan-400 transition duration-300">
-              Blueavian9
-            </a>
+            <a
+              href="#home"
+              className="hover:text-cyan-400 transition duration-300"
+            ></a>
           </div>
 
           {/* Navigation Links */}
           <div className="space-x-8">
-            <a href="#home" className="hover:text-cyan-400 transition duration-300">
+            <a
+              href="#home"
+              className="hover:text-cyan-400 transition duration-300"
+            >
               <strong>Home</strong>
             </a>
-            <a href="#about" className="hover:text-cyan-400 transition duration-300">
+            <a
+              href="#about"
+              className="hover:text-cyan-400 transition duration-300"
+            >
               <strong>About</strong>
             </a>
-            <a href="#services" className="hover:text-cyan-400 transition duration-300">
+            <a
+              href="#services"
+              className="hover:text-cyan-400 transition duration-300"
+            >
               <strong>Services</strong>
             </a>
-            <a href="#projects" className="hover:text-cyan-400 transition duration-300">
+            <a
+              href="#projects"
+              className="hover:text-cyan-400 transition duration-300"
+            >
               <strong>Projects</strong>
             </a>
-            <a href="#contact" className="hover:text-cyan-400 transition duration-300">
+            <a
+              href="#contact"
+              className="hover:text-cyan-400 transition duration-300"
+            >
               <strong>Contact</strong>
             </a>
           </div>
@@ -37,29 +53,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  Mock 2:
