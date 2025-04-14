@@ -1,25 +1,26 @@
 {
   /* Mock 3: Hero.jsx */
 }
+
 <div>
   <GlowingButton
     className=""
-    gradientFrom="#10B981" // emerald-500
-    gradientTo="#3B82F6" // blue-500
+    gradientFrom="#10B981" /* emerald-500 */
+    gradientTo="#3B82F6" /* blue-500 */
   >
     GitHub
   </GlowingButton>
   <GlowingButton
     className=""
-    gradientFrom="#F59E0B" // amber-500
-    gradientTo="#EF4444" // red-500
+    gradientFrom="#F59E0B" /* amber-500 */
+    gradientTo="#EF4444" /* red-500 */
   >
     Download CV
   </GlowingButton>
   <GlowingButton
     className=""
-    gradientFrom="#6366F1" // indigo-500
-    gradientTo="#8B5CF6" // violet-500
+    gradientFrom="#6366F1" /* indigo-500 */
+    gradientTo="#8B5CF6" /* violet-500 */
   >
     LinkedIn
   </GlowingButton>
