@@ -36,10 +36,14 @@ export default function Hero() {
     className=""
     gradientFrom="#6366F1" /* indigo-500 */
     gradientTo="#8B5CF6" /* violet-500 */
-  >
+    >
     LinkedIn
   </GlowingButton>
-</div>;
+</div>
+</section>
+  );
+}
+
 
 {
   /* Mock 2 Hero.jsx:
@@ -129,11 +133,11 @@ export default function Hero() {
            gradientTo="#1E3A8A"
            >
            LinkedIn
-         </GlowingButton>
-       </div>
-     </section>
-   );
-   */
+           </GlowingButton>
+           </div>
+           </section>
+           );
+           */
 }
 
 {
@@ -181,5 +185,4 @@ export default function Hero() {
       </div>
     );
   }
-  export default Hero; */
-}
+  export default Hero; */}
