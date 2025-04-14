@@ -1,43 +1,32 @@
-<GlowingButton
-  className=""
-  gradientFrom="#10B981"  // emerald-500
-  gradientTo="#3B82F6"    // blue-500
->
-  GitHub
-</GlowingButton>
-<GlowingButton
-  className=""
-  gradientFrom="#F59E0B"  // amber-500
-  gradientTo="#EF4444"    // red-500
->
-  Download CV
-</GlowingButton>
-<GlowingButton
-  className=""
-  gradientFrom="#6366F1"  // indigo-500
-  gradientTo="#8B5CF6"    // violet-500
->
-  LinkedIn
-</GlowingButton>
+{
+  /* Mock 3: Hero.jsx */
+}
+<div>
+  <GlowingButton
+    className=""
+    gradientFrom="#10B981" // emerald-500
+    gradientTo="#3B82F6" // blue-500
+  >
+    GitHub
+  </GlowingButton>
+  <GlowingButton
+    className=""
+    gradientFrom="#F59E0B" // amber-500
+    gradientTo="#EF4444" // red-500
+  >
+    Download CV
+  </GlowingButton>
+  <GlowingButton
+    className=""
+    gradientFrom="#6366F1" // indigo-500
+    gradientTo="#8B5CF6" // violet-500
+  >
+    LinkedIn
+  </GlowingButton>
+</div>;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* Mock 1:
+{
+  /* Mock 2 Hero.jsx:
   import React from "react";
   import CesarCoverImg from "../assets/Cesar-Cover.png"
   const GlowingButton = ({ children, className, gradientFrom, gradientTo }) => (
@@ -63,7 +52,7 @@
          zIndex: 1,
         }}
         ></span
-     {/* Pulse ring animation */}
+     {/* Pulse ring animation 
      <span
        className="absolute inset-0 blur-md opacity-30 group-hover:opacity-80 transition duration-500 animate-pulse"
        style={{
@@ -78,7 +67,7 @@
   export default function Hero() {
     return (
       <section className="bg-gradient-to-b from-[#243b55] to-[#141e30] min-h-screen flex flex-col items-center justify-center text-white px-4 py-12">
-       {/* Profile Image Glow Effect */}
+       {/* Profile Image Glow Effect 
        <div className="relative group">
          <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt"></div>
          <img
@@ -125,11 +114,12 @@
        </div>
      </section>
    );
-   */} 
-   
-   {
-     /* 
-     // original Hero Componen
+   */
+}
+
+{
+  /* 
+     // Mock 1 Hero Component
      const Hero = () => { 
       return (
         <div className="bg-gradient-to-b from-[#243b55] to-[#141e30] text-white text-center py-16">
@@ -173,4 +163,4 @@
     );
   }
   export default Hero; */
- }
+}
