@@ -1,58 +1,3 @@
-// import * as React from "react";
-
-// const Navbar = () => {
-//   return (
-//     <nav className="bg-gray-900 text-white p-4 shadow-md w-full z-10">
-//       <div className="container mx-auto flex justify-center items-center border-round">
-//         <div className="space-x-8">
-//           {/* Logo area with actual text */}
-//           <div className="text-2xl font-bold">
-//             <a
-//               href="#home"
-//               className="hover:text-cyan-400 transition duration-300"
-//             ></a>
-//           </div>
-
-//           {/* Navigation Links */}
-//           <div className="space-x-8">
-//             <a
-//               href="#home"
-//               className="hover:text-cyan-400 transition duration-300"
-//             >
-//               <strong>Home</strong>
-//             </a>
-//             <a
-//               href="#about"
-//               className="hover:text-cyan-400 transition duration-300"
-//             >
-//               <strong>About</strong>
-//             </a>
-//             <a
-//               href="#services"
-//               className="hover:text-cyan-400 transition duration-300"
-//             >
-//               <strong>Services</strong>
-//             </a>
-//             <a
-//               href="#projects"
-//               className="hover:text-cyan-400 transition duration-300"
-//             >
-//               <strong>Projects</strong>
-//             </a>
-//             <a
-//               href="#contact"
-//               className="hover:text-cyan-400 transition duration-300"
-//             >
-//               <strong>Contact</strong>
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
 
 {
   /* Mock 2: */
@@ -221,6 +166,7 @@ const Navbar = () => {
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95"
           --> */}
+
               <div
                 class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-hidden"
                 role="menu"
@@ -269,17 +215,17 @@ const Navbar = () => {
           Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" 
           */}
           <a
-            href="#"
+            href="#home"
             class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
             aria-current="page"
           >
-            Dashboard
+            Home
           </a>
           <a
-            href="#"
+            href="#about"
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
           >
-            Team
+            About
           </a>
           <a
             href="#"
@@ -288,10 +234,16 @@ const Navbar = () => {
             Projects
           </a>
           <a
-            href="#"
+            href="#blog"
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
           >
-            Calendar
+            Blog
+          </a>
+          <a
+            href="#footer"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          >
+            Footer
           </a>
         </div>
       </div>
@@ -334,3 +286,62 @@ const Navbar = () => {
 </nav>;
 
 export default Navbar;
+
+
+
+/* Mock 3: */
+// import * as React from "react";
+
+// const Navbar = () => {
+//   return (
+//     <nav className="bg-gray-900 text-white p-4 shadow-md w-full z-10">
+//       <div className="container mx-auto flex justify-center items-center border-round">
+//         <div className="space-x-8">
+//           {/* Logo area with actual text */}
+//           <div className="text-2xl font-bold">
+//             <a
+//               href="#home"
+//               className="hover:text-cyan-400 transition duration-300"
+//             ></a>
+//           </div>
+
+//           {/* Navigation Links */}
+//           <div className="space-x-8">
+//             <a
+//               href="#home"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>Home</strong>
+//             </a>
+//             <a
+//               href="#about"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>About</strong>
+//             </a>
+//             <a
+//               href="#services"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>Services</strong>
+//             </a>
+//             <a
+//               href="#projects"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>Projects</strong>
+//             </a>
+//             <a
+//               href="#contact"
+//               className="hover:text-cyan-400 transition duration-300"
+//             >
+//               <strong>Contact</strong>
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
