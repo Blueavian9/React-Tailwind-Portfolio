@@ -1,4 +1,6 @@
-{/* Mock 2: */}
+{
+  /* Mock 2: */
+}
 import "./App.css";
 import "./index.css";
 import * as React from "react";
@@ -16,49 +18,31 @@ export default function App() {
     <div>
       <Navbar />
       <main>
-        <section id="home">
+        <section id="#home">
           <Hero />
         </section>
-        <section id="about">
+        <section id="#about">
           <About />
         </section>
-        <section id="services">
+        <section id="#services">
           <Services />
         </section>
-        <section id="projects">
+        <section id="#projects">
           <Projects />
         </section>
-        <section id="contact">
+        <section id="#contact">
           <Contact />
         </section>
-        <Blog />
+        <section id="#section">
+          <Blog />
+        </section>
+        <section id="#footer">
+          <Footer />
+        </section>
       </main>
-      <Footer />
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Mock 1:
 //  import "./App.css";

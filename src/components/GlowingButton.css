@@ -4,13 +4,13 @@
     --neon-orange: 35 100% 65%;
 }
 
-.neon-button {
+.glowing-button {
     position: relative;
     text-shadow: 0 0 0.25em currentColor, 0 0 0.5em currentColor;
     border: 2px solid currentColor;
     transition: 0.3s;
 }
 
-.neon-button:hover {
+.glowing-button:hover {
     box-shadow: 0 0 1em currentColor, inset 0 0 1em currentColor;
 }
