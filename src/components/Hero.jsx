@@ -1,7 +1,22 @@
 {
   /* Mock 3: Hero.jsx */
 }
+import React from "react";
+import CesarCoverImg from "../assets/Cesar-Cover.png"
+import GlowingButton from './GlowingButton'; // adjust path if needed
 
+export default function Hero() {
+  return (
+    <section className="bg-gradient-to-b from-[#243b55] to-[#141e30] min-h-screen flex flex-col items-center justify-center text-white px-4 py-12">
+     
+<div className="relative group"></div>
+<div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt">
+  </div>
+         <img
+           src={CesarCoverImg.png}
+           alt="Cesar Cover"
+           className="relative w-48 h-48 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
+           />
 <div>
   <GlowingButton
     className=""
@@ -30,6 +45,9 @@
   /* Mock 2 Hero.jsx:
   import React from "react";
   import CesarCoverImg from "../assets/Cesar-Cover.png"
+  import GlowingButton from './GlowingButton'; // adjust path if needed
+
+  
   const GlowingButton = ({ children, className, gradientFrom, gradientTo }) => (
     <button
     type="button"
