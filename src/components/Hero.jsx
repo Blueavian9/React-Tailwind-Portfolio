@@ -1,48 +1,53 @@
-{
-  /* Mock 3: Hero.jsx */
-}
+{/* Mock 3: Hero.jsx */}
+
 import React from "react";
-import CesarCoverImg from "../assets/Cesar-Cover.png"
-import GlowingButton from './GlowingButton'; // adjust path if needed
+import CesarCoverImg from "../assets/Cesar-Cover.png";
+import GlowingButton from "./GlowingButton";
 
 export default function Hero() {
   return (
     <section className="bg-gradient-to-b from-[#243b55] to-[#141e30] min-h-screen flex flex-col items-center justify-center text-white px-4 py-12">
-     
-<div className="relative group"></div>
-<div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt">
-  </div>
-         <img
-           src={CesarCoverImg.png}
-           alt="Cesar Cover"
-           className="relative w-48 h-48 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
-           />
-<div>
-  <GlowingButton
-    className=""
-    gradientFrom="#10B981" /* emerald-500 */
-    gradientTo="#3B82F6" /* blue-500 */
-  >
-    GitHub
-  </GlowingButton>
-  <GlowingButton
-    className=""
-    gradientFrom="#F59E0B" /* amber-500 */
-    gradientTo="#EF4444" /* red-500 */
-  >
-    Download CV
-  </GlowingButton>
-  <GlowingButton
-    className=""
-    gradientFrom="#6366F1" /* indigo-500 */
-    gradientTo="#8B5CF6" /* violet-500 */
-    >
-    LinkedIn
-  </GlowingButton>
-</div>
-</section>
+
+      {/* Profile Image with Glow Effect */}
+      <div className="relative group mb-6">
+        <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt"></div>
+        <img
+          src={CesarCoverImg}
+          alt="Cesar Cover"
+          className="relative w-48 h-48 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+
+      {/* Title and Tagline */}
+      <h1 className="text-4xl md:text-6xl font-bold text-center mb-4">
+        I'm{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+          Cesar Adrian Aguilar
+        </span>
+        , Full-Stack Developer
+      </h1>
+      <p className="text-lg text-gray-300 font-mono text-center max-w-2xl mb-8">
+        I specialize in building modern and responsive web applications.
+      </p>
+
+      {/* Buttons */}
+      <div className="flex flex-wrap justify-center gap-6">
+        <GlowingButton gradientFrom="#10B981" gradientTo="#3B82F6">
+          GitHub
+        </GlowingButton>
+        <GlowingButton gradientFrom="#F59E0B" gradientTo="#EF4444">
+          Download CV
+        </GlowingButton>
+        <GlowingButton gradientFrom="#6366F1" gradientTo="#8B5CF6">
+          LinkedIn
+        </GlowingButton>
+      </div>
+      
+    </section>
   );
 }
+
+
 
 
 {
@@ -137,11 +142,10 @@ export default function Hero() {
            </div>
            </section>
            );
-           */
-}
+           */}
 
-{
-  /* 
+           
+{/* 
      // Mock 1 Hero Component
      const Hero = () => { 
       return (
@@ -185,4 +189,6 @@ export default function Hero() {
       </div>
     );
   }
+
+  
   export default Hero; */}
