@@ -5,58 +5,60 @@ import GlowingButton from "./GlowingButton";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-b from-[#243b55] to-[#141e30] min-h-screen flex flex-col items-center justify-center text-white px-4 py-12">
-      {/* Profile Glow */}
-      <div className="relative group mb-8">
-        <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt"></div>
-        <img
-          src={CesarCoverImg}
-          alt="Cesar Cover"
-          className="relative w-48 h-48 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-      </div>
+    <div>
+      <section className="bg-gradient-to-b from-[#243b55] to-[#141e30] min-h-screen flex flex-col items-center justify-center text-white px-4 py-12">
+        {/* Profile Glow */}
+        <div className="relative group mb-8">
+          <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt"></div>
+          <img
+            src={CesarCoverImg}
+            alt="Cesar Cover"
+            className="relative w-48 h-48 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
 
-      {/* Name & Title */}
-      <h1 className="text-4xl md:text-6xl font-bold text-center">
-        I'm{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-          Cesar Adrian Aguilar
-        </span>
-        , a Full-Stack Developer
-      </h1>
+        {/* Name & Title */}
+        <h1 className="text-4xl md:text-6xl font-bold text-center">
+          I'm{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+            Cesar Adrian Aguilar
+          </span>
+          , a Full-Stack Developer
+        </h1>
 
-      {/* Bio */}
-      <p className="mt-4 text-lg text-gray-300 font-mono max-w-2xl text-center">
-        I specialize in building modern and responsive web applications.
-      </p>
+        {/* Bio */}
+        <p className="mt-4 text-lg text-gray-300 font-mono max-w-2xl text-center">
+          I specialize in building modern and responsive web applications.
+        </p>
 
-      {/* Glowing Buttons */}
-      <div className="mt-8 flex flex-wrap justify-center gap-6">
-        <GlowingButton
-          color="green"
-          href="https://github.com/blueavian9"
-          target="_blank"
-        >
-          GitHub
-        </GlowingButton>
+        {/* Glowing Buttons */}
+        <div className="mt-8 flex flex-wrap justify-center gap-6">
+          <GlowingButton
+            color="green"
+            href="https://github.com/blueavian9"
+            target="_blank"
+          >
+            GitHub
+          </GlowingButton>
 
-        <GlowingButton
-          color="orange"
-          href="/CesarAguilar_Resume.pdf"
-          target="_blank"
-        >
-          Download CV
-        </GlowingButton>
+          <GlowingButton
+            color="orange"
+            href="/CesarAguilar_Resume.pdf"
+            target="_blank"
+          >
+            Download CV
+          </GlowingButton>
 
-        <GlowingButton
-          color="pink"
-          href="https://www.linkedin.com/in/cesaradrianaguilar/"
-          target="_blank"
-        >
-          LinkedIn
-        </GlowingButton>
-      </div>
-    </section>
+          <GlowingButton
+            color="pink"
+            href="https://www.linkedin.com/in/cesaradrianaguilar/"
+            target="_blank"
+          >
+            LinkedIn
+          </GlowingButton>
+        </div>
+      </section>
+    </div>
   );
 }
 
