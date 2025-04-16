@@ -1,13 +1,21 @@
-// Mock 3: 
+// Mock 3:
 import React from "react";
 
 const colorMap = {
+  moon: "from-[#A1C4FD] via-[#C2E9FB] to-[#667eea]", // light sky blue to moon blue
+  aurora: "from-[#D4FC79] via-[#96E6A1] to-[#56ab2f]", // subtle green aurora tone
+  cosmic: "from-[#8EC5FC] via-[#E0C3FC] to-[#736EFE]", // dreamy purples and blues
   green: "from-green-300 via-green-600 to-green-900",
   orange: "from-orange-300 via-orange-600 to-orange-900",
   pink: "from-pink-300 via-pink-600 to-pink-900",
 };
 
-export default function GlowingButton({ href, children, color = "green", target = "_self" }) {
+export default function GlowingButton({
+  href,
+  children,
+  color = "green",
+  target = "_self",
+}) {
   const gradient = colorMap[color] || colorMap.green;
 
   return (
@@ -25,23 +33,7 @@ export default function GlowingButton({ href, children, color = "green", target 
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  Mock 2: 
+//  Mock 2:
 // const GlowingButton = ({
 //   children,
 //   color = "pink",
@@ -70,8 +62,6 @@ export default function GlowingButton({ href, children, color = "green", target 
 // };
 
 // export default GlowingButton;
-
-
 
 // Mock 1:
 //  const NeonButton = ({ children, color = "pink" }) => {

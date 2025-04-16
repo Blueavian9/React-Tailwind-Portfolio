@@ -30,7 +30,7 @@ export default {
         },
       },
       animation: {
-        glow: "glow 2s ease-in-out infinite",
+        glow: "glow 3s ease-in-out infinite",
         btnAnim1: "btnAnim1 1s linear infinite",
         btnAnim2: "btnAnim2 1s linear infinite 0.25s",
         btnAnim3: "btnAnim3 1s linear infinite 0.5s",
