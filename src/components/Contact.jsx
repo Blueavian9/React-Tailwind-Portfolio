@@ -27,7 +27,6 @@ const ContactForm = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#243b55] to-[#141e30]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mb-8">
-
         {/* Talk to Me Section */}
         <div className="max-w-lg mx-auto bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)] mb-8">
           <h2 className="text-3xl text-center font-bold text-white mb-4">
@@ -36,24 +35,31 @@ const ContactForm = () => {
             </span>
           </h2>
           <p className="text-white text-lg mb-6 text-center font-mono">
-            I'm open to discussing employment opportunities, web development projects, or Full Stack partnerships.
+            I'm open to discussing employment opportunities, web development
+            projects, or Full Stack partnerships.
           </p>
 
           {/* Contact Details Section */}
           <div className="space-y-4 text-white">
             <div className="flex items-center justify-center">
               <FaPhone className="mr-3 text-cyan-400" />
-              <span className="font-mono text-lg"><strong>+123 456 7890</strong></span>
+              <span className="font-mono text-lg">
+                <strong>+123 456 7890</strong>
+              </span>
             </div>
 
             <div className="flex items-center justify-center">
               <FaEnvelope className="mr-3 text-cyan-400" />
-              <span className="font-mono text-lg"><strong>blueavian9@gmail.com</strong></span>
+              <span className="font-mono text-lg">
+                <strong>blueavian9@gmail.com</strong>
+              </span>
             </div>
 
             <div className="flex items-center justify-center">
               <FaMapMarkedAlt className="mr-3 text-cyan-400" />
-              <span className="font-mono text-lg"><strong>123 W. BloomTech St. Los Angeles, USA</strong></span>
+              <span className="font-mono text-lg">
+                <strong>123 W. BloomTech St. Los Angeles, USA</strong>
+              </span>
             </div>
           </div>
         </div>
@@ -75,6 +81,52 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                className="w-full px-0 py-1.5 text-sm text-white bg-transparent border-b border-white focus:outline-none focus:border-[#03e9f4] peer"
+              />
+              <label className="absolute left-0 top-2 text-white text-sm transition-all duration-300 -z-1 origin-0 peer-focus:text-[#03e9f4] peer-focus:text-xs peer-focus:-translate-y-5 peer-valid:text-xs peer-valid:-translate-y-5">
+                Full Name
+              </label>
+            </div>
+
+            {/* Email */}
+            <div className="relative">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-0 py-1.5 text-sm text-white bg-transparent border-b border-white focus:outline-none focus:border-[#03e9f4] peer"
+              />
+              <label className="absolute left-0 top-2 text-white text-sm transition-all duration-300 -z-1 origin-0 peer-focus:text-[#03e9f4] peer-focus:text-xs peer-focus:-translate-y-5 peer-valid:text-xs peer-valid:-translate-y-5">
+                Email
+              </label>
+            </div>
+
+            {/* Message */}
+            <div className="relative">
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows="4"
+                className="w-full px-0 py-1.5 text-sm text-white bg-transparent border-b border-white focus:outline-none focus:border-[#03e9f4] peer resize-none"
+              ></textarea>
+              <label className="absolute left-0 top-2 text-white text-sm transition-all duration-300 -z-1 origin-0 peer-focus:text-[#03e9f4] peer-focus:text-xs peer-focus:-translate-y-5 peer-valid:text-xs peer-valid:-translate-y-5">
+                Message
+              </label>
+            </div>
+            {/* Mock 1 larger input labels in form 
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name 
+            <div className="relative">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
                 className="w-full px-0 py-2 text-base text-white bg-transparent border-b border-white focus:outline-none focus:border-[#03e9f4] peer"
               />
               <label className="absolute left-0 top-2 text-white text-base transition-all duration-300 -z-1 origin-0 peer-focus:text-[#03e9f4] peer-focus:text-xs peer-focus:-translate-y-6 peer-valid:text-xs peer-valid:-translate-y-6">
@@ -82,7 +134,7 @@ const ContactForm = () => {
               </label>
             </div>
 
-            {/* Email */}
+            {/* Email 
             <div className="relative">
               <input
                 type="email"
@@ -97,7 +149,7 @@ const ContactForm = () => {
               </label>
             </div>
 
-            {/* Message */}
+            {/* Message 
             <div className="relative">
               <textarea
                 name="message"
@@ -110,16 +162,18 @@ const ContactForm = () => {
               <label className="absolute left-0 top-2 text-white text-base transition-all duration-300 -z-1 origin-0 peer-focus:text-[#03e9f4] peer-focus:text-xs peer-focus:-translate-y-6 peer-valid:text-xs peer-valid:-translate-y-6">
                 Message
               </label>
-            </div>
+            </div> */}
 
             {/* Submit Button */}
             <div className="text-center">
               <button
                 type="submit"
-                className="w-2/5 py-2 text-cyan-100 font-semibold uppercase tracking-wider bg-cyan-400 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out
-                relative z-1 hover:bg-transparent hover:text-[#00ffff] border-2 border-transparent hover:border-[#00ffff]
-                shadow-[0_0_10px_rgba(0,255,255,0.5),0_0_20px_rgba(0,255,255,0.5),0_0_30px_rgba(0,255,255,0.5),0_0_40px_rgba(0,255,255,0.7)]
-                hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8),0_0_45px_rgba(0,255,255,1)]"
+                className="relative z-10 w-1/4 py-1.5 text-sm text-cyan-100 hover:text-[#000000] font-semibold uppercase tracking-wide rounded-md bg-gradient-to-r from-blue-600 to-blue-600 
+  hover:from-cyan-300 hover:to-cyan-300 
+  border-4 border-transparent hover:border-[#00ffff] 
+  focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 
+  hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8)] 
+  transition-all duration-300 ease-in-out"
               >
                 Send
               </button>
@@ -133,7 +187,22 @@ const ContactForm = () => {
 
 export default ContactForm;
 
-{/* Mock 2:
+{
+  /* Mock 1 larger GlowingButton <button
+                type="submit"
+                className="relative z-10 w-2/5 py-2 text-cyan-100 hover:text-[#000000] font-semibold uppercase tracking-wider rounded-md bg-gradient-to-r from-blue-600 to-blue-600 
+  hover:from-cyan-300  hover:to-cyan-300 
+  border-4 border-transparent hover:border-[#00ffff] 
+  focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 
+  hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8)] 
+  transition-all duration-300 ease-in-out"
+              >
+                Send Message
+              </button> */
+}
+
+{
+  /* Mock 2:
   import * as React from "react";
  import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
  import ContactBg1 from "../assets/logo.png";
@@ -302,4 +371,5 @@ export default ContactForm;
 
 export default ContactForm;
 
-*/}
+*/
+}
