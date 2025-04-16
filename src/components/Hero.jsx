@@ -34,7 +34,7 @@ export default function Hero() {
         {/* Glowing Buttons */}
         <div className="mt-8 flex flex-wrap justify-center gap-6">
           <GlowingButton
-            color="green"
+            color="moon"
             href="https://github.com/blueavian9"
             target="_blank"
           >
@@ -42,7 +42,7 @@ export default function Hero() {
           </GlowingButton>
 
           <GlowingButton
-            color="orange"
+            color="aurora"
             href="/CesarAguilar_Resume.pdf"
             target="_blank"
           >
@@ -50,7 +50,7 @@ export default function Hero() {
           </GlowingButton>
 
           <GlowingButton
-            color="pink"
+            color="cosmic"
             href="https://www.linkedin.com/in/cesaradrianaguilar/"
             target="_blank"
           >
