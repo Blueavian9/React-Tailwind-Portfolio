@@ -1,4 +1,3 @@
-
 {
   /* Mock 2: */
 }
@@ -150,7 +149,7 @@ const Navbar = () => {
                   <span class="sr-only">Open user menu</span>
                   <img
                     class="size-8 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    src="http://localhost:5173/src/assets/Cesar-Cover.png"
                     alt="CesarImg2.png"
                   />
                 </button>
@@ -286,8 +285,6 @@ const Navbar = () => {
 </nav>;
 
 export default Navbar;
-
-
 
 /* Mock 3: */
 // import * as React from "react";
