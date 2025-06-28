@@ -86,11 +86,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { id: "home", label: "Home", icon: "🏠", description: "Welcome to my portfolio" },
-    { id: "about", label: "About", icon: "👨‍💻", description: "Learn about my background" },
-    { id: "services", label: "Services", icon: "⚡", description: "What I can do for you" },
-    { id: "projects", label: "Projects", icon: "🚀", description: "View my work" },
-    { id: "contact", label: "Contact", icon: "📧", description: "Get in touch" },
+    { id: "home", label: "Home", description: "Welcome to my portfolio" },
+    { id: "about", label: "About", description: "Learn about my background" },
+    { id: "services", label: "Services", description: "What I can do for you" },
+    { id: "projects", label: "Projects", description: "View my work" },
+    { id: "contact", label: "Contact", description: "Get in touch" },
   ];
 
   return (
