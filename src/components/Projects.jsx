@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useEffect } from "react";
 import projImg1 from "../assets/projImg1.png";
 import projImg2 from "../assets/projImg2.png";
@@ -17,6 +16,7 @@ const projects = [
     technologies: "AWS-SDK Polly V3, Groq",
     image: projImg1,
     github: "https://github.com/Blueavian9/Text2SpeechAPIPollyV3",
+    liveDemo: "https://text2speechpollyv3.netlify.app/"
   },
   {
     id: 2,
@@ -24,6 +24,7 @@ const projects = [
     technologies: "Full Stack, Backend",
     image: projImg2,
     github: "https://github.com/Blueavian9/bookLibraryDocumentation",
+    liveDemo: "https://booklibraryDocumentation.netlify.app/",
   },
   {
     id: 3,
@@ -31,6 +32,7 @@ const projects = [
     technologies: "REACT.js, API's Front End",
     image: projImg3,
     github: "https://github.com/Blueavian9/nasa-photo-of-the-day",
+    liveDemo: "https://nasa-photo-of-the-day.netlify.app/",
   },
   {
     id: 4,
@@ -38,6 +40,7 @@ const projects = [
     technologies: "GROQ_AI",
     image: projImg4,
     github: "https://github.com/Blueavian9/ai-groq-rpg",
+    liveDemo: "https://ai-groq-rpg.netlify.app/",
   },
   {
     id: 5,
@@ -45,6 +48,7 @@ const projects = [
     technologies: "React-Router, Link, NavLink",
     image: projImg5,
     github: "https://github.com/Blueavian9/React-Router-Movies",
+    liveDemo: "https://React-Router-Movies.netlify.app/",
   },
   {
     id: 6,
@@ -52,6 +56,7 @@ const projects = [
     technologies: "Full Stack, Auth0",
     image: projImg6,
     github: "https://github.com/Blueavian9/asylum-rg-fe-starter",
+    liveDemo: "https://asylum-rg-fe-starter.netlify.app/", 
   },
   {
     id: 7,
@@ -60,6 +65,7 @@ const projects = [
       "React, Tailwind, Testing, API Backend Routes, CRUD, React TransitionGroup, Node, ",
     image: projImg7,
     github: "https://github.com/Blueavian9/web-guided-project-HTTP",
+    liveDemo: "https://web-guided-project-HTTP.netlify.app/", 
   },
   {
     id: 8,
@@ -67,13 +73,15 @@ const projects = [
     technologies: "Full Stack, Advanced React Hooks",
     image: projImg8,
     github: "https://github.com/Blueavian9/User-Onboarding",
+    liveDemo: "https://User-Onboarding.netlify.app/",
   },
   {
     id: 9,
-    name: "Website",
-    technologies: "MERN Stack",
+    name: "Parallax Website",
+    technologies: "React, Spring",
     image: projImg9,
     github: "https://github.com/Blueavian9/",
+    liveDemo: "https://.netlify.app", 
   },
 ];
 
@@ -84,17 +92,9 @@ const Projects = () => {
       document.documentElement.style.setProperty("--y", `${clientY}px`);
     };
 
-    window.addEventListener("pointermove", updateCursor);
+    window.addEventListener("pointermove", updateCursor, { passive: true });
     return () => window.removeEventListener("pointermove", updateCursor);
   }, []);
-
-  // CSS variables for the neon effect
-  const neonStyles = `
-  :root {
-  --clr neon: hsl(317 100% 54%);
-  --clr-bg: hsl(323 21% 16%);
-  }
-  `;
 
   return (
     <div className="bg-black text-white py-20" id="project">

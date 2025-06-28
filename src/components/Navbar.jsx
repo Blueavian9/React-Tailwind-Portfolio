@@ -1,288 +1,390 @@
-{
-  /* Mock 2: */
-}
-import * as React from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const [isHovering, setIsHovering] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isThemeTransitioning, setIsThemeTransitioning] = useState(false);
+
+  // Enhanced scroll effect with performance optimization
+  useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Advanced intersection observer for smooth section detection
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-25% 0px -75% 0px",
+      threshold: [0, 0.25, 0.5, 0.75, 1]
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    const sections = ["home", "about", "services", "projects", "contact"];
+    const elements = sections.map(id => document.getElementById(id)).filter(Boolean);
+    
+    elements.forEach(element => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Theme management with system preference detection
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === "dark");
+    } else {
+      setIsDarkMode(systemPrefersDark);
+    }
+  }, []);
+
+  const toggleTheme = useCallback(() => {
+    setIsThemeTransitioning(true);
+    const newTheme = !isDarkMode;
+    setIsDarkMode(newTheme);
+    localStorage.setItem("theme", newTheme ? "dark" : "light");
+    
+    // Apply theme to document
+    document.documentElement.classList.toggle("dark", newTheme);
+    
+    setTimeout(() => setIsThemeTransitioning(false), 300);
+  }, [isDarkMode]);
+
+  // Smooth scroll with enhanced behavior
+  const smoothScrollTo = useCallback((targetId) => {
+    const target = document.getElementById(targetId);
+    if (target) {
+      const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth"
+      });
+    }
+    setIsMobileMenuOpen(false);
+  }, []);
+
+  const navItems = [
+    { id: "home", label: "Home", icon: "🏠", description: "Welcome to my portfolio" },
+    { id: "about", label: "About", icon: "👨‍💻", description: "Learn about my background" },
+    { id: "services", label: "Services", icon: "⚡", description: "What I can do for you" },
+    { id: "projects", label: "Projects", icon: "🚀", description: "View my work" },
+    { id: "contact", label: "Contact", icon: "📧", description: "Get in touch" },
+  ];
+
   return (
-    <nav class="bg-gray-800">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            {/* <!-- Mobile menu button--> */}
-            <button
-              type="button"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-            >
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              {/* <!--
-            Icon when menu is closed.
-
-            Menu open: "hidden", Menu closed: "block"
-          --> */}
-              <svg
-                class="block size-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
+    <>
+      {/* Enhanced glassmorphism backdrop with depth layers */}
+      <div
+        className={`fixed top-0 left-0 right-0 h-20 z-40 transition-all duration-700 ${
+          isScrolled
+            ? isDarkMode
+              ? "bg-gray-900/85 backdrop-blur-2xl shadow-2xl shadow-black/30"
+              : "bg-white/85 backdrop-blur-2xl shadow-2xl shadow-gray-900/10"
+            : "bg-transparent"
+        }`}
+        style={{
+          backgroundImage: isScrolled
+            ? isDarkMode
+              ? "linear-gradient(135deg, rgba(17, 24, 39, 0.85) 0%, rgba(31, 41, 55, 0.8) 50%, rgba(17, 24, 39, 0.85) 100%)"
+              : "linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(249, 250, 251, 0.8) 50%, rgba(255, 255, 255, 0.85) 100%)"
+            : "none",
+        }}
+      />
+      
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+          isScrolled
+            ? isDarkMode
+              ? "shadow-2xl shadow-black/40 border-b border-gray-700/30"
+              : "shadow-2xl shadow-gray-900/20 border-b border-gray-200/30"
+            : "shadow-none border-transparent"
+        }`}
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Enhanced Logo/Brand with neumorphic design */}
+            <div className="flex-shrink-0">
+              <button
+                onClick={() => smoothScrollTo("home")}
+                className="group flex items-center space-x-3 text-2xl font-bold transition-all duration-500 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 rounded-xl p-2"
+                aria-label="Go to home page"
+                onMouseEnter={() => setIsHovering("logo")}
+                onMouseLeave={() => setIsHovering(null)}
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-              {/* <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          --> */}
-              <svg
-                class="hidden size-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex shrink-0 items-center">
-              <img
-                class="h-8 w-auto"
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-              />
+                <div className="relative">
+                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 ${
+                    isDarkMode
+                      ? "bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 shadow-lg shadow-cyan-400/25 group-hover:shadow-cyan-400/40"
+                      : "bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-700 shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/40"
+                  }`}>
+                    <span className="text-white font-bold text-xl">C</span>
+                  </div>
+                  {/* Animated neumorphic ring effect */}
+                  <div className={`absolute inset-0 rounded-2xl border-2 transition-all duration-500 ${
+                    isHovering === "logo" 
+                      ? isDarkMode
+                        ? "scale-125 opacity-100 border-cyan-400/50 shadow-lg shadow-cyan-400/30"
+                        : "scale-125 opacity-100 border-cyan-500/50 shadow-lg shadow-cyan-500/30"
+                      : "scale-100 opacity-0 border-transparent"
+                  }`} />
+                </div>
+                <div className="hidden sm:block">
+                  <span className={`bg-gradient-to-r bg-clip-text text-transparent transition-all duration-500 ${
+                    isDarkMode
+                      ? "from-white to-gray-300 group-hover:from-cyan-400 group-hover:to-blue-400"
+                      : "from-gray-900 to-gray-700 group-hover:from-cyan-600 group-hover:to-blue-600"
+                  }`}>
+                    Cesar
+                  </span>
+                  <div className={`text-xs font-normal transition-colors duration-500 ${
+                    isDarkMode ? "text-gray-400" : "text-gray-600"
+                  }`}>
+                    Full-Stack Developer
+                  </div>
+                </div>
+              </button>
             </div>
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-                {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                <a
-                  href="#about"
-                  class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                  aria-current="page"
-                >
-                  About
-                </a>
-                <a
-                  href="#hero"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Hero
-                </a>
-                <a
-                  href="#services"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Services
-                </a>
-                <a
-                  href="#projects"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Projects
-                </a>
-                <a
-                  href="#blog"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Blog
-                </a>
-                <a
-                  href="#footer"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Footer
-                </a>
+
+            {/* Enhanced Desktop Navigation with neumorphic elements */}
+            <div className="hidden lg:block">
+              <div className="flex items-center space-x-3">
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => smoothScrollTo(item.id)}
+                    className={`relative px-6 py-3 rounded-2xl text-sm font-medium transition-all duration-500 group overflow-hidden focus:outline-none focus:ring-4 focus:ring-cyan-400/50 ${
+                      activeSection === item.id
+                        ? isDarkMode
+                          ? "text-cyan-400 bg-cyan-400/15 shadow-lg shadow-cyan-400/20 border border-cyan-400/30"
+                          : "text-cyan-600 bg-cyan-100/50 shadow-lg shadow-cyan-500/20 border border-cyan-500/30"
+                        : isDarkMode
+                          ? "text-gray-300 hover:text-white hover:bg-gray-700/30 hover:shadow-lg hover:shadow-gray-700/20"
+                          : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50 hover:shadow-lg hover:shadow-gray-300/20"
+                    }`}
+                    aria-label={`Navigate to ${item.label} section`}
+                    aria-describedby={`${item.id}-description`}
+                    aria-current={activeSection === item.id ? "page" : undefined}
+                    onMouseEnter={() => setIsHovering(item.id)}
+                    onMouseLeave={() => setIsHovering(null)}
+                  >
+                    {/* Enhanced background gradient on hover */}
+                    <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
+                      isDarkMode
+                        ? "bg-gradient-to-r from-cyan-400/20 to-blue-500/20"
+                        : "bg-gradient-to-r from-cyan-500/20 to-blue-600/20"
+                    } opacity-0 group-hover:opacity-100`} />
+                    
+                    {/* Content with enhanced spacing */}
+                    <span className="relative z-10 flex items-center space-x-3">
+                      <span className="text-xl transition-transform duration-300 group-hover:scale-110">{item.icon}</span>
+                      <span className="font-semibold">{item.label}</span>
+                    </span>
+
+                    {/* Enhanced active indicator with animation */}
+                    {activeSection === item.id && (
+                      <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3 h-1 rounded-full animate-pulse ${
+                        isDarkMode ? "bg-gradient-to-r from-cyan-400 to-blue-500" : "bg-gradient-to-r from-cyan-500 to-blue-600"
+                      }`} />
+                    )}
+
+                    {/* Enhanced hover glow effect */}
+                    <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
+                      isHovering === item.id 
+                        ? isDarkMode
+                          ? "shadow-2xl shadow-cyan-400/40 ring-2 ring-cyan-400/50"
+                          : "shadow-2xl shadow-cyan-500/40 ring-2 ring-cyan-500/50"
+                        : "shadow-none ring-0"
+                    }`} />
+                  </button>
+                ))}
               </div>
             </div>
-          </div>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button
-              type="button"
-              class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
-            >
-              <span class="absolute -inset-1.5"></span>
-              <span class="sr-only">View notifications</span>
-              <svg
-                class="size-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
-                />
-              </svg>
-            </button>
 
-            {/* <!-- Profile dropdown --> */}
-            <div class="relative ml-3">
-              <div>
-                <button
-                  type="button"
-                  class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
-                  id="user-menu-button"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                >
-                  <span class="absolute -inset-1.5"></span>
-                  <span class="sr-only">Open user menu</span>
-                  <img
-                    class="size-8 rounded-full"
-                    src="http://localhost:5173/src/assets/Cesar-Cover.png"
-                    alt="CesarImg2.png"
+            {/* Theme Toggle Button */}
+            <div className="hidden md:block">
+              <button
+                onClick={toggleTheme}
+                disabled={isThemeTransitioning}
+                className={`relative p-3 rounded-2xl transition-all duration-500 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 ${
+                  isDarkMode
+                    ? "text-yellow-400 hover:text-yellow-300 hover:bg-gray-700/30"
+                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
+                }`}
+                aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
+                aria-pressed={isDarkMode}
+              >
+                <div className="w-6 h-6 flex items-center justify-center">
+                  {isDarkMode ? (
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                    </svg>
+                  ) : (
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                    </svg>
+                  )}
+                </div>
+              </button>
+            </div>
+
+            {/* Enhanced Mobile menu button with morphing animation */}
+            <div className="lg:hidden flex items-center space-x-2">
+              {/* Theme toggle for mobile */}
+              <button
+                onClick={toggleTheme}
+                disabled={isThemeTransitioning}
+                className={`p-2 rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 ${
+                  isDarkMode
+                    ? "text-yellow-400 hover:text-yellow-300 hover:bg-gray-700/30"
+                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
+                }`}
+                aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
+                aria-pressed={isDarkMode}
+              >
+                <div className="w-5 h-5 flex items-center justify-center">
+                  {isDarkMode ? (
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                    </svg>
+                  ) : (
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                    </svg>
+                  )}
+                </div>
+              </button>
+
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className={`relative p-3 rounded-2xl transition-all duration-500 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 ${
+                  isMobileMenuOpen 
+                    ? isDarkMode
+                      ? "bg-cyan-400/20 text-cyan-400 shadow-lg shadow-cyan-400/20"
+                      : "bg-cyan-500/20 text-cyan-600 shadow-lg shadow-cyan-500/20"
+                    : isDarkMode
+                      ? "text-gray-300 hover:text-white hover:bg-gray-700/30"
+                      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
+                }`}
+                aria-label="Toggle mobile menu"
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-menu"
+              >
+                <div className="w-6 h-6 flex flex-col justify-center items-center">
+                  <span
+                    className={`block w-5 h-0.5 transition-all duration-500 origin-center ${
+                      isDarkMode ? "bg-current" : "bg-current"
+                    } ${
+                      isMobileMenuOpen ? "rotate-45 translate-y-1" : "-translate-y-1"
+                    }`}
                   />
+                  <span
+                    className={`block w-5 h-0.5 transition-all duration-500 ${
+                      isDarkMode ? "bg-current" : "bg-current"
+                    } ${
+                      isMobileMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
+                    }`}
+                  />
+                  <span
+                    className={`block w-5 h-0.5 transition-all duration-500 origin-center ${
+                      isDarkMode ? "bg-current" : "bg-current"
+                    } ${
+                      isMobileMenuOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"
+                    }`}
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+
+          {/* Enhanced Mobile Navigation with glassmorphism */}
+          <div
+            id="mobile-menu"
+            className={`lg:hidden transition-all duration-700 overflow-hidden rounded-2xl ${
+              isMobileMenuOpen 
+                ? `max-h-96 opacity-100 mt-4 ${
+                    isDarkMode
+                      ? "bg-gray-800/90 backdrop-blur-2xl border border-gray-700/50 shadow-2xl shadow-black/30"
+                      : "bg-white/90 backdrop-blur-2xl border border-gray-200/50 shadow-2xl shadow-gray-900/10"
+                  }` 
+                : "max-h-0 opacity-0 mt-0"
+            }`}
+          >
+            <div className="py-6 space-y-3 px-6">
+              {navItems.map((item, index) => (
+                <button
+                  key={item.id}
+                  onClick={() => smoothScrollTo(item.id)}
+                  className={`w-full text-left px-6 py-4 rounded-2xl text-base font-medium transition-all duration-500 transform focus:outline-none focus:ring-4 focus:ring-cyan-400/50 ${
+                    activeSection === item.id
+                      ? isDarkMode
+                        ? "text-cyan-400 bg-cyan-400/15 border-l-4 border-cyan-400 shadow-lg shadow-cyan-400/20"
+                        : "text-cyan-600 bg-cyan-100/50 border-l-4 border-cyan-500 shadow-lg shadow-cyan-500/20"
+                      : isDarkMode
+                        ? "text-gray-300 hover:text-white hover:bg-gray-700/50"
+                        : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
+                  } ${
+                    isMobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: isMobileMenuOpen ? `${index * 100}ms` : "0ms"
+                  }}
+                  aria-label={`Navigate to ${item.label} section`}
+                  aria-describedby={`${item.id}-description`}
+                  aria-current={activeSection === item.id ? "page" : undefined}
+                >
+                  <span className="flex items-center space-x-4">
+                    <span className="text-2xl transition-transform duration-300 hover:scale-110">{item.icon}</span>
+                    <div>
+                      <span className="font-semibold">{item.label}</span>
+                      <div className={`text-xs mt-1 transition-colors duration-500 ${
+                        isDarkMode ? "text-gray-400" : "text-gray-600"
+                      }`}>
+                        {item.description}
+                      </div>
+                    </div>
+                  </span>
                 </button>
-              </div>
-
-              {/*<!--
-            Dropdown menu, show/hide based on menu state.
-
-            Entering: "transition ease-out duration-100"
-              From: "transform opacity-0 scale-95"
-              To: "transform opacity-100 scale-100"
-            Leaving: "transition ease-in duration-75"
-              From: "transform opacity-100 scale-100"
-              To: "transform opacity-0 scale-95"
-          --> */}
-
-              <div
-                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-hidden"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="user-menu-button"
-                tabindex="-1"
-              >
-                {/* <!-- Active: "bg-gray-100 outline-hidden", Not Active: "" --> */}
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-0"
-                >
-                  Your Profile
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-1"
-                >
-                  Settings
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-2"
-                >
-                  Sign out
-                </a>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile menu, show/hide based on menu state. */}
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pt-2 pb-3">
-          {/* 
-          Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" 
-          */}
-          <a
-            href="#home"
-            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-            aria-current="page"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            About
-          </a>
-          <a
-            href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            Projects
-          </a>
-          <a
-            href="#blog"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            Blog
-          </a>
-          <a
-            href="#footer"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            Footer
-          </a>
-        </div>
+      {/* Hidden descriptions for screen readers */}
+      <div className="sr-only">
+        {navItems.map((item) => (
+          <div key={item.id} id={`${item.id}-description`}>
+            {item.description}
+          </div>
+        ))}
       </div>
-    </nav>
+    </>
   );
 };
-
-{
-  /* */
-}
-
-<nav className="bg-gray-900 text-white p-4 shadow-md w-full z-10">
-  <div className="container mx-auto flex justify-center items-center border-round">
-    <div className="space-x-8">
-      <div className="text-2xl font-bold">
-        <a href="#home" className="hover:text-cyan-400"></a>
-      </div>
-      <div className="space-x-8">
-        <a href="#home" className="hover:text-cyan-400">
-          <strong>Home</strong>
-        </a>
-        <a href="#about" className="hover:text-cyan-400">
-          <strong>About</strong>
-        </a>
-        <hr />
-        <a href="#services" className="hover:text-cyan-400">
-          <strong>Services</strong>
-        </a>
-        <hr />
-        <a href="#projects" className="hover:text-cyan-400">
-          <strong>Projects</strong>
-        </a>
-        <hr />
-        <a href="#contact" className="hover:text-cyan-400">
-          <strong>Contact</strong>
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>;
 
 export default Navbar;
 
@@ -342,3 +444,8 @@ export default Navbar;
 // };
 
 // export default Navbar;
+
+
+
+
+

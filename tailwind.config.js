@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: 'class',
   theme: {
     extend: {
       keyframes: {
@@ -24,10 +25,9 @@ export default {
           "0%": { bottom: "-100%" },
           "50%, 100%": { bottom: "100%" },
         },
-        fontfamily: {
-          sans: ["font-mono", "sans-serif"],
-          // other font families
-        },
+      },
+      fontFamily: {
+        sans: ["font-mono", "sans-serif"],
       },
       animation: {
         glow: "glow 3s ease-in-out infinite",

@@ -3,7 +3,7 @@
 }
 import "./App.css";
 import "./index.css";
-import * as React from "react";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
@@ -14,8 +14,20 @@ import Blog from "./components/Blog.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function App() {
+  // Initialize theme on app load
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    if (savedTheme) {
+      document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    } else {
+      document.documentElement.classList.toggle("dark", systemPrefersDark);
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
       <Navbar />
       <main>
         <section id="home">
@@ -33,7 +45,7 @@ export default function App() {
         <section id="contact">
           <Contact />
         </section>
-        <section id="section">
+        <section id="blog">
           <Blog />
         </section>
         <section id="footer">

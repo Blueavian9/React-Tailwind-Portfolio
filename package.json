@@ -2,17 +2,20 @@
   "name": "react-tailwind-portfolio",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": ".eslintrc.js",
+  "description": "Personal portfolio website built with React, Tailwind CSS, and Vite.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["react", "tailwind", "portfolio", "vite"],
+  "author": "Cesar",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blueavian9/Portfolio-React-Tailwind.git"
+  },
   "dependencies": {
     "chart.js": "^4.4.4",
     "react": "^18.3.1",
