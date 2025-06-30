@@ -21,9 +21,9 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-bold text-center">
           I'm{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-            Cesar A Aguilar
+            Cesar Aguilar
           </span>
-          , Cloud DevOps AI Integration Solutions Engineer
+          , DevOps AI Integration Solutions Architect
         </h1>
 
         {/* Bio */}
@@ -31,7 +31,13 @@ export default function Hero() {
           I specialize in building modern and responsive web applications.
         </p>
 
-        {/* Glowing Buttons */}
+        {/*
+        Mock 3:
+        Mock 2:
+        */}
+
+
+       {/* Mock 1: Glowing Buttons */}
         <div className="mt-8 flex flex-wrap justify-center gap-6">
           <GlowingButton
             color="moon"
@@ -56,7 +62,7 @@ export default function Hero() {
           >
             LinkedIn
           </GlowingButton>
-        </div>
+        </div> 
       </section>
     </div>
   );
