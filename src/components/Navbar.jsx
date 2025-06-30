@@ -205,11 +205,11 @@ const Navbar = () => {
                     </span>
 
                     {/* Enhanced active indicator with animation */}
-                    <div
+                    {/* <div
                       className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-0.5 bg-blue-500 rounded-full transition-opacity duration-300 ${
                         activeSection === item.id ? 'opacity-100' : 'opacity-0'
                       }`}
-                    />
+                    /> */}
 
                     {/* Enhanced hover glow effect */}
                     <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${

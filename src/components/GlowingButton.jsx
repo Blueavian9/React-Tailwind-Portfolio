@@ -1,35 +1,35 @@
 // Mock 3:
 import React from "react";
+import "./GlowingButton.css";
 
+const colorMap = {
+  moon: "neon-cyan",
+  aurora: "neon-green",
+  cosmic: "neon-purple",
+  // fallback
+  default: "neon-cyan"
+};
 
 export default function GlowingButton({
   href,
   children,
-  color = "green",
+  color = "moon",
   target = "_self",
 }) {
-  const colorMap = {
-    moon: "from-[#A1C4FD] via-[#C2E9FB] to-[#667eea]", // light sky blue to moon blue
-    aurora: "from-[#D4FC79] via-[#96E6A1] to-[#56ab2f]", // subtle green aurora tone
-    cosmic: "from-[#8EC5FC] via-[#E0C3FC] to-[#736EFE]", // dreamy purples and blues
-    green: "from-green-300 via-green-600 to-green-900",
-    orange: "from-orange-300 via-orange-600 to-orange-900",
-    pink: "from-pink-300 via-pink-600 to-pink-900",
-  };
-  
-  const gradient = colorMap[color] || colorMap.green;
+  const neonClass = colorMap[color] || colorMap.default;
   
   return (
     <a
       href={href}
       target={target}
-      rel="noopener noreferrer"
-      className={`relative inline-block px-6 py-3 rounded-full font-semibold text-white transition-transform transform hover:scale-105 shadow-md group`}
+      rel={target === "_blank" ? "noopener noreferrer" : undefined}
+      className={`neon-button ${neonClass}`}
     >
-      <span
-        className={`absolute inset-0 rounded-full blur-lg opacity-70 group-hover:opacity-100 transition duration-300 ease-in-out bg-gradient-to-r ${gradient}`}
-      ></span>
-      <span className="relative z-10">{children}</span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      {children}
     </a>
   );
 }
