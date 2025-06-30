@@ -205,11 +205,11 @@ const Navbar = () => {
                     </span>
 
                     {/* Enhanced active indicator with animation */}
-                    {activeSection === item.id && (
-                      <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3 h-1 rounded-full animate-pulse ${
-                        isDarkMode ? "bg-gradient-to-r from-cyan-400 to-blue-500" : "bg-gradient-to-r from-cyan-500 to-blue-600"
-                      }`} />
-                    )}
+                    <div
+                      className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-0.5 bg-blue-500 rounded-full transition-opacity duration-300 ${
+                        activeSection === item.id ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    />
 
                     {/* Enhanced hover glow effect */}
                     <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
@@ -225,7 +225,7 @@ const Navbar = () => {
             </div>
 
             {/* Theme Toggle Button */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <button
                 onClick={toggleTheme}
                 disabled={isThemeTransitioning}
@@ -252,7 +252,7 @@ const Navbar = () => {
             </div>
 
             {/* Enhanced Mobile menu button with morphing animation */}
-            <div className="lg:hidden flex items-center space-x-2">
+            <div className="block lg:hidden flex items-center space-x-2">
               {/* Theme toggle for mobile */}
               <button
                 onClick={toggleTheme}
@@ -388,6 +388,8 @@ const Navbar = () => {
 
 export default Navbar;
 
+
+
 /* Mock 3: */
 // import * as React from "react";
 
@@ -444,8 +446,3 @@ export default Navbar;
 // };
 
 // export default Navbar;
-
-
-
-
-

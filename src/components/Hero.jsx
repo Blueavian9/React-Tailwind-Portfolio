@@ -21,9 +21,9 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-bold text-center">
           I'm{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-            Cesar Adrian Aguilar
+            Cesar A Aguilar
           </span>
-          , a Full-Stack Developer
+          , Cloud DevOps AI Integration Solutions Engineer
         </h1>
 
         {/* Bio */}
