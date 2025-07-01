@@ -135,34 +135,7 @@ const Navbar = () => {
                 onMouseEnter={() => setIsHovering("logo")}
                 onMouseLeave={() => setIsHovering(null)}
               >
-                <div className="relative">
-                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 ${
-                    isDarkMode
-                      ? "bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 shadow-lg shadow-cyan-400/25 group-hover:shadow-cyan-400/40"
-                      : "bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-700 shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/40"
-                  }`}>
-                    {/* Cute cat SVG looking up */}
-                    <svg className="w-8 h-8 text-white" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <ellipse cx="32" cy="40" rx="16" ry="12" fill="currentColor"/>
-                      <ellipse cx="24" cy="36" rx="2.5" ry="3.5" fill="#222"/>
-                      <ellipse cx="40" cy="36" rx="2.5" ry="3.5" fill="#222"/>
-                      <ellipse cx="24" cy="35" rx="0.7" ry="1" fill="#fff"/>
-                      <ellipse cx="40" cy="35" rx="0.7" ry="1" fill="#fff"/>
-                      <path d="M32 44 Q33 45 34 44" stroke="#fff" strokeWidth="1.2" strokeLinecap="round"/>
-                      <path d="M32 44 Q31 45 30 44" stroke="#fff" strokeWidth="1.2" strokeLinecap="round"/>
-                      <path d="M16 32 Q10 18 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                      <path d="M48 32 Q54 18 40 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
-                  </div>
-                  {/* Animated neumorphic ring effect */}
-                  <div className={`absolute inset-0 rounded-2xl border-2 transition-all duration-500 ${
-                    isHovering === "logo" 
-                      ? isDarkMode
-                        ? "scale-125 opacity-100 border-cyan-400/50 shadow-lg shadow-cyan-400/30"
-                        : "scale-125 opacity-100 border-cyan-500/50 shadow-lg shadow-cyan-500/30"
-                      : "scale-100 opacity-0 border-transparent"
-                  }`} />
-                </div>
+                {/* Removed logo SVG and container, only text remains */}
                 <div className="hidden sm:block">
                   <span className={`bg-gradient-to-r bg-clip-text text-transparent transition-all duration-500 ${
                     isDarkMode
@@ -238,27 +211,60 @@ const Navbar = () => {
             {/* Theme Toggle Button */}
             <div className="hidden lg:block">
               <button
-                onClick={toggleTheme}
+                onClick={e => {
+                  // Ripple effect
+                  const btn = e.currentTarget;
+                  const ripple = document.createElement('span');
+                  ripple.className = 'theme-toggle-ripple';
+                  ripple.style.left = e.nativeEvent.offsetX + 'px';
+                  ripple.style.top = e.nativeEvent.offsetY + 'px';
+                  btn.appendChild(ripple);
+                  setTimeout(() => ripple.remove(), 600);
+                  toggleTheme();
+                }}
                 disabled={isThemeTransitioning}
-                className={`relative p-3 rounded-2xl transition-all duration-500 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 ${
-                  isDarkMode
-                    ? "text-yellow-400 hover:text-yellow-300 hover:bg-gray-700/30"
-                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
-                }`}
+                className={`relative flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 shadow-lg group overflow-hidden
+                  ${isDarkMode ? "bg-gray-900 text-yellow-400 hover:shadow-yellow-400/60" : "bg-white text-cyan-400 hover:shadow-cyan-400/60"}
+                `}
                 aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
                 aria-pressed={isDarkMode}
+                tabIndex={0}
               >
-                <div className="w-6 h-6 flex items-center justify-center">
-                  {isDarkMode ? (
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
-                    </svg>
-                  ) : (
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                    </svg>
-                  )}
-                </div>
+                {/* Neon glow ring on hover/focus */}
+                <span className={`absolute -inset-1 rounded-full pointer-events-none transition-all duration-300
+                  ${isDarkMode ? "shadow-[0_0_16px_4px_rgba(253,224,71,0.7)] group-hover:shadow-yellow-400/80" : "shadow-[0_0_16px_4px_rgba(34,211,238,0.7)] group-hover:shadow-cyan-400/80"}
+                  opacity-0 group-hover:opacity-100 group-focus:opacity-100`}/>
+                <span className="sr-only">{isDarkMode ? "Switch to light mode" : "Switch to dark mode"}</span>
+                {/* Animated sun/moon icon */}
+                <span className="transition-transform duration-500 group-hover:scale-110 group-active:scale-95 flex items-center justify-center">
+                  <span className={`inline-block transition-transform duration-500 ${isDarkMode ? 'rotate-0 scale-100' : 'rotate-180 scale-90'}`}>
+                    {isDarkMode ? (
+                      // Sun icon
+                      <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5" fill="currentColor" />
+                        <g stroke="currentColor" strokeLinecap="round">
+                          <line x1="12" y1="2" x2="12" y2="4" />
+                          <line x1="12" y1="20" x2="12" y2="22" />
+                          <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+                          <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+                          <line x1="2" y1="12" x2="4" y2="12" />
+                          <line x1="20" y1="12" x2="22" y2="12" />
+                          <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+                          <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+                        </g>
+                      </svg>
+                    ) : (
+                      // Moon icon
+                      <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" fill="currentColor" />
+                      </svg>
+                    )}
+                  </span>
+                </span>
+                {/* Tooltip styled to match portfolio theme */}
+                <span className="absolute left-1/2 -bottom-9 -translate-x-1/2 px-3 py-1 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-xs text-white shadow-lg shadow-cyan-400/30 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity pointer-events-none z-10 whitespace-nowrap font-mono tracking-wide">
+                  {isDarkMode ? "Light mode" : "Dark mode"}
+                </span>
               </button>
             </div>
 
@@ -266,27 +272,54 @@ const Navbar = () => {
             <div className="block lg:hidden flex items-center space-x-2">
               {/* Theme toggle for mobile */}
               <button
-                onClick={toggleTheme}
+                onClick={e => {
+                  const btn = e.currentTarget;
+                  const ripple = document.createElement('span');
+                  ripple.className = 'theme-toggle-ripple';
+                  ripple.style.left = e.nativeEvent.offsetX + 'px';
+                  ripple.style.top = e.nativeEvent.offsetY + 'px';
+                  btn.appendChild(ripple);
+                  setTimeout(() => ripple.remove(), 600);
+                  toggleTheme();
+                }}
                 disabled={isThemeTransitioning}
-                className={`p-2 rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 ${
-                  isDarkMode
-                    ? "text-yellow-400 hover:text-yellow-300 hover:bg-gray-700/30"
-                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
-                }`}
+                className={`relative flex items-center justify-center w-11 h-11 rounded-full transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 shadow-lg group overflow-hidden
+                  ${isDarkMode ? "bg-gray-900 text-yellow-400 hover:shadow-yellow-400/60" : "bg-white text-cyan-400 hover:shadow-cyan-400/60"}
+                `}
                 aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
                 aria-pressed={isDarkMode}
+                tabIndex={0}
               >
-                <div className="w-5 h-5 flex items-center justify-center">
-                  {isDarkMode ? (
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
-                    </svg>
-                  ) : (
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                    </svg>
-                  )}
-                </div>
+                <span className={`absolute -inset-1 rounded-full pointer-events-none transition-all duration-300
+                  ${isDarkMode ? "shadow-[0_0_16px_4px_rgba(253,224,71,0.7)] group-hover:shadow-yellow-400/80" : "shadow-[0_0_16px_4px_rgba(34,211,238,0.7)] group-hover:shadow-cyan-400/80"}
+                  opacity-0 group-hover:opacity-100 group-focus:opacity-100`}/>
+                <span className="sr-only">{isDarkMode ? "Switch to light mode" : "Switch to dark mode"}</span>
+                <span className="transition-transform duration-500 group-hover:scale-110 group-active:scale-95 flex items-center justify-center">
+                  <span className={`inline-block transition-transform duration-500 ${isDarkMode ? 'rotate-0 scale-100' : 'rotate-180 scale-90'}`}>
+                    {isDarkMode ? (
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5" fill="currentColor" />
+                        <g stroke="currentColor" strokeLinecap="round">
+                          <line x1="12" y1="2" x2="12" y2="4" />
+                          <line x1="12" y1="20" x2="12" y2="22" />
+                          <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+                          <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+                          <line x1="2" y1="12" x2="4" y2="12" />
+                          <line x1="20" y1="12" x2="22" y2="12" />
+                          <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+                          <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+                        </g>
+                      </svg>
+                    ) : (
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" fill="currentColor" />
+                      </svg>
+                    )}
+                  </span>
+                </span>
+                <span className="absolute left-1/2 -bottom-9 -translate-x-1/2 px-3 py-1 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-xs text-white shadow-lg shadow-cyan-400/30 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity pointer-events-none z-10 whitespace-nowrap font-mono tracking-wide">
+                  {isDarkMode ? "Light mode" : "Dark mode"}
+                </span>
               </button>
 
               <button
