@@ -212,7 +212,6 @@ const Navbar = () => {
             <div className="hidden lg:block">
               <button
                 onClick={e => {
-                  // Ripple effect
                   const btn = e.currentTarget;
                   const ripple = document.createElement('span');
                   ripple.className = 'theme-toggle-ripple';
@@ -224,22 +223,19 @@ const Navbar = () => {
                 }}
                 disabled={isThemeTransitioning}
                 className={`relative flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 shadow-lg group overflow-hidden
-                  ${isDarkMode ? "bg-gray-900 text-yellow-400 hover:shadow-yellow-400/60" : "bg-white text-cyan-400 hover:shadow-cyan-400/60"}
+                  ${isDarkMode ? "bg-gray-900 text-yellow-400 hover:shadow-yellow-400/80" : "bg-white text-cyan-400 hover:shadow-cyan-400/80"}
                 `}
                 aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
                 aria-pressed={isDarkMode}
                 tabIndex={0}
               >
-                {/* Neon glow ring on hover/focus */}
                 <span className={`absolute -inset-1 rounded-full pointer-events-none transition-all duration-300
                   ${isDarkMode ? "shadow-[0_0_16px_4px_rgba(253,224,71,0.7)] group-hover:shadow-yellow-400/80" : "shadow-[0_0_16px_4px_rgba(34,211,238,0.7)] group-hover:shadow-cyan-400/80"}
                   opacity-0 group-hover:opacity-100 group-focus:opacity-100`}/>
                 <span className="sr-only">{isDarkMode ? "Switch to light mode" : "Switch to dark mode"}</span>
-                {/* Animated sun/moon icon */}
                 <span className="transition-transform duration-500 group-hover:scale-110 group-active:scale-95 flex items-center justify-center">
                   <span className={`inline-block transition-transform duration-500 ${isDarkMode ? 'rotate-0 scale-100' : 'rotate-180 scale-90'}`}>
                     {isDarkMode ? (
-                      // Sun icon
                       <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="5" fill="currentColor" />
                         <g stroke="currentColor" strokeLinecap="round">
@@ -254,14 +250,12 @@ const Navbar = () => {
                         </g>
                       </svg>
                     ) : (
-                      // Moon icon
                       <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                         <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" fill="currentColor" />
                       </svg>
                     )}
                   </span>
                 </span>
-                {/* Tooltip styled to match portfolio theme */}
                 <span className="absolute left-1/2 -bottom-9 -translate-x-1/2 px-3 py-1 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-xs text-white shadow-lg shadow-cyan-400/30 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity pointer-events-none z-10 whitespace-nowrap font-mono tracking-wide">
                   {isDarkMode ? "Light mode" : "Dark mode"}
                 </span>
@@ -284,7 +278,7 @@ const Navbar = () => {
                 }}
                 disabled={isThemeTransitioning}
                 className={`relative flex items-center justify-center w-11 h-11 rounded-full transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 shadow-lg group overflow-hidden
-                  ${isDarkMode ? "bg-gray-900 text-yellow-400 hover:shadow-yellow-400/60" : "bg-white text-cyan-400 hover:shadow-cyan-400/60"}
+                  ${isDarkMode ? "bg-gray-900 text-yellow-400 hover:shadow-yellow-400/80" : "bg-white text-cyan-400 hover:shadow-cyan-400/80"}
                 `}
                 aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
                 aria-pressed={isDarkMode}
