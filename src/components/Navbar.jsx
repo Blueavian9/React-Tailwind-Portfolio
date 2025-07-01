@@ -127,7 +127,22 @@ const Navbar = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Enhanced Logo/Brand with neumorphic design */}
-            {/* Removed logo/brand button. Now, only nav links below. */}
+            <div className="flex-shrink-0">
+              <div className="hidden sm:block">
+                <span className={`bg-gradient-to-r bg-clip-text text-transparent transition-all duration-500 ${
+                  isDarkMode
+                    ? "from-white to-gray-300"
+                    : "from-gray-900 to-gray-700"
+                }`}>
+                  Cesar
+                </span>
+                <div className={`text-xs font-normal transition-colors duration-500 ${
+                  isDarkMode ? "text-gray-400" : "text-gray-600"
+                }`}>
+                  Full-Stack Developer
+                </div>
+              </div>
+            </div>
 
             {/* Enhanced Desktop Navigation with neumorphic elements */}
             <div className="hidden lg:block">
@@ -164,22 +179,13 @@ const Navbar = () => {
                       <span className="font-semibold">{item.label}</span>
                     </span>
 
-                    {/* Enhanced active indicator with animation */}
-                    {/* <div
-                      className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-0.5 bg-blue-500 rounded-full transition-opacity duration-300 ${
-                        activeSection === item.id ? 'opacity-100' : 'opacity-0'
-                      }`}
-                    /> */}
-
                     {/* Enhanced hover glow effect */}
                     <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
-                      item.id === "home"
-                        ? "shadow-none ring-0"
-                        : isHovering === item.id 
-                          ? isDarkMode
-                            ? "shadow-2xl shadow-cyan-400/40 ring-2 ring-cyan-400/50"
-                            : "shadow-2xl shadow-cyan-500/40 ring-2 ring-cyan-500/50"
-                          : "shadow-none ring-0"
+                      isHovering === item.id 
+                        ? isDarkMode
+                          ? "shadow-2xl shadow-cyan-400/40 ring-2 ring-cyan-400/50"
+                          : "shadow-2xl shadow-cyan-500/40 ring-2 ring-cyan-500/50"
+                        : "shadow-none ring-0"
                     }`} />
                   </button>
                 ))}
