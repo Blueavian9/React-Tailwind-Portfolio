@@ -127,31 +127,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Enhanced Logo/Brand with neumorphic design */}
-            <div className="flex-shrink-0">
-              <button
-                onClick={() => smoothScrollTo("home")}
-                className="group flex items-center space-x-3 text-2xl font-bold transition-all duration-500 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 rounded-xl p-2"
-                aria-label="Go to home page"
-                onMouseEnter={() => setIsHovering("logo")}
-                onMouseLeave={() => setIsHovering(null)}
-              >
-                {/* Removed logo SVG and container, only text remains */}
-                <div className="hidden sm:block">
-                  <span className={`bg-gradient-to-r bg-clip-text text-transparent transition-all duration-500 ${
-                    isDarkMode
-                      ? "from-white to-gray-300 group-hover:from-cyan-400 group-hover:to-blue-400"
-                      : "from-gray-900 to-gray-700 group-hover:from-cyan-600 group-hover:to-blue-600"
-                  }`}>
-                    Cesar
-                  </span>
-                  <div className={`text-xs font-normal transition-colors duration-500 ${
-                    isDarkMode ? "text-gray-400" : "text-gray-600"
-                  }`}>
-                    Full-Stack Developer
-                  </div>
-                </div>
-              </button>
-            </div>
+            {/* Removed logo/brand button. Now, only nav links below. */}
 
             {/* Enhanced Desktop Navigation with neumorphic elements */}
             <div className="hidden lg:block">
@@ -197,11 +173,13 @@ const Navbar = () => {
 
                     {/* Enhanced hover glow effect */}
                     <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
-                      isHovering === item.id 
-                        ? isDarkMode
-                          ? "shadow-2xl shadow-cyan-400/40 ring-2 ring-cyan-400/50"
-                          : "shadow-2xl shadow-cyan-500/40 ring-2 ring-cyan-500/50"
-                        : "shadow-none ring-0"
+                      item.id === "home"
+                        ? "shadow-none ring-0"
+                        : isHovering === item.id 
+                          ? isDarkMode
+                            ? "shadow-2xl shadow-cyan-400/40 ring-2 ring-cyan-400/50"
+                            : "shadow-2xl shadow-cyan-500/40 ring-2 ring-cyan-500/50"
+                          : "shadow-none ring-0"
                     }`} />
                   </button>
                 ))}
