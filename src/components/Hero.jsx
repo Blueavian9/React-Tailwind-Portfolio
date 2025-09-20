@@ -28,9 +28,9 @@ export default function Hero() {
 
         {/* Bio */}
         <p className="mt-4 text-lg text-gray-300 font-mono max-w-2xl text-center">
-        I’m a Full Stack DevOps Cloud Engineer with 3+ years of experience building secure, scalable, and AI-integrated systems using technologies like JavaScript, React.js, Node.js, Express, and AWS. My work spans end-to-end web application development, including RESTful APIs, authentication systems, and AI integrations with OpenAI, AWS Polly V3, and LangChain—blending backend logic with intuitive frontend architecture.
+        I'm a Full Stack DevOps Cloud Engineer with 3+ years of experience building secure, scalable, and AI-integrated systems using technologies like JavaScript, React.js, Node.js, Express, and AWS. My work spans end-to-end web application development, including RESTful APIs, authentication systems, and AI integrations with OpenAI, AWS Polly V3, and LangChain—blending backend logic with intuitive frontend architecture.
 
-Currently pursuing a B.S. in Cloud Computing and an M.S. in AI & Machine Learning at WGU, I’m actively translating advanced theory into working cloud-native solutions. I bring a strong grasp of DevOps pipelines, modular architecture, and data persistence, with a focus on ethical, production-ready software. My goal is to lead cross-functional teams driving innovation in AI infrastructure and cloud engineering. </p>
+Currently pursuing a B.S. in Cloud Computing and an M.S. in AI & Machine Learning at WGU, I'm actively translating advanced theory into working cloud-native solutions. I bring a strong grasp of DevOps pipelines, modular architecture, and data persistence, with a focus on ethical, production-ready software. My goal is to lead cross-functional teams driving innovation in AI infrastructure and cloud engineering. </p>
 
         {/*
         Mock 3:
