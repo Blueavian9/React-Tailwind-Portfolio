@@ -14,8 +14,8 @@ const About = () => {
               </strong>
             </h2>
             <p className="text-lg mb-8 font-mono">
-              I am a passionate Full-Stack Software Engineer with over three
-              years of experience in creating secure, dynamic web applications.
+              I am a passionate Full-Stack AI Senior Software Engineer with over six
+              years of experience in creating secure, dynamic full stack web applications.
               My expertise includes React, Node.js, Express, and AI integration,
               as demonstrated by my work with `Groq's Whisper`. At `talkanimate
               Inc.` I led the development of a Full-Stack Asylum Report
