@@ -38,8 +38,9 @@ export default function Hero() {
         </p>
         
         <p className="text-base md:text-lg text-gray-400 font-mono leading-relaxed">
-          Currently pursuing a <span className="text-blue-400 font-semibold">B.S. in Cloud Computing</span> and an{" "}
+          Currently pursuing a <span className="text-blue-400 font-semibold">B.S. in Cloud Network Engineering</span> and an{" "}
           <span className="text-blue-400 font-semibold">M.S. in AI & Machine Learning at WGU</span>, I'm actively translating advanced theory into working cloud-native solutions. I bring a strong grasp of DevOps pipelines, modular architecture, and data persistence, with a focus on ethical, production-ready software. My goal is to lead cross-functional teams driving innovation in AI infrastructure and cloud engineering.
+          <span className="text-purple-400 font-semibold"> Future pursuit: Online Doctor of Engineering (D.Eng) from George Washington University</span>.
         </p>
       </div>
 
