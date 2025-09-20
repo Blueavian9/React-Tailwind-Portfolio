@@ -1,6 +1,9 @@
 /* Mock 3: Hero.jsx */
 import * as React from "react";
+<<<<<<< HEAD
 import CesarCoverImg from "../assets/Cesar-Cover.png";
+=======
+>>>>>>> 211354b92fda7228c105c981ac7cb3e7c67e181b
 import GlowingButton from "./GlowingButton";
 
 export default function Hero() {
@@ -11,7 +14,11 @@ export default function Hero() {
         <div className="relative group mb-8">
           <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt"></div>
           <img
+<<<<<<< HEAD
             src={CesarCoverImg}
+=======
+            src="/src/assets/Cesar-Cover.png"
+>>>>>>> 211354b92fda7228c105c981ac7cb3e7c67e181b
             alt="Cesar Cover"
             className="relative w-48 h-48 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
@@ -28,9 +35,15 @@ export default function Hero() {
 
         {/* Bio */}
         <p className="mt-4 text-lg text-gray-300 font-mono max-w-2xl text-center">
+<<<<<<< HEAD
         I'm a Full Stack DevOps Cloud Engineer with 3+ years of experience building secure, scalable, and AI-integrated systems using technologies like JavaScript, React.js, Node.js, Express, and AWS. My work spans end-to-end web application development, including RESTful APIs, authentication systems, and AI integrations with OpenAI, AWS Polly V3, and LangChain—blending backend logic with intuitive frontend architecture.
 
 Currently pursuing a B.S. in Cloud Computing and an M.S. in AI & Machine Learning at WGU, I'm actively translating advanced theory into working cloud-native solutions. I bring a strong grasp of DevOps pipelines, modular architecture, and data persistence, with a focus on ethical, production-ready software. My goal is to lead cross-functional teams driving innovation in AI infrastructure and cloud engineering. </p>
+=======
+        I’m a Full Stack DevOps Cloud Engineer with 3+ years of experience building secure, scalable, and AI-integrated systems using technologies like JavaScript, React.js, Node.js, Express, and AWS. My work spans end-to-end web application development, including RESTful APIs, authentication systems, and AI integrations with OpenAI, AWS Polly V3, and LangChain—blending backend logic with intuitive frontend architecture.
+
+Currently pursuing a B.S. in Cloud Computing and an M.S. in AI & Machine Learning at WGU, I’m actively translating advanced theory into working cloud-native solutions. I bring a strong grasp of DevOps pipelines, modular architecture, and data persistence, with a focus on ethical, production-ready software. My goal is to lead cross-functional teams driving innovation in AI infrastructure and cloud engineering. </p>
+>>>>>>> 211354b92fda7228c105c981ac7cb3e7c67e181b
 
         {/*
         Mock 3:
