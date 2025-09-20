@@ -1,1146 +1,203 @@
-import * as React from "react";
+import React from "react";
+import { 
+  FaCode, 
+  FaCloud, 
+  FaRobot, 
+  FaGraduationCap, 
+  FaLightbulb,
+  FaUsers,
+  FaChartLine,
+  FaAward
+} from "react-icons/fa";
 
 const About = () => {
+  const skills = [
+    { name: "JavaScript/React", level: 95, color: "from-yellow-400 to-orange-500" },
+    { name: "Node.js/Express", level: 90, color: "from-green-400 to-emerald-600" },
+    { name: "AWS/Cloud", level: 85, color: "from-blue-400 to-cyan-500" },
+    { name: "AI/ML Integration", level: 80, color: "from-purple-400 to-pink-500" },
+    { name: "DevOps/CI-CD", level: 85, color: "from-indigo-400 to-blue-600" },
+    { name: "Database Design", level: 88, color: "from-teal-400 to-cyan-600" }
+  ];
+
+  const achievements = [
+    {
+      icon: <FaCode className="text-cyan-400" />,
+      title: "3+ Years Experience",
+      description: "Full Stack development with modern technologies"
+    },
+    {
+      icon: <FaCloud className="text-blue-400" />,
+      title: "Cloud Architecture",
+      description: "AWS, DevOps pipelines, and scalable solutions"
+    },
+    {
+      icon: <FaRobot className="text-purple-400" />,
+      title: "AI Integration",
+      description: "OpenAI, AWS Polly V3, LangChain implementations"
+    },
+    {
+      icon: <FaGraduationCap className="text-green-400" />,
+      title: "Advanced Education",
+      description: "B.S. Cloud Network Engineering, M.S. AI/ML (WGU)"
+    }
+  ];
+
   return (
-    <div className="bg-black text-white py-20" id="about">
+    <section className="bg-gradient-to-b from-[#141e30] to-[#243b55] text-white py-20" id="about">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <div className="flex flex-col md:flex-row items-center md:space-x-12">
-          <div className="flex-1">
-            <h2 className="text-4xl font-bold text-center mb-12">
-              <strong>
-                <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-                  About Me
-                </span>
-              </strong>
-            </h2>
-            <p className="text-lg mb-8 font-mono">
-              I am a passionate Full-Stack AI Senior Software Engineer with over six
-              years of experience in creating secure, dynamic full stack web applications.
-              My expertise includes React, Node.js, Express, and AI integration,
-              as demonstrated by my work with `Groq's Whisper`. At `talkanimate
-              Inc.` I led the development of a Full-Stack Asylum Report
-              Generator, implementing robust security and Auth0 authentication.
-              My skills encompass building RESTful APIs, performing CRUD
-              operations, and designing efficient database schemas, ensuring
-              scalable, high-quality solutions. I excel in collaborative,
-              fast-paced environments, with a strong focus on security and
-              compliance. My diverse skill set and proactive approach make me a
-              valuable asset to any software company looking for the next up and
-              coming talent.
-            </p>
-            <br />
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+              About Me
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Transforming ideas into scalable, AI-powered solutions through innovative engineering
+          </p>
+        </div>
 
-            <div className="text-4xl font-bold text-center mb-12">
-              <strong>
-                <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-                  Front End:
-                </span>
-              </strong>
-            </div>
-
-            {/* status bar color Yellow and Red bg
-             <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  <span className="font-bold"> HTML, CSS </span>
-                </label>
-
-                 Moonlight glowing effect bar with percentage 
-                <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                   The background glowing effect 
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                   Progress bar representing status % 
-                  <div
-                    className="absolute top-0 left-0 h-full bg-[#A7FF19] rounded-full"
-                    style={{ width: "95%" }}
-                  />
-
-                   Percentage label inside the progress bar 
-                  <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                    95%
-                  </span>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Story & Journey */}
+          <div className="space-y-6">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
+              <div className="flex items-center mb-6">
+                <FaLightbulb className="text-3xl text-yellow-400 mr-4" />
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                  My Journey
+                </h3>
               </div>
-            </div> */}
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  <span className="font-bold"> HTML, CSS </span>
-                </label>
-
-                {/* Moonlight glowing effect bar with percentage */}
-                <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                  {/* The background glowing effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                  {/* Progress bar representing status % */}
-                  <div
-                    className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                    style={{ width: "85%" }}
-                  />
-
-                  {/* Percentage label inside the progress bar */}
-                  <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                    85%
-                  </span>
-                </div>
+              
+              <div className="space-y-4 text-gray-300 font-mono leading-relaxed">
+                <p>
+                  My journey began at <span className="text-cyan-400 font-semibold">Bloom Institute of Technology</span>, 
+                  where I discovered my passion for solving complex problems through code. What started as curiosity 
+                  about web development evolved into a deep expertise in <span className="text-teal-300">full-stack engineering</span> 
+                  and <span className="text-purple-300">AI integration</span>.
+                </p>
+                
+                <p>
+                  At <span className="text-cyan-400 font-semibold">TalkAnimate Inc.</span>, I've spent 3+ years 
+                  building production-ready applications that serve real users. From implementing 
+                  <span className="text-teal-300"> RESTful APIs</span> to integrating 
+                  <span className="text-purple-300"> OpenAI and AWS Polly V3</span>, I've learned that great 
+                  software isn't just about code—it's about creating solutions that make a difference.
+                </p>
+                
+                <p>
+                  Currently pursuing my <span className="text-blue-400 font-semibold">B.S. in Cloud Network Engineering</span> and 
+                  <span className="text-blue-400 font-semibold"> M.S. in AI & Machine Learning at WGU</span>, 
+                  I'm bridging the gap between academic theory and real-world application. My future goal? 
+                  An <span className="text-purple-400 font-semibold">Online D.Eng from George Washington University</span> 
+                  to lead the next generation of AI infrastructure.
+                </p>
               </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  <span className="font-bold"> JavaScript </span>
-                </label>
-
-                {/* Moonlight glowing effect bar with percentage */}
-                <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                  {/* The background glowing effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                  {/* Progress bar representing status % */}
-                  <div
-                    className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                    style={{ width: "83%" }}
-                  />
-
-                  {/* Percentage label inside the progress bar */}
-                  <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                    83%
-                  </span>
-                </div>
+            {/* Leadership & Vision */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
+              <div className="flex items-center mb-6">
+                <FaUsers className="text-3xl text-green-400 mr-4" />
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                  Leadership & Vision
+                </h3>
               </div>
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  <span className="font-bold"> Node.js </span>
-                </label>
-
-                {/* Moonlight glowing effect bar with percentage */}
-                <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                  {/* The background glowing effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                  {/* Progress bar representing status % */}
-                  <div
-                    className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                    style={{ width: "65%" }}
-                  />
-
-                  {/* Percentage label inside the progress bar */}
-                  <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                    65%
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  <span className="font-bold"> BootStrap </span>
-                </label>
-
-                {/* Moonlight glowing effect bar with percentage */}
-                <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                  {/* The background glowing effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                  {/* Progress bar representing status % */}
-                  <div
-                    className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                    style={{ width: "55%" }}
-                  />
-
-                  {/* Percentage label inside the progress bar */}
-                  <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                    55%
-                  </span>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <label htmlFor="htmlandcss" className="w-2/12">
-                    <span className="font-bold"> SASS </span>
-                  </label>
-
-                  {/* Moonlight glowing effect bar with percentage */}
-                  <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                    {/* The background glowing effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                    {/* Progress bar representing status % */}
-                    <div
-                      className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                      style={{ width: "55%" }}
-                    />
-
-                    {/* Percentage label inside the progress bar */}
-                    <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                      55%
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <label htmlFor="htmlandcss" className="w-2/12">
-                    <span className="font-bold"> DOM </span>
-                  </label>
-
-                  {/* Moonlight glowing effect bar with percentage */}
-                  <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                    {/* The background glowing effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                    {/* Progress bar representing status % */}
-                    <div
-                      className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                      style={{ width: "55%" }}
-                    />
-
-                    {/* Percentage label inside the progress bar */}
-                    <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                      55%
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <label htmlFor="htmlandcss" className="w-2/12">
-                    <span className="font-bold"> API </span>
-                  </label>
-
-                  {/* Moonlight glowing effect bar with percentage */}
-                  <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                    {/* The background glowing effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                    {/* Progress bar representing status % */}
-                    <div
-                      className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                      style={{ width: "55%" }}
-                    />
-
-                    {/* Percentage label inside the progress bar */}
-                    <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                      55%
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <label htmlFor="htmlandcss" className="w-2/12">
-                    <span className="font-bold"> NEXT.JS </span>
-                  </label>
-
-                  {/* Moonlight glowing effect bar with percentage */}
-                  <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                    {/* The background glowing effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                    {/* Progress bar representing status % */}
-                    <div
-                      className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                      style={{ width: "70%" }}
-                    />
-
-                    {/* Percentage label inside the progress bar */}
-                    <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                      70%
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <label htmlFor="htmlandcss" className="w-2/12">
-                    <span className="font-bold"> TypeScript </span>
-                  </label>
-
-                  {/* Moonlight glowing effect bar with percentage */}
-                  <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                    {/* The background glowing effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                    {/* Progress bar representing status % */}
-                    <div
-                      className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                      style={{ width: "55%" }}
-                    />
-
-                    {/* Percentage label inside the progress bar */}
-                    <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                      55%
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <br />
-
-              <div className="space-y-4">
-                <div className="text-4xl font-bold text-center mb-12">
-                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-                    Back End:
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold"> MYSQL </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "65%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        65%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold"> JQUERY </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "55%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        55%
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold"> HTTP/AJAX </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "65%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          65%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">AWS-SDK Polly V3</span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "45%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        45%
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold">Unit Testing </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "60%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          60%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold">Cypress </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "55%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          55%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold"> CLI </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "75%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          75%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold">Postman </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "55%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          55%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold">AWS API KEY </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "55%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          55%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <br />
-                  <br />
-
-                  <div className="text-4xl font-bold text-center mb-12">
-                    <strong>
-                      <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-                        Full Stack:
-                      </span>
-                    </strong>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold">Debugging </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "75%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          75%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold">
-                          Data Structures & Algorithms{" "}
-                        </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "55%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          55%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold">Problem Solving </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "55%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          55%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">Project Management </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "33%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        33%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">SCRUM w/ Trello </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "45%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        45%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">
-                        Systems Architecture & S.O.L.I.D. Principles{" "}
-                      </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "55%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        55%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="text-4xl font-bold text-center mb-12">
-                  <strong>
-                    <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-                      AI:
-                    </span>
-                  </strong>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">ChatGPT </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "75%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        75%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">Agents </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "45%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        45%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">Prompt Testing </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "35%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        35%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">Claude.io </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "75%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        75%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">Problem Solving </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "55%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        55%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="text-4xl font-bold text-center mb-12">
-                  <strong>
-                    <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-                      Additional:
-                    </span>
-                  </strong>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <label htmlFor="htmlandcss" className="w-2/12">
-                      <span className="font-bold">Spanish </span>
-                    </label>
-
-                    {/* Moonlight glowing effect bar with percentage */}
-                    <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      {/* The background glowing effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                      {/* Progress bar representing status % */}
-                      <div
-                        className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                        style={{ width: "100%" }}
-                      />
-
-                      {/* Percentage label inside the progress bar */}
-                      <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                        100%
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <label htmlFor="htmlandcss" className="w-2/12">
-                        <span className="font-bold">Hindi </span>
-                      </label>
-
-                      {/* Moonlight glowing effect bar with percentage */}
-                      <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                        {/* The background glowing effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                        {/* Progress bar representing status % */}
-                        <div
-                          className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                          style={{ width: "30%" }}
-                        />
-
-                        {/* Percentage label inside the progress bar */}
-                        <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                          30%
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                        <label htmlFor="htmlandcss" className="w-2/12">
-                          <span className="font-bold">Farsi </span>
-                        </label>
-
-                        {/* Moonlight glowing effect bar with percentage */}
-                        <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                          {/* The background glowing effect */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                          {/* Progress bar representing status % */}
-                          <div
-                            className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                            style={{ width: "15%" }}
-                          />
-
-                          {/* Percentage label inside the progress bar */}
-                          <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                            15%
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                        <label htmlFor="htmlandcss" className="w-2/12">
-                          <span className="font-bold">Chinese </span>
-                        </label>
-
-                        {/* Moonlight glowing effect bar with percentage */}
-                        <div className="relative grow bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                          {/* The background glowing effect */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-80 rounded-full animate-glow" />
-
-                          {/* Progress bar representing status % */}
-                          <div
-                            className="absolute top-0 left-0 h-full bg-[#00FFAB] rounded-full"
-                            style={{ width: "10%" }}
-                          />
-
-                          {/* Percentage label inside the progress bar */}
-                          <span className="absolute right-2 text-sm text-white font-bold top-0 bottom-0 flex items-center justify-center">
-                            10%
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* <div className="mt-8 flex justify-between text-center border-4 border-gradient-to-r from-green-400 to-blue-500 p-6 rounded-lg">
-                  <div>
-                    <h3
-                      className="text-2xl font-bold text-transparent bg-clip-text 
-      bg-gradient-to-r from-green-400 to-blue-500"
-                    >
-                      3+
-                    </h3>
-                    <p className="mt-2">
-                      <span className="font-bold">Years Experience</span>
-                    </p>
-                  </div>
-                  <div>
-                    <h3
-                      className="text-2xl font-bold text-transparent bg-clip-text 
-      bg-gradient-to-r from-green-400 to-blue-500"
-                    >
-                      100+
-                    </h3>
-                    <p className="mt-2">
-                      <strong>Projects Completed</strong>
-                    </p>
-                  </div>
-                  <div>
-                    <h3
-                      className="text-2xl font-bold text-transparent bg-clip-text 
-      bg-gradient-to-r from-green-400 to-blue-500"
-                    >
-                      30+
-                    </h3>
-                    <p className="mt-2">
-                      <strong>Happy Clients</strong>
-                    </p>
-                  </div>
-                  <div>
-                    <h3
-                      className="text-2xl font-bold text-transparent bg-clip-text 
-      bg-gradient-to-r from-green-400 to-blue-500"
-                    >
-                      700+
-                    </h3>
-                    <p className="mt-2">
-                      <strong>Total Contributions</strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              
+              <p className="text-gray-300 font-mono leading-relaxed">
+                I believe in <span className="text-cyan-400 font-semibold">ethical, production-ready software</span> 
+                that scales. My goal is to lead cross-functional teams in building the future of 
+                <span className="text-purple-300"> AI infrastructure</span> and 
+                <span className="text-teal-300"> cloud engineering</span>. Every line of code I write 
+                is guided by principles of security, scalability, and user-centered design.
+              </p>
             </div>
           </div>
-        </div> */}
-                {/* Contribution Status Section */}
-                <div className="mt-8 flex justify-between text-center border-4 border-gradient-to-r from-green-400 to-blue-500 p-6 rounded-lg space-x-4">
-                  {/* Card Container */}
-                  <div className="group relative transform transition-transform duration-500 ease-in-out perspective-500 hover:rotate-y-6 hover:rotate-x-3 hover:scale-105 hover:shadow-2xl">
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-100 to-blue-500">
-                      3+
-                    </h3>
-                    <p className="mt-2">
-                      <span className="font-bold">Years Experience</span>
-                    </p>
-                  </div>
 
-                  <div className="group relative transform transition-transform duration-500 ease-in-out perspective-500 hover:rotate-y-6 hover:rotate-x-3 hover:scale-105 hover:shadow-2xl">
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-100 to-blue-500">
-                      100+
-                    </h3>
-                    <p className="mt-2">
-                      <strong>Projects Completed</strong>
-                    </p>
+          {/* Right Column - Skills & Achievements */}
+          <div className="space-y-8">
+            {/* Technical Skills */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
+              <div className="flex items-center mb-6">
+                <FaChartLine className="text-3xl text-cyan-400 mr-4" />
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                  Technical Expertise
+                </h3>
+              </div>
+              
+              <div className="space-y-4">
+                {skills.map((skill, index) => (
+                  <div key={index} className="group">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-white font-semibold">{skill.name}</span>
+                      <span className="text-gray-400 text-sm">{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                      <div 
+                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out group-hover:shadow-lg`}
+                        style={{ 
+                          width: `${skill.level}%`,
+                          boxShadow: `0 0 10px rgba(34, 211, 238, 0.3)`
+                        }}
+                      ></div>
+                    </div>
                   </div>
+                ))}
+              </div>
+            </div>
 
-                  <div className="group relative transform transition-transform duration-500 ease-in-out perspective-500 hover:rotate-y-6 hover:rotate-x-3 hover:scale-105 hover:shadow-2xl">
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-100 to-blue-500">
-                      30+
-                    </h3>
-                    <p className="mt-2">
-                      <strong>Happy Clients</strong>
+            {/* Key Achievements */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
+              <div className="flex items-center mb-6">
+                <FaAward className="text-3xl text-yellow-400 mr-4" />
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+                  Key Achievements
+                </h3>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {achievements.map((achievement, index) => (
+                  <div 
+                    key={index} 
+                    className="group p-4 rounded-xl bg-gray-700/30 border border-gray-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20"
+                  >
+                    <div className="flex items-center mb-3">
+                      <div className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-300">
+                        {achievement.icon}
+                      </div>
+                      <h4 className="font-bold text-white text-sm">{achievement.title}</h4>
+                    </div>
+                    <p className="text-gray-400 text-xs leading-relaxed">
+                      {achievement.description}
                     </p>
                   </div>
-
-                  <div className="group relative transform transition-transform duration-500 ease-in-out perspective-500 hover:rotate-y-6 hover:rotate-x-3 hover:scale-105 hover:shadow-2xl">
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-100 to-blue-500">
-                      700+
-                    </h3>
-                    <p className="mt-2">
-                      <strong>Total Contributions</strong>
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+              Ready to Build Something Amazing?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              I'm always excited to collaborate on innovative projects that push the boundaries of technology. 
+              Let's create solutions that make a real impact.
+            </p>
+            <a 
+              href="#contact" 
+              className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105"
+            >
+              Let's Connect
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default About;
-
-{
-  /*
-            <div className="mt-8 flex justify-between text-center border-4 border-gradient-to-r from-green-400 to-blue-500 p-6 rounded-lg">
-              <div>
-                <h3
-                  className="text-2xl font-bold text-transparent bg-clip-text 
-                  bg-gradient-to-r from-green-400 to-blue-500"
-                  >
-                  3+
-                </h3>
-                <p className="mt-2">
-                  <span className="font-bold">Years Experience</span>
-                </p>
-              </div>
-              <div>
-                <h3
-                  className="text-2xl font-bold text-transparent bg-clip-text 
-                  bg-gradient-to-r from-green-400 to-blue-500"
-                  >
-                  100+
-                </h3>
-                <p className="mt-2">
-                  <strong>Projects Completed</strong>
-                </p>
-              </div>
-              <div>
-                <h3
-                  className="text-2xl font-bold text-transparent bg-clip-text 
-                  bg-gradient-to-r from-green-400 to-blue-500"
-                  >
-                  30+
-                </h3>
-                <p className="mt-2">
-                  <strong>Happy Clients</strong>
-                </p>
-              </div>
-              <div>
-                <h3
-                  className="text-2xl font-bold text-transparent bg-clip-text 
-                  bg-gradient-to-r from-green-400 to-blue-500"
-                  >
-                  700+
-                </h3>
-                <p className="mt-2">
-                  <strong>Total Contributions</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-  };
-  
-  export default About;
-  
-
-
-
-  
-   original percentage bar 1:
-             <br />
-            <br />
-            <hr />
-
-            <div className="mt-8 flex justify-between text-center">
-              <div>
-                <h3
-                  className="text-2xl font-bold text-transparent bg-clip-text 
-                      bg-gradient-to-r from-green-400 to-blue-500"
-                >
-                  3+
-                </h3>
-                <p className="mt-2">
-                  <span className="font-bold">Years Experience</span>
-                </p>
-              </div>
-              <div>
-                <h3
-                  className="text-2xl font-bold text-transparent bg-clip-text 
-                      bg-gradient-to-r from-green-400 to-blue-500"
-                >
-                  100+
-                </h3>
-                <p className="mt-2">
-                  <strong>Projects Completed</strong>
-                </p>
-              </div>
-              <div>
-                <h3
-                  className="text-2xl font-bold text-transparent bg-clip-text 
-                      bg-gradient-to-r from-green-400 to-blue-500"
-                >
-                  30+
-                </h3>
-                <p className="mt-2">
-                  <strong>Happy Clients</strong>
-                </p>
-              </div>
-              <div>
-                <h3
-                  className="text-2xl font-bold text-transparent bg-clip-text 
-                      bg-gradient-to-r from-green-400 to-blue-500"
-                >
-                  700+
-                </h3>
-                <p className="mt-2">
-                  <strong>Total Contributions</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <br />
-      <hr />
-    </div> */
-}
