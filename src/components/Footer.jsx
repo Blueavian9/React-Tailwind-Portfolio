@@ -1,6 +1,6 @@
 import * as React from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import CesarCover2Img from "../assets/Cesar_Cover2.png";
+import CesarCover2Img from "../assets/Cesar-Cover.png";
 
 const Footer = () => {
   return (
