@@ -1,6 +1,5 @@
 /* Mock 3: Hero.jsx */
 import * as React from "react";
-import CesarCoverImg from "../assets/Cesar-Cover.png";
 import GlowingButton from "./GlowingButton";
 
 export default function Hero() {
@@ -11,7 +10,7 @@ export default function Hero() {
         <div className="relative group mb-8">
           <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt"></div>
           <img
-            src={CesarCoverImg}
+            src="/src/assets/Cesar-Cover.png"
             alt="Cesar Cover"
             className="relative w-48 h-48 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
           />

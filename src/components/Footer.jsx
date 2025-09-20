@@ -1,12 +1,11 @@
 import * as React from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import CesarCover2Img from "../assets/Cesar-Cover.png";
 
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
       <img
-        src={CesarCover2Img}
+        src="/src/assets/Cesar-Cover.png"
         alt="Cesar-Cover.png"
         className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover transform 
         transition-transform duration-300 hover:scale-105"
