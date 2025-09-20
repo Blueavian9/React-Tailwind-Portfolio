@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt"></div>
         <img
           src="/src/assets/Cesar-Cover.png"
-          alt="Cesar Aguilar - Full Stack DevOps Cloud Engineer"
+          alt="Cesar Aguilar - Full Stack AI Integration DevOps Cloud Network Software Engineer and Solutions Architect"
           className="relative w-48 h-48 md:w-56 md:h-56 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="eager"
         />
@@ -24,14 +24,14 @@ export default function Hero() {
           </span>
         </h1>
         <h2 className="text-xl md:text-2xl font-semibold text-gray-300">
-          DevOps AI Integration Solutions Architect
+          Full Stack AI Integration Software Engineer & Solutions Architect
         </h2>
       </div>
 
       {/* Enhanced Bio with Better Readability */}
       <div className="max-w-4xl text-center space-y-4">
         <p className="text-lg md:text-xl text-gray-300 font-mono leading-relaxed">
-          I'm a <span className="text-cyan-400 font-semibold">Full Stack DevOps Cloud Engineer</span> with{" "}
+          I'm a <span className="text-cyan-400 font-semibold">Full Stack AI Integration DevOps Cloud Network Software Engineer</span> with{" "}
           <span className="text-cyan-400 font-semibold">3+ years of experience</span> building secure, scalable, and AI-integrated systems using technologies like{" "}
           <span className="text-teal-300">JavaScript, React.js, Node.js, Express, and AWS</span>. My work spans end-to-end web application development, including RESTful APIs, authentication systems, and AI integrations with{" "}
           <span className="text-teal-300">OpenAI, AWS Polly V3, and LangChain</span>—blending backend logic with intuitive frontend architecture.
