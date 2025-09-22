@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
       <img
-        src="/src/assets/Cesar-Cover2.png"
-        alt="Cesar-Cover2.png"
+        src="/src/assets/Cesar_Cover2.png"
+        alt="Cesar_Cover2.png"
         className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover transform 
         transition-transform duration-300 hover:scale-105"
       />
@@ -42,7 +42,7 @@ const Footer = () => {
 
       <div className="bg-blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-grey-400 hover:text-white mt-2 ml-4 text-sm leading-6 text-slate-500">
-          &copy; {new Date().getFullYear()} Cesar Labs Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} Cesar Labs 2025 Inc. All rights reserved.
         </p>
         <div className="flex space-x-4 my-4 md:my-0">
           <a
