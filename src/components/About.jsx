@@ -70,7 +70,7 @@ const About = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Transforming ideas into scalable, AI-powered solutions through
-            innovative engineering
+            innovative problem solving & engineering
           </p>
         </div>
 
