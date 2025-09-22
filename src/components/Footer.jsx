@@ -41,14 +41,7 @@ const Footer = () => {
       </div>
 
       <div className="bg-blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-grey-400 hover:text-white mt-2 ml-4 text-sm leading-6 text-slate-500">
-<<<<<<< HEAD
-          &copy; {new Date().getFullYear()} Cesar Labs 2025 Inc. All rights
-          reserved.
-=======
-          &copy; {new Date().getFullYear()} Cesar Labs 2025 Inc. All rights reserved.
->>>>>>> a654dba0f048faeb5bb8add9dd3438109783cdd5
-        </p>
+        <p className="text-grey-400 hover:text-white mt-2 ml-4 text-sm leading-6 text-slate-500"></p>
         <div className="flex space-x-4 my-4 md:my-0">
           <a
             href="https://www.facebook.com/cesar.aguilar.712/"
@@ -56,10 +49,10 @@ const Footer = () => {
           >
             <FaFacebook />
           </a>
-          {/* <a href="#" className="text-gray-400 hover:text-white">
+           <a href="#" className="text-gray-400 hover:text-white">
             <FaTwitter /> 
           </a>
-            */}
+            
           <a
             href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/"
             className="text-gray-400 hover:text-white"
