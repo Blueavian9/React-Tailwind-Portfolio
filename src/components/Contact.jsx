@@ -35,8 +35,8 @@ const ContactForm = () => {
             </span>
           </h2>
           <p className="text-white text-lg mb-6 text-center font-mono">
-            I'm open to discussing employment opportunities, web development
-            projects, or Full Stack partnerships.
+            I'm open to discussing employment opportunities, UX/UX Web
+            Development,Full Stack Projects,or business propositions.
           </p>
 
           {/* Contact Details Section */}

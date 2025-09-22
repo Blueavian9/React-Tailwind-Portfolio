@@ -35,7 +35,7 @@ const About = () => {
   const achievements = [
     {
       icon: <FaCode className="text-cyan-400" />,
-      title: "3+ Years Experience",
+      title: "5+ Years Experience",
       description: "Full Stack development with modern technologies",
     },
     {
