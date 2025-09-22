@@ -176,13 +176,24 @@ const Navbar = () => {
     },
   ];
 
+  const getButtonClasses = (dark, active) => {
+    if (active) {
+      return dark
+        ? "text-cyan-400 bg-cyan-400/15 shadow-lg shadow-cyan-400/20 border border-cyan-400/30"
+        : "text-cyan-600 bg-cyan-100/50 shadow-lg shadow-cyan-500/20 border border-cyan-500/30";
+    }
+    return dark
+      ? "text-gray-300 hover:text-white hover:bg-gray-700/30 hover:shadow-lg"
+      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50 hover:shadow-lg";
+  };
+
   return (
     <>
       <div
         className={`fixed top-0 left-0 right-0 h-20 z-40 transition-all duration-700 ${
           isScrolled
             ? isDarkMode
-              ? "bg-gray-900/85 backdrop-blur-2xl shadow-2xl shadow-black/30"
+              ? "bg-gray-900/85 shadow-black/30"
               : "bg-white/85 backdrop-blur-2xl shadow-2xl shadow-gray-900/10"
             : "bg-transparent"
         }`}
@@ -235,15 +246,11 @@ const Navbar = () => {
                   <button
                     key={item.id}
                     onClick={() => smoothScrollTo(item.id)}
-                    className={`relative px-6 py-3 rounded-2xl text-sm font-medium transition-all duration-500 group overflow-hidden focus:outline-none focus:ring-4 focus:ring-cyan-400/50 ${
-                      activeSection === item.id
-                        ? isDarkMode
-                          ? "text-cyan-400 bg-cyan-400/15 shadow-lg shadow-cyan-400/20 border border-cyan-400/30"
-                          : "text-cyan-600 bg-cyan-100/50 shadow-lg shadow-cyan-500/20 border border-cyan-500/30"
-                        : isDarkMode
-                        ? "text-gray-300 hover:text-white hover:bg-gray-700/30 hover:shadow-lg"
-                        : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50 hover:shadow-lg"
-                    }`}
+                    className={`
+    relative px-6 py-3 rounded-2xl text-sm font-medium transition-all duration-500
+    group overflow-hidden focus:outline-none focus:ring-4 focus:ring-cyan-400/50
+    ${getButtonClasses(isDarkMode, activeSection === item.id)}
+  `}
                     aria-label={`Navigate to ${item.label} section`}
                     aria-describedby={`${item.id}-description`}
                     aria-current={
@@ -255,8 +262,8 @@ const Navbar = () => {
                     <div
                       className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
                         isDarkMode
-                          ? "bg-gradient-to-r from-cyan-400/20 to-blue-500/20"
-                          : "bg-gradient-to-r from-cyan-500/20 to-blue-600/20"
+                          ? "bg-gradient-to-r from-cyan-400/20"
+                          : "bg-gradient-to-r  to-blue-600/20"
                       } opacity-0 group-hover:opacity-100`}
                     />
 
@@ -272,7 +279,7 @@ const Navbar = () => {
                         isHovering === item.id
                           ? isDarkMode
                             ? "shadow-2xl shadow-cyan-400/40 ring-2 ring-cyan-400/50"
-                            : "shadow-2xl shadow-cyan-500/40 ring-2 ring-cyan-500/50"
+                            : "shadow-2xl ring-cyan-500/50"
                           : "shadow-none ring-0"
                       }`}
                     />
