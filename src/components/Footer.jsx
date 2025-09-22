@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
       <img
-        src="/src/assets/Cesar-Cover.png"
+        src="/src/assets/Cesar-Cover2.png"
         alt="Cesar-Cover.png"
         className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover transform 
         transition-transform duration-300 hover:scale-105"
