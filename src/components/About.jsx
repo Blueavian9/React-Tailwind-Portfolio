@@ -90,7 +90,7 @@ const About = () => {
                   <span className="text-blue-400 font-semibold"> M.S. in AI & Machine Learning at WGU</span>, 
                   I'm bridging the gap between academic theory and real-world application. My future goal? 
                   An <span className="text-purple-400 font-semibold">Online D.Eng from George Washington University</span> 
-                  to lead the next generation of AI infrastructure.
+                   to lead the next generation of AI infrastructure.
                 </p>
               </div>
             </div>
