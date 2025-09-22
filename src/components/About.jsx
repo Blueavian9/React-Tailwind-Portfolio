@@ -78,11 +78,11 @@ const About = () => {
                 </p>
                 
                 <p>
-                  At <span className="text-cyan-400 font-semibold">TalkAnimate Inc.</span>, I've spent 3+ years 
+                  At <span className="text-cyan-400 font-semibold">TalkAnimate Inc.</span>, I've spent 5+ years 
                   building production-ready applications that serve real users. From implementing 
                   <span className="text-teal-300"> RESTful APIs</span> to integrating 
                   <span className="text-purple-300"> OpenAI and AWS Polly V3</span>, I've learned that great 
-                  software isn't just about code—it's about creating solutions that make a difference.
+                  software isn't just about code—it\'s about creating solutions that make a difference.
                 </p>
                 
                 <p>
