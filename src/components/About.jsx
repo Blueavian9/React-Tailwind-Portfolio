@@ -157,18 +157,15 @@ const About = () => {
                     {" "}
                     Cloud & Network Engineering
                   </span>
-                  In 18 months i will obtain a and will be pursuing a Masters of
+                  In 18 months i will have earned a <span className="text-indigo-700">
+                    Bachelors of Science in Cloud & Network Egineering with AWS Specializations </span> 
+                    right after I will be pursuing a <span className="text-indigo-700">Masters of
                   Science Degree in Artificial Intelligence and Machine Learning
-                  both from Western Governors University (WGU) I will be
-                  pursuing an Online Doctor of Engineering in Artificial
-                  Intelligence and Machine Learning from George Washington
-                  University (GW)
-                  <span className="text-indigo-700">
-                    Bachelors of Science in Cloud & Network Egineering with AWS
-                    Specializations
-                  </span>
-                  <span className="text-indigo-700"></span>
-                  <span className="text-indigo-700"></span>
+                  both from Western Governors University (WGU) </span> I will
+                  pursue an <span className="text-indigo-700"></span>
+                  <span className="text-indigo-700">Masters of
+                  Science Degree in Artificial Intelligence and Machine Learning
+                  both from Western Governors University (WGU)</span></span>
                 </p>
 
                 <p>
