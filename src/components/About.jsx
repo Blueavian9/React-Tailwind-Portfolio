@@ -87,16 +87,44 @@ const About = () => {
 
               <div className="space-y-4 text-gray-300 font-mono leading-relaxed">
                 <p>
-                  My odyssey began in March 2017 where i began to learn how to
-                  code through SolorLearn a mobile app that teachers people how
-                  to code then on 2018 i borrowed my wife's old laptop to learn
-                  how to code via FreeCodeCamp.org after obtaining multiple
-                  Certifications and building simple toy projects via both
-                  resources i decided it was time for me to join a coding
-                  Bootcamp so after some reasearch i joined{" "}
-                  <span className="text-cyan-400 font-semibold">
+                  I’m a Full-Stack Software Engineer with a strong foundation in
+                  JavaScript, React, Node.js, and Tailwind CSS, combined with AI
+                  integration and cloud/network engineering skills. My coding
+                  journey began in 2017 with SoloLearn and FreeCodeCamp, where I
+                  earned multiple certifications and built early projects. I
+                  later graduated from <span className="text-cyan-400 font-semibold">
                     Bloom Institute of Technology
-                  </span>
+                  </span>, gaining
+                  production-level experience across the full web stack. Rather
+                  than be discouraged by market challenges, I turned every
+                  obstacle into growth—continuing to sharpen my craft and deepen
+                  my expertise. Contributing to an Internship. 
+                  I’ve spent 5+ years delivering production-ready applications: Built and deployed
+                  RESTful APIs and complex front-end architectures. Integrated
+                  OpenAI and AWS Polly V3 for advanced AI capabilities. Focused
+                  on performance, scalability, and real impact for end-users.
+                  I’m now advancing my academic credentials with a 
+                  B.S. in Cloud
+                  & Network Engineering (AWS specialization) 
+                  
+                  and a Masters Degree in
+
+                  Artificial Intelligence & Machine Learning at WGU, 
+                  
+                  with plans for a 
+                  
+                  Doctor of Engineering in AI/ML at George Washington
+                  University. 
+                  
+                  What I bring to your team: Proven ability to ship
+                  and maintain production systems that scale. Deep interest in
+                  AI, cloud infrastructure, and real-world problem solving. A
+                  resilient, growth-oriented mindset that turns setbacks into
+                  innovation. I’m excited to bring this combination of hands-on
+                  engineering experience and advanced AI/cloud training to a
+                  forward-thinking team that values creativity, reliability, and
+                  impact{" "}
+                  
                   , even though on my research i didn't trust the school because
                   of the rebranding i still remained skeptical eventually i
                   Graduated and despite doing everything a student must to do
@@ -153,22 +181,30 @@ const About = () => {
                   </span>
                   <span className="text-teal-500">AI Integration</span> and
                   currently
-                  <span className="text-purple-300">
-                    {" "}
-                    Cloud & Network Engineering
+                  <span className="text-purple-300">{" "}
+                  Cloud & Network Engineering
                   </span>
-                  In 18 months i will have earned a <span className="text-indigo-700">
-                    Bachelors of Science in Cloud & Network Egineering with AWS Specializations </span> 
-                    right after I will be pursuing a <span className="text-indigo-700">Masters of
-                  Science Degree in Artificial Intelligence and Machine Learning
-                  both from Western Governors University (WGU) </span> I will
-                  pursue an <span className="text-indigo-700"></span>
-                  <span className="text-indigo-700">Masters of
-                  Science Degree in Artificial Intelligence and Machine Learning
-                  both from Western Governors University (WGU)</span></span>
-                </p>
-
+                  In 18 months i will have earned a{" "}
+                  <span className="text-indigo-700">
+                    Bachelors of Science in Cloud & Network Egineering with AWS
+                    Specializations{" "}
+                  </span>
+                  right after I will be pursuing a{" "}
+                  <span className="text-indigo-700">
+                    Masters of Science Degree in Artificial Intelligence and
+                    Machine Learning both from Western Governors University
+                    (WGU){" "}</span>{" "} I will then pursue an <span className="text-indigo-700">Masters of Science Degree in Artificial Intelligence & Machine Learning both from Western Governors University (WGU) </span>
                 <p>
+                  , I'm bridging the gap between academic theory and real-world
+                  application. My future goal? An{" "}
+                  <span className="text-purple-400 font-semibold">
+                    {" "}
+                    Online D.Eng from George Washington University
+                  </span>
+                  to lead the next generation of AI infrastructure.
+                </p>
+                 
+                 <p>
                   At{" "}
                   <span className="text-cyan-400 font-semibold">
                     TalkAnimate Inc.
@@ -185,23 +221,7 @@ const About = () => {
                   about creating solutions that make a difference.
                 </p>
 
-                <p>
-                  Currently pursuing my{" "}
-                  <span className="text-blue-400 font-semibold">
-                    B.S. in Cloud Network Engineering
-                  </span>{" "}
-                  and
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    M.S. in AI & Machine Learning at WGU
-                  </span>
-                  , I'm bridging the gap between academic theory and real-world
-                  application. My future goal? An{" "}
-                  <span className="text-purple-400 font-semibold">
-                    Online D.Eng from George Washington University
-                  </span>
-                  to lead the next generation of AI infrastructure.
-                </p>
+                
               </div>
             </div>
 
