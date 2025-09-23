@@ -194,7 +194,9 @@ const About = () => {
                     Masters of Science Degree in Artificial Intelligence and
                     Machine Learning both from Western Governors University
                     (WGU){" "}</span>{" "} I will then pursue an <span className="text-indigo-700">Masters of Science Degree in Artificial Intelligence & Machine Learning both from Western Governors University (WGU) </span>
+                </p>
                 <p>
+                  
                   , I'm bridging the gap between academic theory and real-world
                   application. My future goal? An{" "}
                   <span className="text-purple-400 font-semibold">
