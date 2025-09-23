@@ -81,21 +81,94 @@ const About = () => {
               <div className="flex items-center mb-6">
                 <FaLightbulb className="text-3xl text-yellow-400 mr-4" />
                 <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                  My Journey
+                  My Odyssey
                 </h3>
               </div>
 
               <div className="space-y-4 text-gray-300 font-mono leading-relaxed">
                 <p>
-                  My journey began at{" "}
+                  My odyssey began in March 2017 where i began to learn how to
+                  code through SolorLearn a mobile app that teachers people how
+                  to code then on 2018 i borrowed my wife's old laptop to learn
+                  how to code via FreeCodeCamp.org after obtaining multiple
+                  Certifications and building simple toy projects via both
+                  resources i decided it was time for me to join a coding
+                  Bootcamp so after some reasearch i joined{" "}
                   <span className="text-cyan-400 font-semibold">
                     Bloom Institute of Technology
                   </span>
-                  , where I discovered my passion for solving complex problems
-                  through code. What started as curiosity about web development
+                  , even though on my research i didn't trust the school because
+                  of the rebranding i still remained skeptical eventually i
+                  Graduated and despite doing everything a student must to do
+                  land a job i never got hired also during my time there
+                  BloomTech (formerly Lambda School) is known for its "you don't
+                  pay until you land a job" model, though this promise comes
+                  with significant conditions. This payment option, an Income
+                  Share Agreement (ISA), was designed to remove upfront
+                  financial barriers to entering the tech industry. However, the
+                  terms and history of this payment model have led to
+                  controversy and legal action In its simplest form, the model
+                  meant that graduates would only pay a percentage of their
+                  income for a set period of time after securing a job that paid
+                  above a certain threshold (e.g., $50,000 per year). For a
+                  time, it was also covered by a "Tuition Refund Guarantee" that
+                  promised graduates a refund and an additional payment if they
+                  did not get a qualifying job within a year, provided they met
+                  strict job-search requirements. The controversy and legal
+                  action Regulators and students found significant issues with
+                  BloomTech's claims and how the ISAs were actually structured
+                  and sold. Misleading job-placement statistics: The company was
+                  accused of publicly advertising inflated job-placement rates.
+                  Internal reporting showed significantly lower rates for
+                  graduates getting qualifying jobs. Hidden costs and deceptive
+                  marketing: BloomTech falsely claimed that ISAs were not loans
+                  and were "risk-free". The Consumer Financial Protection Bureau
+                  (CFPB) determined they were, in fact, loans with an average
+                  finance charge of $4,000. BloomTech also failed to disclose
+                  key loan information required by law. Selling ISAs to
+                  investors: The company marketed itself as financially aligned
+                  with its students, but it was revealed that they sold many
+                  ISAs to investors. This meant BloomTech often received a lump
+                  sum payment long before a student secured a job. Settlement
+                  and penalties: In April 2024, the CFPB took enforcement action
+                  against BloomTech and its CEO, Austen Allred. As a result, the
+                  company must stop collecting payments from many borrowers and
+                  is banned from consumer lending activities. Allred was also
+                  banned from the student-lending industry for 10 years and both
+                  were required to pay civil penalties. despite my setbacks i
+                  kept busy always learning ever growing towards more and more
+                  coding techniques i was able to implement i even landed an
+                  unpaid internship where i got zuckerburged by an employer
+                  who's app i built despite not landing a job the employer could
+                  not profit from my app becuase i owned the API Key and applied
+                  best practices so it was just an experience that again i had
+                  to change into positive if life give you lemons than i made
+                  lemonade. eventually I discovered my passion for solving
+                  complex problems through code and building better quality real
+                  world projects and even architecural best practices. What
+                  started as curiosity about web development and Full Stack
                   evolved into a deep expertise in{" "}
-                  <span className="text-teal-300">full-stack engineering</span>
-                  and <span className="text-purple-300">AI integration</span>.
+                  <span className="text-teal-300">
+                    Full-stack Web Development
+                  </span>
+                  <span className="text-teal-500">AI Integration</span> and
+                  currently
+                  <span className="text-purple-300">
+                    {" "}
+                    Cloud & Network Engineering
+                  </span>
+                  In 18 months i will obtain a and will be pursuing a Masters of
+                  Science Degree in Artificial Intelligence and Machine Learning
+                  both from Western Governors University (WGU) I will be
+                  pursuing an Online Doctor of Engineering in Artificial
+                  Intelligence and Machine Learning from George Washington
+                  University (GW)
+                  <span className="text-indigo-700">
+                    Bachelors of Science in Cloud & Network Egineering with AWS
+                    Specializations
+                  </span>
+                  <span className="text-indigo-700"></span>
+                  <span className="text-indigo-700"></span>
                 </p>
 
                 <p>
