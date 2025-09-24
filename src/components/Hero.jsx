@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="relative group mb-8">
         <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-1000 group-hover:duration-300 animate-tilt"></div>
         <img
-          src="/src/assets/Cesar-Cover.png"
+          src="/pubilc/assets/Cesar-Cover.png"
           alt="Cesar Aguilar - Full Stack AI Integration DevOps Cloud Network Software Engineer and Solutions Architect"
           className="relative w-48 h-48 md:w-56 md:h-56 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="eager"
