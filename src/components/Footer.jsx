@@ -1,14 +1,14 @@
 import * as React from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-
+import cover2 from "/assets/Cesar_Cover2.png";
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
+      import cover2 from "../assets/Cesar_Cover2.png";
       <img
-        src="/src/assets/Cesar_Cover2.png"
+        src={cover2}
         alt="Cesar_Cover2.png"
-        className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover transform 
-        transition-transform duration-300 hover:scale-105"
+        className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
       />
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
@@ -39,7 +39,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
       <div className="bg-blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-grey-400 hover:text-white mt-2 ml-4 text-sm leading-6 text-slate-500"></p>
         <div className="flex space-x-4 my-4 md:my-0">
