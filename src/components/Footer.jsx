@@ -1,15 +1,17 @@
 import * as React from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import cover2 from "/assets/Cesar_Cover2.png";
+
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
-      import cover2 from "../assets/Cesar_Cover2.png";
+      {/* ✅ Correct public reference */}
       <img
-        src={cover2}
-        alt="Cesar_Cover2.png"
-        className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
+        src="/assets/Cesar_Cover2.webp"
+        alt="Cesar Cover 2"
+        className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover
+             transform transition-transform duration-300 hover:scale-105"
       />
+
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
           <div className="flex-1 mb-4 md:mb-0">
@@ -19,28 +21,14 @@ const Footer = () => {
               </span>
             </h3>
 
-            <p className="text-white-400 font-mono" algin="justify-left">
-              is a passionate and dedicated Full Stack Software Engineer with
-              over 3 years of professional experience, currently specializing in
-              Full Stack Software Development and AI prompt testing at
-              TalkAnimate Inc. His expertise spans a range of Front End
-              technologies like React.js, Redux, and Flexbox, as well as Back
-              End skills in Node.js, TypeScript, and MYSQL. He excels in
-              developing responsive, efficient applications while leveraging his
-              deep knowledge of algorithms, data structures, and system
-              architecture. Married for over six years to his best friend Neha,
-              Cesar codes, problem-solves, and innovates alongside their beloved
-              guinea pigs, Munchie and Coco, always pushing the boundaries of
-              modern technology. Fluent in Spanish and conversational in Hindi,
-              he seamlessly blends technical acumen with effective
-              communication, making him a standout engineer in today’s
-              competitive tech landscape.
+            <p className="text-gray-300 font-mono text-justify">
+              {/* your bio text here */}
             </p>
           </div>
         </div>
       </div>
+
       <div className="bg-blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-grey-400 hover:text-white mt-2 ml-4 text-sm leading-6 text-slate-500"></p>
         <div className="flex space-x-4 my-4 md:my-0">
           <a
             href="https://www.facebook.com/cesar.aguilar.712/"
@@ -51,7 +39,6 @@ const Footer = () => {
           <a href="#" className="text-gray-400 hover:text-white">
             <FaTwitter />
           </a>
-
           <a
             href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/"
             className="text-gray-400 hover:text-white"
@@ -66,35 +53,16 @@ const Footer = () => {
           </a>
         </div>
         <div className="flex space-x-4 mr-8">
-          <a
-            target="_blank"
-            href="#"
-            className="text-gray-400 hover:text-white"
-          >
+          <a href="#" className="text-gray-400 hover:text-white">
             Privacy
           </a>
-
-          <a
-            target="_blank"
-            href="#"
-            className="text-gray-400 hover:text-white"
-          >
+          <a href="#" className="text-gray-400 hover:text-white">
             Terms of Service
           </a>
-
-          <a
-            target="_blank"
-            href="#"
-            className="text-gray-400 hover:text-white"
-          >
+          <a href="#" className="text-gray-400 hover:text-white">
             Accessibility
           </a>
-
-          <a
-            target="_blank"
-            href="#"
-            className="text-gray-400 hover:text-white"
-          >
+          <a href="#" className="text-gray-400 hover:text-white">
             Business Proposition VC Funding
           </a>
         </div>
