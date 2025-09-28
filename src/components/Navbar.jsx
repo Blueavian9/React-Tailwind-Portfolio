@@ -15,8 +15,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
             setActiveSection(entry.target.id);
           }
@@ -26,16 +26,17 @@ const Navbar = () => {
     );
 
     ["home", "about", "services", "projects", "contact"]
-      .map(id => document.getElementById(id))
+      .map((id) => document.getElementById(id))
       .filter(Boolean)
-      .forEach(el => observer.observe(el));
+      .forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
-  const smoothScrollTo = useCallback(id => {
+  const smoothScrollTo = useCallback((id) => {
     const target = document.getElementById(id);
-    if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
+    if (target)
+      window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
     setIsMobileMenuOpen(false);
   }, []);
 
@@ -54,6 +55,8 @@ const Navbar = () => {
         : "text-cyan-600 bg-cyan-100/50 border border-cyan-500/30"
       : dark
       ? "text-gray-300 hover:text-white hover:bg-gray-700/30"
-      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"; // Final bfanch & semicolon 
-  }
-}
+      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"; // Final bfanch & semicolon
+  };
+};
+
+export default Navbar;

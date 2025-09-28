@@ -85,169 +85,181 @@ const About = () => {
                 </h3>
               </div>
 
+              {/* === NEW ABOUT ME SUMMARY === */}
               <div className="space-y-4 text-gray-300 font-mono leading-relaxed">
                 <p>
-                  I’m a Full-Stack Software Engineer with a strong foundation in
-                  JavaScript, React, Node.js, and Tailwind CSS, combined with AI
-                  integration and cloud/network engineering skills. My coding
-                  journey began in 2017 with SoloLearn and FreeCodeCamp, where I
-                  earned multiple certifications and built early projects. I
-                  later graduated from <span className="text-cyan-400 font-semibold">
-                    Bloom Institute of Technology
-                  </span>, gaining
-                  production-level experience across the full web stack. Rather
-                  than be discouraged by market challenges, I turned every
-                  obstacle into growth—continuing to sharpen my craft and deepen
-                  my expertise. Contributing to an Internship. 
-                  I’ve spent 5+ years delivering production-ready applications: Built and deployed
-                  RESTful APIs and complex front-end architectures. Integrated
-                  OpenAI and AWS Polly V3 for advanced AI capabilities. Focused
-                  on performance, scalability, and real impact for end-users.
-                  I’m now advancing my academic credentials with a 
-                  B.S. in Cloud
-                  & Network Engineering (AWS specialization) 
-                  
-                  and a Masters Degree in
-
-                  Artificial Intelligence & Machine Learning at WGU, 
-                  
-                  with plans for a 
-                  
-                  Doctor of Engineering in AI/ML at George Washington
-                  University. 
-                  
-                  What I bring to your team: Proven ability to ship
-                  and maintain production systems that scale. Deep interest in
-                  AI, cloud infrastructure, and real-world problem solving. A
-                  resilient, growth-oriented mindset that turns setbacks into
-                  innovation. I’m excited to bring this combination of hands-on
-                  engineering experience and advanced AI/cloud training to a
-                  forward-thinking team that values creativity, reliability, and
-                  impact{" "}
-                  
-                  , even though on my research i didn't trust the school because
-                  of the rebranding i still remained skeptical eventually i
-                  Graduated and despite doing everything a student must to do
-                  land a job i never got hired also during my time there
-                  BloomTech (formerly Lambda School) is known for its "you don't
-                  pay until you land a job" model, though this promise comes
-                  with significant conditions. This payment option, an Income
-                  Share Agreement (ISA), was designed to remove upfront
-                  financial barriers to entering the tech industry. However, the
-                  terms and history of this payment model have led to
-                  controversy and legal action In its simplest form, the model
-                  meant that graduates would only pay a percentage of their
-                  income for a set period of time after securing a job that paid
-                  above a certain threshold (e.g., $50,000 per year). For a
-                  time, it was also covered by a "Tuition Refund Guarantee" that
-                  promised graduates a refund and an additional payment if they
-                  did not get a qualifying job within a year, provided they met
-                  strict job-search requirements. The controversy and legal
-                  action Regulators and students found significant issues with
-                  BloomTech's claims and how the ISAs were actually structured
-                  and sold. Misleading job-placement statistics: The company was
-                  accused of publicly advertising inflated job-placement rates.
-                  Internal reporting showed significantly lower rates for
-                  graduates getting qualifying jobs. Hidden costs and deceptive
-                  marketing: BloomTech falsely claimed that ISAs were not loans
-                  and were "risk-free". The Consumer Financial Protection Bureau
-                  (CFPB) determined they were, in fact, loans with an average
-                  finance charge of $4,000. BloomTech also failed to disclose
-                  key loan information required by law. Selling ISAs to
-                  investors: The company marketed itself as financially aligned
-                  with its students, but it was revealed that they sold many
-                  ISAs to investors. This meant BloomTech often received a lump
-                  sum payment long before a student secured a job. Settlement
-                  and penalties: In April 2024, the CFPB took enforcement action
-                  against BloomTech and its CEO, Austen Allred. As a result, the
-                  company must stop collecting payments from many borrowers and
-                  is banned from consumer lending activities. Allred was also
-                  banned from the student-lending industry for 10 years and both
-                  were required to pay civil penalties. despite my setbacks i
-                  kept busy always learning ever growing towards more and more
-                  coding techniques i was able to implement i even landed an
-                  unpaid internship where i got zuckerburged by an employer
-                  who's app i built despite not landing a job the employer could
-                  not profit from my app becuase i owned the API Key and applied
-                  best practices so it was just an experience that again i had
-                  to change into positive if life give you lemons than i made
-                  lemonade. eventually I discovered my passion for solving
-                  complex problems through code and building better quality real
-                  world projects and even architecural best practices. What
-                  started as curiosity about web development and Full Stack
-                  evolved into a deep expertise in{" "}
-                  <span className="text-teal-300">
-                    Full-stack Web Development
+                  I’m a
+                  <span className="text-cyan-400 font-semibold">
+                    {" "}
+                    Full-Stack Software Engineer{" "}
                   </span>
-                  <span className="text-teal-500">AI Integration</span> and
-                  currently
-                  <span className="text-purple-300">{" "}
-                  Cloud & Network Engineering
+                  specializing in
+                  <span className="text-yellow-400 font-semibold">
+                    {" "}
+                    JavaScript/TypeScript
                   </span>
-                  In 18 months i will have earned a{" "}
-                  <span className="text-indigo-700">
-                    Bachelors of Science in Cloud & Network Egineering with AWS
-                    Specializations{" "}
+                  ,<span className="text-cyan-400 font-semibold"> React</span>,
+                  <span className="text-green-400 font-semibold"> Node.js</span>
+                  ,
+                  <span className="text-blue-400 font-semibold">
+                    {" "}
+                    Tailwind CSS
                   </span>
-                  right after I will be pursuing a{" "}
-                  <span className="text-indigo-700">
-                    Masters of Science Degree in Artificial Intelligence and
-                    Machine Learning both from Western Governors University
-                    (WGU){" "}</span>{" "} I will then pursue an <span className="text-indigo-700">Masters of Science Degree in Artificial Intelligence & Machine Learning both from Western Governors University (WGU) </span>
-                </p>
-                <p>
-                  
-                  , I'm bridging the gap between academic theory and real-world
-                  application. My future goal? An{" "}
+                  , and
                   <span className="text-purple-400 font-semibold">
                     {" "}
-                    Online D.Eng from George Washington University
+                    cloud-native AI integrations
                   </span>
-                  to lead the next generation of AI infrastructure.
-                </p>
-                 
-                 <p>
-                  At{" "}
-                  <span className="text-cyan-400 font-semibold">
-                    TalkAnimate Inc.
-                  </span>
-                  , I've spent 5+ years building production-ready applications
-                  that serve real users. From implementing
-                  <span className="text-teal-300"> RESTful APIs</span> to
-                  integrating
-                  <span className="text-purple-300">
+                  . I design and ship
+                  <span className="text-teal-300 font-semibold">
                     {" "}
-                    OpenAI and AWS Polly V3
+                    production-grade applications{" "}
                   </span>
-                  , I've learned that great software isn't just about code—it\'s
-                  about creating solutions that make a difference.
+                  that merge AI, cloud infrastructure, and real-world impact.
                 </p>
 
-                
-              </div>
-            </div>
+                <p>Currently, I’m building two major projects:</p>
 
-            {/* Leadership & Vision */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
-              <div className="flex items-center mb-6">
-                <FaUsers className="text-3xl text-green-400 mr-4" />
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                  Leadership & Vision
-                </h3>
-              </div>
+                <p>
+                  <span className="text-purple-300 font-semibold">
+                    Healthcare-AI-Productivity App
+                  </span>{" "}
+                  – an AI-powered wellness and productivity platform for remote
+                  workers with planned healthcare integration. It fuses
+                  <span className="text-teal-300 font-semibold">
+                    {" "}
+                    health-tech
+                  </span>{" "}
+                  and
+                  <span className="text-cyan-400 font-semibold">
+                    {" "}
+                    remote-work tools
+                  </span>
+                  , is{" "}
+                  <span className="text-indigo-400 font-semibold">
+                    HIPAA-ready
+                  </span>
+                  , and is guided by built-in product, engineering, and growth
+                  personas to
+                  <span className="text-green-400 font-semibold">
+                    {" "}
+                    scale user adoption
+                  </span>
+                  .
+                </p>
 
-              <p className="text-gray-300 font-mono leading-relaxed">
-                I believe in{" "}
-                <span className="text-cyan-400 font-semibold">
-                  ethical, production-ready software
-                </span>
-                that scales. My goal is to lead cross-functional teams in
-                building the future of
-                <span className="text-purple-300"> AI infrastructure</span> and
-                <span className="text-teal-300"> cloud engineering</span>. Every
-                line of code I write is guided by principles of security,
-                scalability, and user-centered design.
-              </p>
+                <p>
+                  <span className="text-teal-300 font-semibold">
+                    Ascot Hills 5K Fundraiser App
+                  </span>{" "}
+                  – a full-stack platform helping raise
+                  <span className="text-yellow-400 font-semibold">$10,000</span>
+                  for a community 5K event. Built with
+                  <span className="text-cyan-400 font-semibold"> React</span>,
+                  <span className="text-green-400 font-semibold"> Node.js</span>
+                  ,
+                  <span className="text-blue-400 font-semibold">
+                    {" "}
+                    Tailwind CSS
+                  </span>
+                  ,
+                  <span className="text-teal-400 font-semibold">
+                    {" "}
+                    Supabase/Stripe
+                  </span>
+                  , and{" "}
+                  <span className="text-indigo-400 font-semibold">
+                    {" "}
+                    RESTful APIs
+                  </span>
+                  , it focuses on secure payments, real-time registration, and
+                  <span className="text-purple-400 font-semibold">
+                    {" "}
+                    mobile responsiveness
+                  </span>
+                  .
+                </p>
+
+                <p>
+                  Other key builds include a
+                  <span className="text-purple-300 font-semibold">
+                    {" "}
+                    Text-to-Speech K-12 Educational Platform
+                  </span>
+                  (AWS SDK Polly V3, Groq, Node.js, Express, Speech-to-Text,
+                  prompt testing) and a
+                  <span className="text-cyan-400 font-semibold">
+                    {" "}
+                    Book Library Documentation App
+                  </span>
+                  (Node/Express, React, SQLite/Sequelize, JWT, bcrypt.js,
+                  Jest/Supertest).
+                </p>
+
+                <p>
+                  <span className="text-yellow-400 font-semibold">
+                    Marketable Senior Skills
+                  </span>{" "}
+                  include:
+                  <br />•{" "}
+                  <span className="text-teal-300 font-semibold">
+                    End-to-End Architecture
+                  </span>{" "}
+                  – scalable front ends, secure APIs, database design, CI/CD
+                  pipelines.
+                  <br />•{" "}
+                  <span className="text-purple-300 font-semibold">
+                    AI & Cloud Integration
+                  </span>{" "}
+                  – AWS SDK Polly V3, Groq, AI prompt engineering, HIPAA-ready
+                  design.
+                  <br />•{" "}
+                  <span className="text-cyan-400 font-semibold">
+                    Security & Testing
+                  </span>{" "}
+                  – JWT, bcrypt.js, automated test suites, continuous
+                  integration.
+                  <br />•{" "}
+                  <span className="text-green-400 font-semibold">
+                    Product & Growth Mindset
+                  </span>{" "}
+                  – user-centered design (Figma), analytics, and conversion
+                  optimization.
+                </p>
+
+                <p>
+                  I’m advancing my expertise with a
+                  <span className="text-blue-400 font-semibold">
+                    {" "}
+                    B.S. in Cloud & Network Engineering (AWS specialization)
+                  </span>
+                  and an
+                  <span className="text-purple-400 font-semibold">
+                    {" "}
+                    M.S. in AI & Machine Learning
+                  </span>{" "}
+                  at WGU, with plans for a
+                  <span className="text-indigo-400 font-semibold">
+                    {" "}
+                    Doctor of Engineering in AI/ML
+                  </span>
+                  at George Washington University.
+                </p>
+
+                <p>
+                  I thrive on transforming ambitious ideas into
+                  <span className="text-teal-300 font-semibold">
+                    {" "}
+                    scalable, real-world solutions
+                  </span>
+                  , ready to make an immediate impact on
+                  <span className="text-cyan-400 font-semibold">
+                    {" "}
+                    forward-thinking engineering teams
+                  </span>
+                  .
+                </p>
+              </div>
             </div>
           </div>
 
