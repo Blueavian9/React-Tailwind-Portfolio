@@ -57,19 +57,26 @@ const Service = () => {
               key={service.id}
               className="group relative bg-gray-800 rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
+              {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-pink-100 to-violet-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+
               <div className="relative px-6 pb-6 h-full flex flex-col justify-between z-10">
                 <div>
-                  <div className="text-right text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-400">
+                  {/* 🔹 ID number: brightens on hover */}
+                  <div className="text-right text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-400 group-hover:from-green-300 group-hover:to-teal-300 transition-colors duration-300">
                     {service.id}
                   </div>
-                  <h3 className="mt-2 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+
+                  {/* 🔹 Title: stronger gradient and glow on hover */}
+                  <h3 className="mt-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-300 via-teal-300 to-blue-400 group-hover:from-yellow-300 group-hover:via-pink-400 group-hover:to-purple-500 transition-colors duration-300 drop-shadow-md group-hover:drop-shadow-lg">
                     {service.title}
                   </h3>
+
                   <p className="font-mono mt-2 text-gray-300">
                     {service.description}
                   </p>
                 </div>
+
                 <a
                   href="#"
                   className="mt-4 inline-block text-green-400 hover:text-blue-500 transition-colors duration-300"
@@ -89,12 +96,56 @@ export default Service;
 
 
 
+// Mock 2: Code
+// const Service = () => {
+//   return (
+//     <div
+//       className="bg-gradient-to-b from-[#243b55] to-[#141e30] text-white py-20"
+//       id="service"
+//     >
+//       <div className="container mx-auto px-8 md:px-16 lg:px-24">
+//         <h2 className="text-4xl font-bold text-center mb-12">
+//           <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+//             Services
+//           </span>
+//         </h2>
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {services.map((service) => (
+//             <div
+//               key={service.id}
+//               className="group relative bg-gray-800 rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+//             >
+//               <div className="absolute inset-0 bg-gradient-to-br from-pink-100 to-violet-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+//               <div className="relative px-6 pb-6 h-full flex flex-col justify-between z-10">
+//                 <div>
+//                   <div className="text-right text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-400">
+//                     {service.id}
+//                   </div>
+//                   <h3 className="mt-2 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+//                     {service.title}
+//                   </h3>
+//                   <p className="font-mono mt-2 text-gray-300">
+//                     {service.description}
+//                   </p>
+//                 </div>
+//                 <a
+//                   href="#"
+//                   className="mt-4 inline-block text-green-400 hover:text-blue-500 transition-colors duration-300"
+//                 >
+//                   Read More
+//                 </a>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
+// export default Service;
 
-
-
-
-// original code before animated gradient border
+// original Mock 1: code before animated gradient border
 //import * as React from "react";
 
 // const services = [
