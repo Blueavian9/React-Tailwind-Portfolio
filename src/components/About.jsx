@@ -20,7 +20,7 @@ const About = () => {
     {
       name: "Node.js/Express",
       level: 90,
-      color: "from-green-400 to-emerald-600",
+      color: "from-green-300 to-emerald-500",
     },
     { name: "AWS/Cloud", level: 85, color: "from-blue-400 to-cyan-500" },
     {
