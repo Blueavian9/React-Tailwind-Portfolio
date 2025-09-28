@@ -20,7 +20,7 @@ const About = () => {
     {
       name: "Node.js/Express",
       level: 90,
-      color: "from-green-300 to-emerald-500",
+      color: "from-lime-400 to-green-600", // ✅ brighter gradient for visibility
     },
     { name: "AWS/Cloud", level: 85, color: "from-blue-400 to-cyan-500" },
     {
@@ -87,181 +87,78 @@ const About = () => {
 
               {/* === NEW ABOUT ME SUMMARY === */}
               <div className="space-y-4 text-gray-300 font-mono leading-relaxed">
-                <p>
-                  I’m a
-                  <span className="text-cyan-400 font-semibold">
-                    {" "}
-                    Full-Stack Software Engineer{" "}
-                  </span>
-                  specializing in
-                  <span className="text-yellow-400 font-semibold">
-                    {" "}
-                    JavaScript/TypeScript
-                  </span>
-                  ,<span className="text-cyan-400 font-semibold"> React</span>,
-                  <span className="text-green-400 font-semibold"> Node.js</span>
-                  ,
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Tailwind CSS
-                  </span>
-                  , and
-                  <span className="text-purple-400 font-semibold">
-                    {" "}
-                    cloud-native AI integrations
-                  </span>
-                  . I design and ship
-                  <span className="text-teal-300 font-semibold">
-                    {" "}
-                    production-grade applications{" "}
-                  </span>
-                  that merge AI, cloud infrastructure, and real-world impact.
-                </p>
+                {/* (keep all your current <p> paragraphs exactly as in your latest version) */}
+              {/* Long Blog Bio */}
+              <p>Hi, I’m Cesar A. Aguilar—a devoted husband to my wife
+<span className="text-cyan-400 font-semibold">Neha</span> for over six years,
+and proud “pet dad” to two spoiled guinea pigs,
+<span className="text-teal-400 font-semibold">Munchie</span> and
+<span className="text-teal-400 font-semibold">Coco</span>.
+They keep me company (and occasionally steal my snacks) while I code late into the night.
 
-                <p>Currently, I’m building two major projects:</p>
+By day, I serve as a
+<span className="text-blue-400 font-semibold">Security Officer for Los Angeles Council District 14 in El Sereno</span>,
+guarding Councilmember Ysabel Jurado’s office and supporting community safety.
+I also work Saturdays for the Lincoln Heights Youth Center and
+answer to the
+<span className="text-blue-400 font-semibold">Hollenbeck LAPD Security Services Division</span>,
+serving multiple City of Los Angeles LAPD posts including
+<span className="text-blue-400 font-semibold">PiperTech</span> and the
+<span className="text-blue-400 font-semibold">Hyperion S.A.F.E. Center</span>—
+all while studying full time at
+<span className="text-indigo-400 font-semibold">Western Governors University (WGU)</span>.
 
-                <p>
-                  <span className="text-purple-300 font-semibold">
-                    Healthcare-AI-Productivity App
-                  </span>{" "}
-                  – an AI-powered wellness and productivity platform for remote
-                  workers with planned healthcare integration. It fuses
-                  <span className="text-teal-300 font-semibold">
-                    {" "}
-                    health-tech
-                  </span>{" "}
-                  and
-                  <span className="text-cyan-400 font-semibold">
-                    {" "}
-                    remote-work tools
-                  </span>
-                  , is{" "}
-                  <span className="text-indigo-400 font-semibold">
-                    HIPAA-ready
-                  </span>
-                  , and is guided by built-in product, engineering, and growth
-                  personas to
-                  <span className="text-green-400 font-semibold">
-                    {" "}
-                    scale user adoption
-                  </span>
-                  .
-                </p>
+By passion, I volunteer my technical skills to local organizations like
+<span className="text-purple-400 font-semibold">Barrio Action Youth & Family Resource Center</span>
+and
+<span className="text-purple-400 font-semibold">College Bridge Academy</span>,
+building digital tools to help them grow and better serve the neighborhood.
 
-                <p>
-                  <span className="text-teal-300 font-semibold">
-                    Ascot Hills 5K Fundraiser App
-                  </span>{" "}
-                  – a full-stack platform helping raise
-                  <span className="text-yellow-400 font-semibold">$10,000</span>
-                  for a community 5K event. Built with
-                  <span className="text-cyan-400 font-semibold"> React</span>,
-                  <span className="text-green-400 font-semibold"> Node.js</span>
-                  ,
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Tailwind CSS
-                  </span>
-                  ,
-                  <span className="text-teal-400 font-semibold">
-                    {" "}
-                    Supabase/Stripe
-                  </span>
-                  , and{" "}
-                  <span className="text-indigo-400 font-semibold">
-                    {" "}
-                    RESTful APIs
-                  </span>
-                  , it focuses on secure payments, real-time registration, and
-                  <span className="text-purple-400 font-semibold">
-                    {" "}
-                    mobile responsiveness
-                  </span>
-                  .
-                </p>
+When the uniform comes off, I turn to my other calling:
+becoming a world-class technologist.
+I’m currently pursuing a
+<span className="text-indigo-400 font-semibold">B.S. in Cloud & Network Engineering</span>
+and preparing for a
+<span className="text-indigo-400 font-semibold">Master’s in AI & Machine Learning</span>,
+all while refining my craft as a
+<span className="text-cyan-400 font-semibold">Full-Stack Software Engineer</span>.
 
-                <p>
-                  Other key builds include a
-                  <span className="text-purple-300 font-semibold">
-                    {" "}
-                    Text-to-Speech K-12 Educational Platform
-                  </span>
-                  (AWS SDK Polly V3, Groq, Node.js, Express, Speech-to-Text,
-                  prompt testing) and a
-                  <span className="text-cyan-400 font-semibold">
-                    {" "}
-                    Book Library Documentation App
-                  </span>
-                  (Node/Express, React, SQLite/Sequelize, JWT, bcrypt.js,
-                  Jest/Supertest).
-                </p>
+It’s a full life of
+long workdays, overtime shifts, late-night coding sessions, and family time—
+but I wouldn’t trade it.
+Every project I build, whether for a neighborhood non-profit or an AI-powered startup,
+is fueled by my belief that technology should strengthen communities
+and create opportunities for everyone.</p>
+              
+              {/* Short Blog Bio */}
+              {/* <p>Hi, I’m Cesar A. Aguilar—married for over
+<span className="text-cyan-400 font-semibold">six years</span> to my wife
+<span className="text-cyan-400 font-semibold">Neha</span> and pet dad to two spoiled guinea pigs,
+<span className="text-teal-400 font-semibold">Munchie</span> and
+<span className="text-teal-400 font-semibold">Coco</span>.
 
-                <p>
-                  <span className="text-yellow-400 font-semibold">
-                    Marketable Senior Skills
-                  </span>{" "}
-                  include:
-                  <br />•{" "}
-                  <span className="text-teal-300 font-semibold">
-                    End-to-End Architecture
-                  </span>{" "}
-                  – scalable front ends, secure APIs, database design, CI/CD
-                  pipelines.
-                  <br />•{" "}
-                  <span className="text-purple-300 font-semibold">
-                    AI & Cloud Integration
-                  </span>{" "}
-                  – AWS SDK Polly V3, Groq, AI prompt engineering, HIPAA-ready
-                  design.
-                  <br />•{" "}
-                  <span className="text-cyan-400 font-semibold">
-                    Security & Testing
-                  </span>{" "}
-                  – JWT, bcrypt.js, automated test suites, continuous
-                  integration.
-                  <br />•{" "}
-                  <span className="text-green-400 font-semibold">
-                    Product & Growth Mindset
-                  </span>{" "}
-                  – user-centered design (Figma), analytics, and conversion
-                  optimization.
-                </p>
+By day, I’m a
+<span className="text-blue-400 font-semibold">Security Officer for Los Angeles Council District 14 in El Sereno</span>,
+guarding Councilmember Ysabel Jurado’s office.
+I also work Saturdays at Lincoln Heights Youth Center and support
+<span className="text-blue-400 font-semibold">Hollenbeck LAPD Security Services</span>,
+covering PiperTech and the Hyperion S.A.F.E. Center—all while studying full time at
+<span className="text-indigo-400 font-semibold">Western Governors University</span>.
 
-                <p>
-                  I’m advancing my expertise with a
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    B.S. in Cloud & Network Engineering (AWS specialization)
-                  </span>
-                  and an
-                  <span className="text-purple-400 font-semibold">
-                    {" "}
-                    M.S. in AI & Machine Learning
-                  </span>{" "}
-                  at WGU, with plans for a
-                  <span className="text-indigo-400 font-semibold">
-                    {" "}
-                    Doctor of Engineering in AI/ML
-                  </span>
-                  at George Washington University.
-                </p>
+I volunteer technical skills for
+<span className="text-purple-400 font-semibold">Barrio Action Youth & Family Resource Center</span>
+and
+<span className="text-purple-400 font-semibold">College Bridge Academy</span>,
+building digital tools that empower local non-profits.
 
-                <p>
-                  I thrive on transforming ambitious ideas into
-                  <span className="text-teal-300 font-semibold">
-                    {" "}
-                    scalable, real-world solutions
-                  </span>
-                  , ready to make an immediate impact on
-                  <span className="text-cyan-400 font-semibold">
-                    {" "}
-                    forward-thinking engineering teams
-                  </span>
-                  .
-                </p>
+Currently pursuing a
+<span className="text-indigo-400 font-semibold">B.S. in Cloud & Network Engineering</span>
+and an
+<span className="text-indigo-400 font-semibold">M.S. in AI & Machine Learning</span>,
+I merge full-stack engineering with AI innovation to create scalable solutions that serve real communities.</p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Right Column - Skills & Achievements */}
           <div className="space-y-8">
