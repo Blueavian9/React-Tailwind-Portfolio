@@ -5,13 +5,10 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        spinSlow: {
-          "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(360deg)" },
-        },
-        pulseSoft: {
-          "0%,100%": { opacity: 0.8 },
-          "50%": { opacity: 1 },
+        spinPulse: {
+          "0%": { transform: "rotate(0deg)", opacity: 0.8 },
+          "50%": { transform: "rotate(180deg)", opacity: 1 },
+          "100%": { transform: "rotate(360deg)", opacity: 0.8 },
         },
         btnAnim1: {
           "0%": { left: "-100%" },
@@ -31,8 +28,7 @@ export default {
         },
       },
       animation: {
-        "spin-slow": "spinSlow 12s linear infinite",
-        "pulse-soft": "pulseSoft 4s ease-in-out infinite",
+        "spin-pulse": "spinPulse 8s ease-in-out infinite",
         btnAnim1: "btnAnim1 1s linear infinite",
         btnAnim2: "btnAnim2 1s linear infinite 0.25s",
         btnAnim3: "btnAnim3 1s linear infinite 0.5s",

@@ -29,10 +29,7 @@ const ContactForm = () => {
         setToast({ type: "success", text: "✅ Message sent successfully!" });
         setFormData({ name: "", email: "", message: "", role: "" });
       } else {
-        setToast({
-          type: "error",
-          text: "❌ Failed to send. Please try again.",
-        });
+        setToast({ type: "error", text: "❌ Failed to send. Please try again." });
       }
     } catch {
       setToast({ type: "error", text: "⚠️ Network error. Please try again." });
@@ -42,10 +39,9 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#243b55] to-[#141e30] relative">
-      {/* Toast Notification */}
       {toast && (
         <div
-          className={`fixed top-6 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg text-white text-sm font-semibold transition-all duration-300 ${
+          className={`fixed top-6 left-1/2 -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg text-white text-sm font-semibold transition-all duration-300 ${
             toast.type === "success" ? "bg-green-500" : "bg-red-500"
           }`}
         >
@@ -54,8 +50,8 @@ const ContactForm = () => {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mb-8">
-        {/* Info Panel */}
-        <div className="max-w-lg mx-auto bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)] mb-8">
+        {/* Info panel */}
+        <div className="max-w-lg mx-auto bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
           <h2 className="text-3xl text-center font-bold text-white mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-blue-400">
               Talk to Me
@@ -72,9 +68,7 @@ const ContactForm = () => {
             </div>
             <div className="flex items-center justify-center">
               <FaEnvelope className="mr-3 text-cyan-400" />
-              <strong className="font-mono text-lg">
-                blueavian9@gmail.com
-              </strong>
+              <strong className="font-mono text-lg">blueavian9@gmail.com</strong>
             </div>
             <div className="flex items-center justify-center">
               <FaMapMarkedAlt className="mr-3 text-cyan-400" />
@@ -85,7 +79,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
+        {/* Contact form */}
         <div className="bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
           <h2 className="text-3xl font-bold text-center text-white mb-8">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
@@ -94,37 +88,23 @@ const ContactForm = () => {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name */}
-            <div className="relative">
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
-                placeholder="Full Name"
-              />
-              <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
-                Full Name
-              </label>
-            </div>
-
-            {/* Email */}
-            <div className="relative">
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
-                placeholder="Email"
-              />
-              <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
-                Email
-              </label>
-            </div>
+            {/* Inputs */}
+            {["name", "email"].map((field) => (
+              <div key={field} className="relative">
+                <input
+                  type={field === "email" ? "email" : "text"}
+                  name={field}
+                  value={formData[field]}
+                  onChange={handleChange}
+                  required
+                  placeholder={field === "name" ? "Full Name" : "Email"}
+                  className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
+                />
+                <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
+                  {field === "name" ? "Full Name" : "Email"}
+                </label>
+              </div>
+            ))}
 
             {/* Message */}
             <div className="relative">
@@ -134,8 +114,8 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 rows="4"
-                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none resize-none"
                 placeholder="Message"
+                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none resize-none"
               />
               <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
                 Message
@@ -161,7 +141,7 @@ const ContactForm = () => {
             {/* Honeypot */}
             <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-            {/* Send Button */}
+            {/* Glow Button */}
             <div className="text-center">
               <button
                 type="submit"
@@ -177,7 +157,7 @@ const ContactForm = () => {
                   before:content-[''] before:absolute before:inset-0 before:rounded-full
                   before:bg-conic-gradient(from_0deg,theme(colors.glow-cyan),theme(colors.glow-fuchsia),theme(colors.glow-violet),theme(colors.glow-cyan))
                   before:opacity-0 before:blur-2xl
-                  hover:before:opacity-40 hover:before:animate-spin-slow hover:before:animate-pulse-soft
+                  hover:before:opacity-40 hover:before:animate-spin-pulse
                 "
               >
                 Send
