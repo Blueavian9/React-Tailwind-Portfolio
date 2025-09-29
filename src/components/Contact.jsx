@@ -42,7 +42,7 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#243b55] to-[#141e30] relative">
-      {/* Toast */}
+      {/* Toast Notification */}
       {toast && (
         <div
           className={`fixed top-6 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg text-white text-sm font-semibold transition-all duration-300 ${
@@ -54,7 +54,7 @@ const ContactForm = () => {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mb-8">
-        {/* Talk to Me */}
+        {/* Left: Info Panel */}
         <div className="max-w-lg mx-auto bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)] mb-8">
           <h2 className="text-3xl text-center font-bold text-white mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-blue-400">
@@ -85,7 +85,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
+        {/* Right: Contact Form */}
         <div className="bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
           <h2 className="text-3xl font-bold text-center text-white mb-8">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
@@ -94,7 +94,7 @@ const ContactForm = () => {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name */}
+            {/* Full Name */}
             <div className="relative">
               <input
                 type="text"
@@ -102,7 +102,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 placeholder-transparent transition-all duration-300 outline-none"
+                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
                 placeholder="Full Name"
               />
               <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
@@ -118,7 +118,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 placeholder-transparent transition-all duration-300 outline-none"
+                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
                 placeholder="Email"
               />
               <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
@@ -134,7 +134,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 rows="4"
-                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 placeholder-transparent transition-all duration-300 outline-none resize-none"
+                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none resize-none"
                 placeholder="Message"
               />
               <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
@@ -150,7 +150,7 @@ const ContactForm = () => {
                 value={formData.role}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full px-4 py-3 bg-[#1b2735]/70 text-white rounded-md border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 outline-none transition-all duration-300"
+                className="mt-2 w-full px-4 py-3 bg-[#1b2735]/70 text-white rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 outline-none transition-all duration-300"
               >
                 <option value="">Select one</option>
                 <option value="recruiter">Hiring Manager / Recruiter</option>
@@ -158,14 +158,28 @@ const ContactForm = () => {
               </select>
             </label>
 
-            {/* Honeypot */}
+            {/* Hidden Honeypot */}
             <input type="text" name="_gotcha" style={{ display: "none" }} />
 
+            {/* Super-Glow Submit Button */}
             {/* Submit Button */}
             <div className="text-center">
               <button
                 type="submit"
-                className="relative z-10 w-1/3 py-3 text-base text-cyan-100 hover:text-black font-semibold uppercase tracking-wide rounded-md bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-300 hover:to-cyan-400 border-4 border-transparent hover:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 hover:shadow-[0_0_20px_rgba(0,255,255,0.7),0_0_30px_rgba(0,255,255,0.7)] transition-all duration-300"
+                className="
+      relative z-10 w-48 py-3 text-lg font-extrabold uppercase tracking-wider
+      text-white rounded-full
+      bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-purple-600
+      border border-cyan-400/40
+      transition-all duration-700 ease-in-out
+      hover:scale-110
+      before:absolute before:inset-0 before:rounded-full before:blur-3xl before:bg-gradient-to-r
+      before:from-cyan-400/0 before:via-fuchsia-500/0 before:to-purple-600/0
+      hover:before:from-cyan-400/30 hover:before:via-fuchsia-500/30 hover:before:to-purple-600/30
+      hover:before:animate-spin-slow
+      hover:shadow-[0_0_25px_#0ff,0_0_50px_#c084fc,0_0_80px_#f472b6]
+      focus:shadow-[0_0_25px_#0ff,0_0_50px_#c084fc,0_0_80px_#f472b6]
+    "
               >
                 Send
               </button>

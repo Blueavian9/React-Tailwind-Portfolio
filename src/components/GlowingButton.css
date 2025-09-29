@@ -8,80 +8,39 @@
     --neon-purple: #a259ff;
 }
 
-.glowing-button {
-    position: relative;
-    text-shadow: 0 0 0.25em currentColor, 0 0 0.5em currentColor;
-    border: 2px solid currentColor;
-    transition: 0.3s;
-}
-
-.glowing-button:hover {
-    box-shadow: 0 0 1em currentColor, inset 0 0 1em currentColor;
-}
-
 .neon-button {
     position: relative;
     display: inline-block;
-    padding: 18px 30px;
+    padding: 14px 34px;
     margin: 20px 0;
-    color: var(--neon-cyan);
     text-decoration: none;
     text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-    margin-right: 32px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    background: transparent;
-    border: none;
     font-size: 1rem;
-    z-index: 1;
-}
-
-.neon-button.neon-cyan { 
-    color: var(--neon-cyan); 
-}
-.neon-button.neon-cyan:hover, .neon-button.neon-cyan:focus {
-    box-shadow: 0 0 5px var(--neon-cyan),
-                0 0 25px var(--neon-cyan),
-                0 0 50px var(--neon-cyan),
-                0 0 200px var(--neon-cyan);
-    text-shadow: 0 0 10px var(--neon-cyan),
-                 0 0 20px var(--neon-cyan),
-                 0 0 30px var(--neon-cyan);
-}
-
-.neon-button.neon-green { 
-    color: var(--neon-green); 
-}
-.neon-button.neon-green:hover, .neon-button.neon-green:focus {
-    box-shadow: 0 0 5px var(--neon-green),
-                0 0 25px var(--neon-green),
-                0 0 50px var(--neon-green),
-                0 0 200px var(--neon-green);
-    text-shadow: 0 0 10px var(--neon-green),
-                 0 0 20px var(--neon-green),
-                 0 0 30px var(--neon-green);
-}
-
-.neon-button.neon-purple { 
-    color: var(--neon-purple); 
-}
-.neon-button.neon-purple:hover, .neon-button.neon-purple:focus {
-    box-shadow: 0 0 5px var(--neon-purple),
-                0 0 25px var(--neon-purple),
-                0 0 50px var(--neon-purple),
-                0 0 200px var(--neon-purple);
-    text-shadow: 0 0 10px var(--neon-purple),
-                 0 0 20px var(--neon-purple),
-                 0 0 30px var(--neon-purple);
-}
-
-.neon-button:hover, .neon-button:focus {
+    letter-spacing: 4px;
+    color: var(--neon-cyan);
+    border-radius: 9999px;
+    border: 2px solid currentColor;
     background: transparent;
-    color: currentColor;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.4s ease, color 0.4s ease;
+    text-shadow: 0 0 8px currentColor, 0 0 16px currentColor;
+    box-shadow: 0 0 12px currentColor, inset 0 0 12px currentColor;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+    transform: scale(1.08);
+    box-shadow:
+        0 0 20px currentColor,
+        0 0 40px currentColor,
+        0 0 80px currentColor;
+    text-shadow:
+        0 0 10px currentColor,
+        0 0 20px currentColor,
+        0 0 30px currentColor;
 }
 
 .neon-button span {
@@ -91,15 +50,11 @@
 
 .neon-button span:nth-child(1) {
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg,transparent,currentColor);
-    animation: animate1 1s linear infinite;
-}
-@keyframes animate1 {
-    0% { left: -100%; }
-    50%,100% { left: 100%; }
+    background: linear-gradient(90deg, transparent, currentColor);
+    animation: animate1 1.5s linear infinite;
 }
 
 .neon-button span:nth-child(2) {
@@ -107,27 +62,17 @@
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg,transparent,currentColor);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-@keyframes animate2 {
-    0% { top: -100%; }
-    50%,100% { top: 100%; }
+    background: linear-gradient(180deg, transparent, currentColor);
+    animation: animate2 1.5s linear infinite 0.375s;
 }
 
 .neon-button span:nth-child(3) {
     bottom: 0;
-    right: 0;
+    right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg,transparent,currentColor);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
-}
-@keyframes animate3 {
-    0% { right: -100%; }
-    50%,100% { right: 100%; }
+    background: linear-gradient(270deg, transparent, currentColor);
+    animation: animate3 1.5s linear infinite 0.75s;
 }
 
 .neon-button span:nth-child(4) {
@@ -135,11 +80,62 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg,transparent,currentColor);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
+    background: linear-gradient(360deg, transparent, currentColor);
+    animation: animate4 1.5s linear infinite 1.125s;
 }
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
 @keyframes animate4 {
-    0% { bottom: -100%; }
-    50%,100% { bottom: 100%; }
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+.neon-cyan {
+    color: var(--neon-cyan);
+}
+
+.neon-green {
+    color: var(--neon-green);
+}
+
+.neon-purple {
+    color: var(--neon-purple);
 }
