@@ -1,21 +1,12 @@
 import { useEffect, useRef } from "react";
 
-interface Project {
-  id: number;
-  name: string;
-  technologies: string;
-  image: string;
-  github: string;
-  liveDemo: string;
-  sound?: string; // optional sound path
-}
-
-const projects: Project[] = [
+const projects = [
   {
     id: 1,
     name: "Text2SpeechAPIPollyV3",
     technologies: "AWS-SDK Polly V3, Groq",
-    image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image:
+      "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/Text2SpeechAPIPollyV3",
     liveDemo: "https://text2speechpollyv3.netlify.app/",
     sound: "/sounds/owen-wilson-wow.mp3", // 👈 only first project has a sound for now
@@ -24,7 +15,8 @@ const projects: Project[] = [
     id: 2,
     name: "bookLibraryDocumentation",
     technologies: "Full Stack, Backend",
-    image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image:
+      "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/bookLibraryDocumentation",
     liveDemo: "https://booklibraryDocumentation.netlify.app/",
   },
@@ -32,7 +24,8 @@ const projects: Project[] = [
     id: 3,
     name: "Nasa-Photo-Generator",
     technologies: "REACT.js, API's Front End",
-    image: "https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&w=400",
+    image:
+      "https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/nasa-photo-of-the-day",
     liveDemo: "https://nasa-photo-of-the-day.netlify.app/",
   },
@@ -40,11 +33,10 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
-  // store a ref to each audio element keyed by project id
-  const audioRefs = useRef<Record<number, HTMLAudioElement | null>>({});
+  const audioRefs = useRef({}); // no TypeScript type here
 
   useEffect(() => {
-    const updateCursor = ({ clientX, clientY }: PointerEvent) => {
+    const updateCursor = ({ clientX, clientY }) => {
       document.documentElement.style.setProperty("--x", `${clientX}px`);
       document.documentElement.style.setProperty("--y", `${clientY}px`);
     };
@@ -52,10 +44,10 @@ const Projects = () => {
     return () => window.removeEventListener("pointermove", updateCursor);
   }, []);
 
-  const playSound = (id: number) => {
+  const playSound = (id) => {
     const audio = audioRefs.current[id];
     if (audio) {
-      audio.currentTime = 0; // restart if clicked again
+      audio.currentTime = 0;
       audio.play();
     }
   };
@@ -69,7 +61,7 @@ const Projects = () => {
           </span>
         </h2>
 
-        {/* hidden audio tags for projects that have sounds */}
+        {/* Hidden audio elements for any project with sound */}
         {projects.map(
           (p) =>
             p.sound && (
@@ -88,7 +80,7 @@ const Projects = () => {
               key={project.id}
               className="bg-gray-800 rounded-lg overflow-hidden relative transition-all duration-300 hover:scale-105 group"
               style={{ aspectRatio: "4 / 3", "--active": "0" }}
-              onClick={() => playSound(project.id)} // only works if sound is set
+              onClick={() => playSound(project.id)}
             >
               <div className="absolute inset-0 bg-gray-900 z-0"></div>
               <div
@@ -145,13 +137,6 @@ const Projects = () => {
 
 export default Projects;
 
-
-
-
-
-
-
-
 // Mock 1:
 // import { useEffect } from "react";
 
@@ -202,7 +187,7 @@ export default Projects;
 //     technologies: "Full Stack, Auth0",
 //     image: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=400",
 //     github: "https://github.com/Blueavian9/asylum-rg-fe-starter",
-//     liveDemo: "https://asylum-rg-fe-starter.netlify.app/", 
+//     liveDemo: "https://asylum-rg-fe-starter.netlify.app/",
 //   },
 //   {
 //     id: 7,
@@ -211,7 +196,7 @@ export default Projects;
 //       "React, Tailwind, Testing, API Backend Routes, CRUD, React TransitionGroup, Node, ",
 //     image: "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg?auto=compress&cs=tinysrgb&w=400",
 //     github: "https://github.com/Blueavian9/web-guided-project-HTTP",
-//     liveDemo: "https://web-guided-project-HTTP.netlify.app/", 
+//     liveDemo: "https://web-guided-project-HTTP.netlify.app/",
 //   },
 //   {
 //     id: 8,
@@ -227,7 +212,7 @@ export default Projects;
 //     technologies: "React, Spring",
 //     image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=400",
 //     github: "https://github.com/Blueavian9/",
-//     liveDemo: "https://.netlify.app", 
+//     liveDemo: "https://.netlify.app",
 //   },
 // ];
 
