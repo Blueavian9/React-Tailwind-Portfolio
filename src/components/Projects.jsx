@@ -19,6 +19,7 @@ const projects = [
       "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/bookLibraryDocumentation",
     liveDemo: "https://booklibraryDocumentation.netlify.app/",
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 3,
@@ -28,6 +29,7 @@ const projects = [
       "https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/nasa-photo-of-the-day",
     liveDemo: "https://nasa-photo-of-the-day.netlify.app/",
+    sound: "/sounds/simple-whoosh-382724.mp3",
   },
   {
     id: 4,
@@ -37,6 +39,7 @@ const projects = [
       "https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/ai-groq-rpg",
     liveDemo: "https://ai-groq-rpg.netlify.app/",
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 5,
@@ -46,6 +49,7 @@ const projects = [
       "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/React-Router-Movies",
     liveDemo: "https://React-Router-Movies.netlify.app/",
+    sound: "/sounds/simple-whoosh-382724.mp3",
   },
   {
     id: 6,
@@ -55,6 +59,7 @@ const projects = [
       "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/asylum-rg-fe-starter",
     liveDemo: "https://asylum-rg-fe-starter.netlify.app/",
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 7,
@@ -65,6 +70,7 @@ const projects = [
       "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/web-guided-project-HTTP",
     liveDemo: "https://web-guided-project-HTTP.netlify.app/",
+    sound: "/sounds/simple-whoosh-382724.mp3",
   },
   {
     id: 8,
@@ -74,7 +80,7 @@ const projects = [
       "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/User-Onboarding",
     liveDemo: "https://User-Onboarding.netlify.app/",
-    sound: "/sounds/owen-wilson-wow.mp3", // 👈 add this line
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 9,

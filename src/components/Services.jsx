@@ -6,7 +6,7 @@ const services = [
     title: "Strong Foundation in Web Technologies",
     description:
       "Proficient in HTML, CSS, and JavaScript fundamentals. Understands web protocols, APIs, and responsive design principles. Keeps up-to-date with evolving web standards and technologies.",
-    sound: "/sounds/whoosh-bamboo-389752.mp3",
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const services = [
     title: "Database Skills",
     description:
       "Designed and optimized database structures. Wrote complex queries and managed data efficiently. Worked with both SQL and NoSQL databases.",
-    sound: "/sounds/whoosh-bamboo-389752.mp3",
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const services = [
     title: "Cloud Computing",
     description:
       "Designed and managed cloud infrastructure. Optimized resources for performance and cost. Implemented security and scalable solutions.",
-    sound: "/sounds/whoosh-bamboo-389752.mp3",
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 6,
