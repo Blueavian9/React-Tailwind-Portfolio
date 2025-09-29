@@ -54,7 +54,7 @@ const ContactForm = () => {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mb-8">
-        {/* Left: Info Panel */}
+        {/* Info Panel */}
         <div className="max-w-lg mx-auto bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)] mb-8">
           <h2 className="text-3xl text-center font-bold text-white mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-blue-400">
@@ -85,7 +85,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        {/* Right: Contact Form */}
+        {/* Contact Form */}
         <div className="bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
           <h2 className="text-3xl font-bold text-center text-white mb-8">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
@@ -94,7 +94,7 @@ const ContactForm = () => {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Full Name */}
+            {/* Name */}
             <div className="relative">
               <input
                 type="text"
@@ -142,7 +142,7 @@ const ContactForm = () => {
               </label>
             </div>
 
-            {/* Role Selector */}
+            {/* Role */}
             <label className="block text-white font-mono">
               Who are you? <span className="text-red-400">*</span>
               <select
@@ -158,27 +158,27 @@ const ContactForm = () => {
               </select>
             </label>
 
-            {/* Hidden Honeypot */}
+            {/* Honeypot */}
             <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-            {/* Super-Glow Submit Button */}
-            {/* Submit Button */}
+            {/* Send Button */}
             <div className="text-center">
               <button
                 type="submit"
                 className="
-      relative z-10 w-48 py-3 text-lg font-extrabold uppercase tracking-wider
-      text-white rounded-full
-      bg-gradient-to-r from-glow-cyan via-glow-fuchsia to-glow-violet
-      border border-glow-cyan/40
-      transition-all duration-700 ease-in-out
-      hover:scale-110 hover:shadow-[0_0_25px_#22d3ee,0_0_50px_#e879f9,0_0_75px_#a78bfa]
-      focus:shadow-[0_0_25px_#22d3ee,0_0_50px_#e879f9,0_0_75px_#a78bfa]
-      before:content-[''] before:absolute before:inset-0 before:rounded-full
-      before:bg-conic-gradient(from_0deg,theme(colors.glow-cyan),theme(colors.glow-fuchsia),theme(colors.glow-violet),theme(colors.glow-cyan))
-      before:opacity-0 before:blur-2xl
-      hover:before:opacity-40 hover:before:animate-spin-slow hover:before:animate-pulse-soft
-    "
+                  relative z-10 w-48 py-3 text-lg font-extrabold uppercase tracking-wider
+                  text-white rounded-full
+                  bg-gradient-to-r from-glow-cyan via-glow-fuchsia to-glow-violet
+                  border border-glow-cyan/40
+                  transition-all duration-700 ease-in-out
+                  hover:scale-110
+                  hover:shadow-[0_0_25px_#22d3ee,0_0_50px_#e879f9,0_0_75px_#a78bfa]
+                  focus:shadow-[0_0_25px_#22d3ee,0_0_50px_#e879f9,0_0_75px_#a78bfa]
+                  before:content-[''] before:absolute before:inset-0 before:rounded-full
+                  before:bg-conic-gradient(from_0deg,theme(colors.glow-cyan),theme(colors.glow-fuchsia),theme(colors.glow-violet),theme(colors.glow-cyan))
+                  before:opacity-0 before:blur-2xl
+                  hover:before:opacity-40 hover:before:animate-spin-slow hover:before:animate-pulse-soft
+                "
               >
                 Send
               </button>
