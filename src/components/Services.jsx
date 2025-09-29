@@ -1,4 +1,4 @@
-import React, { useRef } from "react"; // ✅ added useRef only if you want hover sound
+import React, { useRef } from "react";
 
 const services = [
   {
@@ -40,14 +40,15 @@ const services = [
 ];
 
 const Service = () => {
-  // Optional: prepare hover sound (uncomment and add /public/sounds/hover.mp3)
-  // const hoverSoundRef = useRef(null);
-  // const playHoverSound = () => {
-  //   if (hoverSoundRef.current) {
-  //     hoverSoundRef.current.currentTime = 0;
-  //     hoverSoundRef.current.play().catch(() => {});
-  //   }
-  // };
+  // 🔊 single audio element for all cards
+  const hoverSoundRef = useRef(null);
+
+  const playHoverSound = () => {
+    if (hoverSoundRef.current) {
+      hoverSoundRef.current.currentTime = 0;
+      hoverSoundRef.current.play().catch(() => {});
+    }
+  };
 
   return (
     <div
@@ -61,27 +62,29 @@ const Service = () => {
           </span>
         </h2>
 
+        {/* hidden audio element */}
+        <audio
+          ref={hoverSoundRef}
+          src="/sounds/scifi-whoosh.mp3"
+          preload="auto"
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <div
               key={service.id}
               className="group relative bg-gray-800 rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/30"
-              // onMouseEnter={playHoverSound} // ✅ enable for hover sound
+              onMouseEnter={playHoverSound} // ✅ play sound on hover
             >
-              {/* Optional hover sound file */}
-              {/* <audio ref={hoverSoundRef} src="/sounds/hover.mp3" preload="auto" /> */}
-
               {/* Hover overlay glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-pink-300/10 to-violet-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative px-6 pb-6 h-full flex flex-col justify-between z-10">
                 <div>
-                  {/* ID number with strong hover gradient */}
                   <div className="text-right text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 group-hover:from-yellow-300 group-hover:to-pink-400 transition-all duration-500">
                     {service.id}
                   </div>
 
-                  {/* Title with bright dynamic hover gradient + glow */}
                   <h3 className="mt-2 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-teal-300 to-blue-400 group-hover:from-yellow-300 group-hover:via-pink-400 group-hover:to-purple-500 transition-all duration-500 drop-shadow-md group-hover:drop-shadow-[0_0_15px_#38bdf8]">
                     {service.title}
                   </h3>
@@ -107,21 +110,6 @@ const Service = () => {
 };
 
 export default Service;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Mock 3:
 // import React from "react";
@@ -219,8 +207,6 @@ export default Service;
 // };
 
 // export default Service;
-
-
 
 // Mock 2: Code
 // const Service = () => {
