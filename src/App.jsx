@@ -1,10 +1,6 @@
-{
-  /* Mock 2: */
-}
-import Navbar from "./components/Navbar.jsx";
-import "./App.css";
-import "./index.css";
+// src/App.jsx
 import { useEffect } from "react";
+import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Services from "./components/Services.jsx";
@@ -12,6 +8,9 @@ import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
 import Blog from "./components/Blog.jsx";
 import Footer from "./components/Footer.jsx";
+
+import "./App.css";
+import "./index.css";
 
 export default function App() {
   // Initialize theme on app load
@@ -31,7 +30,6 @@ export default function App() {
   return (
     <div className="relative min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
       <Navbar />
-      {/* ✅ give the page breathing room so Navbar never overlaps */}
       <main className="pt-16">
         <section id="home">
           <Hero />
@@ -58,31 +56,3 @@ export default function App() {
     </div>
   );
 }
-
-// Mock 1:
-//  import "./App.css";
-// import "./index.css";
-// import * as React from "react";
-// import Navbar from "./components/Navbar.jsx";
-// import Hero from "./components/Hero.jsx";
-// import About from "./components/About.jsx";
-// import Services from "./components/Services.jsx";
-// import Projects from "./components/Projects.jsx";
-// import Contact from "./components/Contact.jsx";
-// import Blog from "./components/Blog.jsx";
-// import Footer from "./components/Footer.jsx";
-
-// export default function App() {
-//   return (
-//     <div>
-//       <Navbar />
-//       <About />
-//       <Hero />
-//       <Services />
-//       <Projects />
-//       <Contact />
-//       <Blog />
-//       <Footer />
-//     </div>
-//   );
-// }
