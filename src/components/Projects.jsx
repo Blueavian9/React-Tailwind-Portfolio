@@ -5,18 +5,15 @@ const projects = [
     id: 1,
     name: "Text2SpeechAPIPollyV3",
     technologies: "AWS-SDK Polly V3, Groq",
-    image:
-      "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/Text2SpeechAPIPollyV3",
-    liveDemo: "https://text2speechpollyv3.netlify.app/",
-    sound: "/sounds/owen-wilson-wow.mp3", // 👈 only first project has a sound for now
+    liveDemo: "https://text2speechpollyv3.netlify.app/"
   },
   {
     id: 2,
     name: "bookLibraryDocumentation",
     technologies: "Full Stack, Backend",
-    image:
-      "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/bookLibraryDocumentation",
     liveDemo: "https://booklibraryDocumentation.netlify.app/",
   },
@@ -24,12 +21,59 @@ const projects = [
     id: 3,
     name: "Nasa-Photo-Generator",
     technologies: "REACT.js, API's Front End",
-    image:
-      "https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&w=400",
+    image: "https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/nasa-photo-of-the-day",
     liveDemo: "https://nasa-photo-of-the-day.netlify.app/",
   },
-  // ...remaining projects unchanged
+  {
+    id: 4,
+    name: "Langchain Agents RPG-Game",
+    technologies: "GROQ_AI",
+    image: "https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/ai-groq-rpg",
+    liveDemo: "https://ai-groq-rpg.netlify.app/",
+  },
+  {
+    id: 5,
+    name: "React-Router-Movies",
+    technologies: "React-Router, Link, NavLink",
+    image: "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/React-Router-Movies",
+    liveDemo: "https://React-Router-Movies.netlify.app/",
+  },
+  {
+    id: 6,
+    name: "Asylum Report Generator",
+    technologies: "Full Stack, Auth0",
+    image: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/asylum-rg-fe-starter",
+    liveDemo: "https://asylum-rg-fe-starter.netlify.app/", 
+  },
+  {
+    id: 7,
+    name: "HTTP Todo App",
+    technologies:
+      "React, Tailwind, Testing, API Backend Routes, CRUD, React TransitionGroup, Node, ",
+    image: "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/web-guided-project-HTTP",
+    liveDemo: "https://web-guided-project-HTTP.netlify.app/", 
+  },
+  {
+    id: 8,
+    name: "User-Onboarding",
+    technologies: "Full Stack, Advanced React Hooks",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/User-Onboarding",
+    liveDemo: "https://User-Onboarding.netlify.app/",
+  },
+  {
+    id: 9,
+    name: "Parallax Website",
+    technologies: "React, Spring",
+    image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/",
+    liveDemo: "https://.netlify.app", 
+  },
 ];
 
 const Projects = () => {
