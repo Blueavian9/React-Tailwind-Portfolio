@@ -10,7 +10,7 @@ const ContactForm = () => {
     role: "",
   });
 
-  const [toast, setToast] = useState(null); // success or error message
+  const [toast, setToast] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,14 +19,12 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const res = await fetch("https://formspree.io/f/xovkeoew", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
       if (res.ok) {
         setToast({ type: "success", text: "✅ Message sent successfully!" });
         setFormData({ name: "", email: "", message: "", role: "" });
@@ -36,17 +34,15 @@ const ContactForm = () => {
           text: "❌ Failed to send. Please try again.",
         });
       }
-    } catch (err) {
+    } catch {
       setToast({ type: "error", text: "⚠️ Network error. Please try again." });
     }
-
-    // Hide toast after 4 seconds
     setTimeout(() => setToast(null), 4000);
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#243b55] to-[#141e30] relative">
-      {/* 🔔 Toast notification */}
+      {/* Toast */}
       {toast && (
         <div
           className={`fixed top-6 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg text-white text-sm font-semibold transition-all duration-300 ${
@@ -58,7 +54,7 @@ const ContactForm = () => {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mb-8">
-        {/* Left panel */}
+        {/* Talk to Me */}
         <div className="max-w-lg mx-auto bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)] mb-8">
           <h2 className="text-3xl text-center font-bold text-white mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-blue-400">
@@ -69,30 +65,27 @@ const ContactForm = () => {
             I'm open to discussing employment opportunities, UX/UI or Full Stack
             projects, or business propositions.
           </p>
-
           <div className="space-y-4 text-white">
             <div className="flex items-center justify-center">
               <FaPhone className="mr-3 text-cyan-400" />
-              <span className="font-mono text-lg">
-                <strong>+123 456 7890</strong>
-              </span>
+              <strong className="font-mono text-lg">+123 456 7890</strong>
             </div>
             <div className="flex items-center justify-center">
               <FaEnvelope className="mr-3 text-cyan-400" />
-              <span className="font-mono text-lg">
-                <strong>blueavian9@gmail.com</strong>
-              </span>
+              <strong className="font-mono text-lg">
+                blueavian9@gmail.com
+              </strong>
             </div>
             <div className="flex items-center justify-center">
               <FaMapMarkedAlt className="mr-3 text-cyan-400" />
-              <span className="font-mono text-lg">
-                <strong>123 W. BloomTech St. Los Angeles, USA</strong>
-              </span>
+              <strong className="font-mono text-lg">
+                123 W. BloomTech St. Los Angeles, USA
+              </strong>
             </div>
           </div>
         </div>
 
-        {/* Contact form */}
+        {/* Contact Form */}
         <div className="bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
           <h2 className="text-3xl font-bold text-center text-white mb-8">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
@@ -109,9 +102,10 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-0 py-1.5 text-sm text-white bg-transparent border-b border-white focus:outline-none focus:border-[#03e9f4] peer"
+                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 placeholder-transparent transition-all duration-300 outline-none"
+                placeholder="Full Name"
               />
-              <label className="absolute left-0 top-2 text-white text-sm transition-all duration-300 peer-focus:text-[#03e9f4] peer-focus:text-xs peer-focus:-translate-y-5 peer-valid:text-xs peer-valid:-translate-y-5">
+              <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
                 Full Name
               </label>
             </div>
@@ -124,9 +118,10 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-0 py-1.5 text-sm text-white bg-transparent border-b border-white focus:outline-none focus:border-[#03e9f4] peer"
+                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 placeholder-transparent transition-all duration-300 outline-none"
+                placeholder="Email"
               />
-              <label className="absolute left-0 top-2 text-white text-sm transition-all duration-300 peer-focus:text-[#03e9f4] peer-focus:text-xs peer-focus:-translate-y-5 peer-valid:text-xs peer-valid:-translate-y-5">
+              <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
                 Email
               </label>
             </div>
@@ -139,22 +134,23 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 rows="4"
-                className="w-full px-0 py-1.5 text-sm text-white bg-transparent border-b border-white focus:outline-none focus:border-[#03e9f4] peer resize-none"
-              ></textarea>
-              <label className="absolute left-0 top-2 text-white text-sm transition-all duration-300 peer-focus:text-[#03e9f4] peer-focus:text-xs peer-focus:-translate-y-5 peer-valid:text-xs peer-valid:-translate-y-5">
+                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 placeholder-transparent transition-all duration-300 outline-none resize-none"
+                placeholder="Message"
+              />
+              <label className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm transition-all duration-300">
                 Message
               </label>
             </div>
 
             {/* Role Selector */}
-            <label className="block text-white">
+            <label className="block text-white font-mono">
               Who are you? <span className="text-red-400">*</span>
               <select
                 name="role"
                 value={formData.role}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 mt-1 text-black rounded"
+                className="mt-2 w-full px-4 py-3 bg-[#1b2735]/70 text-white rounded-md border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 outline-none transition-all duration-300"
               >
                 <option value="">Select one</option>
                 <option value="recruiter">Hiring Manager / Recruiter</option>
@@ -165,11 +161,11 @@ const ContactForm = () => {
             {/* Honeypot */}
             <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-            {/* Submit button */}
+            {/* Submit Button */}
             <div className="text-center">
               <button
                 type="submit"
-                className="relative z-10 w-1/4 py-1.5 text-sm text-cyan-100 hover:text-[#000000] font-semibold uppercase tracking-wide rounded-md bg-gradient-to-r from-blue-600 to-blue-600 hover:from-cyan-300 hover:to-cyan-300 border-4 border-transparent hover:border-[#00ffff] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 hover:shadow-[0_0_15px_rgba(0,255,255,0.7),0_0_25px_rgba(0,255,255,0.7),0_0_35px_rgba(0,255,255,0.8)] transition-all duration-300 ease-in-out"
+                className="relative z-10 w-1/3 py-3 text-base text-cyan-100 hover:text-black font-semibold uppercase tracking-wide rounded-md bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-300 hover:to-cyan-400 border-4 border-transparent hover:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-75 hover:shadow-[0_0_20px_rgba(0,255,255,0.7),0_0_30px_rgba(0,255,255,0.7)] transition-all duration-300"
               >
                 Send
               </button>
