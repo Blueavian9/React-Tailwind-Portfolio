@@ -65,6 +65,8 @@ const projects = [
     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/User-Onboarding",
     liveDemo: "https://User-Onboarding.netlify.app/",
+    sound: "/sounds/owen-wilson-wow.mp3", // 👈 add this line
+  },
   },
   {
     id: 9,
@@ -124,6 +126,7 @@ const Projects = () => {
               key={project.id}
               className="bg-gray-800 rounded-lg overflow-hidden relative transition-all duration-300 hover:scale-105 group"
               style={{ aspectRatio: "4 / 3", "--active": "0" }}
+              onMouseEnter={() => playSound(project.id)}
               onClick={() => playSound(project.id)}
             >
               <div className="absolute inset-0 bg-gray-900 z-0"></div>
