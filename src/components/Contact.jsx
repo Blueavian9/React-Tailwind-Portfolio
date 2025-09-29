@@ -169,16 +169,15 @@ const ContactForm = () => {
                 className="
       relative z-10 w-48 py-3 text-lg font-extrabold uppercase tracking-wider
       text-white rounded-full
-      bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-purple-600
-      border border-cyan-400/40
+      bg-gradient-to-r from-glow-cyan via-glow-fuchsia to-glow-violet
+      border border-glow-cyan/40
       transition-all duration-700 ease-in-out
-      hover:scale-110
-      before:absolute before:inset-0 before:rounded-full before:blur-3xl before:bg-gradient-to-r
-      before:from-cyan-400/0 before:via-fuchsia-500/0 before:to-purple-600/0
-      hover:before:from-cyan-400/30 hover:before:via-fuchsia-500/30 hover:before:to-purple-600/30
-      hover:before:animate-spin-slow
-      hover:shadow-[0_0_25px_#0ff,0_0_50px_#c084fc,0_0_80px_#f472b6]
-      focus:shadow-[0_0_25px_#0ff,0_0_50px_#c084fc,0_0_80px_#f472b6]
+      hover:scale-110 hover:shadow-[0_0_25px_#22d3ee,0_0_50px_#e879f9,0_0_75px_#a78bfa]
+      focus:shadow-[0_0_25px_#22d3ee,0_0_50px_#e879f9,0_0_75px_#a78bfa]
+      before:content-[''] before:absolute before:inset-0 before:rounded-full
+      before:bg-conic-gradient(from_0deg,theme(colors.glow-cyan),theme(colors.glow-fuchsia),theme(colors.glow-violet),theme(colors.glow-cyan))
+      before:opacity-0 before:blur-2xl
+      hover:before:opacity-40 hover:before:animate-spin-slow hover:before:animate-pulse-soft
     "
               >
                 Send

@@ -5,47 +5,27 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        glow: {
-          "0%, 100%": { transform: "translateX(-100%)", opacity: 0.6 },
-          "50%": { transform: "translateX(100%)", opacity: 1 },
+        spinSlow: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
         },
-        btnAnim1: {
-          "0%": { left: "-100%" },
-          "50%, 100%": { left: "100%" },
+        pulseSoft: {
+          "0%,100%": { opacity: 0.8 },
+          "50%": { opacity: 1 },
         },
-        btnAnim2: {
-          "0%": { top: "-100%" },
-          "50%, 100%": { top: "100%" },
-        },
-        btnAnim3: {
-          "0%": { right: "-100%" },
-          "50%, 100%": { right: "100%" },
-        },
-        btnAnim4: {
-          "0%": { bottom: "-100%" },
-          "50%, 100%": { bottom: "100%" },
-        },
-      },
-      fontFamily: {
-        sans: ["font-mono", "sans-serif"],
+        // … keep your btnAnim1-4 if used elsewhere
       },
       animation: {
-        glow: "glow 3s ease-in-out infinite",
-        btnAnim1: "btnAnim1 1s linear infinite",
-        btnAnim2: "btnAnim2 1s linear infinite 0.25s",
-        btnAnim3: "btnAnim3 1s linear infinite 0.5s",
-        btnAnim4: "btnAnim4 1s linear infinite 0.75s",
-      },
-      backgroundImage: {
-        "gradient-heading":
-          "linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)",
+        "spin-slow": "spinSlow 12s linear infinite",
+        "pulse-soft": "pulseSoft 4s ease-in-out infinite",
       },
       colors: {
-        "glow-blue": "#03e9f4",
-        pink: "hsl(var(--neon-pink))",
-        green: "hsl(var(--neon-green))",
-        orange: "hsl(var(--neon-orange))",
+        "glow-cyan": "#22d3ee",
+        "glow-fuchsia": "#e879f9",
+        "glow-violet": "#a78bfa",
       },
+      hover:before:animate-[pulse_2s_infinite]
+
     },
   },
   plugins: [],
