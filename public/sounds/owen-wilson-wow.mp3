@@ -1,0 +1,6 @@
+{
+    id: 4, 
+    name: "Langchain Agents RPG-Game",
+    
+    sound: "/sounds/wow-4.mp3";
+}
