@@ -6,36 +6,42 @@ const services = [
     title: "Strong Foundation in Web Technologies",
     description:
       "Proficient in HTML, CSS, and JavaScript fundamentals. Understands web protocols, APIs, and responsive design principles. Keeps up-to-date with evolving web standards and technologies.",
+    sound: "public/sounds/whoosh-bamboo-389752.mp3",
   },
   {
     id: 2,
     title: "Full-Stack JS & React Expertise",
     description:
       "Developed end-to-end web applications using JavaScript, with Node.js for back-end and React for front-end. Built complex user interfaces, efficiently managing state and props in React. Implemented performance optimizations and integrated various JS frameworks and libraries for comprehensive web solutions.",
+    sound: "public/sounds/simple-whoosh-382724.mp3",
   },
   {
     id: 3,
     title: "Database Skills",
     description:
       "Designed and optimized database structures. Wrote complex queries and managed data efficiently. Worked with both SQL and NoSQL databases.",
+    sound: "public/sounds/",
   },
   {
     id: 4,
     title: "Version Control, Collaboration & Tool Control",
     description:
       "Managed code versions using systems like Git. Facilitated team collaboration through platforms such as Github or GitLab. Implemented and maintained development tools and workflows.",
+    sound: "public/sounds/",
   },
   {
     id: 5,
     title: "Cloud Computing",
     description:
       "Designed and managed cloud infrastructure. Optimized resources for performance and cost. Implemented security and scalable solutions.",
+    sound: "public/sounds/",
   },
   {
     id: 6,
     title: "DevOps CI/CD",
     description:
       "Automated software development and deployment processes. Built and maintained CI/CD pipelines. Improved system efficiency & software delivery quality.",
+    sound: "public/sounds/",
   },
 ];
 
