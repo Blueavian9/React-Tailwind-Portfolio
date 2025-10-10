@@ -23,7 +23,11 @@ const Footer = () => {
 
             <p className="text-gray-300 font-mono text-justify">
               {/* your bio text here */}
+<<<<<<< HEAD
               Hi, I’m Cesar A. Aguilar a devoted husband and family man to my wife
+=======
+              Hi, I’m Cesar A. Aguilar, A devoted husband to my wife
+>>>>>>> 964d8b2d37080ff837bc55624eecd2c4656a8deb
               <span className="text-cyan-400 font-semibold">Neha</span> for over
               seven years and counting, I am also a proud “pet dad” to two spoiled guinea pigs,
               <span className="text-teal-400 font-semibold">Munchie</span> and
