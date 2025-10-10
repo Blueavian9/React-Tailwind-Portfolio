@@ -13,6 +13,8 @@ export default function GlowingButton({
   children,
   color = "moon",
   target = "_self",
+  "aria-label": ariaLabel,
+  ...props
 }) {
   const neonClass = colorMap[color] || colorMap.default;
 
@@ -22,6 +24,8 @@ export default function GlowingButton({
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
       className={`neon-button ${neonClass}`}
+      aria-label={ariaLabel}
+      {...props}
     >
       <span></span>
       <span></span>

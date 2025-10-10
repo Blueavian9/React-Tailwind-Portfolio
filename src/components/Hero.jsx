@@ -10,9 +10,12 @@ export default function Hero() {
         <img
           src="/assets/Cesar-Cover.webp"
           alt="Cesar Aguilar - Full Stack AI Integration DevOps Cloud Network Software Engineer and Solutions Architect"
-          // 🔽 reduced overall size
           className="relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="eager"
+          onError={(e) => {
+            console.log('Image failed to load, using fallback');
+            e.target.src = '/assets/Cesar_Cover2.png';
+          }}
         />
       </div>
 
@@ -78,6 +81,7 @@ export default function Hero() {
           color="moon"
           href="https://github.com/blueavian9"
           target="_blank"
+          aria-label="Visit Cesar's GitHub profile"
         >
           GitHub
         </GlowingButton>
@@ -86,6 +90,7 @@ export default function Hero() {
           color="aurora"
           href="/CesarAguilar_Resume.pdf"
           target="_blank"
+          aria-label="Download Cesar's resume as PDF"
         >
           Download CV
         </GlowingButton>
@@ -94,6 +99,7 @@ export default function Hero() {
           color="cosmic"
           href="https://www.linkedin.com/in/cesaradrianaguilar/"
           target="_blank"
+          aria-label="Visit Cesar's LinkedIn profile"
         >
           LinkedIn
         </GlowingButton>

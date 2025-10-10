@@ -52,8 +52,16 @@ const Service = () => {
   const playHoverSound = (id) => {
     const audio = audioRefs.current[id];
     if (audio) {
+      console.log(`Playing sound for service ${id}:`, audio.src);
       audio.currentTime = 0;
-      audio.play().catch(() => {});
+      audio.play().catch(error => {
+        console.log('Audio play failed:', error);
+        console.log('Audio element:', audio);
+        console.log('Audio src:', audio.src);
+        // Silently fail - audio is optional enhancement
+      });
+    } else {
+      console.log(`No audio element found for service ${id}`);
     }
   };
 
@@ -78,9 +86,17 @@ const Service = () => {
             >
               {/* individual hidden audio per card */}
               <audio
-                ref={(el) => (audioRefs.current[service.id] = el)}
+                ref={(el) => {
+                  audioRefs.current[service.id] = el;
+                  if (el) {
+                    console.log(`Audio element created for service ${service.id}:`, el.src);
+                  }
+                }}
                 src={service.sound}
                 preload="auto"
+                onLoadStart={() => console.log(`Audio loading started for service ${service.id}:`, service.sound)}
+                onCanPlay={() => console.log(`Audio can play for service ${service.id}`)}
+                onError={(e) => console.log(`Audio error for service ${service.id}:`, e)}
               />
 
               {/* Hover overlay glow */}
