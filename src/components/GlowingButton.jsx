@@ -14,7 +14,6 @@ export default function GlowingButton({
   color = "moon",
   target = "_self",
   "aria-label": ariaLabel,
-  ...props
 }) {
   const neonClass = colorMap[color] || colorMap.default;
 
@@ -24,8 +23,7 @@ export default function GlowingButton({
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
       className={`neon-button ${neonClass}`}
-      aria-label={ariaLabel}
-      {...props}
+      aria-label={ariaLabel || children}
     >
       <span></span>
       <span></span>
@@ -35,3 +33,37 @@ export default function GlowingButton({
     </a>
   );
 }
+
+// import React from "react";
+// import "./GlowingButton.css";
+
+// const colorMap = {
+//   moon: "neon-cyan",
+//   aurora: "neon-green",
+//   cosmic: "neon-purple",
+//   default: "neon-cyan",
+// };
+
+// export default function GlowingButton({
+//   href,
+//   children,
+//   color = "moon",
+//   target = "_self",
+// }) {
+//   const neonClass = colorMap[color] || colorMap.default;
+
+//   return (
+//     <a
+//       href={href}
+//       target={target}
+//       rel={target === "_blank" ? "noopener noreferrer" : undefined}
+//       className={`neon-button ${neonClass}`}
+//     >
+//       <span></span>
+//       <span></span>
+//       <span></span>
+//       <span></span>
+//       {children}
+//     </a>
+//   );
+// }
