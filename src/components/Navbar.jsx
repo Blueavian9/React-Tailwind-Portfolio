@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
+import { twMerge } from "tailwind-merge";
+import clsx from "clsx";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,9 +12,10 @@ const Navbar = () => {
   // Initialize dark mode from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     const initialDark = savedTheme ? savedTheme === "dark" : prefersDark;
-    
     setIsDarkMode(initialDark);
     document.documentElement.classList.toggle("dark", initialDark);
   }, []);
@@ -48,9 +51,8 @@ const Navbar = () => {
   // Smooth scroll handler
   const smoothScrollTo = useCallback((id) => {
     const target = document.getElementById(id);
-    if (target) {
+    if (target)
       window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
-    }
     setIsMobileMenuOpen(false);
   }, []);
 
@@ -72,19 +74,17 @@ const Navbar = () => {
   ];
 
   // Dynamic button classes
-  const getButtonClasses = (active) => {
-    const baseClasses = "px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105";
-    
-    if (active) {
-      return isDarkMode
-        ? `${baseClasses} text-cyan-400 bg-cyan-400/15 border border-cyan-400/30 shadow-lg shadow-cyan-500/20`
-        : `${baseClasses} text-cyan-600 bg-cyan-100/50 border border-cyan-500/30`;
-    }
-    
-    return isDarkMode
-      ? `${baseClasses} text-gray-300 hover:text-white hover:bg-gray-700/30`
-      : `${baseClasses} text-gray-700 hover:text-gray-900 hover:bg-gray-100/50`;
-  };
+  const getButtonClasses = (active) =>
+    twMerge(
+      "px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105",
+      active
+        ? isDarkMode
+          ? "text-cyan-400 bg-cyan-400/15 border border-cyan-400/30 shadow-lg shadow-cyan-500/20"
+          : "text-cyan-600 bg-cyan-100/50 border border-cyan-500/30"
+        : isDarkMode
+        ? "text-gray-300 hover:text-white hover:bg-gray-700/30"
+        : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
+    );
 
   // Keyboard navigation handler
   const handleKeyDown = (e, id) => {
@@ -104,16 +104,16 @@ const Navbar = () => {
         Skip to main content
       </a>
 
+      {/* Navbar Container */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={twMerge(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           isScrolled
             ? isDarkMode
               ? "bg-gray-900/95 backdrop-blur-lg shadow-xl shadow-cyan-500/10 border-b border-cyan-400/20"
               : "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200"
-            : isDarkMode
-            ? "bg-transparent"
             : "bg-transparent"
-        }`}
+        )}
         role="navigation"
         aria-label="Main navigation"
       >
@@ -146,12 +146,15 @@ const Navbar = () => {
               {/* Dark Mode Toggle */}
               <button
                 onClick={toggleDarkMode}
-                className={`ml-4 p-3 rounded-full transition-all duration-300 transform hover:scale-110 ${
+                className={twMerge(
+                  "ml-4 p-3 rounded-full transition-all duration-300 transform hover:scale-110",
                   isDarkMode
                     ? "bg-gray-700/50 text-yellow-400 hover:bg-gray-600/50"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-                aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+                )}
+                aria-label={
+                  isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+                }
                 title={isDarkMode ? "Light Mode" : "Dark Mode"}
               >
                 {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
@@ -163,12 +166,15 @@ const Navbar = () => {
               {/* Mobile Dark Mode Toggle */}
               <button
                 onClick={toggleDarkMode}
-                className={`p-2 rounded-full transition-all duration-300 ${
+                className={twMerge(
+                  "p-2 rounded-full transition-all duration-300",
                   isDarkMode
                     ? "bg-gray-700/50 text-yellow-400"
                     : "bg-gray-200 text-gray-700"
-                }`}
-                aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+                )}
+                aria-label={
+                  isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+                }
               >
                 {isDarkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
               </button>
@@ -176,11 +182,12 @@ const Navbar = () => {
               {/* Hamburger Menu */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className={`p-2 rounded-lg transition-all duration-300 ${
+                className={twMerge(
+                  "p-2 rounded-lg transition-all duration-300",
                   isDarkMode
                     ? "text-cyan-400 hover:bg-gray-700/50"
                     : "text-gray-700 hover:bg-gray-200"
-                }`}
+                )}
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMobileMenuOpen}
               >
@@ -192,13 +199,13 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden ${
-            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          } ${
+          className={twMerge(
+            "md:hidden transition-all duration-500 ease-in-out overflow-hidden",
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
             isDarkMode
               ? "bg-gray-900/98 backdrop-blur-xl border-t border-cyan-400/20"
               : "bg-white/98 backdrop-blur-xl border-t border-gray-200"
-          }`}
+          )}
         >
           <div className="container mx-auto px-4 py-4 space-y-2">
             {navItems.map((item) => (
@@ -206,7 +213,8 @@ const Navbar = () => {
                 key={item.id}
                 onClick={() => smoothScrollTo(item.id)}
                 onKeyDown={(e) => handleKeyDown(e, item.id)}
-                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                className={twMerge(
+                  "w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300",
                   activeSection === item.id
                     ? isDarkMode
                       ? "text-cyan-400 bg-cyan-400/15 border border-cyan-400/30"
@@ -214,7 +222,7 @@ const Navbar = () => {
                     : isDarkMode
                     ? "text-gray-300 hover:text-white hover:bg-gray-700/50"
                     : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
-                }`}
+                )}
                 aria-label={`Navigate to ${item.label}`}
                 aria-current={activeSection === item.id ? "page" : undefined}
               >
@@ -228,69 +236,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
-
-
-
-// import { useState, useEffect, useCallback } from "react";
-
-// const Navbar = () => {
-//   const [isScrolled, setIsScrolled] = useState(false);
-//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-//   const [activeSection, setActiveSection] = useState("home");
-//   const [isHovering, setIsHovering] = useState(null);
-//   const [isDarkMode, setIsDarkMode] = useState(true);
-
-//   useEffect(() => {
-//     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-//     window.addEventListener("scroll", handleScroll, { passive: true });
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-//             setActiveSection(entry.target.id);
-//           }
-//         });
-//       },
-//       { root: null, rootMargin: "-25% 0px -75% 0px", threshold: [0.5] }
-//     );
-
-//     ["home", "about", "services", "projects", "contact"]
-//       .map((id) => document.getElementById(id))
-//       .filter(Boolean)
-//       .forEach((el) => observer.observe(el));
-
-//     return () => observer.disconnect();
-//   }, []);
-
-//   const smoothScrollTo = useCallback((id) => {
-//     const target = document.getElementById(id);
-//     if (target)
-//       window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
-//     setIsMobileMenuOpen(false);
-//   }, []);
-
-//   const navItems = [
-//     { id: "home", label: "Home" },
-//     { id: "about", label: "About" },
-//     { id: "services", label: "Services" },
-//     { id: "projects", label: "Projects" },
-//     { id: "contact", label: "Contact" },
-//   ];
-
-//   const getButtonClasses = (dark, active) => {
-//     active
-//       ? dark
-//         ? "text-cyan-400 bg-cyan-400/15 border border-cyan-400/30"
-//         : "text-cyan-600 bg-cyan-100/50 border border-cyan-500/30"
-//       : dark
-//       ? "text-gray-300 hover:text-white hover:bg-gray-700/30"
-//       : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"; // Final bfanch & semicolon
-//   };
-// };
-
-// export default Navbar;
+export default Navbar();
