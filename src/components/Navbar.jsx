@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
-import clsx from "clsx";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -236,4 +235,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar();
+export default Navbar;
