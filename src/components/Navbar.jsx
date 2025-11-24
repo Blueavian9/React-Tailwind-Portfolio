@@ -121,10 +121,16 @@ const Navbar = () => {
             {/* Logo */}
             <button
               onClick={() => smoothScrollTo("home")}
-              className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 bg-clip-text text-transparent hover:scale-110 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-2"
+              className="text-3xl font-extrabold tracking-wide 
+  bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 
+  bg-clip-text text-transparent 
+  hover:scale-110 transition-transform duration-300 
+  focus:outline-none focus:ring-2 focus:ring-cyan-400 
+  focus:ring-offset-2 focus:ring-offset-gray-900 
+  rounded-lg px-2"
               aria-label="Go to home section"
             >
-              Cesar.dev
+              CESAR
             </button>
 
             {/* Desktop Navigation */}
