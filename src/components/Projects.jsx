@@ -97,7 +97,8 @@ const projects = [
     technologies: "React, Vite, Tailwindcss",
     image:
       "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=400",
-    github: "https://github.com/Blueavian9/parallax-website",
+    github:
+      "https://github.com/Blueavian9/valeries-psychological-wellness-app.vercel.app/",
     liveDemo: "https://valeriemunozpsyc.com/",
     loomVideo: "https://www.loom.com/share/your-video-id-9",
     sound: "/sounds/owen-wilson-wow-80640.mp3",
@@ -127,7 +128,7 @@ const Projects = () => {
         audio.play().catch((err) => {
           console.log(
             `Audio playback prevented for project ${id}:`,
-            err.message
+            err.message,
           );
         });
       } catch (error) {
@@ -172,7 +173,7 @@ const Projects = () => {
                   console.log(`Failed to load audio for project ${p.id}`)
                 }
               />
-            )
+            ),
         )}
 
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0">
@@ -287,8 +288,6 @@ const Projects = () => {
 };
 
 export default Projects;
-
-
 
 // import { useEffect, useRef } from "react";
 
