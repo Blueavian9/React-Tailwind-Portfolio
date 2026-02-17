@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
+// import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
 
 const Navbar = () => {

@@ -93,12 +93,12 @@ const projects = [
   },
   {
     id: 9,
-    name: "Parallax Website",
-    technologies: "React, Spring",
+    name: "Holistic Psychology SaaS  Website",
+    technologies: "React, Vite, Tailwindcss",
     image:
       "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/parallax-website",
-    liveDemo: "https://parallax-website-demo.netlify.app",
+    liveDemo: "https://valeriemunozpsyc.com/",
     loomVideo: "https://www.loom.com/share/your-video-id-9",
     sound: "/sounds/owen-wilson-wow-80640.mp3",
   },
