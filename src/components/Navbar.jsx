@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-// import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
+import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
     const initialDark = savedTheme ? savedTheme === "dark" : prefersDark;
     setIsDarkMode(initialDark);
@@ -36,7 +36,7 @@ const Navbar = () => {
           }
         });
       },
-      { root: null, rootMargin: "-25% 0px -75% 0px", threshold: [0.5] }
+      { root: null, rootMargin: "-25% 0px -75% 0px", threshold: [0.5] },
     );
 
     ["home", "about", "services", "projects", "contact"]
@@ -81,8 +81,8 @@ const Navbar = () => {
           ? "text-cyan-400 bg-cyan-400/15 border border-cyan-400/30 shadow-lg shadow-cyan-500/20"
           : "text-cyan-600 bg-cyan-100/50 border border-cyan-500/30"
         : isDarkMode
-        ? "text-gray-300 hover:text-white hover:bg-gray-700/30"
-        : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
+          ? "text-gray-300 hover:text-white hover:bg-gray-700/30"
+          : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50",
     );
 
   // Keyboard navigation handler
@@ -111,7 +111,7 @@ const Navbar = () => {
             ? isDarkMode
               ? "bg-gray-900/95 backdrop-blur-lg shadow-xl shadow-cyan-500/10 border-b border-cyan-400/20"
               : "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200"
-            : "bg-transparent"
+            : "bg-transparent",
         )}
         role="navigation"
         aria-label="Main navigation"
@@ -155,7 +155,7 @@ const Navbar = () => {
                   "ml-4 p-3 rounded-full transition-all duration-300 transform hover:scale-110",
                   isDarkMode
                     ? "bg-gray-700/50 text-yellow-400 hover:bg-gray-600/50"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300",
                 )}
                 aria-label={
                   isDarkMode ? "Switch to light mode" : "Switch to dark mode"
@@ -175,7 +175,7 @@ const Navbar = () => {
                   "p-2 rounded-full transition-all duration-300",
                   isDarkMode
                     ? "bg-gray-700/50 text-yellow-400"
-                    : "bg-gray-200 text-gray-700"
+                    : "bg-gray-200 text-gray-700",
                 )}
                 aria-label={
                   isDarkMode ? "Switch to light mode" : "Switch to dark mode"
@@ -191,7 +191,7 @@ const Navbar = () => {
                   "p-2 rounded-lg transition-all duration-300",
                   isDarkMode
                     ? "text-cyan-400 hover:bg-gray-700/50"
-                    : "text-gray-700 hover:bg-gray-200"
+                    : "text-gray-700 hover:bg-gray-200",
                 )}
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMobileMenuOpen}
@@ -209,7 +209,7 @@ const Navbar = () => {
             isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
             isDarkMode
               ? "bg-gray-900/98 backdrop-blur-xl border-t border-cyan-400/20"
-              : "bg-white/98 backdrop-blur-xl border-t border-gray-200"
+              : "bg-white/98 backdrop-blur-xl border-t border-gray-200",
           )}
         >
           <div className="container mx-auto px-4 py-4 space-y-2">
@@ -225,8 +225,8 @@ const Navbar = () => {
                       ? "text-cyan-400 bg-cyan-400/15 border border-cyan-400/30"
                       : "text-cyan-600 bg-cyan-100/50 border border-cyan-500/30"
                     : isDarkMode
-                    ? "text-gray-300 hover:text-white hover:bg-gray-700/50"
-                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                      ? "text-gray-300 hover:text-white hover:bg-gray-700/50"
+                      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100",
                 )}
                 aria-label={`Navigate to ${item.label}`}
                 aria-current={activeSection === item.id ? "page" : undefined}
