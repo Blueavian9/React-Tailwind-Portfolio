@@ -161,8 +161,7 @@ const About = () => {
                   , all while refining my craft as a
                   <span className="text-cyan-400 font-semibold">
                     {" "}
-                    Full-Stack Software Engineer
-                  </span>
+                    Full Stack AI Integrations Systems Architect                  </span>
                   .
                 </p>
 
