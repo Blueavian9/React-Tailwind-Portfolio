@@ -6,7 +6,7 @@ import {
   FaGraduationCap,
   FaLightbulb,
   FaChartLine,
-  FaAward,
+  FaAward, 
 } from "react-icons/fi";
 
 const About = () => {
