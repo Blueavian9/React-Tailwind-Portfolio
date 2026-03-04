@@ -6,9 +6,15 @@ import {
   FaGraduationCap,
   FaLightbulb,
   FaChartLine,
-  FaAward, 
-} from "react-icons/fi";
+  FaAward,
+} from "react-icons/fa";
+import { FiSun } from "react-icons/fi";
 
+<FiSun className="w-6 h-6" />;
+// or with conditional logic for dark mode toggle
+{
+  theme === "dark" ? <FiSun onClick={toggleTheme} /> : <FiMoon />;
+}
 const About = () => {
   const skills = [
     {
@@ -161,7 +167,8 @@ const About = () => {
                   , all while refining my craft as a
                   <span className="text-cyan-400 font-semibold">
                     {" "}
-                    Full Stack AI Integrations Systems Architect                  </span>
+                    Full Stack AI Integrations Systems Architect{" "}
+                  </span>
                   .
                 </p>
 
