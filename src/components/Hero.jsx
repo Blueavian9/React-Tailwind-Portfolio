@@ -1,6 +1,6 @@
 import { useState } from "react";
 import GlowingButton from "./GlowingButton";
-
+import profileImage from "../assets/Cesar-Cover.webp";
 export default function Hero() {
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -27,8 +27,8 @@ export default function Hero() {
 
         <img
           src={imageError ? fallbackImage : "/assets/Cesar-Cover.webp"}
-          alt="Cesar Aguilar - Full Stack AI Integration DevOps Cloud Network Software Engineer and Solutions Architect"
-          className={`relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover transition-all duration-300 group-hover:scale-105 ${
+          alt="Cesar Aguilar Senior Full Stack AI Integration Cloud Network Systems Engineer"
+          className={`animate-fade-in-up animate-once animate-duration-1000 relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover transition-all duration-300 group-hover:scale-105 ${
             imageLoaded ? "opacity-100" : "opacity-0"
           }`}
           loading="eager"

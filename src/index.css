@@ -19,3 +19,8 @@
         }
     }
 }
+
+animate-fade /* opacity 0 -> 1 */
+animate-slide-up /* translateY(20px) -> 0 */
+animate-bounce-short /* small bounce */
+animate-shimmer /* gradient loading effect */ 

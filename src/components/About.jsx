@@ -8,13 +8,7 @@ import {
   FaChartLine,
   FaAward,
 } from "react-icons/fa";
-import { FiSun } from "react-icons/fi";
 
-<FiSun className="w-6 h-6" />;
-// or with conditional logic for dark mode toggle
-{
-  theme === "dark" ? <FiSun onClick={toggleTheme} /> : <FiMoon />;
-}
 const About = () => {
   const skills = [
     {

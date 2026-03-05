@@ -7,7 +7,8 @@ const Footer = () => {
       <img
         src="/assets/Cesar_Cover2.webp"
         alt="Cesar Cover 2"
-        className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
+        className="absolute -inset-1 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-xl opacity-0 group-hover:opacity-80 transition-opacity duration-700 animate-pulse-slow"
+        // className="mx-auto mt-12 mb-8 w-48 h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
       />
 
       {/* Top container (bio) */}
