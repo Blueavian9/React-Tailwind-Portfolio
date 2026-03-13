@@ -20,7 +20,21 @@
     }
 }
 
-animate-fade /* opacity 0 -> 1 */
-animate-slide-up /* translateY(20px) -> 0 */
-animate-bounce-short /* small bounce */
-animate-shimmer /* gradient loading effect */ 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade { animation: fadeIn 1s ease-out; }
+.animate-slide-up { animation: slideUp 1s ease-out; }
+
+/* animate-fade  opacity 0 -> 1 */
+/* animate-slide-up  translateY(20px) -> 0 */
+/* animate-bounce-short  small bounce */
+/* animate-shimmer gradient loading effect */ 
+/* animate-pulse-slow  slow pulse */
