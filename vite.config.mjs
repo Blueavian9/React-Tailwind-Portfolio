@@ -5,7 +5,8 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/", // Important for Vercel previews & production
+  base:
+    process.env.NODE_ENV === "production" ? "/React-Tailwind-Portfolio/" : "/", // Important for Vercel previews & production
   css: {
     postcss: "./postcss.config.js", // If you have one (usually auto-detected)
   },

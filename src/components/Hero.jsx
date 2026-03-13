@@ -1,6 +1,5 @@
 import { useState } from "react";
 import GlowingButton from "./GlowingButton";
-import profileImage from "../assets/Cesar-Cover.webp";
 export default function Hero() {
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -16,8 +15,6 @@ export default function Hero() {
     >
       {/* Profile Image with Enhanced Glow and Error Handling */}
       <div className="relative group mb-8">
-        <div className="absolute -inset-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-all duration-700 group-hover:duration-300 animate-tilt"></div>
-
         {/* Loading state */}
         {!imageLoaded && !imageError && (
           <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full bg-gray-700 animate-pulse flex items-center justify-center">
@@ -43,7 +40,7 @@ export default function Hero() {
 
       {/* Name & Title */}
       <div className="text-center mb-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-2">
+        <h1 className="animate-fade text-4xl md:text-5xl font-bold mb-2">
           I&apos;m{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
             Cesar Aguilar
