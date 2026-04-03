@@ -41,11 +41,11 @@ export default function Hero() {
       {/* Name & Title */}
       <div className="text-center mb-6">
         <h1 className="animate-fade text-4xl md:text-5xl font-bold mb-2">
-          I&apos;m{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-            Cesar Aguilar
-          </span>
-        </h1>
+  I&apos;m{" "}
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500">
+    Cesar A. Aguilar
+  </span>
+</h1>
         <h2 className="text-lg md:text-xl font-semibold text-gray-300">
           Full Stack AI Integration Software Engineer &amp; Solutions Architect
         </h2>
