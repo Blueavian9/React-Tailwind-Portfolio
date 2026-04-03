@@ -125,6 +125,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="flex items-center justify-between h-20">
+
             {/* ── Logo ── */}
             <button
               onClick={() => smoothScrollTo("home")}
@@ -137,25 +138,12 @@ const Navbar = () => {
               )}
               aria-label="Go to home section"
             >
-              {/* Monogram badge */}
-              <span
-                className={twMerge(
-                  "w-9 h-9 rounded-xl flex items-center justify-center",
-                  "text-sm font-bold leading-none select-none",
-                  isDarkMode
-                    ? "bg-cyan-400 text-gray-900"
-                    : "bg-cyan-500 text-white",
-                )}
-              >
-                CA
-              </span>
-
               {/* Calligraphy name */}
               <span
                 style={{ fontFamily: "'Great Vibes', cursive" }}
                 className={twMerge(
                   "text-3xl leading-none tracking-wide",
-                  "bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500",
+                  "bg-gradient-to-r from-cyan-100 via-teal-400 to-blue-600",
                   "bg-clip-text text-transparent",
                 )}
               >
@@ -178,23 +166,11 @@ const Navbar = () => {
                 </button>
               ))}
 
-              {/* CTA Button */}
-              <button
-                onClick={() => smoothScrollTo("contact")}
-                className="ml-4 px-5 py-2 rounded-xl font-semibold text-sm
-                  bg-cyan-400 hover:bg-cyan-300 text-gray-900
-                  transition-all duration-300 transform hover:scale-105
-                  shadow-lg shadow-cyan-500/25"
-                aria-label="Navigate to contact section"
-              >
-                Let's Talk
-              </button>
-
               {/* Dark Mode Toggle */}
               <button
                 onClick={toggleDarkMode}
                 className={twMerge(
-                  "ml-2 p-3 rounded-full transition-all duration-300 transform hover:scale-110",
+                  "ml-4 p-3 rounded-full transition-all duration-300 transform hover:scale-110",
                   isDarkMode
                     ? "bg-gray-700/50 text-yellow-400 hover:bg-gray-600/50"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300",
@@ -276,17 +252,6 @@ const Navbar = () => {
                 {item.label}
               </button>
             ))}
-
-            {/* Mobile CTA */}
-            <button
-              onClick={() => smoothScrollTo("contact")}
-              className="w-full mt-2 py-3 rounded-xl font-semibold text-sm
-                bg-cyan-400 hover:bg-cyan-300 text-gray-900
-                transition-all duration-300 shadow-lg shadow-cyan-500/25"
-              aria-label="Navigate to contact section"
-            >
-              Let's Talk
-            </button>
           </div>
         </div>
       </nav>
