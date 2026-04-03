@@ -137,13 +137,27 @@ const Navbar = () => {
               )}
               aria-label="Go to home section"
             >
+              {/* Monogram badge */}
               <span
+                className={twMerge(
+                  "w-9 h-9 rounded-xl flex items-center justify-center",
+                  "text-sm font-bold leading-none select-none",
+                  isDarkMode
+                    ? "bg-cyan-400 text-gray-900"
+                    : "bg-cyan-500 text-white",
+                )}
+              >
+                CA
+              </span>
+
+              {/* Calligraphy name */}
+              <span
+                style={{ fontFamily: "'Great Vibes', cursive" }}
                 className={twMerge(
                   "text-3xl leading-none tracking-wide",
                   "bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500",
                   "bg-clip-text text-transparent",
                 )}
-                style={{ fontFamily: "'Great Vibes', cursive" }}
               >
                 Cesar A. Aguilar
               </span>
