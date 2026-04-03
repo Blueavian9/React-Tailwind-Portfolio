@@ -247,7 +247,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* CTA call to Action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
@@ -262,7 +262,7 @@ const About = () => {
               href="#contact"
               className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105"
             >
-              Let's Connect
+              Talk to Me!
             </a>
           </div>
         </div>
