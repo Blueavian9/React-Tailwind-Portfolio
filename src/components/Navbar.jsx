@@ -2,6 +2,13 @@ import { useState, useEffect, useCallback } from "react";
 import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
 
+// Cursive calligraphy font for logo
+const calligraphyFontLink = document.createElement("link");
+calligraphyFontLink.href =
+  "https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap";
+calligraphyFontLink.rel = "stylesheet";
+document.head.appendChild(calligraphyFontLink);
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -103,7 +110,7 @@ const Navbar = () => {
         Skip to main content
       </a>
 
-      {/*Navbar Container */}
+      {/* Navbar Container */}
       <nav
         className={twMerge(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
@@ -118,19 +125,43 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
+
+            {/* ── Logo ── */}
             <button
               onClick={() => smoothScrollTo("home")}
-              className="text-3xl font-extrabold tracking-wide 
-  bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 
-  bg-clip-text text-transparent 
-  hover:scale-110 transition-transform duration-300 
-  focus:outline-none focus:ring-2 focus:ring-cyan-400 
-  focus:ring-offset-2 focus:ring-offset-gray-900 
-  rounded-lg px-2"
+              onKeyDown={(e) => handleKeyDown(e, "home")}
+              className={twMerge(
+                "flex items-center gap-2 group",
+                "hover:scale-105 transition-transform duration-300",
+                "focus:outline-none focus:ring-2 focus:ring-cyan-400",
+                "focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-2",
+              )}
               aria-label="Go to home section"
             >
-              CESAR
+              {/* Monogram badge */}
+              <span
+                className={twMerge(
+                  "w-9 h-9 rounded-xl flex items-center justify-center",
+                  "text-sm font-bold leading-none select-none",
+                  isDarkMode
+                    ? "bg-cyan-400 text-gray-900"
+                    : "bg-cyan-500 text-white",
+                )}
+              >
+                CA
+              </span>
+
+              {/* Calligraphy name */}
+              <span
+                style={{ fontFamily: "'Great Vibes', cursive" }}
+                className={twMerge(
+                  "text-3xl leading-none tracking-wide",
+                  "bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500",
+                  "bg-clip-text text-transparent",
+                )}
+              >
+                Cesar A. Aguilar
+              </span>
             </button>
 
             {/* Desktop Navigation */}
