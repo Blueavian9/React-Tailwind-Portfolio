@@ -7,6 +7,8 @@ import {
   FaLightbulb,
   FaChartLine,
   FaAward,
+  FaGithub,
+  FaLinkedin,
 } from "react-icons/fa";
 
 const About = () => {
@@ -16,15 +18,31 @@ const About = () => {
       level: 95,
       color: "from-yellow-400 to-orange-500",
     },
-    { name: "Node.js/Express", level: 90, color: "from-lime-400 to-green-600" }, // ✅ brighter gradient
-    { name: "AWS/Cloud", level: 85, color: "from-blue-400 to-cyan-500" },
+    {
+      name: "Node.js/Express",
+      level: 90,
+      color: "from-lime-400 to-green-600",
+    },
+    {
+      name: "AWS/Cloud",
+      level: 85,
+      color: "from-blue-400 to-cyan-500",
+    },
     {
       name: "AI/ML Integration",
       level: 80,
       color: "from-purple-400 to-pink-500",
     },
-    { name: "DevOps/CI-CD", level: 85, color: "from-indigo-400 to-blue-600" },
-    { name: "Database Design", level: 88, color: "from-teal-400 to-cyan-600" },
+    {
+      name: "DevOps/CI-CD",
+      level: 85,
+      color: "from-indigo-400 to-blue-600",
+    },
+    {
+      name: "Database Design",
+      level: 88,
+      color: "from-teal-400 to-cyan-600",
+    },
   ];
 
   const achievements = [
@@ -46,7 +64,7 @@ const About = () => {
     {
       icon: <FaGraduationCap className="text-green-400" />,
       title: "Advanced Education",
-      description: "B.S. in Cloud Network Engineering, M.S. AI/ML (WGU)",
+      description: "B.S. Cloud Network Engineering · M.S. AI/ML (WGU)",
     },
   ];
 
@@ -56,6 +74,7 @@ const About = () => {
       id="about"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -65,12 +84,25 @@ const About = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Transforming ideas into scalable, AI-powered solutions through
-            innovative problem solving & engineering
+            innovative problem solving &amp; engineering
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Story & Journey */}
+        {/* Profile Photo */}
+        <div className="flex justify-center mb-12">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 rounded-full blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
+            <img
+              src="/assets/Cesar-Cover.webp"
+              alt="Cesar A. Aguilar"
+              className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-cyan-400/30 group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+          {/* Left Column — Story */}
           <div className="space-y-6">
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
               <div className="flex items-center mb-6">
@@ -80,16 +112,15 @@ const About = () => {
                 </h3>
               </div>
 
-              {/* === NEW ABOUT ME SUMMARY === */}
               <div className="space-y-4 text-gray-300 font-mono leading-relaxed">
                 <p>
-                  Hi, I’m Cesar A. Aguilar—a devoted husband to my wife
+                  Hi, I&apos;m Cesar A. Aguilar — a devoted husband to my wife
                   <span className="text-cyan-400 font-semibold"> Neha </span>
-                  for over six years, and proud “pet dad” to two spoiled guinea
-                  pigs,
+                  for over six years, and proud &ldquo;pet dad&rdquo; to two
+                  spoiled guinea pigs,
                   <span className="text-teal-400 font-semibold"> Munchie </span>
                   and
-                  <span className="text-teal-400 font-semibold"> Coco </span>.
+                  <span className="text-teal-400 font-semibold"> Coco</span>.
                   They keep me company (and occasionally steal my snacks) while
                   I code late into the night.
                 </p>
@@ -97,35 +128,27 @@ const About = () => {
                 <p>
                   By day, I serve as a
                   <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Security Officer for Los Angeles Council District 14 in El
-                    Sereno
+                    {" "}Security Officer for Los Angeles Council District 14
+                    in El Sereno
                   </span>
-                  , guarding Councilmember Ysabel Jurado’s office and supporting
-                  community safety. I also work Saturdays for the
+                  , guarding Councilmember Ysabel Jurado&apos;s office and
+                  supporting community safety. I also work Saturdays for the
                   <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Lincoln Heights Youth Center
-                  </span>
-                  and answer to the
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Hollenbeck LAPD Security Services Division
-                  </span>
-                  , serving multiple City of Los Angeles LAPD posts including
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    PiperTech
+                    {" "}Lincoln Heights Youth Center
                   </span>{" "}
                   and the
                   <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Hyperion S.A.F.E. Center
+                    {" "}Hollenbeck LAPD Security Services Division
                   </span>
-                  —all while studying full time at
+                  , serving LAPD posts including
+                  <span className="text-blue-400 font-semibold"> PiperTech</span>{" "}
+                  and the
+                  <span className="text-blue-400 font-semibold">
+                    {" "}Hyperion S.A.F.E. Center
+                  </span>
+                  — all while studying full time at
                   <span className="text-indigo-400 font-semibold">
-                    {" "}
-                    Western Governors University (WGU)
+                    {" "}Western Governors University (WGU)
                   </span>
                   .
                 </p>
@@ -134,13 +157,11 @@ const About = () => {
                   By passion, I volunteer my technical skills to local
                   organizations like
                   <span className="text-purple-400 font-semibold">
-                    {" "}
-                    Barrio Action Youth & Family Resource Center
-                  </span>
+                    {" "}Barrio Action Youth &amp; Family Resource Center
+                  </span>{" "}
                   and
                   <span className="text-purple-400 font-semibold">
-                    {" "}
-                    College Bridge Academy
+                    {" "}College Bridge Academy
                   </span>
                   , building digital tools to help them grow and better serve
                   the neighborhood.
@@ -148,38 +169,37 @@ const About = () => {
 
                 <p>
                   When the uniform comes off, I turn to my other calling:
-                  becoming a world-class technologist. I’m currently pursuing a
+                  becoming a world-class technologist. I&apos;m currently
+                  pursuing a
                   <span className="text-indigo-400 font-semibold">
-                    {" "}
-                    B.S. in Cloud & Network Engineering
-                  </span>
-                  and preparing for a
+                    {" "}B.S. in Cloud &amp; Network Engineering
+                  </span>{" "}
+                  and a
                   <span className="text-indigo-400 font-semibold">
-                    {" "}
-                    Master’s in AI & Machine Learning
+                    {" "}Master&apos;s in AI &amp; Machine Learning
                   </span>
-                  , all while refining my craft as a
+                  , while refining my craft as a
                   <span className="text-cyan-400 font-semibold">
-                    {" "}
-                    Full Stack AI Integrations Systems Architect{" "}
+                    {" "}Full Stack AI Integrations Systems Architect
                   </span>
                   .
                 </p>
 
                 <p>
-                  It’s a full life of long workdays, overtime shifts, late-night
-                  coding sessions, and family time—but I wouldn’t trade it.
-                  Every project I build, whether for a neighborhood non-profit
-                  or an AI-powered startup, is fueled by my belief that
-                  technology should strengthen communities and create
-                  opportunities for everyone.
+                  It&apos;s a full life — long workdays, overtime shifts,
+                  late-night coding sessions, and family time — but I
+                  wouldn&apos;t trade it. Every project I build, whether for a
+                  neighborhood non-profit or an AI-powered startup, is fueled
+                  by my belief that technology should strengthen communities and
+                  create opportunities for everyone.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Skills & Achievements */}
+          {/* Right Column — Skills & Achievements */}
           <div className="space-y-8">
+
             {/* Technical Skills */}
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
               <div className="flex items-center mb-6">
@@ -247,25 +267,45 @@ const About = () => {
           </div>
         </div>
 
-        {/* CTA call to Action */}
+        {/* CTA — GitHub + LinkedIn only, no Talk to Me button */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
               Ready to Build Something Amazing?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              I'm always excited to collaborate on innovative projects that push
-              the boundaries of technology. Let's create solutions that make a
-              real impact.
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              I&apos;m always excited to collaborate on innovative projects that
+              push the boundaries of technology. Let&apos;s create solutions
+              that make a real impact.
             </p>
-            <a
-              href="#contact"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105"
-            >
-              Talk to Me!
-            </a>
+
+            {/* Social Links */}
+            <div className="flex justify-center gap-6">
+              <a
+                href="https://github.com/Blueavian9"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex items-center gap-3 px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-cyan-400/50 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 hover:scale-105"
+                aria-label="GitHub Profile"
+              >
+                <FaGithub className="text-xl text-gray-300" />
+                <span className="text-gray-300">GitHub</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/cesaradrianaguilar/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex items-center gap-3 px-6 py-3 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/40 hover:border-blue-400 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-400/20 hover:scale-105"
+                aria-label="LinkedIn Profile"
+              >
+                <FaLinkedin className="text-xl text-blue-400" />
+                <span className="text-blue-300">LinkedIn</span>
+              </a>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );
