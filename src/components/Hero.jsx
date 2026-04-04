@@ -10,7 +10,7 @@ export default function Hero() {
 
   // Task 4 — Trust badge data pulled from resume
   const trustBadges = [
-    { value: "5+",  label: "Years Shipping" },
+    { value: "5+", label: "Years Shipping" },
     { value: "15+", label: "Projects Delivered" },
     { value: "WGU", label: "B.S. + M.S. In Progress" },
   ];
@@ -48,7 +48,9 @@ export default function Hero() {
       <div className="mb-6 flex flex-wrap justify-center gap-3">
         <div className="inline-flex items-center gap-2 bg-gray-800/60 border border-cyan-400/20 rounded-full px-5 py-2 text-sm">
           <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-          <span className="text-gray-300">Open to Remote Roles · No Sponsorship Required</span>
+          <span className="text-gray-300">
+            Open to Remote Roles · No Sponsorship Required
+          </span>
         </div>
         <div className="inline-flex items-center gap-2 bg-gray-800/60 border border-cyan-400/20 rounded-full px-5 py-2 text-sm">
           <span className="text-cyan-400">📍</span>
@@ -69,7 +71,8 @@ export default function Hero() {
         <h2 className="text-lg md:text-xl font-semibold text-gray-300 max-w-2xl mx-auto">
           Building AI-Powered Cloud Systems for 5+ Years &nbsp;|&nbsp;{" "}
           <span className="text-cyan-400">
-            Full Stack &middot; DevSecOps &middot; LangChain &middot; AWS &middot; Remote-Ready
+            Full Stack &middot; DevSecOps &middot; LangChain &middot; AWS
+            &middot; Remote-Ready
           </span>
         </h2>
       </div>
@@ -93,8 +96,8 @@ export default function Hero() {
           <span className="text-teal-300">
             OpenAI, AWS Polly V3, and LangChain
           </span>{" "}
-          into real EdTech platforms used by K&ndash;12 students. I build secure,
-          scalable full-stack apps with{" "}
+          into real EdTech platforms used by K&ndash;12 students. I build
+          secure, scalable full-stack apps with{" "}
           <span className="text-teal-300">
             React, Node.js, Express, PostgreSQL, and AWS
           </span>
@@ -144,7 +147,7 @@ export default function Hero() {
         </GlowingButton>
         <GlowingButton
           color="aurora"
-          href="/CesarAguilar_Resume.pdf"
+          href="https://www.linkedin.com/in/cesaradrianaguilar/"
           target="_blank"
           rel="noreferrer noopener"
         >
