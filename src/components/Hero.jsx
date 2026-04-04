@@ -47,9 +47,11 @@ export default function Hero() {
   </span>
 </h1>
         <h2 className="text-lg md:text-xl font-semibold text-gray-300">
-          Full Stack AI Integration Software Engineer &amp; Solutions Architect
-        </h2>
-      </div>
+  Building AI-Powered Cloud Systems for 5+ Years |{" "}
+  <span className="text-cyan-400">
+    Full Stack · DevSecOps · LangChain · AWS · Remote-Ready
+  </span>
+</h2>
 
       {/* Bio */}
       <div
