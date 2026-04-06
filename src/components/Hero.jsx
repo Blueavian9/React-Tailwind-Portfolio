@@ -21,8 +21,32 @@ export default function Hero() {
       id="home"
       aria-label="Hero section"
     >
+
+       {/* ── Profile Photo ── */}
+        <div className="flex justify-center mb-12">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 rounded-full blur opacity-40 group-hover:opacity-70 transition duration-500" />
+            <img
+              src="/assets/Cesar-Cover.webp"
+              alt="Cesar A. Aguilar"
+              onError={(e) => {
+                // Fallback: initials avatar if photo fails to load
+                e.target.style.display = "none";
+                e.target.nextSibling.style.display = "flex";
+              }}
+              className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-cyan-400/30 group-hover:scale-105 transition-transform duration-300"
+            />
+            {/* Fallback initials avatar — hidden unless photo 404s */}
+            <div
+              style={{ display: "none" }}
+              className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-cyan-400/30 items-center justify-center bg-gradient-to-br from-cyan-600 to-blue-700 text-4xl font-bold text-white group-hover:scale-105 transition-transform duration-300"
+            >
+              CA
+            </div>
+          </div>
+        </div>
       {/* Profile Image */}
-      <div className="relative group mb-8">
+      {/* <div className="relative group mb-8">
         {!imageLoaded && !imageError && (
           <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full bg-gray-700 animate-pulse flex items-center justify-center">
             <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
@@ -42,7 +66,7 @@ export default function Hero() {
             setImageLoaded(true);
           }}
         />
-      </div>
+      </div> */}
 
       {/* Task 3 — Location + Availability badges */}
       <div className="mb-6 flex flex-wrap justify-center gap-3">
@@ -133,34 +157,6 @@ export default function Hero() {
             <div className="text-sm text-gray-400 mt-1">{label}</div>
           </div>
         ))}
-      </div>
-
-      {/* CTA Buttons */}
-      <div className="mt-10 flex flex-wrap justify-center gap-6">
-        <GlowingButton
-          color="moon"
-          href="https://github.com/blueavian9"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          GitHub
-        </GlowingButton>
-        <GlowingButton
-          color="aurora"
-          href="https://www.linkedin.com/in/cesaradrianaguilar/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Download CV
-        </GlowingButton>
-        <GlowingButton
-          color="cosmic"
-          href="https://www.linkedin.com/in/cesaradrianaguilar/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          LinkedIn
-        </GlowingButton>
       </div>
 
       {/* Scroll Indicator */}
