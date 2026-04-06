@@ -8,6 +8,7 @@ import Hero from "./components/Hero.jsx";
 
 // Lazy load below-the-fold components
 const About = lazy(() => import("./components/About.jsx"));
+const Experience = lazy(() => import("./components/Experience.jsx"));
 const Services = lazy(() => import("./components/Services.jsx"));
 const Projects = lazy(() => import("./components/Projects.jsx"));
 const Contact = lazy(() => import("./components/Contact.jsx"));
@@ -60,6 +61,12 @@ export default function App() {
           </section>
         </Suspense>
 
+      <Suspense fallback={<LoadingSpinner />}>
+        <section id="experience">
+          <Experience />
+          </section>
+        </Suspense>
+        
         <Suspense fallback={<LoadingSpinner />}>
           <section id="services">
             <Services />
