@@ -56,63 +56,53 @@ const About = () => {
     return () => observer.disconnect();
   }, []);
 
-const skills = [
-  // ── Frontend ──────────────────────────────────────────
-  { name: "JavaScript / React", level: 95, color: "from-yellow-400 to-orange-500" },
-  { name: "TypeScript",         level: 85, color: "from-yellow-300 to-yellow-500" },
-  { name: "Next.js",            level: 83, color: "from-gray-300 to-gray-500"     },
+  const skills = [
+    // ── Frontend ──────────────────────────────────────────
+    {
+      name: "JavaScript / React",
+      level: 95,
+      color: "from-yellow-400 to-orange-500",
+    },
+    { name: "TypeScript", level: 85, color: "from-yellow-300 to-yellow-500" },
+    { name: "Next.js", level: 83, color: "from-gray-300 to-gray-500" },
 
-  // ── Backend ───────────────────────────────────────────
-  { name: "Node.js / Express",  level: 90, color: "from-lime-400 to-green-600"   },
-  { name: "Python",             level: 82, color: "from-blue-300 to-indigo-500"  },
+    // ── Backend ───────────────────────────────────────────
+    {
+      name: "Node.js / Express",
+      level: 90,
+      color: "from-lime-400 to-green-600",
+    },
+    { name: "Python", level: 82, color: "from-blue-300 to-indigo-500" },
 
-  // ── Cloud & DevOps ────────────────────────────────────
-  { name: "AWS / Cloud",        level: 85, color: "from-blue-400 to-cyan-500"    },
-  { name: "DevOps / CI-CD",     level: 85, color: "from-indigo-400 to-blue-600"  },
-  { name: "Docker / Kubernetes",level: 78, color: "from-sky-400 to-blue-500"     },
+    // ── Cloud & DevOps ────────────────────────────────────
+    { name: "AWS / Cloud", level: 85, color: "from-blue-400 to-cyan-500" },
+    { name: "DevOps / CI-CD", level: 85, color: "from-indigo-400 to-blue-600" },
+    {
+      name: "Docker / Kubernetes",
+      level: 78,
+      color: "from-sky-400 to-blue-500",
+    },
 
-  // ── AI & Data ─────────────────────────────────────────
-  { name: "AI / ML Integration",level: 88, color: "from-purple-400 to-pink-500"  },
-  { name: "LangChain / RAG",    level: 80, color: "from-violet-400 to-purple-600"},
+    // ── AI & Data ─────────────────────────────────────────
+    {
+      name: "AI / ML Integration",
+      level: 88,
+      color: "from-purple-400 to-pink-500",
+    },
+    {
+      name: "LangChain / RAG",
+      level: 80,
+      color: "from-violet-400 to-purple-600",
+    },
 
-  // ── Database ──────────────────────────────────────────
-  { name: "Database Design",         level: 88, color: "from-teal-400 to-cyan-600"  },
-  { name: "PostgreSQL / MongoDB",    level: 85, color: "from-green-400 to-teal-500" },
-];
-
-  // skills mock 1
-  //  const skills = [
-  //   {
-  //     name: "JavaScript / React",
-  //     level: 95,
-  //     color: "from-yellow-400 to-orange-500",
-  //   },
-  //   {
-  //     name: "Node.js / Express",
-  //     level: 90,
-  //     color: "from-lime-400 to-green-600",
-  //   },
-  //   {
-  //     name: "AWS / Cloud",
-  //     level: 85,
-  //     color: "from-blue-400 to-cyan-500",
-  //   },
-  //   {
-  //     name: "AI / ML Integration",
-  //     level: 80,
-  //     color: "from-purple-400 to-pink-500",
-  //   },
-  //   {
-  //     name: "DevOps / CI-CD",
-  //     level: 85,
-  //     color: "from-indigo-400 to-blue-600",
-  //   },
-  //   {
-  //     name: "Database Design",
-  //     level: 88,
-  //     color: "from-teal-400 to-cyan-600",
-  //   },
-  // ];
+    // ── Database ──────────────────────────────────────────
+    { name: "Database Design", level: 88, color: "from-teal-400 to-cyan-600" },
+    {
+      name: "PostgreSQL / MongoDB",
+      level: 85,
+      color: "from-green-400 to-teal-500",
+    },
+  ];
 
   const achievements = [
     {
@@ -173,30 +163,6 @@ const skills = [
             Transforming ideas into scalable, AI-powered solutions through
             innovative problem solving &amp; engineering
           </p>
-        </div>
-
-        {/* ── Profile Photo ── */}
-        <div className="flex justify-center mb-12">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 rounded-full blur opacity-40 group-hover:opacity-70 transition duration-500" />
-            <img
-              src="/assets/Cesar-Cover.webp"
-              alt="Cesar A. Aguilar"
-              onError={(e) => {
-                // Fallback: initials avatar if photo fails to load
-                e.target.style.display = "none";
-                e.target.nextSibling.style.display = "flex";
-              }}
-              className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-cyan-400/30 group-hover:scale-105 transition-transform duration-300"
-            />
-            {/* Fallback initials avatar — hidden unless photo 404s */}
-            <div
-              style={{ display: "none" }}
-              className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-cyan-400/30 items-center justify-center bg-gradient-to-br from-cyan-600 to-blue-700 text-4xl font-bold text-white group-hover:scale-105 transition-transform duration-300"
-            >
-              CA
-            </div>
-          </div>
         </div>
 
         {/* ── Two-column layout ── */}
