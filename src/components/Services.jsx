@@ -43,4 +43,4 @@ const services = [
   },
 ];
 
-export default Services;
+export default Service;
