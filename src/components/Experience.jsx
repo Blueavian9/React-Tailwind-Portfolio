@@ -2,45 +2,46 @@ const Experience = () => {
   const experiences = [
     {
       type: "work",
-      title: "Full Stack Engineer",
-      company: "talkAnimate Inc.",
-      location: "Los Angeles, CA",
-      dates: "2024 – Present",
-      bullets: [
-        "Build and maintain scalable full-stack features using React, TypeScript, and Node.js in a production SaaS environment.",
-        "Architect AWS infrastructure (EC2, S3, Lambda, RDS) and automate CI/CD pipelines with GitHub Actions.",
-        "Collaborate cross-functionally with design and product to ship user-facing animation tooling at speed.",
-        "Optimize front-end performance through lazy loading, code splitting, and Lighthouse auditing.",
-      ],
-      tags: ["React", "TypeScript", "AWS", "Node.js", "CI/CD"],
-    },
-    {
-      type: "work",
-      title: "Full Stack Developer — Freelance",
-      company: "Self-Employed",
+      title: "Full Stack AI Integrations Systems Engineer",
+      company: "Freelancer — Self-Employed",
       location: "Los Angeles, CA (Remote)",
-      dates: "2023 – Present",
+      dates: "April 2024 – Present",
       bullets: [
-        "Designed and deployed a HIPAA-aware psychology SaaS (valeriemunozpsyc.com) using Vite, React, TypeScript, and Astro.",
-        "Built a RAG-powered Cloud Ops AI assistant with Python, LangChain, and Streamlit for DevOps troubleshooting.",
-        "Delivered a real-time parent–teacher communication platform (HallPass) with TypeScript and WebSockets.",
-        "Managed Azure and AWS cloud deployments, DNS, and Vercel/Netlify hosting for multiple client projects.",
+        "Develop secure RESTful APIs integrating AWS Polly V3 SDK and OpenAI APIs for text generation, vision, speech, and content moderation features.",
+        "Build scalable backend systems with Node.js/Express supporting real-time AI-driven educational tools serving 1,000+ users.",
+        "Implement backend workflows and CI/CD pipelines (GitHub Actions) to enhance system reliability by 35%.",
+        "Lead security configurations across AWS environments following industry best practices — environment variables, API key security, RBAC.",
+        "Collaborate with cross-functional teams (DevOps, frontend, product) to deliver cohesive, production-grade solutions.",
       ],
-      tags: ["Python", "LangChain", "Azure", "Astro", "Vercel", "Netlify"],
+      tags: ["Node.js", "Express", "AWS Polly", "OpenAI APIs", "CI/CD", "GitHub Actions"],
     },
     {
       type: "work",
-      title: "DevOps & Cloud Engineering",
-      company: "Independent Projects",
-      location: "Los Angeles, CA",
-      dates: "2022 – Present",
+      title: "Full Stack Software Engineer (Internship)",
+      company: "TalkAnimate Inc.",
+      location: "Burbank, CA (Remote)",
+      dates: "April 2024 – November 2024",
       bullets: [
-        "Designed and documented a microservices architecture visualizer using a mall-floor metaphor — blueprint diagram, interactive HTML, and layered system maps.",
-        "Built and deployed Text-to-Speech applications using AWS Polly, API Gateway, and Lambda.",
-        "Developed LangChain-powered RPG agents live on Netlify, demonstrating multi-agent orchestration patterns.",
-        "Earned AWS and Azure cloud specializations with hands-on infrastructure management across both platforms.",
+        "Built and maintained AI-driven educational tools integrating AWS Polly V3 SDK and OpenAI APIs (TTS, STT, vision, content moderation).",
+        "Architected scalable Node.js/Express backend systems serving a real-time SaaS platform with 1,000+ concurrent users.",
+        "Implemented CI/CD pipelines improving deployment reliability by 35% and accelerating release cadence.",
+        "Documented complex AI integration workflows and presented technical architecture to non-technical stakeholders.",
       ],
-      tags: ["AWS Polly", "Lambda", "Microservices", "LangChain", "Terraform"],
+      tags: ["React", "TypeScript", "Node.js", "AWS", "OpenAI", "CI/CD"],
+    },
+    {
+      type: "work",
+      title: "Full Stack Software Developer",
+      company: "Bloom Institute of Technology",
+      location: "San Francisco, CA (Remote)",
+      dates: "March 2021 – March 2024",
+      bullets: [
+        "Engineered a Full-Stack Asylum Report Generator with Auth0 authentication and PostgreSQL persistence.",
+        "Designed and deployed RESTful APIs using Express.js, improving system performance by 30% through query optimization.",
+        "Achieved 98% Jest unit test coverage rate across all backend services.",
+        "Collaborated in Agile sprint cycles (planning, standups, retrospectives) ensuring timely, cross-functional project delivery.",
+      ],
+      tags: ["Express.js", "PostgreSQL", "Auth0", "Jest", "Knex.js", "Agile"],
     },
     {
       type: "volunteer",
@@ -52,7 +53,7 @@ const Experience = () => {
         "Mentored aspiring developers from underrepresented communities on full-stack fundamentals and job search strategy.",
         "Facilitated coding workshops covering React, Python, and cloud basics for non-traditional learners.",
       ],
-      tags: ["Mentorship", "Community", "Education"],
+      tags: ["Mentorship", "React", "Python", "Community", "Education"],
     },
   ];
 
@@ -88,8 +89,8 @@ const Experience = () => {
             Experience &amp; Impact
           </h2>
           <p className="mt-3 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
-            Full Stack Engineer and DevOps enthusiast with AWS &amp; Azure
-            specializations — building, deploying, and optimizing scalable
+            Full Stack Engineer and AI Integration specialist with AWS &amp; Azure
+            cloud experience — building, deploying, and optimizing scalable
             solutions from Los Angeles.
           </p>
         </div>
