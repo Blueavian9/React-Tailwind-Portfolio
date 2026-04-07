@@ -104,9 +104,14 @@ const Experience = () => {
               <div key={i} className="relative flex gap-6 group">
                 {/* Timeline dot */}
                 <div className="hidden sm:flex flex-col items-center mt-1.5 flex-shrink-0">
-      <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center z-10 transition-all duration-300 group-hover:scale-110${exp.type === "volunteer" ? "border-purple-400 bg-purple-50 dark:bg-purple-900/30" : "border-cyan-400 bg-cyan-50 dark:bg-cyan-900/20"}`}>   
-      
-
+                  <div
+                    className={[
+                      "w-8 h-8 rounded-full border-2 flex items-center justify-center z-10 transition-all duration-300 group-hover:scale-110",
+                      exp.type === "volunteer"
+                        ? "border-purple-400 bg-purple-50 dark:bg-purple-900/30"
+                        : "border-cyan-400 bg-cyan-50 dark:bg-cyan-900/20",
+                    ].join(" ")}
+                  >
                     {exp.type === "volunteer" ? (
                       <svg
                         className="w-4 h-4 text-purple-500"
