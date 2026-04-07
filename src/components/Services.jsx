@@ -42,3 +42,5 @@ const services = [
     sound: "/sounds/simple-whoosh-382724.mp3",
   },
 ];
+
+export default Services;
