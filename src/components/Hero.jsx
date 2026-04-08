@@ -21,30 +21,29 @@ export default function Hero() {
       id="home"
       aria-label="Hero section"
     >
-
-       {/* ── Profile Photo ── */}
-        <div className="flex justify-center mb-12">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 rounded-full blur opacity-40 group-hover:opacity-70 transition duration-500" />
-            <img
-              src="/assets/Cesar-Cover.webp"
-              alt="Cesar A. Aguilar"
-              onError={(e) => {
-                // Fallback: initials avatar if photo fails to load
-                e.target.style.display = "none";
-                e.target.nextSibling.style.display = "flex";
-              }}
-              className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-cyan-400/30 group-hover:scale-105 transition-transform duration-300"
-            />
-            {/* Fallback initials avatar — hidden unless photo 404s */}
-            <div
-              style={{ display: "none" }}
-              className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-cyan-400/30 items-center justify-center bg-gradient-to-br from-cyan-600 to-blue-700 text-4xl font-bold text-white group-hover:scale-105 transition-transform duration-300"
-            >
-              CA
-            </div>
+      {/* ── Profile Photo ── */}
+      <div className="flex justify-center mb-12">
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 rounded-full blur opacity-40 group-hover:opacity-70 transition duration-500" />
+          <img
+            src="/assets/Cesar-Cover.webp"
+            alt="Cesar A. Aguilar"
+            onError={(e) => {
+              // Fallback: initials avatar if photo fails to load
+              e.target.style.display = "none";
+              e.target.nextSibling.style.display = "flex";
+            }}
+            className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-cyan-400/30 group-hover:scale-105 transition-transform duration-300"
+          />
+          {/* Fallback initials avatar — hidden unless photo 404s */}
+          <div
+            style={{ display: "none" }}
+            className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-cyan-400/30 items-center justify-center bg-gradient-to-br from-cyan-600 to-blue-700 text-4xl font-bold text-white group-hover:scale-105 transition-transform duration-300"
+          >
+            CA
           </div>
         </div>
+      </div>
       {/* Profile Image */}
       {/* <div className="relative group mb-8">
         {!imageLoaded && !imageError && (
@@ -78,7 +77,10 @@ export default function Hero() {
         </div>
         <div className="inline-flex items-center gap-2 bg-gray-800/60 border border-cyan-400/20 rounded-full px-5 py-2 text-sm">
           <span className="text-cyan-400">📍</span>
-          <span className="text-gray-300">Los Angeles, CA · El Sereno</span>
+          <span className="text-gray-300">
+            {" "}
+            · Pasadena · Los Angeles Greater Area · California.{" "}
+          </span>
         </div>
       </div>
 

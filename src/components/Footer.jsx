@@ -1,5 +1,4 @@
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-
+import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
@@ -23,9 +22,9 @@ const Footer = () => {
 
             <p className="text-gray-300 font-mono text-justify">
               {/* your bio text here */}
-              Hi, I’m Cesar A. Aguilar, a devoted husband to my wife{" "}
+              Hi, I’m, a devoted husband to my wife{" "}
               <span className="text-cyan-400 font-semibold">Neha</span> for over
-              seven years and counting. I am also a proud “pet dad” to two
+              eight years and counting. I am also a proud “pet dad” to two
               spoiled guinea pigs,{" "}
               <span className="text-teal-400 font-semibold">Munchie</span> and{" "}
               <span className="text-teal-400 font-semibold">Coco</span>. They
@@ -100,9 +99,9 @@ const Footer = () => {
           <a
             href="#"
             className="text-gray-400 hover:text-white"
-            aria-label="Twitter"
+            aria-label="Instagram"
           >
-            <FaTwitter />
+            <FaInstagram />
           </a>
           <a
             href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/"
