@@ -78,44 +78,44 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div className="bg-blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
-   <div className="flex space-x-4 my-4 md:my-0 ml-8">
-  
-    href="https://www.facebook.com/cesar.aguilar.712/"
-    className="text-gray-400 hover:text-white transition-colors duration-300"
-    aria-label="Facebook"
-    target="_blank"
-    rel="noreferrer noopener"
-  >
-    <FaFacebook />
-  </a>
-  
-    href="https://www.instagram.com/Redavian10"
-    className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
-    aria-label="Instagram"
-    target="_blank"
-    rel="noreferrer noopener"
-  >
-    <FaInstagram />
-  </a>
-  
-    href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/"
-    className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
-    aria-label="LinkedIn"
-    target="_blank"
-    rel="noreferrer noopener"
-  >
-    <FaLinkedin />
-  </a>
-  
-    href="https://github.com/Blueavian9"
-    className="text-gray-400 hover:text-white transition-colors duration-300"
-    aria-label="GitHub"
-    target="_blank"
-    rel="noreferrer noopener"
-  >
-    <FaGithub />
-  </a>
-</div>
+        <div className="flex space-x-4 my-4 md:my-0 ml-8">
+          
+            href="https://www.facebook.com/cesar.aguilar.712/"
+            className="text-gray-400 hover:text-white transition-colors duration-300"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <FaFacebook />
+          </a>
+          
+            href="https://www.instagram.com/Redavian10"
+            className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <FaInstagram />
+          </a>
+          
+            href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/"
+            className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <FaLinkedin />
+          </a>
+          
+            href="https://github.com/Blueavian9"
+            className="text-gray-400 hover:text-white transition-colors duration-300"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <FaGithub />
+          </a>
+        </div>
 
         <div className="flex space-x-4 mr-8 mb-4 md:mb-0">
           <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
