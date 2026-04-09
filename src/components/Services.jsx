@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useInView } from "../hooks/useInView";
 
 const services = [
   {
@@ -47,6 +48,7 @@ const services = [
 
 const Service = () => {
   const audioRefs = useRef({});
+  const [gridRef, gridVisible] = useInView(0.1);
 
   const playHoverSound = (id) => {
     const audio = audioRefs.current[id];
@@ -54,10 +56,7 @@ const Service = () => {
       try {
         audio.currentTime = 0;
         audio.play().catch((err) => {
-          console.log(
-            `Audio playback prevented for service ${id}:`,
-            err.message,
-          );
+          console.log(`Audio playback prevented for service ${id}:`, err.message);
         });
       } catch (error) {
         console.log(`Audio error for service ${id}:`, error.message);
@@ -84,11 +83,21 @@ const Service = () => {
           </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, i) => (
             <div
               key={service.id}
               className="group relative bg-gray-800 rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/30 focus-within:scale-105 focus-within:shadow-2xl focus-within:shadow-teal-500/30"
+              style={{
+                opacity: gridVisible ? 1 : 0,
+                transform: gridVisible ? "translateY(0)" : "translateY(32px)",
+                transition:
+                  "opacity 0.5s ease-out " +
+                  i * 0.1 +
+                  "s, transform 0.5s ease-out " +
+                  i * 0.1 +
+                  "s",
+              }}
               onMouseEnter={() => playHoverSound(service.id)}
               onFocus={() => playHoverSound(service.id)}
               onKeyDown={(e) => handleKeyDown(e, service.id)}
