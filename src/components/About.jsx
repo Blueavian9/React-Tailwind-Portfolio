@@ -286,7 +286,7 @@ const About = () => {
                 {certifications.map((cert, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-700/40 border border-gray-600/30 hover:border-cyan-400/40 transition-colors duration-200"
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-700/40 border border-gray-600/30 hover:border-cyan-400/60 hover:shadow-md hover:shadow-cyan-400/20 hover:-translate-y-0.5 transition-all duration-200"
                   >
                     <span className="text-lg flex-shrink-0">{cert.icon}</span>
                     <span className="text-gray-300 text-xs font-medium leading-tight">
@@ -327,7 +327,7 @@ const About = () => {
                 {achievements.map((achievement, i) => (
                   <div
                     key={i}
-                    className="group p-4 rounded-xl bg-gray-700/30 border border-gray-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20"
+                    className="group p-4 rounded-xl bg-gray-700/30 border border-gray-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:-translate-y-1"
                   >
                     <div className="flex items-center mb-3">
                       <div className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-300">
@@ -365,7 +365,7 @@ const About = () => {
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="GitHub Profile"
-                className="flex items-center gap-3 px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-cyan-400/50 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 hover:scale-105"
+                className="flex items-center gap-3 px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-cyan-400/50 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105"
               >
                 <FaGithub className="text-xl text-gray-300" />
                 <span className="text-gray-300">GitHub</span>
@@ -377,7 +377,7 @@ const About = () => {
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="LinkedIn Profile"
-                className="flex items-center gap-3 px-6 py-3 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/40 hover:border-blue-400 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-400/20 hover:scale-105"
+                className="flex items-center gap-3 px-6 py-3 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/40 hover:border-blue-400 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-400/30 hover:scale-105"
               >
                 <FaLinkedin className="text-xl text-blue-400" />
                 <span className="text-blue-300">LinkedIn</span>
@@ -388,7 +388,7 @@ const About = () => {
                 href="/assets/Cesar-Aguilar-Resume.pdf"
                 download="Cesar-Aguilar-Resume.pdf"
                 aria-label="Download Resume PDF"
-                className="flex items-center gap-3 px-6 py-3 bg-teal-600/20 hover:bg-teal-600/30 border border-teal-500/40 hover:border-teal-400 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-teal-400/20 hover:scale-105"
+                className="flex items-center gap-3 px-6 py-3 bg-teal-600/20 hover:bg-teal-600/30 border border-teal-500/40 hover:border-teal-400 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-teal-400/30 hover:scale-105"
               >
                 <FaDownload className="text-xl text-teal-400" />
                 <span className="text-teal-300">Resume PDF</span>
