@@ -78,7 +78,7 @@ const ContactForm = () => {
             <div className="flex items-center justify-center">
               <FaMapMarkedAlt className="mr-3 text-cyan-400" />
               <strong className="font-mono text-lg">
-                123 W. BloomTech St. Los Angeles, USA
+                Los Angeles, USA
               </strong>
             </div>
           </div>
