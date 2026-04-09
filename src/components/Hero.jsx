@@ -8,7 +8,6 @@ export default function Hero() {
   const fallbackImage =
     "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400";
 
-  // Task 4 — Trust badge data pulled from resume
   const trustBadges = [
     { value: "5+", label: "Years Shipping" },
     { value: "15+", label: "Projects Delivered" },
@@ -21,21 +20,19 @@ export default function Hero() {
       id="home"
       aria-label="Hero section"
     >
-      {/* ── Profile Photo ── */}
-      <div className="flex justify-center mb-12">
+      {/* ── 1. Profile Photo — first in ── */}
+      <div className="flex justify-center mb-12 animate-fade-up-1">
         <div className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 rounded-full blur opacity-40 group-hover:opacity-70 transition duration-500" />
           <img
             src="/assets/Cesar-Cover.webp"
             alt="Cesar A. Aguilar"
             onError={(e) => {
-              // Fallback: initials avatar if photo fails to load
               e.target.style.display = "none";
               e.target.nextSibling.style.display = "flex";
             }}
             className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-cyan-400/30 group-hover:scale-105 transition-transform duration-300"
           />
-          {/* Fallback initials avatar — hidden unless photo 404s */}
           <div
             style={{ display: "none" }}
             className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-cyan-400/30 items-center justify-center bg-gradient-to-br from-cyan-600 to-blue-700 text-4xl font-bold text-white group-hover:scale-105 transition-transform duration-300"
@@ -44,31 +41,9 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      {/* Profile Image */}
-      {/* <div className="relative group mb-8">
-        {!imageLoaded && !imageError && (
-          <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full bg-gray-700 animate-pulse flex items-center justify-center">
-            <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        )}
-        <img
-          src={imageError ? fallbackImage : "/assets/Cesar-Cover.webp"}
-          alt="Cesar A. Aguilar — Full Stack AI Engineer & Cloud Systems Developer"
-          className={`animate-fade-in-up animate-once animate-duration-1000 relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover transition-all duration-300 group-hover:scale-105 ${
-            imageLoaded ? "opacity-100" : "opacity-0"
-          }`}
-          loading="eager"
-          onLoad={() => setImageLoaded(true)}
-          onError={() => {
-            console.log("Profile image failed to load, using fallback");
-            setImageError(true);
-            setImageLoaded(true);
-          }}
-        />
-      </div> */}
 
-      {/* Task 3 — Location + Availability badges */}
-      <div className="mb-6 flex flex-wrap justify-center gap-3">
+      {/* ── 2. Location + Availability badges ── */}
+      <div className="mb-6 flex flex-wrap justify-center gap-3 animate-fade-up-2">
         <div className="inline-flex items-center gap-2 bg-gray-800/60 border border-cyan-400/20 rounded-full px-5 py-2 text-sm">
           <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
           <span className="text-gray-300">
@@ -78,22 +53,19 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 bg-gray-800/60 border border-cyan-400/20 rounded-full px-5 py-2 text-sm">
           <span className="text-cyan-400">📍</span>
           <span className="text-gray-300">
-            {" "}
-            · Pasadena · Los Angeles Greater Area · California.{" "}
+            · Pasadena · Los Angeles Greater Area · California.
           </span>
         </div>
       </div>
 
-      {/* Name & Title */}
-      <div className="text-center mb-6">
-        <h1 className="animate-fade text-4xl md:text-5xl font-bold mb-3">
+      {/* ── 3. Name & Title ── */}
+      <div className="text-center mb-6 animate-fade-up-3">
+        <h1 className="text-4xl md:text-5xl font-bold mb-3">
           I&apos;m{" "}
-          {/* Task 5 — Gradient: cyan-300 → teal-400 → blue-500 for richer pop */}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-teal-400 to-blue-500">
             Cesar A. Aguilar
           </span>
         </h1>
-
         <h2 className="text-lg md:text-xl font-semibold text-gray-300 max-w-2xl mx-auto">
           Building AI-Powered Cloud Systems for 5+ Years &nbsp;|&nbsp;{" "}
           <span className="text-cyan-400">
@@ -103,9 +75,9 @@ export default function Hero() {
         </h2>
       </div>
 
-      {/* Bio */}
+      {/* ── 4. Bio ── */}
       <div
-        className="max-w-3xl text-center space-y-4"
+        className="max-w-3xl text-center space-y-4 animate-fade-up-4"
         role="region"
         aria-label="Professional summary"
       >
@@ -130,7 +102,6 @@ export default function Hero() {
           , with a security-first mindset backed by active professional
           experience in high-stakes operations.
         </p>
-
         <p className="text-base md:text-lg text-gray-400 font-mono leading-relaxed">
           Currently accelerating through a{" "}
           <span className="text-blue-400 font-semibold">
@@ -149,8 +120,8 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Task 4 — Trust Badges */}
-      <div className="mt-10 flex flex-wrap justify-center gap-10">
+      {/* ── 5. Trust Badges ── */}
+      <div className="mt-10 flex flex-wrap justify-center gap-10 animate-fade-up-5">
         {trustBadges.map(({ value, label }) => (
           <div key={label} className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
@@ -161,10 +132,12 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gradient-to-b from-teal-400 to-blue-500 rounded-full mt-2 animate-pulse"></div>
+      {/* ── Scroll Indicator — last in, no delay needed ── */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-fade-up-5">
+        <div className="animate-bounce">
+          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-gradient-to-b from-teal-400 to-blue-500 rounded-full mt-2 animate-pulse"></div>
+          </div>
         </div>
       </div>
     </section>
