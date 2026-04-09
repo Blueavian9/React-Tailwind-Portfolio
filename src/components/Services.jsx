@@ -6,7 +6,7 @@ const services = [
     title: "Full-Stack Web Development",
     description:
       "Building production-grade applications with React, Next.js, TypeScript, and Node.js/Express. I architect scalable front-to-back solutions — from pixel-perfect UIs to RESTful APIs — with performance and accessibility baked in from day one.",
-    sound: "/sounds/whoosh-effect-382717.mp3",
+    sound: "/sounds/whoosh-bamboo-389752.mp3",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const services = [
     title: "Cloud Architecture & AWS",
     description:
       "Designing and deploying resilient cloud infrastructure on AWS (Cloud Practitioner certified). From IAM and S3 to Lambda and scalable VPC setups, I build environments that stay up, stay fast, and stay within budget.",
-    sound: "/sounds/whoosh-effect-382717.mp3",
+    sound: "/sounds/whoosh-bamboo-389752.mp3",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const services = [
     title: "Database Design & Optimization",
     description:
       "Modeling and tuning data layers with PostgreSQL, MongoDB, and hybrid SQL/NoSQL strategies. I design schemas that scale cleanly, write queries that don't crawl, and structure data so your app never becomes its own bottleneck.",
-    sound: "/sounds/whoosh-effect-382717.mp3",
+    sound: "/sounds/whoosh-bamboo-389752.mp3",
   },
   {
     id: 6,
