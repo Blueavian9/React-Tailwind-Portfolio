@@ -3,7 +3,6 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
-      {/* Top container (bio) */}
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
           <div className="flex-1 mb-4 md:mb-0">
@@ -12,21 +11,19 @@ const Footer = () => {
                 Cesar Adrian Aguilar
               </span>
             </h3>
-
             <p className="text-gray-300 font-mono text-justify">
-              Hi, I'm a devoted husband to my wife{" "}
+              Hi, I&apos;m a devoted husband to my wife{" "}
               <span className="text-cyan-400 font-semibold">Neha</span> for over
-              eight years and counting. I am also a proud "pet dad" to two
+              eight years and counting. I am also a proud &ldquo;pet dad&rdquo; to two
               spoiled guinea pigs,{" "}
               <span className="text-teal-400 font-semibold">Munchie</span> and{" "}
               <span className="text-teal-400 font-semibold">Coco</span>. They
               keep me company (and occasionally steal my snacks) while I code
               late into the night. By day, I serve as a{" "}
               <span className="text-blue-400 font-semibold">
-                Security Officer for Los Angeles Council District 14 in El
-                Sereno
+                Security Officer for Los Angeles Council District 14 in El Sereno
               </span>
-              , guarding Councilmember Ysabel Jurado's office and supporting
+              , guarding Councilmember Ysabel Jurado&apos;s office and supporting
               community safety. I also work Saturdays for the Lincoln Heights
               Youth Center and answer to the{" "}
               <span className="text-blue-400 font-semibold">
@@ -42,8 +39,7 @@ const Footer = () => {
               <span className="text-indigo-400 font-semibold">
                 Western Governors University (WGU)
               </span>
-              . By passion, I volunteer my technical skills to local
-              organizations like{" "}
+              . By passion, I volunteer my technical skills to local organizations like{" "}
               <span className="text-purple-400 font-semibold">
                 Barrio Action Youth &amp; Family Resource Center
               </span>{" "}
@@ -53,21 +49,21 @@ const Footer = () => {
               </span>
               , building digital tools to help them grow and better serve the
               neighborhood. When the uniform comes off, I turn to my other
-              calling: becoming a world-class technologist. I'm currently
+              calling: becoming a world-class technologist. I&apos;m currently
               pursuing a{" "}
               <span className="text-indigo-400 font-semibold">
                 B.S. in Cloud &amp; Network Engineering
               </span>{" "}
               and preparing for a{" "}
               <span className="text-indigo-400 font-semibold">
-                Master's in AI &amp; Machine Learning
+                Master&apos;s in AI &amp; Machine Learning
               </span>
               , all while refining my craft as a{" "}
               <span className="text-cyan-400 font-semibold">
                 Full-Stack Software Engineer
               </span>
-              . It's a full life of long workdays, overtime shifts, late-night
-              coding sessions, and family time—but I wouldn't trade it. Every
+              . It&apos;s a full life of long workdays, overtime shifts, late-night
+              coding sessions, and family time—but I wouldn&apos;t trade it. Every
               project I build, whether for a neighborhood non-profit or an
               AI-powered startup, is fueled by my belief that technology should
               strengthen communities and create opportunities for everyone.
@@ -76,7 +72,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="bg-blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
         <div className="flex space-x-4 my-4 md:my-0 ml-8">
           
@@ -118,24 +113,15 @@ const Footer = () => {
         </div>
 
         <div className="flex space-x-4 mr-8 mb-4 md:mb-0">
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-            Privacy
-          </a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-            Terms of Service
-          </a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-            Accessibility
-          </a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-            Business Proposition VC Funding
-          </a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Privacy</a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Accessibility</a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Business Proposition VC Funding</a>
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="text-center text-gray-500 text-sm mt-4">
-        © {new Date().getFullYear()} Cesar Adrian Aguilar. All rights reserved.
+      <div className="text-center text-gray-500 text-sm mt-4 pb-4">
+        &copy; {new Date().getFullYear()} Cesar Adrian Aguilar. All rights reserved.
       </div>
     </footer>
   );
