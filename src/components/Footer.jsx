@@ -14,18 +14,19 @@ const Footer = () => {
             <p className="text-gray-300 font-mono text-justify">
               Hi, I&apos;m a devoted husband to my wife{" "}
               <span className="text-cyan-400 font-semibold">Neha</span> for over
-              eight years and counting. I am also a proud &ldquo;pet dad&rdquo; to two
-              spoiled guinea pigs,{" "}
+              eight years and counting. I am also a proud &ldquo;pet dad&rdquo;
+              to two spoiled guinea pigs,{" "}
               <span className="text-teal-400 font-semibold">Munchie</span> and{" "}
               <span className="text-teal-400 font-semibold">Coco</span>. They
               keep me company (and occasionally steal my snacks) while I code
               late into the night. By day, I serve as a{" "}
               <span className="text-blue-400 font-semibold">
-                Security Officer for Los Angeles Council District 14 in El Sereno
+                Security Officer for Los Angeles Council District 14 in El
+                Sereno
               </span>
-              , guarding Councilmember Ysabel Jurado&apos;s office and supporting
-              community safety. I also work Saturdays for the Lincoln Heights
-              Youth Center and answer to the{" "}
+              , guarding Councilmember Ysabel Jurado&apos;s office and
+              supporting community safety. I also work Saturdays for the Lincoln
+              Heights Youth Center and answer to the{" "}
               <span className="text-blue-400 font-semibold">
                 Hollenbeck LAPD Security Services Division
               </span>
@@ -39,7 +40,8 @@ const Footer = () => {
               <span className="text-indigo-400 font-semibold">
                 Western Governors University (WGU)
               </span>
-              . By passion, I volunteer my technical skills to local organizations like{" "}
+              . By passion, I volunteer my technical skills to local
+              organizations like{" "}
               <span className="text-purple-400 font-semibold">
                 Barrio Action Youth &amp; Family Resource Center
               </span>{" "}
@@ -62,11 +64,12 @@ const Footer = () => {
               <span className="text-cyan-400 font-semibold">
                 Full-Stack Software Engineer
               </span>
-              . It&apos;s a full life of long workdays, overtime shifts, late-night
-              coding sessions, and family time—but I wouldn&apos;t trade it. Every
-              project I build, whether for a neighborhood non-profit or an
-              AI-powered startup, is fueled by my belief that technology should
-              strengthen communities and create opportunities for everyone.
+              . It&apos;s a full life of long workdays, overtime shifts,
+              late-night coding sessions, and family time—but I wouldn&apos;t
+              trade it. Every project I build, whether for a neighborhood
+              non-profit or an AI-powered startup, is fueled by my belief that
+              technology should strengthen communities and create opportunities
+              for everyone.
             </p>
           </div>
         </div>
@@ -74,7 +77,7 @@ const Footer = () => {
 
       <div className="bg-blue-950 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
         <div className="flex space-x-4 my-4 md:my-0 ml-8">
-          
+          <a
             href="https://www.facebook.com/cesar.aguilar.712/"
             className="text-gray-400 hover:text-white transition-colors duration-300"
             aria-label="Facebook"
@@ -83,7 +86,7 @@ const Footer = () => {
           >
             <FaFacebook />
           </a>
-          
+          <a
             href="https://www.instagram.com/Redavian10"
             className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
             aria-label="Instagram"
@@ -92,7 +95,7 @@ const Footer = () => {
           >
             <FaInstagram />
           </a>
-          
+          <a
             href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/"
             className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
             aria-label="LinkedIn"
@@ -101,7 +104,7 @@ const Footer = () => {
           >
             <FaLinkedin />
           </a>
-          
+          <a
             href="https://github.com/Blueavian9"
             className="text-gray-400 hover:text-white transition-colors duration-300"
             aria-label="GitHub"
@@ -113,15 +116,36 @@ const Footer = () => {
         </div>
 
         <div className="flex space-x-4 mr-8 mb-4 md:mb-0">
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Privacy</a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Accessibility</a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Business Proposition VC Funding</a>
+          <a
+            href="#"
+            className="text-gray-400 hover:text-white transition-colors duration-300"
+          >
+            Privacy
+          </a>
+          <a
+            href="#"
+            className="text-gray-400 hover:text-white transition-colors duration-300"
+          >
+            Terms of Service
+          </a>
+          <a
+            href="#"
+            className="text-gray-400 hover:text-white transition-colors duration-300"
+          >
+            Accessibility
+          </a>
+          <a
+            href="#"
+            className="text-gray-400 hover:text-white transition-colors duration-300"
+          >
+            Business Proposition VC Funding
+          </a>
         </div>
       </div>
 
       <div className="text-center text-gray-500 text-sm mt-4 pb-4">
-        &copy; {new Date().getFullYear()} Cesar Adrian Aguilar. All rights reserved.
+        &copy; {new Date().getFullYear()} Cesar Adrian Aguilar. All rights
+        reserved.
       </div>
     </footer>
   );
