@@ -12,64 +12,15 @@ const Footer = () => {
               </span>
             </h3>
             <p className="text-gray-300 font-mono text-justify">
-              Hi, I&apos;m a devoted husband to my wife{" "}
-              <span className="text-cyan-400 font-semibold">Neha</span> for over
-              eight years and counting. I am also a proud &ldquo;pet dad&rdquo;
-              to two spoiled guinea pigs,{" "}
-              <span className="text-teal-400 font-semibold">Munchie</span> and{" "}
-              <span className="text-teal-400 font-semibold">Coco</span>. They
-              keep me company (and occasionally steal my snacks) while I code
-              late into the night. By day, I serve as a{" "}
-              <span className="text-blue-400 font-semibold">
-                Security Officer for Los Angeles Council District 14 in El
-                Sereno
-              </span>
-              , guarding Councilmember Ysabel Jurado&apos;s office and
-              supporting community safety. I also work Saturdays for the Lincoln
-              Heights Youth Center and answer to the{" "}
-              <span className="text-blue-400 font-semibold">
-                Hollenbeck LAPD Security Services Division
-              </span>
-              , serving multiple City of Los Angeles LAPD posts including{" "}
-              <span className="text-blue-400 font-semibold">PiperTech</span> and
-              the{" "}
-              <span className="text-blue-400 font-semibold">
-                Hyperion S.A.F.E. Center
-              </span>
-              — all while studying full time at{" "}
+              Hi, I'm a devoted husband to my wife for over eight years and
+              counting. I am also a proud &ldquo;pet dad&rdquo; to two spoiled
+              guinea pigs, Munchie and Coco. They keep me company and
+              occasionally steal my snacks while I code late into the night. By
+              day, I serve as a{" "}
               <span className="text-indigo-400 font-semibold">
-                Western Governors University (WGU)
-              </span>
-              . By passion, I volunteer my technical skills to local
-              organizations like{" "}
-              <span className="text-purple-400 font-semibold">
-                Barrio Action Youth &amp; Family Resource Center
+                Security Officer
               </span>{" "}
-              and{" "}
-              <span className="text-purple-400 font-semibold">
-                College Bridge Academy
-              </span>
-              , building digital tools to help them grow and better serve the
-              neighborhood. When the uniform comes off, I turn to my other
-              calling: becoming a world-class technologist. I&apos;m currently
-              pursuing a{" "}
-              <span className="text-indigo-400 font-semibold">
-                B.S. in Cloud &amp; Network Engineering
-              </span>{" "}
-              and preparing for a{" "}
-              <span className="text-indigo-400 font-semibold">
-                Master&apos;s in AI &amp; Machine Learning
-              </span>
-              , all while refining my craft as a{" "}
-              <span className="text-cyan-400 font-semibold">
-                Full-Stack Software Engineer
-              </span>
-              . It&apos;s a full life of long workdays, overtime shifts,
-              late-night coding sessions, and family time—but I wouldn&apos;t
-              trade it. Every project I build, whether for a neighborhood
-              non-profit or an AI-powered startup, is fueled by my belief that
-              technology should strengthen communities and create opportunities
-              for everyone.
+              for a Los Angeles City Council office.
             </p>
           </div>
         </div>
