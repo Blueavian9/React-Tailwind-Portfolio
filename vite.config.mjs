@@ -5,9 +5,8 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Root deployment (Vercel, Netlify, etc.). Subdirectory deploys (e.g. GitHub Pages) need
-  // base: "/YourRepoName/" — set VITE_BASE_PATH in that environment instead of changing this file.
-  base: process.env.VITE_BASE_PATH || "/",
+  // Vercel and most hosts serve the app at "/". For GitHub Pages (subpath), set VITE_BASE=/your-repo-name/ in that CI env only.
+  base: process.env.VITE_BASE || "/",
   css: {
     postcss: "./postcss.config.js", // If you have one (usually auto-detected)
   },
