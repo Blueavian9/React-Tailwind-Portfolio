@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 
+/** @see public/PRD.md — "Portfolio project replacement roadmap" (flagship slots 1–4 + batch 5–9). */
 const projects = [
   {
     id: 1,

@@ -1,7 +1,7 @@
 # PRD.md — Cesar A. Aguilar Portfolio Upgrade
 
 **Product Requirements Document**  
-**Version:** 1.6 (Status sync — Experience, Contact, dual deploy, audio)  
+**Version:** 1.7 (Portfolio roadmap — flagship rebuilds + batch hygiene)  
 **Date:** April 13, 2026  
 **Author:** Cesar A. Aguilar (with Grok)  
 **Status:** In Progress (maintenance & optional backlog)
@@ -9,7 +9,7 @@
 ## Repository snapshot (latest check)
 
 - **Branch:** `main` — **up to date** with `origin/main`
-- **Working tree:** **clean** (nothing to commit)
+- **Working tree:** **clean** after each doc/code commit (re-check before releases)
 
 ---
 
@@ -19,6 +19,49 @@ Two deliverables from one repo:
 
 - **React + Vite + Tailwind** — Primary SPA: theme (light/dark), full sections (Hero, About, Services, Projects, Contact, Blog, Footer), Formspree contact, `vercel.json` SPA rewrites.
 - **Single-file HTML** (`portfolio-static.html` at repo root) — Fast static variant; SEO/OG tags, Formspree, process section; intended URL referenced in meta tags (`react-tailwind-portfolio-static.vercel.app`).
+
+**Featured project URLs:** Do **not** wire per-repo links on the static page (or swap grid entries in React) until each new flagship repo is public, deployed, and README-ready. Until then, static featured cards use the **GitHub profile** link; `Projects.jsx` remains the live list of current work with pointers to this roadmap.
+
+---
+
+## Portfolio project replacement roadmap (planned)
+
+This section is the **single planning source** for what replaces portfolio slots **1–4** and how to handle **5–9** without thrash. Code pointers: `src/components/Projects.jsx`, `portfolio-static.html` (featured strip).
+
+### A. Meta-cognitive frame (how to decide, in order)
+
+1. **Outcome** — For each slot, finish this sentence: “A hiring manager learns that I can ___.” If two ideas prove the same outcome, merge or defer.
+2. **Constraints** — Time budget, recurring cost (e.g. K8s cluster), and dependencies (auth, WebSocket server, app store for RN). Put the expensive or fragile piece last once patterns exist.
+3. **One flagship at a time** — One active “greenfield” repo until it has: public default branch, deployed demo, README with architecture diagram, and this PRD updated. Then start the next level.
+4. **Portfolio sync rule** — When a flagship ships: update **React grid + static featured (if applicable) + PRD** in **one commit** so the site never points at empty repos.
+5. **Retrospective** — After each flagship: one paragraph in README (“what broke, what I’d automate next”). That becomes interview content.
+
+### B. Flagship replacements (slots 1–4 in `Projects.jsx` order)
+
+| Slot | Working title | Intent (what it proves) | Notes |
+|------|----------------|-------------------------|--------|
+| **1** | **Smart Habit Tracker** — Valerie’s Wellness App + Habit Companion (React Native) | Therapists assign habits; clients track streaks/XP; **AI sentiment** on check-in notes; badges / tiers | Mobile + product + applied AI; good **first** flagship (visible end-to-end story). |
+| **2** | **Real-time collaborative editor** — Cloud Ops AI Assistant + live incident runbook | **WebSockets**: two engineers edit AI-generated runbooks like Google Docs; low conflict | Realtime + DevOps domain; natural follow-on after APIs/auth from slot 1. |
+| **3** | **Microservices visualizer → live platform** | **K8s**-orchestrated services, **Kafka/NATS** events, live traffic/pod health/logs in UI | Highest complexity; do **after** 1–2 so observability and backend patterns are warm. |
+| **4** | *TBD* | Reserve until 1–3 are scoped; options: fourth vertical slice, shared platform spine (auth/tenant), or upgrade strongest legacy instead of a fourth greenfield | User to lock scope when Level 1–3 milestones exist. |
+
+**Suggested build order (importance × dependencies):** **1 → 2 → 3**, then **4**. That order moves from mobile/product + AI → collaborative realtime → distributed systems, without paying cluster cost before you have backend habits.
+
+### C. Batch plan for existing slots **5–9** (revive vs deprecate)
+
+Goal: when you return “one project at a time,” you don’t re-discover state. For each repo in **5–9**:
+
+1. **Label** — `revive` (ship small README + demo fix), `archive` (read-only + banner in README), or `merge` (ideas absorbed into a flagship).
+2. **Minimum viable hygiene** (one session each): default branch builds, README “Status: active / maintenance / archived”, correct live URL or strikethrough, security (env samples, no secrets).
+3. **Do not** block flagship **1–4** on 5–9 unless a dependency forces it (e.g. shared component lib).
+
+### D. Checklist before any “wire URLs” task
+
+- [ ] Repo is public (or demo is public with clear access).
+- [ ] `README.md` has architecture + how to run.
+- [ ] Deploy URL works (Netlify/Vercel/etc.).
+- [ ] Replace entry in `Projects.jsx` and adjust `portfolio-static.html` featured cards if they showcase the same story.
+- [ ] Bump this PRD version line + repository snapshot.
 
 ---
 
@@ -84,11 +127,13 @@ Two deliverables from one repo:
 _LinkedIn “view full profile” / footer uses canonical URL (`/in/cesaradrianaguilar/`)._
 
 ### EPIC 6: Featured Projects
-**Status:** ✅ COMPLETED (React) · 🔄 Optional polish (static HTML)
+**Status:** 🔄 In progress — **UI done**; **content swap deferred** until flagship repos (see **Portfolio project replacement roadmap**)
 
-- [✅] React: Full project grid in `Projects.jsx` with images, GitHub, live demos, and hover interactions.
-- [ ] Static: Replace generic GitHub profile links on the three featured cards with **per-repository** URLs when ready (`portfolio-static.html` TODO comment).
-- [ ] Optional: Commit after static link pass.
+- [✅] React: Project grid in `Projects.jsx` (images, links, hover sound guarded).
+- [✅] Static: Featured strip uses **profile** link until new builds ship (no misleading per-repo URLs).
+- [ ] Replace slots **1–4** with flagship projects when each repo + demo are ready.
+- [ ] Batch-hygiene pass for slots **5–9** (README + demo + archive labels).
+- [ ] Final “wire URLs” commit per **§D Checklist** in roadmap.
 
 ### EPIC 7: Development Process
 **Status:** ✅ COMPLETED (static HTML — four-step process section)
@@ -154,7 +199,7 @@ _Single-file HTML footer was already aligned (no FB/IG, no legal placeholders)._
 
 ## Post-PRD backlog (separate initiatives)
 
-- [ ] Wire up a CI pipeline (e.g. GitHub Actions: `npm ci`, `npm run build`)
+- [✅] CI pipeline — `.github/workflows/ci.yml` (`npm ci`, `npm run build` on `main` / PRs)
 - [ ] Containerize the app (optional for Vercel-only workflow)
 - [ ] Profile and fix slowness (Lighthouse, bundle analyzer, React Profiler)
 
@@ -169,7 +214,7 @@ _Single-file HTML footer was already aligned (no FB/IG, no legal placeholders)._
 | EPIC 3  | ✅ Completed      | 6/6 subtasks                               |
 | EPIC 4  | ✅ Completed      | 5/5 subtasks                               |
 | EPIC 5  | ✅ Completed      | React `Experience.jsx`                     |
-| EPIC 6  | ✅ / optional     | React grid done; static per-repo links TODO |
+| EPIC 6  | 🔄 In progress    | Flagship roadmap §; wire URLs when repos ship |
 | EPIC 7  | ✅ Completed      | Static process; React uses Services        |
 | EPIC 8  | ✅ Completed      | Formspree + email patterns                 |
 | EPIC 9  | ✅ Completed      | 5/5 subtasks                               |
