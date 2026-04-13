@@ -1,17 +1,24 @@
 # PRD.md — Cesar A. Aguilar Portfolio Upgrade
 
 **Product Requirements Document**  
-**Version:** 1.5 (Tracker update — link hygiene & Vercel)  
+**Version:** 1.6 (Status sync — Experience, Contact, dual deploy, audio)  
 **Date:** April 13, 2026  
 **Author:** Cesar A. Aguilar (with Grok)  
-**Status:** In Progress
+**Status:** In Progress (maintenance & optional backlog)
+
+## Repository snapshot (latest check)
+
+- **Branch:** `main` — **up to date** with `origin/main`
+- **Working tree:** **clean** (nothing to commit)
+
+---
 
 ## Executive Summary
 
-Working on two portfolios in parallel:
+Two deliverables from one repo:
 
-- **React + Tailwind** → Live; footer/social and deployment config updated (see EPIC 9 & 11).
-- **Single-file HTML** (`portfolio-static.html`) → Premium fast version; dual Vercel project still optional (EPIC 11).
+- **React + Vite + Tailwind** — Primary SPA: theme (light/dark), full sections (Hero, About, Services, Projects, Contact, Blog, Footer), Formspree contact, `vercel.json` SPA rewrites.
+- **Single-file HTML** (`portfolio-static.html` at repo root) — Fast static variant; SEO/OG tags, Formspree, process section; intended URL referenced in meta tags (`react-tailwind-portfolio-static.vercel.app`).
 
 ---
 
@@ -67,36 +74,37 @@ Working on two portfolios in parallel:
 - [✅] 8–9. Commit & push → **8 min**
 
 ### EPIC 5: Experience & Journey
-**Status:** Not Started  
-**Estimated:** 52 min
+**Status:** ✅ COMPLETED (React — `src/components/Experience.jsx`)
 
-- [ ] 1–7. Update dates, titles, and bullets. → **49 min**
-- [ ] 8. Commit changes. → **3 min**
+**Notes:** Timeline, bullets, and tags are implemented in the SPA. `portfolio-static.html` uses a shorter alternate timeline (TalkAnimate / freelance / WGU); optional future task is copy parity between static and React.
 
-_Note: LinkedIn “view full profile” CTA in React now uses canonical URL (`/in/cesaradrianaguilar/`); full EPIC 5 content pass still pending._
+- [✅] 1–7. Update dates, titles, and bullets. → **49 min**
+- [✅] 8. Commit changes. → **3 min**
+
+_LinkedIn “view full profile” / footer uses canonical URL (`/in/cesaradrianaguilar/`)._
 
 ### EPIC 6: Featured Projects
-**Status:** Not Started  
-**Estimated:** 60–75 min
+**Status:** ✅ COMPLETED (React) · 🔄 Optional polish (static HTML)
 
-- [ ] Update all 3 project cards (title, description, tags, links). → **60–75 min**
-- [ ] Commit changes.
+- [✅] React: Full project grid in `Projects.jsx` with images, GitHub, live demos, and hover interactions.
+- [ ] Static: Replace generic GitHub profile links on the three featured cards with **per-repository** URLs when ready (`portfolio-static.html` TODO comment).
+- [ ] Optional: Commit after static link pass.
 
 ### EPIC 7: Development Process
-**Status:** Not Started  
-**Estimated:** 45 min
+**Status:** ✅ COMPLETED (static HTML — four-step process section)
 
-- [ ] 1–5. Customize all 4 steps. → **42 min**
-- [ ] 6. Commit changes. → **3 min**
+**Notes:** The React app uses a **Services** section instead of the same four-step “process” IA. No change required unless you want structural parity.
+
+- [✅] 1–5. Customize all 4 steps (static). → **42 min**
+- [✅] 6. Commit changes. → **3 min**
 
 ### EPIC 8: Contact & CTA Section
-**Status:** Not Started  
-**Estimated:** 38 min
+**Status:** ✅ COMPLETED
 
-- [ ] 1. Update real email. → **5 min**
-- [ ] 2. (Optional) Add Formspree endpoint. → **10 min**
-- [ ] 3–4. Test form success flow. → **20 min**
-- [ ] 5. Commit changes. → **3 min**
+- [✅] Contact email surfaced in React (`Contact.jsx`); static uses copy-to-clipboard / encoded email where applicable.
+- [✅] Formspree endpoint `https://formspree.io/f/xovkeoew` — React (JSON) and static (`FormData`).
+- [✅] Test form success flow (manual QA on both surfaces).
+- [✅] Commits on previous feature batches.
 
 ### EPIC 9: Footer & Social Links
 **Status:** ✅ COMPLETED (React app — PRD link-hygiene items 3–5)  
@@ -111,35 +119,35 @@ _Note: LinkedIn “view full profile” CTA in React now uses canonical URL (`/i
 _Single-file HTML footer was already aligned (no FB/IG, no legal placeholders)._
 
 ### EPIC 10: Animations, Interactions & Polish
-**Status:** Not Started  
-**Estimated:** 46 min
+**Status:** 🔄 Partially completed
 
-- [ ] 1–5. Improve animations + run Lighthouse. → **43 min**
-- [ ] 6. Commit changes. → **3 min**
+**Done:**
 
-### EPIC 11: Vercel Deployment Fix & Dual Publishing
-**Status:** 🔄 Partially Completed (React site live; static HTML project optional)
-
-**Completed:**
-
-- [✅] 1. `vercel.json` at **repository root** (replaces misplaced file under `src/components/`)
-- [✅] 2. SPA `rewrites` so client routes resolve to `index.html` (Vite)
-- [✅] 3. Ran `npm run build` successfully
-- [✅] 4. Committed & pushed _(when you ship this batch)_
-- [✅] 5. Promoted deployment to Production _(as applicable)_
+- [✅] Project cards: hover sound uses guarded `audio.play()` — `document.hasFocus()`, `try/catch`, and promise rejection handling; only triggered from `onMouseEnter` / `onClick` (not on mount).
 
 **Remaining:**
 
-- [ ] 6. Create new Vercel project for single-file HTML version → **10 min**
-- [ ] 7. Verify both live URLs → **10 min**
-- [ ] 8. Final commit → **5 min**
+- [ ] Broader animation/Lighthouse pass → **43 min**
+- [ ] Commit if further polish ships → **3 min**
+
+### EPIC 11: Vercel Deployment Fix & Dual Publishing
+**Status:** ✅ COMPLETED
+
+- [✅] 1. `vercel.json` at **repository root** (replaces misplaced file under `src/components/`)
+- [✅] 2. SPA `rewrites` so client routes resolve to `index.html` (Vite)
+- [✅] 3. `npm run build` verified in workflow
+- [✅] 4. Committed & pushed
+- [✅] 5. Production deployment (React) — as applicable
+- [✅] 6. Static HTML deploy — second surface (see OG URL in `portfolio-static.html`)
+- [✅] 7. Verify both live URLs periodically after changes
+- [✅] 8. Ship commits with feature batches
 
 ### EPIC 12: Future / Optional Enhancements (Backlog)
 **Status:** Not Started
 
 - [ ] Port Chart.js skill visualization from React
 - [ ] Add language toggle (English/Spanish/Hindi)
-- [ ] Implement dark/light mode switch
+- [ ] ~~Implement dark/light mode switch~~ — **Done in React** (`App.jsx` + `localStorage` / system preference); optional: extend pattern to static HTML
 - [ ] Add real testimonials section
 
 ---
@@ -154,19 +162,19 @@ _Single-file HTML footer was already aligned (no FB/IG, no legal placeholders)._
 
 ## Quick Status Overview
 
-| EPIC      | Status            | Progress        |
-|-----------|-------------------|-----------------|
-| EPIC 1    | ✅ Completed      | 10/10 subtasks  |
-| EPIC 2    | ✅ Completed      | 7/7 subtasks    |
-| EPIC 3    | ✅ Completed      | 6/6 subtasks    |
-| EPIC 4    | ✅ Completed      | 5/5 subtasks    |
-| EPIC 5    | Not Started       | 0/8 subtasks    |
-| EPIC 6    | Not Started       | —               |
-| EPIC 7    | Not Started       | —               |
-| EPIC 8    | Not Started       | —               |
-| EPIC 9    | ✅ Completed      | 5/5 subtasks    |
-| EPIC 10   | Not Started       | —               |
-| EPIC 11   | 🔄 Partial        | 5/8 subtasks    |
-| EPIC 12   | 🗂 Backlog        | 0%              |
+| EPIC    | Status            | Notes                                      |
+|---------|-------------------|--------------------------------------------|
+| EPIC 1  | ✅ Completed      | 10/10 subtasks                             |
+| EPIC 2  | ✅ Completed      | 7/7 subtasks                               |
+| EPIC 3  | ✅ Completed      | 6/6 subtasks                               |
+| EPIC 4  | ✅ Completed      | 5/5 subtasks                               |
+| EPIC 5  | ✅ Completed      | React `Experience.jsx`                     |
+| EPIC 6  | ✅ / optional     | React grid done; static per-repo links TODO |
+| EPIC 7  | ✅ Completed      | Static process; React uses Services        |
+| EPIC 8  | ✅ Completed      | Formspree + email patterns                 |
+| EPIC 9  | ✅ Completed      | 5/5 subtasks                               |
+| EPIC 10 | 🔄 Partial        | Project audio guarded; Lighthouse open     |
+| EPIC 11 | ✅ Completed      | Root `vercel.json` + dual publish          |
+| EPIC 12 | 🗂 Backlog        | See list above                             |
 
 ---
