@@ -107,10 +107,17 @@ const Projects = () => {
   }, []);
 
   const playSound = (id) => {
+    if (!document.hasFocus()) return;
     const audio = audioRefs.current[id];
-    if (audio) {
-      audio.currentTime = 0;
-      audio.play();
+    if (!audio) return;
+    audio.currentTime = 0;
+    try {
+      const playResult = audio.play();
+      if (playResult !== undefined) {
+        playResult.catch(() => {});
+      }
+    } catch {
+      /* silence NotAllowedError and similar */
     }
   };
 
