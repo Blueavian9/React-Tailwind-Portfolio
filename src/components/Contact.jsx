@@ -97,85 +97,69 @@ const ContactForm = () => {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name — input before label so peer:* floating styles apply */}
-            <div className="relative">
+            <div>
+              <label htmlFor="name" className="sr-only">
+                Name
+              </label>
               <input
-                id="contact-name"
-                type="text"
+                id="name"
                 name="name"
+                type="text"
                 autoComplete="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                placeholder="Full Name"
-                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
+                placeholder="Your Name"
+                className="w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder:text-zinc-500 transition-all duration-300 outline-none"
               />
-              <label
-                htmlFor="contact-name"
-                className="absolute left-4 top-3 text-gray-400 text-base transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm"
-              >
-                Full Name
-              </label>
             </div>
 
-            {/* Email */}
-            <div className="relative">
+            <div>
+              <label htmlFor="email" className="sr-only">
+                Email
+              </label>
               <input
-                id="contact-email"
-                type="email"
+                id="email"
                 name="email"
+                type="email"
                 autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="Email"
-                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
+                placeholder="Your Email"
+                className="w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder:text-zinc-500 transition-all duration-300 outline-none"
               />
-              <label
-                htmlFor="contact-email"
-                className="absolute left-4 top-3 text-gray-400 text-base transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm"
-              >
-                Email
-              </label>
             </div>
 
-            {/* Message */}
-            <div className="relative">
+            <div>
+              <label htmlFor="message" className="sr-only">
+                Message
+              </label>
               <textarea
-                id="contact-message"
+                id="message"
                 name="message"
                 autoComplete="off"
                 value={formData.message}
                 onChange={handleChange}
                 required
                 rows={4}
-                placeholder="Message"
-                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none resize-none"
+                placeholder="Your Message"
+                className="w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder:text-zinc-500 transition-all duration-300 outline-none resize-none"
               />
-              <label
-                htmlFor="contact-message"
-                className="absolute left-4 top-3 text-gray-400 text-base transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm"
-              >
-                Message
-              </label>
             </div>
 
-            {/* Role selector */}
             <div>
-              <label
-                htmlFor="contact-role"
-                className="block text-white font-mono"
-              >
-                Who are you? <span className="text-red-400">*</span>
+              <label htmlFor="role" className="sr-only">
+                Who are you
               </label>
               <select
-                id="contact-role"
+                id="role"
                 name="role"
                 autoComplete="off"
                 value={formData.role}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full px-4 py-3 bg-[#1b2735]/70 text-white rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 outline-none transition-all duration-300"
+                className="w-full px-4 py-3 bg-[#1b2735]/70 text-white rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 outline-none transition-all duration-300"
               >
                 <option value="">Select one</option>
                 <option value="recruiter">Hiring Manager / Recruiter</option>
@@ -183,12 +167,11 @@ const ContactForm = () => {
               </select>
             </div>
 
-            {/* ✅ Honeypot — labeled for a11y audit; hidden from users and AT */}
-            <label htmlFor="contact-gotcha" className="sr-only">
+            <label htmlFor="gotcha" className="sr-only">
               Leave this field empty
             </label>
             <input
-              id="contact-gotcha"
+              id="gotcha"
               type="text"
               name="_gotcha"
               tabIndex={-1}
