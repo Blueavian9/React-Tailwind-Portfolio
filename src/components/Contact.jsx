@@ -97,45 +97,81 @@ const ContactForm = () => {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name & Email inputs */}
-            {["name", "email"].map((field) => (
-              <div key={field} className="relative">
-                <input
-                  type={field === "email" ? "email" : "text"}
-                  name={field}
-                  value={formData[field]}
-                  onChange={handleChange}
-                  required
-                  placeholder={field === "name" ? "Full Name" : "Email"}
-                  className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
-                />
-                <label className="absolute left-4 top-3 text-gray-400 text-base transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm">
-                  {field === "name" ? "Full Name" : "Email"}
-                </label>
-              </div>
-            ))}
+            {/* Name — input before label so peer:* floating styles apply */}
+            <div className="relative">
+              <input
+                id="contact-name"
+                type="text"
+                name="name"
+                autoComplete="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="Full Name"
+                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
+              />
+              <label
+                htmlFor="contact-name"
+                className="absolute left-4 top-3 text-gray-400 text-base transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm"
+              >
+                Full Name
+              </label>
+            </div>
+
+            {/* Email */}
+            <div className="relative">
+              <input
+                id="contact-email"
+                type="email"
+                name="email"
+                autoComplete="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="Email"
+                className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none"
+              />
+              <label
+                htmlFor="contact-email"
+                className="absolute left-4 top-3 text-gray-400 text-base transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm"
+              >
+                Email
+              </label>
+            </div>
 
             {/* Message */}
             <div className="relative">
               <textarea
+                id="contact-message"
                 name="message"
+                autoComplete="off"
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows="4"
+                rows={4}
                 placeholder="Message"
                 className="peer w-full px-4 py-3 text-white bg-[#1b2735]/70 rounded-md border border-cyan-500/40 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/50 placeholder-transparent transition-all duration-300 outline-none resize-none"
               />
-              <label className="absolute left-4 top-3 text-gray-400 text-base transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm">
+              <label
+                htmlFor="contact-message"
+                className="absolute left-4 top-3 text-gray-400 text-base transition-all duration-300 peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-translate-y-4 peer-focus:text-cyan-300 peer-focus:text-sm"
+              >
                 Message
               </label>
             </div>
 
             {/* Role selector */}
-            <label className="block text-white font-mono">
-              Who are you? <span className="text-red-400">*</span>
+            <div>
+              <label
+                htmlFor="contact-role"
+                className="block text-white font-mono"
+              >
+                Who are you? <span className="text-red-400">*</span>
+              </label>
               <select
+                id="contact-role"
                 name="role"
+                autoComplete="off"
                 value={formData.role}
                 onChange={handleChange}
                 required
@@ -145,10 +181,21 @@ const ContactForm = () => {
                 <option value="recruiter">Hiring Manager / Recruiter</option>
                 <option value="collaboration">Project Collaboration</option>
               </select>
-            </label>
+            </div>
 
-            {/* ✅ Honeypot spam protection */}
-            <input type="text" name="_gotcha" style={{ display: "none" }} />
+            {/* ✅ Honeypot — labeled for a11y audit; hidden from users and AT */}
+            <label htmlFor="contact-gotcha" className="sr-only">
+              Leave this field empty
+            </label>
+            <input
+              id="contact-gotcha"
+              type="text"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ display: "none" }}
+            />
 
             {/* ✅ Fixed submit button — uses standard Tailwind colors, no missing custom classes */}
             <div className="text-center">
