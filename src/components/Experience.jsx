@@ -196,7 +196,7 @@ const Experience = () => {
         {/* Bottom CTA */}
         <div className="mt-14 text-center">
           <a
-            href="https://linkedin.com/in/cesar-aguilar-blueavian9"
+            href="https://www.linkedin.com/in/cesaradrianaguilar/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-cyan-400/40 text-cyan-600 dark:text-cyan-400 text-sm font-medium hover:bg-cyan-50 dark:hover:bg-cyan-900/20 transition-colors duration-200"

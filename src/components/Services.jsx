@@ -1,80 +1,66 @@
-import { useRef } from "react";
-import { useInView } from "../hooks/useInView";
+import React, { useRef } from "react";
 
 const services = [
   {
     id: 1,
-    title: "Full-Stack Web Development",
+    title: "Strong Foundation in Web Technologies",
     description:
-      "Building production-grade applications with React, Next.js, TypeScript, and Node.js/Express. I architect scalable front-to-back solutions — from pixel-perfect UIs to RESTful APIs — with performance and accessibility baked in from day one.",
-    sound: "/sounds/whoosh-bamboo-389752.mp3",
+      "Proficient in HTML, CSS, and JavaScript fundamentals. Understands web protocols, APIs, and responsive design principles. Keeps up-to-date with evolving web standards and technologies.",
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 2,
-    title: "AI & ML Integration",
+    title: "Full-Stack JS & React Expertise",
     description:
-      "Embedding intelligent features into real products using OpenAI, LangChain, RAG pipelines, and AWS Polly V3. I bridge the gap between ML models and user-facing apps so AI actually does something useful — not just impressive in a demo.",
+      "Developed end-to-end web applications using JavaScript, with Node.js for back-end and React for front-end. Built complex user interfaces, efficiently managing state and props in React. Implemented performance optimizations and integrated various JS frameworks and libraries for comprehensive web solutions.",
     sound: "/sounds/simple-whoosh-382724.mp3",
   },
   {
     id: 3,
-    title: "Cloud Architecture & AWS",
+    title: "Database Skills",
     description:
-      "Designing and deploying resilient cloud infrastructure on AWS (Cloud Practitioner certified). From IAM and S3 to Lambda and scalable VPC setups, I build environments that stay up, stay fast, and stay within budget.",
-    sound: "/sounds/whoosh-bamboo-389752.mp3",
+      "Designed and optimized database structures. Wrote complex queries and managed data efficiently. Worked with both SQL and NoSQL databases.",
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 4,
-    title: "DevOps & CI/CD Pipelines",
+    title: "Version Control, Collaboration & Tool Control",
     description:
-      "Automating the full software lifecycle with GitHub Actions, Docker, and Kubernetes. I eliminate manual deployments, enforce code quality gates, and keep teams shipping confidently — multiple times a day if needed.",
+      "Managed code versions using systems like Git. Facilitated team collaboration through platforms such as Github or GitLab. Implemented and maintained development tools and workflows.",
     sound: "/sounds/simple-whoosh-382724.mp3",
   },
   {
     id: 5,
-    title: "Database Design & Optimization",
+    title: "Cloud Computing",
     description:
-      "Modeling and tuning data layers with PostgreSQL, MongoDB, and hybrid SQL/NoSQL strategies. I design schemas that scale cleanly, write queries that don't crawl, and structure data so your app never becomes its own bottleneck.",
-    sound: "/sounds/whoosh-bamboo-389752.mp3",
+      "Designed and managed cloud infrastructure. Optimized resources for performance and cost. Implemented security and scalable solutions.",
+    sound: "/sounds/whoosh-effect-382717.mp3",
   },
   {
     id: 6,
-    title: "Community Tech & Non-Profit Solutions",
+    title: "DevOps CI/CD",
     description:
-      "Volunteering technical skills to organizations like Barrio Action Youth & Family Resource Center and College Bridge Academy. I build affordable, maintainable digital tools that help community orgs punch above their weight.",
+      "Automated software development and deployment processes. Built and maintained CI/CD pipelines. Improved system efficiency & software delivery quality.",
     sound: "/sounds/simple-whoosh-382724.mp3",
   },
 ];
 
 const Service = () => {
+  // store refs keyed by service id
   const audioRefs = useRef({});
-  const [gridRef, gridVisible] = useInView(0.1);
 
   const playHoverSound = (id) => {
     const audio = audioRefs.current[id];
     if (audio) {
-      try {
-        audio.currentTime = 0;
-        audio.play().catch((err) => {
-          console.log(`Audio playback prevented for service ${id}:`, err.message);
-        });
-      } catch (error) {
-        console.log(`Audio error for service ${id}:`, error.message);
-      }
-    }
-  };
-
-  const handleKeyDown = (e, id) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      playHoverSound(id);
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
     }
   };
 
   return (
     <div
       className="bg-gradient-to-b from-[#243b55] to-[#141e30] text-white py-20"
-      id="services"
+      id="service"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12">
@@ -83,41 +69,22 @@ const Service = () => {
           </span>
         </h2>
 
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
             <div
               key={service.id}
-              className="group relative bg-gray-800 rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/30 focus-within:scale-105 focus-within:shadow-2xl focus-within:shadow-teal-500/30"
-              style={{
-                opacity: gridVisible ? 1 : 0,
-                transform: gridVisible ? "translateY(0)" : "translateY(32px)",
-                transition:
-                  "opacity 0.5s ease-out " +
-                  i * 0.1 +
-                  "s, transform 0.5s ease-out " +
-                  i * 0.1 +
-                  "s",
-              }}
+              className="group relative bg-gray-800 rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/30"
               onMouseEnter={() => playHoverSound(service.id)}
-              onFocus={() => playHoverSound(service.id)}
-              onKeyDown={(e) => handleKeyDown(e, service.id)}
-              tabIndex="0"
-              role="article"
-              aria-label={`${service.title} service card`}
             >
+              {/* individual hidden audio per card */}
               <audio
                 ref={(el) => (audioRefs.current[service.id] = el)}
                 src={service.sound}
                 preload="auto"
-                onError={(e) => {
-                  console.log(
-                    `Failed to load audio for service ${service.id}:`,
-                    e.target.error?.message,
-                  );
-                }}
               />
 
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-300/10 to-violet-700/20 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-500"></div>
+              {/* Hover overlay glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-300/10 to-violet-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative px-6 pb-6 h-full flex flex-col justify-between z-10">
                 <div>
@@ -134,16 +101,12 @@ const Service = () => {
                   </p>
                 </div>
 
-                <button
-                  className="mt-4 inline-block text-left text-green-400 hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-800 rounded transition-colors duration-300"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    console.log(`Read more about: ${service.title}`);
-                  }}
-                  aria-label={`Read more about ${service.title}`}
+                <a
+                  href="#contact"
+                  className="mt-4 inline-block text-green-400 hover:text-blue-400 transition-colors duration-300"
                 >
                   Read More
-                </button>
+                </a>
               </div>
             </div>
           ))}
