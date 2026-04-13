@@ -1,221 +1,364 @@
-import { useInView } from "../hooks/useInView";
+import { useEffect, useRef } from "react";
+
+const projects = [
+  {
+    id: 1,
+    name: "Text2SpeechAPIPollyV3",
+    technologies: "AWS-SDK Polly V3, Groq",
+    image:
+      "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/Text2SpeechAPIPollyV3",
+    liveDemo: "https://text2speechpollyv3.netlify.app/",
+    sound: "public/sounds/owen-wilson-wow-80640.mp3",
+  },
+  {
+    id: 2,
+    name: "bookLibraryDocumentation",
+    technologies: "Full Stack, Backend",
+    image:
+      "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/bookLibraryDocumentation",
+    liveDemo: "https://booklibraryDocumentation.netlify.app/",
+    sound: "/sounds/whoosh-effect-382717.mp3",
+  },
+  {
+    id: 3,
+    name: "Nasa-Photo-Generator",
+    technologies: "REACT.js, API's Front End",
+    image:
+      "https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/nasa-photo-of-the-day",
+    liveDemo: "https://nasa-photo-of-the-day.netlify.app/",
+    sound: "/sounds/simple-whoosh-382724.mp3",
+  },
+  {
+    id: 4,
+    name: "Langchain Agents RPG-Game",
+    technologies: "GROQ_AI",
+    image:
+      "https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/ai-groq-rpg",
+    liveDemo: "https://ai-groq-rpg.netlify.app/",
+    sound: "/sounds/whoosh-effect-382717.mp3",
+  },
+  {
+    id: 5,
+    name: "React-Router-Movies",
+    technologies: "React-Router, Link, NavLink",
+    image:
+      "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/React-Router-Movies",
+    liveDemo: "https://React-Router-Movies.netlify.app/",
+    sound: "/sounds/simple-whoosh-382724.mp3",
+  },
+  {
+    id: 6,
+    name: "Asylum Report Generator",
+    technologies: "Full Stack, Auth0",
+    image:
+      "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/asylum-rg-fe-starter",
+    liveDemo: "https://asylum-rg-fe-starter.netlify.app/",
+    sound: "/sounds/whoosh-effect-382717.mp3",
+  },
+  {
+    id: 7,
+    name: "HTTP Todo App",
+    technologies:
+      "React, Tailwind, Testing, API Backend Routes, CRUD, React TransitionGroup, Node, ",
+    image:
+      "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/web-guided-project-HTTP",
+    liveDemo: "https://web-guided-project-HTTP.netlify.app/",
+    sound: "/sounds/simple-whoosh-382724.mp3",
+  },
+  {
+    id: 8,
+    name: "User-Onboarding",
+    technologies: "Full Stack, Advanced React Hooks",
+    image:
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/User-Onboarding",
+    liveDemo: "https://User-Onboarding.netlify.app/",
+    sound: "/sounds/whoosh-effect-382717.mp3",
+  },
+  {
+    id: 9,
+    name: "Parallax Website",
+    technologies: "React, Spring",
+    image:
+      "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=400",
+    github: "https://github.com/Blueavian9/",
+    liveDemo: "https://.netlify.app",
+    sound: "public/sounds/owen-wilson-wow-5_D3r9Hw8.mp3",
+  },
+];
 
 const Projects = () => {
-  const [gridRef, gridVisible] = useInView(0.1);
+  const audioRefs = useRef({}); // no TypeScript type here
 
-  const projects = [
-    {
-      title: "Holistic Psychology Wellness App",
-      description:
-        "HIPAA-conscious AI-enabled full-stack wellness platform with secure Auth0 authentication, Stripe payments, AI-enhanced booking and reporting, and OpenAI-powered prompt pipelines. Deployed and production-ready.",
-      tags: [
-        "React",
-        "Node.js",
-        "Vite",
-        "Tailwind CSS",
-        "OpenAI APIs",
-        "Supabase",
-        "Stripe",
-        "Auth0",
-      ],
-      github: "https://github.com/blueavian9",
-      demo: "https://valeriemunozpsyc.com",
-      highlight: "HIPAA-Conscious · AI-Powered",
-      icon: "🧠",
-    },
-    {
-      title: "AI-Powered Educational Platform",
-      description:
-        "Full-stack platform showcasing AI-driven features: text-to-speech (AWS Polly V3), speech-to-text, vision analysis, and content moderation. Modular Express backend serving 500+ potential users with comprehensive API documentation.",
-      tags: [
-        "Node.js",
-        "Express",
-        "AWS Polly V3 SDK",
-        "OpenAI APIs",
-        "REST API",
-      ],
-      github: "https://github.com/blueavian9",
-      demo: "https://github.com/blueavian9",
-      highlight: "TTS · STT · Vision · AI Moderation",
-      icon: "🎓",
-    },
-    {
-      title: "AI Chatbot Summarizer (RAG)",
-      description:
-        "Knowledge-augmented AI chatbot using Retrieval-Augmented Generation to summarize school information with advanced search pipelines. Built with a team of 4 engineers with full state management and data persistence.",
-      tags: ["React.js", "Node.js", "RAG", "LangChain", "OpenAI", "PostgreSQL"],
-      github: "https://github.com/blueavian9",
-      demo: "https://github.com/blueavian9",
-      highlight: "RAG Architecture · Multi-Dev Team",
-      icon: "🤖",
-    },
-    {
-      title: "Secure Authentication System",
-      description:
-        "Production-grade login/signup system with JWT token-based auth, bcrypt password hashing, RBAC, and comprehensive Express middleware. Achieved 98% Jest unit test coverage rate with a hardened PostgreSQL schema.",
-      tags: ["Express.js", "PostgreSQL", "JWT", "bcrypt.js", "Knex.js", "Jest"],
-      github: "https://github.com/blueavian9",
-      demo: "https://github.com/blueavian9",
-      highlight: "98% Test Coverage · RBAC",
-      icon: "🔐",
-    },
-    {
-      title: "RESTful API Suite",
-      description:
-        "Scalable RESTful APIs for high-performance web apps with optimized SQL queries, Knex.js migrations, and full API documentation. Reduced response times by 40% through query optimization and efficient data handling.",
-      tags: ["Node.js", "Express", "Knex.js", "SQLite", "PostgreSQL", "REST"],
-      github: "https://github.com/blueavian9",
-      demo: "https://github.com/blueavian9",
-      highlight: "40% Faster · Fully Documented",
-      icon: "⚡",
-    },
-    {
-      title: "Cloud Ops AI Assistant (RAG)",
-      description:
-        "DevOps troubleshooting assistant powered by LangChain and RAG pipelines. Built with Python and Streamlit, it enables intelligent task execution, data transformation, and decision-support for cloud operations workflows.",
-      tags: ["Python", "LangChain", "RAG", "Streamlit", "AWS", "Azure"],
-      github: "https://github.com/blueavian9",
-      demo: "https://github.com/blueavian9",
-      highlight: "LangChain · Multi-Cloud DevOps",
-      icon: "☁️",
-    },
-  ];
+  useEffect(() => {
+    const updateCursor = ({ clientX, clientY }) => {
+      document.documentElement.style.setProperty("--x", `${clientX}px`);
+      document.documentElement.style.setProperty("--y", `${clientY}px`);
+    };
+    window.addEventListener("pointermove", updateCursor, { passive: true });
+    return () => window.removeEventListener("pointermove", updateCursor);
+  }, []);
 
-  const TagPill = ({ label }) => (
-    <span className="inline-block px-2 py-0.5 text-xs font-medium rounded-full bg-cyan-400/10 text-cyan-600 dark:text-cyan-400 border border-cyan-400/20">
-      {label}
-    </span>
-  );
+  const playSound = (id) => {
+    const audio = audioRefs.current[id];
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+  };
 
   return (
-    <section
-      id="projects"
-      className="py-20 bg-gray-50 dark:bg-gray-800/40 transition-colors duration-500"
-    >
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="mb-14 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-cyan-500 mb-2">
-            Featured Work
-          </p>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Projects &amp; Builds
-          </h2>
-          <p className="mt-3 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
-            Full-stack systems, AI integrations, and cloud-ready apps built with
-            real users and production constraints in mind.
-          </p>
-        </div>
+    <div className="bg-black text-white py-20" id="project">
+      <div className="container mx-auto px-8 md:px-16 lg:px-24">
+        <h2 className="text-4xl font-bold text-center mb-12">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+            Projects
+          </span>
+        </h2>
 
-        {/* Grid */}
-        <div
-          ref={gridRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {projects.map((project, i) => (
-            <div
-              key={i}
-              className="group flex flex-col bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-md hover:-translate-y-1 hover:shadow-cyan-400/10"
-              style={{
-                opacity: gridVisible ? 1 : 0,
-                transform: gridVisible ? "translateY(0)" : "translateY(32px)",
-                transition:
-                  "opacity 0.5s ease-out " +
-                  i * 0.1 +
-                  "s, transform 0.5s ease-out " +
-                  i * 0.1 +
-                  "s",
-              }}
-            >
-              <div className="flex items-start justify-between mb-4">
-                <span className="text-2xl">{project.icon}</span>
-                <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-cyan-50 text-cyan-700 dark:bg-cyan-900/20 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-800 text-right leading-relaxed">
-                  {project.highlight}
-                </span>
-              </div>
-
-              <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
-                {project.title}
-              </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4 flex-1">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-1.5 mb-5">
-                {project.tags.map((tag, j) => (
-                  <TagPill key={j} label={tag} />
-                ))}
-              </div>
-
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-100 dark:border-gray-800">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
-                  </svg>
-                  GitHub
-                </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-medium text-cyan-600 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-300 transition-colors duration-200"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Footer CTA */}
-        <div className="mt-14 text-center">
-          <a
-            href="https://github.com/blueavian9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-cyan-400/40 text-cyan-600 dark:text-cyan-400 text-sm font-medium hover:bg-cyan-50 dark:hover:bg-cyan-900/20 transition-colors duration-200"
-          >
-            View all repositories on GitHub
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+        {/* Hidden audio elements for any project with sound */}
+        {projects.map(
+          (p) =>
+            p.sound && (
+              <audio
+                key={p.id}
+                ref={(el) => (audioRefs.current[p.id] = el)}
+                src={p.sound}
+                preload="auto"
               />
-            </svg>
-          </a>
-        </div>
+            )
+        )}
+
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0">
+          {projects.map((project) => (
+            <li
+              key={project.id}
+              className="bg-gray-800 rounded-lg overflow-hidden relative transition-all duration-300 hover:scale-105 group"
+              style={{ aspectRatio: "4 / 3", "--active": "0" }}
+              onMouseEnter={() => playSound(project.id)}
+              onClick={() => playSound(project.id)}
+            >
+              <div className="absolute inset-0 bg-gray-900 z-0"></div>
+              <div
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-cover bg-center z-10"
+                style={{ backgroundImage: `url(${project.image})` }}
+              ></div>
+              <div className="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+              <div className="relative z-30 p-6 h-full flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
+                  <p className="text-gray-400 mb-4">{project.technologies}</p>
+                </div>
+
+                <div className="flex justify-center">
+                  <a
+                    href={project.github}
+                    className="relative inline-block cursor-pointer bg-gradient-to-br from-gray-300 via-gray-400 to-gray-600 text-white border border-gray-400 px-4 py-2 rounded-md text-sm font-semibold shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-40"
+                style={{
+                  background:
+                    "radial-gradient(circle at var(--x) var(--y), hsla(0, 0%, 100%, 0.3), transparent 30vmin)",
+                  backgroundAttachment: "fixed",
+                }}
+              ></div>
+              <div
+                className="absolute inset-0 pointer-events-none z-50"
+                style={{
+                  background:
+                    "radial-gradient(circle at var(--x) var(--y), hsla(0, 0%, 100%, 0.7), transparent 30vmin), transparent",
+                  backgroundAttachment: "fixed",
+                  mask: `
+                    linear-gradient(white, white) 50% 0 / 100% 4px no-repeat,
+                    linear-gradient(white, white) 50% 100% / 100% 4px no-repeat,
+                    linear-gradient(white, white) 0 50% / 4px 100% no-repeat,
+                    linear-gradient(white, white) 100% 50% / 4px 100% no-repeat
+                  `,
+                }}
+              ></div>
+            </li>
+          ))}
+        </ul>
       </div>
-    </section>
+    </div>
   );
 };
 
 export default Projects;
+// Mock 1:
+// import { useEffect } from "react";
+
+// const projects = [
+//   {
+//     id: 1,
+//     name: "Text2SpeechAPIPollyV3",
+//     technologies: "AWS-SDK Polly V3, Groq",
+//     image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
+//     github: "https://github.com/Blueavian9/Text2SpeechAPIPollyV3",
+//     liveDemo: "https://text2speechpollyv3.netlify.app/"
+//   },
+//   {
+//     id: 2,
+//     name: "bookLibraryDocumentation",
+//     technologies: "Full Stack, Backend",
+//     image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
+//     github: "https://github.com/Blueavian9/bookLibraryDocumentation",
+//     liveDemo: "https://booklibraryDocumentation.netlify.app/",
+//   },
+//   {
+//     id: 3,
+//     name: "Nasa-Photo-Generator",
+//     technologies: "REACT.js, API's Front End",
+//     image: "https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&w=400",
+//     github: "https://github.com/Blueavian9/nasa-photo-of-the-day",
+//     liveDemo: "https://nasa-photo-of-the-day.netlify.app/",
+//   },
+//   {
+//     id: 4,
+//     name: "Langchain Agents RPG-Game",
+//     technologies: "GROQ_AI",
+//     image: "https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=400",
+//     github: "https://github.com/Blueavian9/ai-groq-rpg",
+//     liveDemo: "https://ai-groq-rpg.netlify.app/",
+//   },
+//   {
+//     id: 5,
+//     name: "React-Router-Movies",
+//     technologies: "React-Router, Link, NavLink",
+//     image: "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=400",
+//     github: "https://github.com/Blueavian9/React-Router-Movies",
+//     liveDemo: "https://React-Router-Movies.netlify.app/",
+//   },
+//   {
+//     id: 6,
+//     name: "Asylum Report Generator",
+//     technologies: "Full Stack, Auth0",
+//     image: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=400",
+//     github: "https://github.com/Blueavian9/asylum-rg-fe-starter",
+//     liveDemo: "https://asylum-rg-fe-starter.netlify.app/",
+//   },
+//   {
+//     id: 7,
+//     name: "HTTP Todo App",
+//     technologies:
+//       "React, Tailwind, Testing, API Backend Routes, CRUD, React TransitionGroup, Node, ",
+//     image: "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg?auto=compress&cs=tinysrgb&w=400",
+//     github: "https://github.com/Blueavian9/web-guided-project-HTTP",
+//     liveDemo: "https://web-guided-project-HTTP.netlify.app/",
+//   },
+//   {
+//     id: 8,
+//     name: "User-Onboarding",
+//     technologies: "Full Stack, Advanced React Hooks",
+//     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
+//     github: "https://github.com/Blueavian9/User-Onboarding",
+//     liveDemo: "https://User-Onboarding.netlify.app/",
+//   },
+//   {
+//     id: 9,
+//     name: "Parallax Website",
+//     technologies: "React, Spring",
+//     image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=400",
+//     github: "https://github.com/Blueavian9/",
+//     liveDemo: "https://.netlify.app",
+//   },
+// ];
+
+// const Projects = () => {
+//   useEffect(() => {
+//     const updateCursor = ({ clientX, clientY }) => {
+//       document.documentElement.style.setProperty("--x", `${clientX}px`);
+//       document.documentElement.style.setProperty("--y", `${clientY}px`);
+//     };
+
+//     window.addEventListener("pointermove", updateCursor, { passive: true });
+//     return () => window.removeEventListener("pointermove", updateCursor);
+//   }, []);
+
+//   return (
+//     <div className="bg-black text-white py-20" id="project">
+//       <div className="container mx-auto px-8 md:px-16 lg:px-24">
+//         <h2 className="text-4xl font-bold text-center mb-12">
+//           <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
+//             Projects
+//           </span>
+//         </h2>
+//         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0">
+//           {projects.map((project) => (
+//             <li
+//               key={project.id}
+//               className="bg-gray-800 rounded-lg overflow-hidden relative transition-all duration-300 hover:scale-105 group"
+//               style={{
+//                 aspectRatio: "4 / 3",
+//                 "--active": "0",
+//               }}
+//             >
+//               <div className="absolute inset-0 bg-gray-900 z-0"></div>
+//               <div
+//                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-cover bg-center z-10"
+//                 style={{ backgroundImage: `url(${project.image})` }}
+//               ></div>
+//               <div className="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+//               <div className="relative z-30 p-6 h-full flex flex-col justify-between">
+//                 <div>
+//                   <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
+//                   <p className="text-gray-400 mb-4">{project.technologies}</p>
+//                 </div>
+
+//                 <div className="flex justify-center">
+//                   <a
+//                     href={project.github}
+//                     className="relative inline-block cursor-pointer bg-gradient-to-br from-gray-300 via-gray-400 to-gray-600 text-white border border-gray-400 px-4 py-2 rounded-md text-sm font-semibold shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                   >
+//                     GitHub
+//                   </a>
+//                 </div>
+//               </div>
+//               <div
+//                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-40"
+//                 style={{
+//                   background:
+//                     "radial-gradient(circle at var(--x) var(--y), hsla(0, 0%, 100%, 0.3), transparent 30vmin)",
+//                   backgroundAttachment: "fixed",
+//                 }}
+//               ></div>
+//               <div
+//                 className="absolute inset-0 pointer-events-none z-50"
+//                 style={{
+//                   background:
+//                     "radial-gradient(circle at var(--x) var(--y), hsla(0, 0%, 100%, 0.7), transparent 30vmin), transparent",
+//                   backgroundAttachment: "fixed",
+//                   mask: `
+//                     linear-gradient(white, white) 50% 0 / 100% 4px no-repeat,
+//                     linear-gradient(white, white) 50% 100% / 100% 4px no-repeat,
+//                     linear-gradient(white, white) 0 50% / 4px 100% no-repeat,
+//                     linear-gradient(white, white) 100% 50% / 4px 100% no-repeat
+//                   `,
+//                 }}
+//               ></div>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Projects;
+

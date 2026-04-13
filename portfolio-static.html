@@ -5,78 +5,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cesar A. Aguilar | Full Stack Cloud & AI Engineer</title>
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Cesar A. Aguilar — Full Stack Cloud & AI Engineer based in Los Angeles, CA. 5+ years building secure, scalable SaaS applications powered by AI and cloud infrastructure. Available for full-time and contract roles.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Cesar A. Aguilar">
+
+  <!-- ✅ Open Graph (LinkedIn / Slack / iMessage previews) -->
+  <meta property="og:title" content="Cesar A. Aguilar | Full Stack Cloud & AI Engineer">
+  <meta property="og:description" content="Building secure, scalable SaaS applications powered by AI and cloud infrastructure. Based in Los Angeles, CA.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://react-tailwind-portfolio-static.vercel.app">
+  <meta property="og:image" content="https://react-tailwind-portfolio-static.vercel.app/assets/Cesar-Cover.webp">
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cesar A. Aguilar | Full Stack Cloud & AI Engineer">
+  <meta name="twitter:description" content="Building secure, scalable SaaS applications powered by AI and cloud infrastructure.">
+  <meta name="twitter:image" content="https://react-tailwind-portfolio-static.vercel.app/assets/Cesar-Cover.webp">
+
+  <link rel="icon" type="image/png" href="/assets/Cesar-Cover.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --primary: 34 211 238;
-    }
+    :root { --primary: 34 211 238; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    .hero-bg { background: radial-gradient(at center bottom, rgb(17 24 39), rgb(15 23 42), rgb(8 15 23)); }
 
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-    }
-
-    .heading-font {
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    .hero-bg {
-      background: radial-gradient(at center bottom, rgb(17 24 39), rgb(15 23 42), rgb(8 15 23));
-    }
-
-    .nav-link {
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
+    .nav-link { position: relative; transition: all 0.3s ease; }
     .nav-link:after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -2px;
-      left: 0;
-      background: rgb(34 211 238);
-      transition: width 0.3s ease;
+      content: ''; position: absolute; width: 0; height: 2px;
+      bottom: -2px; left: 0; background: rgb(34 211 238); transition: width 0.3s ease;
     }
+    .nav-link:hover:after { width: 100%; }
 
-    .nav-link:hover:after {
-      width: 100%;
-    }
+    .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .project-card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
 
-    .project-card {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    .skill-bar { transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
 
-    .project-card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
-    }
+    .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); }
 
-    .skill-bar {
-      transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* ✅ Copy-to-clipboard email button */
+    #copy-email-btn { cursor: pointer; transition: all 0.2s ease; }
+    #copy-email-btn:hover { color: #22d3ee; }
+    #copy-toast {
+      position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      background: #18181b; border: 1px solid #22d3ee; color: #22d3ee;
+      padding: 0.75rem 1.5rem; border-radius: 9999px; font-size: 0.875rem;
+      font-weight: 600; opacity: 0; transition: opacity 0.3s ease; pointer-events: none; z-index: 9999;
     }
-
-    .glass {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(12px);
-    }
+    #copy-toast.show { opacity: 1; }
   </style>
 </head>
 
 <body class="bg-zinc-950 text-zinc-200 overflow-x-hidden">
 
+  <!-- ✅ Copy toast notification -->
+  <div id="copy-toast">📋 Email copied to clipboard!</div>
+
   <!-- NAVBAR -->
-  <nav id="navbar"
-    class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800 transition-all duration-300">
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div
-          class="w-9 h-9 bg-cyan-400 rounded-2xl flex items-center justify-center text-zinc-950 font-bold text-xl heading-font">
-          CA</div>
+        <div class="w-9 h-9 bg-cyan-400 rounded-2xl flex items-center justify-center text-zinc-950 font-bold text-xl heading-font">CA</div>
         <span class="text-2xl font-semibold heading-font tracking-tighter">Cesar A. Aguilar</span>
       </div>
       <div class="hidden md:flex items-center gap-10 text-sm font-medium">
@@ -87,8 +82,7 @@
         <a href="#process" class="nav-link text-zinc-400 hover:text-white">Process</a>
         <a href="#contact" class="nav-link text-zinc-400 hover:text-white">Contact</a>
       </div>
-      <a href="#contact"
-        class="hidden md:flex bg-cyan-400 hover:bg-cyan-300 transition-colors text-zinc-950 px-6 py-3 rounded-2xl font-semibold text-sm items-center gap-2">
+      <a href="#contact" class="hidden md:flex bg-cyan-400 hover:bg-cyan-300 transition-colors text-zinc-950 px-6 py-3 rounded-2xl font-semibold text-sm items-center gap-2">
         <i class="fa-solid fa-paper-plane"></i> Let's Collaborate
       </a>
       <button id="mobile-menu-btn" class="md:hidden text-2xl text-zinc-400 hover:text-white transition-colors">
@@ -103,14 +97,13 @@
         <a href="#projects" onclick="toggleMobileMenu()" class="text-zinc-400 hover:text-white">Projects</a>
         <a href="#process" onclick="toggleMobileMenu()" class="text-zinc-400 hover:text-white">Process</a>
         <a href="#contact" onclick="toggleMobileMenu()" class="text-zinc-400 hover:text-white">Contact</a>
-        <a href="#contact" onclick="toggleMobileMenu()"
-          class="mt-8 bg-cyan-400 text-zinc-950 py-5 rounded-3xl text-center font-semibold">Let's Collaborate</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="mt-8 bg-cyan-400 text-zinc-950 py-5 rounded-3xl text-center font-semibold">Let's Collaborate</a>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero-bg min-h-screen flex items-center pt-20">
+  <section class="hero-bg min-h-screen flex items-center pt-20 relative">
     <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
       <div class="space-y-8">
         <div class="inline-flex items-center gap-3 bg-zinc-900 border border-zinc-700 rounded-full px-5 py-2 text-sm">
@@ -120,18 +113,13 @@
         <h1 class="text-6xl md:text-7xl font-bold heading-font tracking-tighter leading-none">
           Hi, I'm <span class="text-cyan-400">Cesar A. Aguilar</span>
         </h1>
-        <p class="text-2xl md:text-3xl text-zinc-400 max-w-lg">Full Stack Cloud Network Systems Engineer &amp; Applied
-          AI Integrator</p>
-        <p class="text-xl text-zinc-400 max-w-md">5+ years building secure, scalable SaaS applications powered by AI,
-          cloud infrastructure, and modern JavaScript ecosystems.</p>
+        <p class="text-2xl md:text-3xl text-zinc-400 max-w-lg">Full Stack Cloud Network Systems Engineer &amp; Applied AI Integrator</p>
+        <p class="text-xl text-zinc-400 max-w-md">5+ years building secure, scalable SaaS applications powered by AI, cloud infrastructure, and modern JavaScript ecosystems.</p>
         <div class="flex flex-wrap gap-4">
-          <a href="#contact"
-            class="bg-cyan-400 hover:bg-cyan-300 transition-all text-zinc-950 px-10 py-5 rounded-3xl font-semibold text-lg flex items-center gap-3">
+          <a href="#contact" class="bg-cyan-400 hover:bg-cyan-300 transition-all text-zinc-950 px-10 py-5 rounded-3xl font-semibold text-lg flex items-center gap-3">
             Work With Me <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="#projects"
-            class="border border-zinc-700 hover:border-zinc-400 transition-all px-10 py-5 rounded-3xl font-medium text-lg">View
-            My Work</a>
+          <a href="#projects" class="border border-zinc-700 hover:border-zinc-400 transition-all px-10 py-5 rounded-3xl font-medium text-lg">View My Work</a>
         </div>
         <div class="flex gap-10 pt-8">
           <div>
@@ -149,11 +137,8 @@
         </div>
       </div>
       <div class="hidden md:flex justify-center relative">
-        <div
-          class="w-96 h-96 bg-gradient-to-br from-cyan-400/10 to-purple-500/10 rounded-[4rem] flex items-center justify-center border border-cyan-400/20">
-          <div
-            class="text-[18rem] font-black heading-font text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 to-cyan-500 opacity-10">
-            CA</div>
+        <div class="w-96 h-96 bg-gradient-to-br from-cyan-400/10 to-purple-500/10 rounded-[4rem] flex items-center justify-center border border-cyan-400/20">
+          <div class="text-[18rem] font-black heading-font text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 to-cyan-500 opacity-10">CA</div>
         </div>
         <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-zinc-700 rounded-3xl p-6 w-64">
           <div class="flex items-center gap-4">
@@ -166,6 +151,7 @@
         </div>
       </div>
     </div>
+    <!-- ✅ Fixed: relative parent on section, so absolute positioning works correctly -->
     <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500 text-sm">
       <div>Scroll to explore</div>
       <i class="fa-solid fa-chevron-down animate-bounce"></i>
@@ -178,9 +164,8 @@
       <div class="grid md:grid-cols-12 gap-16 items-center">
         <div class="md:col-span-5">
           <div class="sticky top-28">
-            <div
-              class="w-80 h-80 mx-auto md:mx-0 bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700 flex items-center justify-center">
-              <img src="/assets/Cesar-Cover.webp" alt="Cesar A. Aguilar" class="w-full h-full object-cover"
+            <div class="w-80 h-80 mx-auto md:mx-0 bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700 flex items-center justify-center">
+              <img src="/assets/Cesar-Cover.webp" alt="Cesar A. Aguilar — Full Stack Cloud & AI Engineer" class="w-full h-full object-cover"
                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
               <div style="display:none" class="w-full h-full items-center justify-center">
                 <div class="text-[180px] font-black text-cyan-400/10 heading-font">CA</div>
@@ -197,16 +182,9 @@
         <div class="md:col-span-7 space-y-8">
           <h2 class="text-5xl font-semibold heading-font tracking-tighter">About Me</h2>
           <div class="text-zinc-300 text-lg leading-relaxed space-y-4">
-            <p>I'm a passionate Full Stack Cloud Network Systems Engineer with a strong focus on <span
-                class="text-cyan-400">Applied AI Integration</span>. With over 5 years of hands-on experience, I
-              specialize in building secure, scalable SaaS applications that leverage modern cloud infrastructure and
-              intelligent AI capabilities.</p>
-            <p>My background includes designing and integrating AI-driven features for an EdTech platform serving K–12
-              students at TalkAnimate Inc., where I combined robust backend logic with beautiful, responsive user
-              interfaces.</p>
-            <p>Currently pursuing a B.S. in Cloud Network Engineering and an M.S. in Artificial Intelligence &amp;
-              Machine Learning at Western Governors University. I thrive on turning complex technical challenges into
-              elegant, production-ready solutions.</p>
+            <p>I'm a passionate Full Stack Cloud Network Systems Engineer with a strong focus on <span class="text-cyan-400">Applied AI Integration</span>. With over 5 years of hands-on experience, I specialize in building secure, scalable SaaS applications that leverage modern cloud infrastructure and intelligent AI capabilities.</p>
+            <p>My background includes designing and integrating AI-driven features for an EdTech platform serving K–12 students at TalkAnimate Inc., where I combined robust backend logic with beautiful, responsive user interfaces.</p>
+            <p>Currently pursuing a B.S. in Cloud Network Engineering and an M.S. in Artificial Intelligence &amp; Machine Learning at Western Governors University. I thrive on turning complex technical challenges into elegant, production-ready solutions.</p>
           </div>
           <div class="grid grid-cols-2 gap-6 pt-6">
             <div class="bg-zinc-800/50 border border-zinc-700 rounded-3xl p-8">
@@ -220,7 +198,6 @@
               <div class="text-zinc-400 text-sm">AWS • OpenAI • LangChain • RAG</div>
             </div>
           </div>
-          <!-- FIXED: correct LinkedIn URL + resume download -->
           <div class="flex gap-4 pt-8 flex-wrap">
             <a href="https://github.com/Blueavian9" target="_blank" rel="noreferrer noopener"
               class="flex-1 min-w-[120px] bg-zinc-800 hover:bg-zinc-700 transition-colors border border-zinc-700 hover:border-zinc-500 rounded-3xl p-6 text-center">
@@ -247,9 +224,7 @@
   <section id="skills" class="py-28">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <span
-          class="px-6 py-2 bg-zinc-900 text-cyan-400 text-sm font-medium rounded-full border border-cyan-400/20">Technical
-          Arsenal</span>
+        <span class="px-6 py-2 bg-zinc-900 text-cyan-400 text-sm font-medium rounded-full border border-cyan-400/20">Technical Arsenal</span>
         <h2 class="text-5xl font-semibold heading-font tracking-tighter mt-6">Skills &amp; Technologies</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-16">
@@ -257,27 +232,21 @@
           <h3 class="text-2xl font-semibold mb-8"><span class="text-cyan-400">Frontend</span></h3>
           <div class="space-y-8">
             <div>
-              <div class="flex justify-between text-sm mb-2"><span>React / Next.js</span><span
-                  class="text-cyan-400">95%</span></div>
+              <div class="flex justify-between text-sm mb-2"><span>React / Next.js</span><span class="text-cyan-400">95%</span></div>
               <div class="h-2 bg-zinc-800 rounded-full overflow-hidden">
-                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-                  data-width="95%"></div>
+                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" data-width="95%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-2"><span>Tailwind CSS</span><span
-                  class="text-cyan-400">98%</span></div>
+              <div class="flex justify-between text-sm mb-2"><span>Tailwind CSS</span><span class="text-cyan-400">98%</span></div>
               <div class="h-2 bg-zinc-800 rounded-full overflow-hidden">
-                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-                  data-width="98%"></div>
+                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" data-width="98%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-2"><span>JavaScript / TypeScript</span><span
-                  class="text-cyan-400">92%</span></div>
+              <div class="flex justify-between text-sm mb-2"><span>JavaScript / TypeScript</span><span class="text-cyan-400">92%</span></div>
               <div class="h-2 bg-zinc-800 rounded-full overflow-hidden">
-                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-                  data-width="92%"></div>
+                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" data-width="92%"></div>
               </div>
             </div>
           </div>
@@ -286,27 +255,21 @@
           <h3 class="text-2xl font-semibold mb-8"><span class="text-cyan-400">Backend &amp; Cloud</span></h3>
           <div class="space-y-8">
             <div>
-              <div class="flex justify-between text-sm mb-2"><span>Node.js / Express</span><span
-                  class="text-cyan-400">90%</span></div>
+              <div class="flex justify-between text-sm mb-2"><span>Node.js / Express</span><span class="text-cyan-400">90%</span></div>
               <div class="h-2 bg-zinc-800 rounded-full overflow-hidden">
-                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-                  data-width="90%"></div>
+                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" data-width="90%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-2"><span>AWS (Polly, SDK, EC2)</span><span
-                  class="text-cyan-400">85%</span></div>
+              <div class="flex justify-between text-sm mb-2"><span>AWS (Polly, SDK, EC2)</span><span class="text-cyan-400">85%</span></div>
               <div class="h-2 bg-zinc-800 rounded-full overflow-hidden">
-                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-                  data-width="85%"></div>
+                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" data-width="85%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-2"><span>AI Integration (OpenAI, LangChain, RAG)</span><span
-                  class="text-cyan-400">88%</span></div>
+              <div class="flex justify-between text-sm mb-2"><span>AI Integration (OpenAI, LangChain, RAG)</span><span class="text-cyan-400">88%</span></div>
               <div class="h-2 bg-zinc-800 rounded-full overflow-hidden">
-                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-                  data-width="88%"></div>
+                <div class="skill-bar h-full w-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" data-width="88%"></div>
               </div>
             </div>
           </div>
@@ -353,8 +316,7 @@
             <div class="text-sm text-zinc-500">2022 — 2024</div>
           </div>
           <div>
-            <div class="font-semibold text-xl">Full Stack Developer • Freelance &amp; Bloom Institute of Technology
-            </div>
+            <div class="font-semibold text-xl">Full Stack Developer • Freelance &amp; Bloom Institute of Technology</div>
             <ul class="list-disc list-outside pl-5 space-y-2 text-zinc-400">
               <li>Developed multiple full-stack applications with React, Node.js and AWS</li>
               <li>Created AI Agent demos using RAG and tool-calling patterns</li>
@@ -368,8 +330,7 @@
           </div>
           <div>
             <div class="font-semibold text-xl">Western Governors University</div>
-            <div class="text-zinc-400">B.S. Cloud Network Engineering • M.S. Artificial Intelligence &amp; Machine
-              Learning (in progress)</div>
+            <div class="text-zinc-400">B.S. Cloud Network Engineering • M.S. Artificial Intelligence &amp; Machine Learning (in progress)</div>
           </div>
         </div>
       </div>
@@ -377,6 +338,7 @@
   </section>
 
   <!-- PROJECTS -->
+  <!-- ✅ TODO: Replace href="#" on each card with your real GitHub repo URLs -->
   <section id="projects" class="py-28">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
@@ -384,54 +346,58 @@
         <p class="text-zinc-400 mt-4">Real-world applications showcasing AI, cloud, and full-stack expertise</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
-          <div
-            class="h-48 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center text-6xl">
-            🧠</div>
+
+        <!-- Project 1: AI Agent -->
+        <a href="https://github.com/Blueavian9" target="_blank" rel="noreferrer noopener"
+          class="project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden block">
+          <div class="h-48 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center text-6xl">🧠</div>
           <div class="p-8">
             <div class="flex gap-2 mb-4">
               <span class="text-xs px-4 py-1 bg-zinc-800 rounded-full">AI Agent</span>
               <span class="text-xs px-4 py-1 bg-zinc-800 rounded-full">RAG</span>
             </div>
             <h3 class="text-2xl font-semibold mb-3">AI Agent with RAG &amp; Tools</h3>
-            <p class="text-zinc-400 text-sm">Intelligent assistant powered by LangChain, OpenAI, and retrieval-augmented
-              generation for accurate, context-aware responses.</p>
-            <div class="mt-6 text-cyan-400 text-sm font-medium flex items-center gap-2">View Project <i
-                class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            <p class="text-zinc-400 text-sm">Intelligent assistant powered by LangChain, OpenAI, and retrieval-augmented generation for accurate, context-aware responses.</p>
+            <div class="mt-6 text-cyan-400 text-sm font-medium flex items-center gap-2">
+              View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
           </div>
-        </div>
-        <div class="project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
-          <div
-            class="h-48 bg-gradient-to-br from-blue-500/20 to-emerald-500/20 flex items-center justify-center text-6xl">
-            📚</div>
+        </a>
+
+        <!-- Project 2: Book Library -->
+        <a href="https://github.com/Blueavian9" target="_blank" rel="noreferrer noopener"
+          class="project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden block">
+          <div class="h-48 bg-gradient-to-br from-blue-500/20 to-emerald-500/20 flex items-center justify-center text-6xl">📚</div>
           <div class="p-8">
             <div class="flex gap-2 mb-4">
               <span class="text-xs px-4 py-1 bg-zinc-800 rounded-full">Full-Stack</span>
               <span class="text-xs px-4 py-1 bg-zinc-800 rounded-full">Auth</span>
             </div>
             <h3 class="text-2xl font-semibold mb-3">Advanced Book Library Platform</h3>
-            <p class="text-zinc-400 text-sm">Complete full-stack application with authentication, database persistence,
-              and modern UI built with React and Node.js.</p>
-            <div class="mt-6 text-cyan-400 text-sm font-medium flex items-center gap-2">View Project <i
-                class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            <p class="text-zinc-400 text-sm">Complete full-stack application with authentication, database persistence, and modern UI built with React and Node.js.</p>
+            <div class="mt-6 text-cyan-400 text-sm font-medium flex items-center gap-2">
+              View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
           </div>
-        </div>
-        <div class="project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden">
-          <div
-            class="h-48 bg-gradient-to-br from-rose-500/20 to-amber-500/20 flex items-center justify-center text-6xl">🎤
-          </div>
+        </a>
+
+        <!-- Project 3: TalkAnimate -->
+        <a href="https://github.com/Blueavian9" target="_blank" rel="noreferrer noopener"
+          class="project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden block">
+          <div class="h-48 bg-gradient-to-br from-rose-500/20 to-amber-500/20 flex items-center justify-center text-6xl">🎤</div>
           <div class="p-8">
             <div class="flex gap-2 mb-4">
               <span class="text-xs px-4 py-1 bg-zinc-800 rounded-full">AWS Polly</span>
               <span class="text-xs px-4 py-1 bg-zinc-800 rounded-full">EdTech</span>
             </div>
             <h3 class="text-2xl font-semibold mb-3">TalkAnimate AI Voice Platform</h3>
-            <p class="text-zinc-400 text-sm">AI-powered voice generation and text-to-speech integration for K–12
-              educational content using AWS Polly V3 and OpenAI.</p>
-            <div class="mt-6 text-cyan-400 text-sm font-medium flex items-center gap-2">View Project <i
-                class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            <p class="text-zinc-400 text-sm">AI-powered voice generation and text-to-speech integration for K–12 educational content using AWS Polly V3 and OpenAI.</p>
+            <div class="mt-6 text-cyan-400 text-sm font-medium flex items-center gap-2">
+              View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
           </div>
-        </div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -441,41 +407,28 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-semibold heading-font tracking-tighter">My Development Process</h2>
-        <p class="text-zinc-400 mt-4 max-w-md mx-auto">A structured, AI-first approach that delivers reliable and
-          scalable solutions</p>
+        <p class="text-zinc-400 mt-4 max-w-md mx-auto">A structured, AI-first approach that delivers reliable and scalable solutions</p>
       </div>
       <div class="grid md:grid-cols-4 gap-8">
         <div class="text-center">
-          <div
-            class="w-16 h-16 mx-auto mb-6 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl font-bold">
-            01</div>
+          <div class="w-16 h-16 mx-auto mb-6 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl font-bold">01</div>
           <h4 class="font-semibold text-xl mb-3">Discovery &amp; Planning</h4>
-          <p class="text-zinc-400 text-sm">Deep dive into requirements, architecture design, and AI opportunity mapping.
-          </p>
+          <p class="text-zinc-400 text-sm">Deep dive into requirements, architecture design, and AI opportunity mapping.</p>
         </div>
         <div class="text-center">
-          <div
-            class="w-16 h-16 mx-auto mb-6 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl font-bold">
-            02</div>
+          <div class="w-16 h-16 mx-auto mb-6 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl font-bold">02</div>
           <h4 class="font-semibold text-xl mb-3">Design &amp; Prototyping</h4>
-          <p class="text-zinc-400 text-sm">Create modern UIs and robust backend architecture with early AI integration
-            testing.</p>
+          <p class="text-zinc-400 text-sm">Create modern UIs and robust backend architecture with early AI integration testing.</p>
         </div>
         <div class="text-center">
-          <div
-            class="w-16 h-16 mx-auto mb-6 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl font-bold">
-            03</div>
+          <div class="w-16 h-16 mx-auto mb-6 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl font-bold">03</div>
           <h4 class="font-semibold text-xl mb-3">Development &amp; Integration</h4>
-          <p class="text-zinc-400 text-sm">Agile development with continuous integration of AI features and cloud
-            services.</p>
+          <p class="text-zinc-400 text-sm">Agile development with continuous integration of AI features and cloud services.</p>
         </div>
         <div class="text-center">
-          <div
-            class="w-16 h-16 mx-auto mb-6 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl font-bold">
-            04</div>
+          <div class="w-16 h-16 mx-auto mb-6 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-3xl font-bold">04</div>
           <h4 class="font-semibold text-xl mb-3">Deploy, Optimize &amp; Iterate</h4>
-          <p class="text-zinc-400 text-sm">Production deployment, performance monitoring, and continuous improvement.
-          </p>
+          <p class="text-zinc-400 text-sm">Production deployment, performance monitoring, and continuous improvement.</p>
         </div>
       </div>
     </div>
@@ -486,53 +439,59 @@
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-semibold heading-font tracking-tighter">Let's Build Something Great</h2>
-        <p class="text-zinc-400 mt-4">Whether it's a new AI feature, cloud migration, or full SaaS product — I'm ready
-          to collaborate.</p>
+        <p class="text-zinc-400 mt-4">Whether it's a new AI feature, cloud migration, or full SaaS product — I'm ready to collaborate.</p>
       </div>
       <div class="glass border border-zinc-700 rounded-3xl p-12">
         <form id="contact-form" class="space-y-8">
           <div class="grid md:grid-cols-2 gap-8">
             <div>
-              <label class="block text-sm text-zinc-400 mb-2">Your Name</label>
-              <input type="text" id="name" required
+              <label class="block text-sm text-zinc-400 mb-2" for="name">Your Name</label>
+              <!-- ✅ Added name attributes required by Formspree -->
+              <input type="text" id="name" name="name" required
                 class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-2xl px-6 py-5 outline-none transition-colors text-white">
             </div>
             <div>
-              <label class="block text-sm text-zinc-400 mb-2">Email Address</label>
-              <input type="email" id="email" required
+              <label class="block text-sm text-zinc-400 mb-2" for="email">Email Address</label>
+              <input type="email" id="email" name="email" required
                 class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-2xl px-6 py-5 outline-none transition-colors text-white">
             </div>
           </div>
           <div>
-            <label class="block text-sm text-zinc-400 mb-2">Project Details</label>
-            <textarea id="message" rows="6" required
+            <label class="block text-sm text-zinc-400 mb-2" for="message">Project Details</label>
+            <textarea id="message" name="message" rows="6" required
               class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 outline-none transition-colors resize-none text-white"></textarea>
           </div>
-          <button type="submit"
-            class="w-full bg-cyan-400 hover:bg-cyan-300 transition-colors text-zinc-950 font-semibold py-7 rounded-3xl text-lg">Send
-            Message</button>
+          <!-- ✅ Honeypot spam protection -->
+          <input type="text" name="_gotcha" style="display:none">
+          <button type="submit" id="submit-btn"
+            class="w-full bg-cyan-400 hover:bg-cyan-300 transition-colors text-zinc-950 font-semibold py-7 rounded-3xl text-lg">
+            Send Message
+          </button>
         </form>
       </div>
+
       <div id="success-message" class="hidden text-center py-12">
         <i class="fa-solid fa-check-circle text-6xl text-emerald-400 mb-6"></i>
         <h3 class="text-3xl font-semibold mb-2">Message Received!</h3>
         <p class="text-zinc-400">Thank you — Cesar will get back to you within 48 hours.</p>
       </div>
+
+      <!-- ✅ Email obfuscated: copy-to-clipboard instead of raw mailto: -->
       <div class="text-center mt-12 text-sm text-zinc-500">
-        Or email directly at <a href="mailto:blueavian9@gmail.com"
-          class="text-cyan-400 hover:underline">blueavian9@gmail.com</a>
+        Or reach out directly —
+        <button id="copy-email-btn" class="text-cyan-400 font-medium inline-flex items-center gap-1">
+          <i class="fa-solid fa-copy text-xs"></i> Copy email address
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER — FIXED: correct LinkedIn everywhere, X-Twitter replaced with email icon -->
+  <!-- FOOTER -->
   <footer class="bg-black py-16 border-t border-zinc-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-8">
         <div class="flex items-center gap-3">
-          <div
-            class="w-8 h-8 bg-cyan-400 rounded-2xl flex items-center justify-center text-zinc-950 font-bold heading-font">
-            CA</div>
+          <div class="w-8 h-8 bg-cyan-400 rounded-2xl flex items-center justify-center text-zinc-950 font-bold heading-font">CA</div>
           <span class="font-medium">Cesar A. Aguilar © 2026</span>
         </div>
         <div class="flex gap-8 text-sm">
@@ -544,10 +503,10 @@
           <a href="https://github.com/Blueavian9" target="_blank" rel="noreferrer noopener" aria-label="GitHub"
             class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-github"></i></a>
           <a href="https://www.linkedin.com/in/cesaradrianaguilar/" target="_blank" rel="noreferrer noopener"
-            aria-label="LinkedIn" class="hover:text-cyan-400 transition-colors"><i
-              class="fa-brands fa-linkedin"></i></a>
-          <a href="mailto:cesar.aguilar.dev@gmail.com" aria-label="Email"
-            class="hover:text-cyan-400 transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            aria-label="LinkedIn" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+          <!-- ✅ Footer email: copy-to-clipboard button instead of raw mailto: -->
+          <button onclick="copyEmail()" aria-label="Copy email address"
+            class="hover:text-cyan-400 transition-colors"><i class="fa-solid fa-envelope"></i></button>
         </div>
       </div>
       <div class="text-center text-xs text-zinc-600 mt-12">
@@ -570,7 +529,7 @@
     }
     document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
 
-    // Skill bars: animate from 0 to data-width on scroll into view
+    // Skill bars
     const skillObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -581,28 +540,59 @@
         }
       });
     }, { threshold: 0.3 });
-
     const skillsSection = document.getElementById('skills');
     if (skillsSection) skillObserver.observe(skillsSection);
 
-    // Contact form
+    // ✅ Real Formspree contact form submission
     const form = document.getElementById('contact-form');
     const successMsg = document.getElementById('success-message');
-    form.addEventListener('submit', function (e) {
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      setTimeout(() => {
-        form.classList.add('hidden');
-        successMsg.classList.remove('hidden');
-        setTimeout(() => {
-          form.reset();
-          form.classList.remove('hidden');
-          successMsg.classList.add('hidden');
-        }, 4500);
-      }, 800);
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+
+      try {
+        const res = await fetch('https://formspree.io/f/xovkeoew', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+
+        if (res.ok) {
+          form.classList.add('hidden');
+          successMsg.classList.remove('hidden');
+          setTimeout(() => {
+            form.reset();
+            form.classList.remove('hidden');
+            successMsg.classList.add('hidden');
+            submitBtn.textContent = 'Send Message';
+            submitBtn.disabled = false;
+          }, 4500);
+        } else {
+          submitBtn.textContent = 'Failed — please try again';
+          submitBtn.disabled = false;
+        }
+      } catch {
+        submitBtn.textContent = 'Network error — try again';
+        submitBtn.disabled = false;
+      }
     });
+
+    // ✅ Copy-to-clipboard email (no raw mailto: in source)
+    function copyEmail() {
+      const email = atob('Ymx1ZWF2aWFuOUBnbWFpbC5jb20='); // base64 encoded
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('copy-toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      });
+    }
+
+    document.getElementById('copy-email-btn').addEventListener('click', copyEmail);
 
     console.log('%c Cesar A. Aguilar | Full Stack Cloud & AI Engineer', 'color: #67e8f9; font-family: monospace; font-size: 14px');
   </script>
 </body>
-
 </html>
