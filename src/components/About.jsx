@@ -159,10 +159,7 @@ const About = () => {
               About Me
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transforming ideas into scalable, AI-powered solutions through
-            innovative problem solving &amp; engineering
-          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">I build Full-Stack Apps with Payments, Auth, and Automation.</p>
         </div>
 
         {/* ── Two-column layout ── */}
