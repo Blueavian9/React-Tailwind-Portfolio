@@ -4,12 +4,12 @@ import { useEffect, useRef } from "react";
 const projects = [
   {
     id: 1,
-    name: "Text2SpeechAPIPollyV3",
-    technologies: "AWS-SDK Polly V3, Groq",
+    name: "Therapy Booking Platform",
+    technologies: "Frontend	React 18, Vite, Tailwind CSS,Backend Supabase Edge Functions Deno, Database	Supabase PostgreSQL, Auth	Supabase Auth role based client, therapists, admin, Payments Stripe card payments, webhooks, Email	Resend transactional email, Deployment	Vercel frontend Supabase backend, Domain at	Namecheap domname is at www.valeriemunozpsyc.com",
     image:
       "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
     github: "https://github.com/Blueavian9/Text2SpeechAPIPollyV3",
-    liveDemo: "https://text2speechpollyv3.netlify.app/",
+    liveDemo: "https://valerie.u.netlify.app/",
     sound: "public/sounds/owen-wilson-wow-80640.mp3",
   },
   {

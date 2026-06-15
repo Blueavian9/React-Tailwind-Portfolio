@@ -29,7 +29,7 @@ const Footer = () => {
       <div className="bg-blue-950 border-t border-gray-600 pt-4 flex justify-center items-center">
         <div className="flex space-x-4 my-4">
           <a
-            href="https://www.linkedin.com/in/cesaradrianaguilar/"
+            href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/"
             className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
             aria-label="LinkedIn"
             target="_blank"

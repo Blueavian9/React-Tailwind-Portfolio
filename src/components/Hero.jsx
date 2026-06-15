@@ -25,7 +25,7 @@ export default function Hero() {
           </span>
         </h1>
         <h2 className="text-lg md:text-xl font-semibold text-gray-300">
-          Full Stack AI Integration Software Engineer & Solutions Architect
+        I'm a Full Stack Engineer I build and ship production web applications.  
         </h2>
       </div>
 
@@ -34,23 +34,7 @@ export default function Hero() {
         <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed">
           I'm a{" "}
           <span className="text-cyan-400 font-semibold">
-            Full Stack AI Integration DevOps Cloud Network Software Engineer
-          </span>{" "}
-          with{" "}
-          <span className="text-cyan-400 font-semibold">
-            5+ years of experience
-          </span>{" "}
-          building secure, scalable, and AI-integrated systems using{" "}
-          <span className="text-teal-300">
-            JavaScript, React.js, Node.js, Express, and AWS
-          </span>
-          . My work spans end-to-end web application development, including
-          RESTful APIs, authentication systems, and AI integrations with{" "}
-          <span className="text-teal-300">
-            OpenAI, AWS Polly V3, and LangChain
-          </span>
-          .
-        </p>
+          full stack engineer. My most recent project is a production therapy booking platform with real client, live domain, Stripe payments, automated emails, role-based auth. </span></p>
 
         <p className="text-base md:text-lg text-gray-400 font-mono leading-relaxed">
           Currently pursuing a{" "}
