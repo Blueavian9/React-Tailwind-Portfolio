@@ -48,7 +48,7 @@
     "tailwindcss-animate": "^1.0.7",
     "vite": "^7.1.7"
   },
-    "overrides": {
-      "esbuild": ">=0.28.1"
-    }
+  "overrides": {
+    "esbuild": ">=0.28.1"
   }
+}
