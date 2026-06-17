@@ -22,7 +22,7 @@ const Navbar = () => {
           }
         });
       },
-      { root: null, rootMargin: "-25% 0px -75% 0px", threshold: [0.5] },
+      { root: null, rootMargin: "-25% 0px -75% 0px", threshold: [0.5] }
     );
 
     ["home", "about", "services", "projects", "contact"]
@@ -35,8 +35,7 @@ const Navbar = () => {
 
   const smoothScrollTo = useCallback((id) => {
     const target = document.getElementById(id);
-    if (target)
-      window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
+    if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
     setIsMobileMenuOpen(false);
   }, []);
 
@@ -50,10 +49,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-lg border-b ${
         isScrolled
-          ? "bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-lg"
-          : "bg-gray-900/50 backdrop-blur-sm border-b border-gray-800/50"
+          ? "bg-gray-900/95 border-cyan-500 border-opacity-20 shadow-lg"
+          : "bg-gray-900/50 border-gray-700/20"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,9 +64,7 @@ const Navbar = () => {
                 key={item.id}
                 onClick={() => smoothScrollTo(item.id)}
                 className={`relative text-sm font-medium transition-colors duration-300 ${
-                  activeSection === item.id
-                    ? "text-cyan-400"
-                    : "text-gray-300 hover:text-white"
+                  activeSection === item.id ? "text-cyan-400" : "text-gray-300 hover:text-white"
                 }`}
               >
                 {item.label}
