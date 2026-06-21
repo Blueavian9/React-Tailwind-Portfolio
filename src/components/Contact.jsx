@@ -54,7 +54,6 @@ const ContactForm = () => {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
-
         {/* ✅ Info panel — phone removed, address is just city */}
         <div className="max-w-lg mx-auto bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
           <h2 className="text-3xl text-center font-bold text-white mb-4">
@@ -63,14 +62,14 @@ const ContactForm = () => {
             </span>
           </h2>
           <p className="text-white text-lg mb-8 text-center font-mono">
-            I'm open to discussing employment opportunities, UX/UI or Full Stack
-            projects, and business propositions.
+            I'm open to discussing employment opportunities, UX/UI or Full Stack projects, and
+            business propositions.
           </p>
           <div className="space-y-5 text-white">
             {/* ✅ Email — displayed for credibility, no mailto: link */}
             <div className="flex items-center justify-center gap-3">
               <FaEnvelope className="text-cyan-400 shrink-0" />
-              <span className="font-mono text-lg select-all">blueavian9@gmail.com</span>
+              <span className="font-mono text-lg select-all">cesar.aguilar.dev@gmail.com</span>
             </div>
             {/* ✅ Location — city only, no street address */}
             <div className="flex items-center justify-center gap-3">
@@ -192,7 +191,6 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
-
       </div>
     </div>
   );

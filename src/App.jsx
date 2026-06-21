@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
-import Services from "./components/Services.jsx";
+import Skills from "./components/Services.jsx";
 import Projects from "./components/Projects.jsx";
+import Experience from "./components/Experience.jsx";
 import Contact from "./components/Contact.jsx";
-import Blog from "./components/Blog.jsx";
 import Footer from "./components/Footer.jsx";
 
 import "./App.css";
@@ -16,9 +16,7 @@ export default function App() {
   // Initialize theme on app load
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
     if (savedTheme) {
       document.documentElement.classList.toggle("dark", savedTheme === "dark");
@@ -28,7 +26,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+    <div className="relative min-h-screen bg-[#080D1A] text-[#F0F4FF] transition-colors duration-500">
       <Navbar />
       <main className="pt-16">
         <section id="home">
@@ -37,17 +35,17 @@ export default function App() {
         <section id="about">
           <About />
         </section>
-        <section id="services">
-          <Services />
+        <section id="skills">
+          <Skills />
         </section>
         <section id="projects">
           <Projects />
         </section>
+        <section id="experience">
+          <Experience />
+        </section>
         <section id="contact">
           <Contact />
-        </section>
-        <section id="blog">
-          <Blog />
         </section>
         <section id="footer">
           <Footer />

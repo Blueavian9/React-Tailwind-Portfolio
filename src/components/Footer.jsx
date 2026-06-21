@@ -12,15 +12,11 @@ const Footer = () => {
               </span>
             </h3>
             <p className="text-gray-300 font-mono text-justify">
-              Hi, I'm a devoted husband to my wife for over eight years and
-              counting. I am also a proud &ldquo;pet dad&rdquo; to two spoiled
-              guinea pigs, Munchie and Coco. They keep me company and
-              occasionally steal my snacks while I code late into the night. By
-              day, I serve as a{" "}
-              <span className="text-indigo-400 font-semibold">
-                Security Officer
-              </span>{" "}
-              for a Los Angeles City Council office.
+              Hi, I'm a devoted husband to my wife for over eight years and counting. I am also a
+              proud “pet dad” to two spoiled guinea pigs, Munchie and Coco. They keep me company and
+              occasionally steal my snacks while I code late into the night. By day, I serve as a{" "}
+              <span className="text-indigo-400 font-semibold">Security Officer</span> for a Los
+              Angeles City Council office.
             </p>
           </div>
         </div>
@@ -50,8 +46,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-gray-500 text-sm mt-4 pb-4">
-        &copy; {new Date().getFullYear()} Cesar Adrian Aguilar. All rights
-        reserved.
+        &copy; {new Date().getFullYear()} Cesar Adrian Aguilar. All rights reserved.
       </div>
     </footer>
   );

@@ -1,119 +1,128 @@
-import React, { useRef } from "react";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
-const services = [
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+
+const skillPills = [
+  { label: "React", group: "Frontend" },
+  { label: "TypeScript", group: "Frontend" },
+  { label: "Node.js", group: "Backend" },
+  { label: "Supabase", group: "Backend" },
+  { label: "OpenAI", group: "AI / Cloud" },
+  { label: "AWS", group: "AI / Cloud" },
+  { label: "Stripe", group: "AI / Cloud" },
+  { label: "GitHub Actions", group: "Dev Tools" },
+  { label: "Docker", group: "Dev Tools" },
+  { label: "Tailwind CSS", group: "Frontend" },
+];
+
+const chartData = {
+  labels: ["Frontend", "Backend", "AI / Cloud", "Dev Tools"],
+  datasets: [
+    {
+      label: "Proficiency",
+      data: [92, 88, 84, 79],
+      backgroundColor: ["#00D4AA", "#32d4ff", "#8b5cf6", "#f59e0b"],
+      borderRadius: 12,
+      borderSkipped: false,
+      barThickness: 28,
+    },
+  ],
+};
+
+const chartOptions = {
+  responsive: true,
+  plugins: {
+    legend: { display: false },
+    tooltip: {
+      backgroundColor: "rgba(15, 24, 41, 0.95)",
+      titleColor: "#F0F4FF",
+      bodyColor: "#E2E8F0",
+    },
+  },
+  scales: {
+    x: {
+      ticks: { color: "#94A3B8", font: { size: 12 } },
+      grid: { display: false },
+    },
+    y: {
+      beginAtZero: true,
+      max: 100,
+      ticks: { color: "#94A3B8", stepSize: 25, font: { size: 12 } },
+      grid: { color: "rgba(148, 163, 184, 0.12)" },
+    },
+  },
+};
+
+const skillsSummary = [
   {
-    id: 1,
-    title: "Strong Foundation in Web Technologies",
+    title: "Frontend",
     description:
-      "Proficient in HTML, CSS, and JavaScript fundamentals. Understands web protocols, APIs, and responsive design principles. Keeps up-to-date with evolving web standards and technologies.",
-    sound: "/sounds/whoosh-effect-382717.mp3",
+      "React, TypeScript, Tailwind CSS, responsive UX patterns, component-driven design.",
   },
   {
-    id: 2,
-    title: "Full-Stack JS & React Expertise",
-    description:
-      "Developed end-to-end web applications using JavaScript, with Node.js for back-end and React for front-end. Built complex user interfaces, efficiently managing state and props in React. Implemented performance optimizations and integrated various JS frameworks and libraries for comprehensive web solutions.",
-    sound: "/sounds/simple-whoosh-382724.mp3",
+    title: "Backend",
+    description: "Node.js, Supabase, REST APIs, performance tuning, secure auth flows.",
   },
   {
-    id: 3,
-    title: "Database Skills",
-    description:
-      "Designed and optimized database structures. Wrote complex queries and managed data efficiently. Worked with both SQL and NoSQL databases.",
-    sound: "/sounds/whoosh-effect-382717.mp3",
+    title: "AI / Cloud",
+    description: "OpenAI, AWS services, RAG pipelines, cloud-native architecture and deployment.",
   },
   {
-    id: 4,
-    title: "Version Control, Collaboration & Tool Control",
-    description:
-      "Managed code versions using systems like Git. Facilitated team collaboration through platforms such as Github or GitLab. Implemented and maintained development tools and workflows.",
-    sound: "/sounds/simple-whoosh-382724.mp3",
-  },
-  {
-    id: 5,
-    title: "Cloud Computing",
-    description:
-      "Designed and managed cloud infrastructure. Optimized resources for performance and cost. Implemented security and scalable solutions.",
-    sound: "/sounds/whoosh-effect-382717.mp3",
-  },
-  {
-    id: 6,
-    title: "DevOps CI/CD",
-    description:
-      "Automated software development and deployment processes. Built and maintained CI/CD pipelines. Improved system efficiency & software delivery quality.",
-    sound: "/sounds/simple-whoosh-382724.mp3",
+    title: "Dev Tools",
+    description: "CI/CD, GitHub Actions, Docker workflows, monitoring, and release automation.",
   },
 ];
 
-const Service = () => {
-  // store refs keyed by service id
-  const audioRefs = useRef({});
-
-  const playHoverSound = (id) => {
-    const audio = audioRefs.current[id];
-    if (audio) {
-      audio.currentTime = 0;
-      audio.play().catch(() => {});
-    }
-  };
-
+export default function Skills() {
   return (
-    <div
-      className="bg-gradient-to-b from-[#243b55] to-[#141e30] text-white py-20"
-      id="service"
-    >
+    <section id="skills" className="bg-[#0F1829] py-20 text-[#F0F4FF]">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-            Services
-          </span>
-        </h2>
+        <div className="text-center mb-12">
+          <p className="text-sm uppercase tracking-[0.4em] text-cyan-300 mb-3">Skills</p>
+          <h2 className="text-4xl font-bold text-white">
+            Simplified skill visibility for recruiters.
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
+            I keep the skill story direct: Frontend, Backend, AI / Cloud, and tooling you can trust.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="group relative bg-gray-800 rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/30"
-              onMouseEnter={() => playHoverSound(service.id)}
-            >
-              {/* individual hidden audio per card */}
-              <audio
-                ref={(el) => (audioRefs.current[service.id] = el)}
-                src={service.sound}
-                preload="auto"
-              />
-
-              {/* Hover overlay glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-300/10 to-violet-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              <div className="relative px-6 pb-6 h-full flex flex-col justify-between z-10">
-                <div>
-                  <div className="text-right text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 group-hover:from-yellow-300 group-hover:to-pink-400 transition-all duration-500">
-                    {service.id}
-                  </div>
-
-                  <h3 className="mt-2 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-teal-300 to-blue-400 group-hover:from-yellow-300 group-hover:via-pink-400 group-hover:to-purple-500 transition-all duration-500 drop-shadow-md group-hover:drop-shadow-[0_0_15px_#38bdf8]">
-                    {service.title}
-                  </h3>
-
-                  <p className="font-mono mt-2 text-gray-300 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-
-                <a
-                  href="#contact"
-                  className="mt-4 inline-block text-green-400 hover:text-blue-400 transition-colors duration-300"
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_0.95fr]">
+          <div className="rounded-[2rem] border border-cyan-500/10 bg-[#081924] p-8 shadow-[0_25px_80px_rgba(0,212,170,0.12)]">
+            <div className="mb-6 flex flex-wrap gap-3">
+              {skillPills.map((skill) => (
+                <span
+                  key={skill.label}
+                  className="rounded-full border border-[#1E2D47] bg-[#112240] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-200"
                 >
-                  Read More
-                </a>
-              </div>
+                  {skill.label}
+                </span>
+              ))}
             </div>
-          ))}
+
+            <div className="rounded-[1.75rem] bg-[#091726] p-4">
+              <Bar data={chartData} options={chartOptions} />
+            </div>
+          </div>
+
+          <div className="space-y-6 rounded-[2rem] border border-cyan-500/10 bg-[#081924] p-8 shadow-[0_25px_80px_rgba(0,212,170,0.12)]">
+            {skillsSummary.map((skill) => (
+              <div key={skill.title} className="rounded-3xl border border-white/5 bg-white/5 p-6">
+                <h3 className="text-xl font-semibold text-white">{skill.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-300">{skill.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Service;
+}

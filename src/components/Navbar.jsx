@@ -1,4 +1,3 @@
-// Mock 2:
 import { useState, useEffect, useCallback } from "react";
 import ThemeToggle from "./ThemeToggle";
 
@@ -25,7 +24,7 @@ const Navbar = () => {
       { root: null, rootMargin: "-25% 0px -75% 0px", threshold: [0.5] }
     );
 
-    ["home", "about", "services", "projects", "contact"]
+    ["home", "about", "skills", "projects", "experience", "contact"]
       .map((id) => document.getElementById(id))
       .filter(Boolean)
       .forEach((el) => observer.observe(el));
@@ -35,93 +34,107 @@ const Navbar = () => {
 
   const smoothScrollTo = useCallback((id) => {
     const target = document.getElementById(id);
-    if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
+    if (target) window.scrollTo({ top: target.offsetTop - 88, behavior: "smooth" });
     setIsMobileMenuOpen(false);
   }, []);
 
   const navItems = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
-    { id: "services", label: "Services" },
+    { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
+    { id: "experience", label: "Experience" },
     { id: "contact", label: "Contact" },
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-lg border-b ${
-        isScrolled
-          ? "bg-gray-900/95 border-cyan-500 border-opacity-20 shadow-lg"
-          : "bg-gray-900/50 border-gray-700/20"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Nav Links - Desktop */}
-          <div className="hidden md:flex items-center gap-8 flex-1">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => smoothScrollTo(item.id)}
-                className={`relative text-sm font-medium transition-colors duration-300 ${
-                  activeSection === item.id ? "text-cyan-400" : "text-gray-300 hover:text-white"
-                }`}
-              >
-                {item.label}
-                {activeSection === item.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-400 rounded-full" />
-                )}
-              </button>
-            ))}
-          </div>
-
-          {/* Right Side: Theme + Mobile Menu */}
-          <div className="flex items-center gap-4">
-            <ThemeToggle />
-
-            {/* Mobile Hamburger */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden flex flex-col gap-1.5 p-2"
-              aria-label="Toggle menu"
-            >
-              <span
-                className={`w-6 h-0.5 bg-cyan-400 transition-all duration-300 ${
-                  isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
-                }`}
-              />
-              <span
-                className={`w-6 h-0.5 bg-cyan-400 transition-all duration-300 ${
-                  isMobileMenuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`w-6 h-0.5 bg-cyan-400 transition-all duration-300 ${
-                  isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
-              />
-            </button>
-          </div>
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      <div className="hidden md:flex justify-between items-center bg-[#06111d]/95 border-b border-cyan-500/10 px-6 py-2 text-xs text-cyan-200 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2">
+          <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Available for remote roles —</span>
+          <a href="mailto:cesar.aguilar.dev@gmail.com" className="underline text-cyan-200">
+            cesar.aguilar.dev@gmail.com
+          </a>
         </div>
+        <span className="text-gray-400">Remote-ready Full Stack Cloud & AI Engineer</span>
+      </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden pb-4 space-y-2">
-            {navItems.map((item) => (
+      <div
+        className={`backdrop-blur-lg transition-all duration-300 border-b ${
+          isScrolled ? "bg-[#08111d]/95 border-cyan-500/10 shadow-lg" : "bg-[#06111d]/80"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="hidden md:flex items-center gap-8 flex-1">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => smoothScrollTo(item.id)}
+                  className={`relative text-sm font-medium transition-colors duration-300 ${
+                    activeSection === item.id ? "text-cyan-400" : "text-gray-300 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                  {activeSection === item.id && (
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-400 rounded-full" />
+                  )}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+
               <button
-                key={item.id}
-                onClick={() => smoothScrollTo(item.id)}
-                className={`block w-full text-left px-4 py-2 rounded transition-colors ${
-                  activeSection === item.id
-                    ? "text-cyan-400 bg-cyan-400/10"
-                    : "text-gray-300 hover:text-white hover:bg-gray-800/50"
-                }`}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden flex flex-col gap-1.5 p-2"
+                aria-label="Toggle menu"
               >
-                {item.label}
+                <span
+                  className={`w-6 h-0.5 bg-cyan-400 transition-all duration-300 ${
+                    isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                  }`}
+                />
+                <span
+                  className={`w-6 h-0.5 bg-cyan-400 transition-all duration-300 ${
+                    isMobileMenuOpen ? "opacity-0" : ""
+                  }`}
+                />
+                <span
+                  className={`w-6 h-0.5 bg-cyan-400 transition-all duration-300 ${
+                    isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                  }`}
+                />
               </button>
-            ))}
+            </div>
           </div>
-        )}
+
+          {isMobileMenuOpen && (
+            <div className="md:hidden pb-4 space-y-2">
+              <div className="px-4 py-3 bg-[#06111d]/95 text-xs text-cyan-200 border-y border-cyan-500/10">
+                🟢 Available for remote roles —{" "}
+                <a href="mailto:cesar.aguilar.dev@gmail.com" className="underline">
+                  cesar.aguilar.dev@gmail.com
+                </a>
+              </div>
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => smoothScrollTo(item.id)}
+                  className={`block w-full text-left px-4 py-2 rounded transition-colors ${
+                    activeSection === item.id
+                      ? "text-cyan-400 bg-cyan-400/10"
+                      : "text-gray-300 hover:text-white hover:bg-gray-800/50"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );
