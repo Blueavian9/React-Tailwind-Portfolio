@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
-import Skills from "./components/Services.jsx";
+import Services from "./components/Services.jsx";
 import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
 import Contact from "./components/Contact.jsx";
@@ -36,7 +36,7 @@ export default function App() {
           <About />
         </section>
         <section id="skills">
-          <Skills />
+          <Services />
         </section>
         <section id="projects">
           <Projects />
