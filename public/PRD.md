@@ -32,7 +32,6 @@ within the first viewport — before any scrolling.
 - **Title:** `Full Stack Cloud & AI Engineer` (already in meta — make it H1)
 - **Tagline:** One tight sentence. "I build production SaaS apps powered by AI — currently open to remote roles."
 - **Remove:** "Multilingual Support" section (adds noise, not signal for tech hiring)
-- **Remove:** Modelfile, PICKUP_PROMPT.md, AUDIT_LOG.md, DECISIONS.md, SESSION_PROTOCOL.md from the repo (internal files — clean the public face)
 
 ### 2. Hero — The 8-Second Pitch
 Must contain above the fold:
