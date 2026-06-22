@@ -51,9 +51,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div
         className={`backdrop-blur-lg transition-all duration-300 border-b ${
-          isScrolled
-            ? "bg-app-surface/95 border-cyan-500/10 shadow-lg dark:bg-[#08111d]/95"
-            : "bg-app-surface/80 dark:bg-[#06111d]/80"
+          isScrolled ? "bg-app-surface/95 border-app-border/10 shadow-lg" : "bg-app-surface/80"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,13 +63,13 @@ const Navbar = ({ theme, toggleTheme }) => {
                   onClick={() => smoothScrollTo(item.id)}
                   className={`relative text-sm font-medium transition-colors duration-300 ${
                     activeSection === item.id
-                      ? "text-cyan-400"
-                      : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+                      ? "text-app-accent"
+                      : "text-app-muted hover:text-app-text"
                   }`}
                 >
                   {item.label}
                   {activeSection === item.id && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-400 rounded-full" />
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-app-accent rounded-full" />
                   )}
                 </button>
               ))}
@@ -86,17 +84,17 @@ const Navbar = ({ theme, toggleTheme }) => {
                 aria-label="Toggle menu"
               >
                 <span
-                  className={`w-6 h-0.5 bg-cyan-400 transition-all duration-300 ${
+                  className={`w-6 h-0.5 bg-app-accent transition-all duration-300 ${
                     isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
                   }`}
                 />
                 <span
-                  className={`w-6 h-0.5 bg-cyan-400 transition-all duration-300 ${
+                  className={`w-6 h-0.5 bg-app-accent transition-all duration-300 ${
                     isMobileMenuOpen ? "opacity-0" : ""
                   }`}
                 />
                 <span
-                  className={`w-6 h-0.5 bg-cyan-400 transition-all duration-300 ${
+                  className={`w-6 h-0.5 bg-app-accent transition-all duration-300 ${
                     isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
                   }`}
                 />
@@ -112,8 +110,8 @@ const Navbar = ({ theme, toggleTheme }) => {
                   onClick={() => smoothScrollTo(item.id)}
                   className={`block w-full text-left px-4 py-2 rounded transition-colors ${
                     activeSection === item.id
-                      ? "text-cyan-400 bg-cyan-400/10"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-gray-800/50"
+                      ? "text-app-accent bg-app-accent/10"
+                      : "text-app-muted hover:text-app-text hover:bg-app-surface/80"
                   }`}
                 >
                   {item.label}
