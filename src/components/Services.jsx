@@ -83,7 +83,10 @@ const skillsSummary = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-[#0F1829] py-20 text-[#F0F4FF]">
+    <section
+      id="skills"
+      className="bg-app-background py-20 text-app-text dark:bg-[#0F1829] dark:text-[#F0F4FF]"
+    >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.4em] text-cyan-300 mb-3">Skills</p>
@@ -96,7 +99,7 @@ export default function Skills() {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[0.95fr_0.95fr]">
-          <div className="rounded-[2rem] border border-cyan-500/10 bg-[#081924] p-8 shadow-[0_25px_80px_rgba(0,212,170,0.12)]">
+          <div className="rounded-[2rem] border border-cyan-500/10 bg-app-surface p-8 shadow-[0_25px_80px_rgba(0,212,170,0.08)] dark:bg-[#081924] dark:shadow-[0_25px_80px_rgba(0,212,170,0.12)]">
             <div className="mb-6 flex flex-wrap gap-3">
               {skillPills.map((skill) => (
                 <span
@@ -108,7 +111,7 @@ export default function Skills() {
               ))}
             </div>
 
-            <div className="rounded-[1.75rem] bg-[#091726] p-4">
+            <div className="rounded-[1.75rem] bg-app-background p-4 dark:bg-[#091726]">
               <Bar data={chartData} options={chartOptions} />
             </div>
           </div>

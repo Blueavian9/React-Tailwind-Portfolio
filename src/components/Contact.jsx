@@ -41,7 +41,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#243b55] to-[#141e30] relative px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-100 to-slate-200 relative px-4 py-12 dark:from-[#243b55] dark:to-[#141e30]">
       {/* Toast notification */}
       {toast && (
         <div
@@ -55,7 +55,7 @@ const ContactForm = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
         {/* ✅ Info panel — phone removed, address is just city */}
-        <div className="max-w-lg mx-auto bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
+        <div className="max-w-lg mx-auto bg-white/80 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.1)] dark:bg-black/50 dark:shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
           <h2 className="text-3xl text-center font-bold text-white mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-blue-400">
               Talk to Me
@@ -88,7 +88,7 @@ const ContactForm = () => {
         </div>
 
         {/* Contact form */}
-        <div className="bg-black bg-opacity-50 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
+        <div className="bg-white/80 p-8 rounded-lg shadow-[0_15px_25px_rgba(0,0,0,0.1)] dark:bg-black/50 dark:shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
           <h2 className="text-3xl font-bold text-center text-white mb-8">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
               Contact

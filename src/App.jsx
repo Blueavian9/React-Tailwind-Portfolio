@@ -1,5 +1,5 @@
 // src/App.jsx
-import { useEffect } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
@@ -13,21 +13,27 @@ import "./App.css";
 import "./index.css";
 
 export default function App() {
-  // Initialize theme on app load
+  const [theme, setTheme] = useState("dark");
+
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const nextTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+    setTheme(nextTheme);
+    document.documentElement.classList.toggle("dark", nextTheme === "dark");
+  }, []);
 
-    if (savedTheme) {
-      document.documentElement.classList.toggle("dark", savedTheme === "dark");
-    } else {
-      document.documentElement.classList.toggle("dark", systemPrefersDark);
-    }
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = useCallback(() => {
+    setTheme((current) => (current === "dark" ? "light" : "dark"));
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#080D1A] text-[#F0F4FF] transition-colors duration-500">
-      <Navbar />
+    <div className="relative min-h-screen bg-app-background text-app-text transition-colors duration-500 dark:bg-[#080D1A] dark:text-[#F0F4FF]">
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="pt-16">
         <section id="home">
           <Hero />

@@ -9,6 +9,18 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        app: {
+          background: "#F8F9FA",
+          surface: "#FFFFFF",
+          text: "#1A1A1A",
+          muted: "#2D3748",
+          accent: "#00D4AA",
+          border: "#CBD5E1",
+          card: "#F1F5F9",
+        },
+        neon: "#03e9f4",
+      },
       keyframes: {
         btnAnim1: { "0%": { left: "-100%" }, "50%,100%": { left: "100%" } },
         btnAnim2: { "0%": { top: "-100%" }, "50%,100%": { top: "100%" } },
