@@ -197,12 +197,7 @@ const Blog = () => {
             onClick={() => setSelectedArticle(null)}
             className="mb-8 flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300"
           >
-            <svg
-              className="w-5 h-5 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -229,9 +224,7 @@ const Blog = () => {
                 <span>{selectedArticle.readTime}</span>
               </div>
 
-              <h1 className="text-4xl font-bold text-white mb-6">
-                {selectedArticle.title}
-              </h1>
+              <h1 className="text-4xl font-bold text-white mb-6">{selectedArticle.title}</h1>
 
               <div className="prose prose-invert prose-purple max-w-none">
                 <div className="text-gray-300 leading-relaxed whitespace-pre-line">
@@ -261,10 +254,7 @@ const Blog = () => {
   }
 
   return (
-    <section
-      id="blog"
-      className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900"
-    >
+    <section id="blog" className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-6">
@@ -273,8 +263,8 @@ const Blog = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Insights on AI integration, cloud architecture, and modern software
-            development practices
+            Insights on AI integration, cloud architecture, and modern software development
+            practices
           </p>
         </div>
 
@@ -298,9 +288,7 @@ const Blog = () => {
         {/* Featured Post */}
         {selectedCategory === "All" && featuredPost && (
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">
-              Featured Article
-            </h3>
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">Featured Article</h3>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -308,13 +296,14 @@ const Blog = () => {
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       Featured
                     </span>
-                    <span className="text-purple-400 text-sm">
-                      {featuredPost.category}
-                    </span>
+                    <span className="text-purple-400 text-sm">{featuredPost.category}</span>
                   </div>
-                  <h4 className="text-2xl font-bold text-white mb-4">
-                    {featuredPost.title}
-                  </h4>
+                  <img
+                    src="/assets/Cesar_Cover2.webp"
+                    alt="Cesar Aguilar Blog"
+                    className="w-full h-64 object-cover rounded-xl mb-8"
+                  />
+                  <h4 className="text-2xl font-bold text-white mb-4">{featuredPost.title}</h4>
                   <p className="text-gray-300 mb-6">{featuredPost.excerpt}</p>
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
                     <span>{featuredPost.date}</span>
@@ -348,23 +337,15 @@ const Blog = () => {
                 key={post.id}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-48 object-cover"
-                />
+                <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">
                       {post.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
+                  <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">{post.title}</h3>
+                  <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <span>{post.date}</span>
                     <span>{post.readTime}</span>
@@ -382,9 +363,7 @@ const Blog = () => {
 
         {filteredPosts.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-400 text-lg">
-              No articles found in this category.
-            </p>
+            <p className="text-gray-400 text-lg">No articles found in this category.</p>
           </div>
         )}
 
@@ -395,8 +374,7 @@ const Blog = () => {
               Want to collaborate on a project?
             </h3>
             <p className="text-gray-300 mb-6">
-              I'm always interested in discussing new opportunities and
-              technical challenges.
+              I'm always interested in discussing new opportunities and technical challenges.
             </p>
             <a
               href="#contact"

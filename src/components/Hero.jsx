@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import GlowingButton from "./GlowingButton";
 
 const techStack = ["React", "Node", "OpenAI", "AWS", "Supabase", "Stripe"];
 
