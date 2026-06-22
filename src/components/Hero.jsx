@@ -28,6 +28,8 @@ export default function Hero() {
 
         {/* Left column */}
         <div className="w-full lg:w-6/12 space-y-6">
+
+          {/* Available badge */}
           <div className="inline-flex items-center gap-3 rounded-full border border-cyan-500/20 bg-app-surface/80 px-4 py-2 text-xs uppercase tracking-[0.24em] text-cyan-700 dark:text-cyan-200 backdrop-blur-sm">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             Open to remote roles —{" "}
@@ -36,6 +38,7 @@ export default function Hero() {
             </a>
           </div>
 
+          {/* Name + title + tagline */}
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.32em] text-cyan-400">Cesar A. Aguilar</p>
             <h1 className="text-4xl font-bold md:text-5xl xl:text-6xl leading-tight">
@@ -46,6 +49,7 @@ export default function Hero() {
             </p>
           </div>
 
+          {/* Tech stack pills */}
           <div className="flex flex-wrap gap-3">
             {techStack.map((tech) => (
               <span
@@ -57,8 +61,9 @@ export default function Hero() {
             ))}
           </div>
 
+          {/* CTAs */}
           <div className="flex flex-wrap gap-4">
-            
+            <a
               href="/CesarAguilar_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -66,7 +71,7 @@ export default function Hero() {
             >
               Download Resume
             </a>
-            
+            <a
               href="#projects"
               className="inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-app-surface/90 px-6 py-3 text-sm font-semibold text-cyan-700 transition hover:bg-cyan-100 dark:text-cyan-200 dark:hover:bg-cyan-500/10"
             >
