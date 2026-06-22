@@ -1,4 +1,4 @@
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa6";
+import { FaUpRightFromSquare, FaGithub } from "react-icons/fa6";
 const projects = [
   {
     id: 1,
@@ -97,7 +97,7 @@ const Projects = () => {
                     className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-4 py-2 text-sm font-semibold text-[#07191f] transition hover:bg-cyan-300"
                   >
                     Live Demo
-                    <FaExternalLinkAlt className="h-4 w-4" />
+                    <FaUpRightFromSquare className="h-4 w-4" />
                   </a>
                   <a
                     href={project.github}
