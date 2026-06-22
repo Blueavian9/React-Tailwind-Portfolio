@@ -32,7 +32,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-app-background text-app-text transition-colors duration-500 dark:bg-[#080D1A] dark:text-[#F0F4FF]">
+    <div className="relative min-h-screen bg-app-background text-app-text transition-colors duration-500">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="pt-16">
         <section id="home">
