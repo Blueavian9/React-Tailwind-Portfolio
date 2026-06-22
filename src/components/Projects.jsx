@@ -48,7 +48,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-[#080D1A] py-20 text-[#F0F4FF]">
+    <section
+      id="projects"
+      className="bg-app-background py-20 text-app-text dark:bg-[#080D1A] dark:text-[#F0F4FF]"
+    >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.4em] text-cyan-300 mb-3">Projects</p>
@@ -62,9 +65,9 @@ const Projects = () => {
           {projects.map((project) => (
             <article
               key={project.id}
-              className="group overflow-hidden rounded-[2rem] border border-[#1E2D47] bg-[#0F1829]/95 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 hover:border-cyan-400/30"
+              className="group overflow-hidden rounded-[2rem] border border-app-border bg-app-surface/95 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.10)] transition hover:-translate-y-1 dark:border-[#1E2D47] dark:bg-[#0F1829]/95 dark:shadow-[0_20px_60px_rgba(0,0,0,0.25)] hover:dark:border-cyan-400/30"
             >
-              <div className="overflow-hidden rounded-3xl border border-cyan-500/10 bg-[#091724] mb-6">
+              <div className="overflow-hidden rounded-3xl border border-cyan-500/10 bg-slate-100 mb-6 dark:bg-[#091724]">
                 <img
                   src={project.image}
                   alt={project.name}
@@ -82,7 +85,7 @@ const Projects = () => {
                   {project.tech.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full bg-[#112240] px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-slate-200"
+                      className="rounded-full bg-app-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-app-text dark:bg-[#112240] dark:text-slate-200"
                     >
                       {skill}
                     </span>

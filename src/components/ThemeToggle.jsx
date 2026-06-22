@@ -1,17 +1,13 @@
-import { FiSun, FiMoon } from "react-icons/fi";
+import { FaSun, FaMoon } from "react-icons/fa6";
 
 const ThemeToggle = ({ theme, toggleTheme }) => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
-      aria-label="Toggle dark/light mode"
+      className="p-2 rounded-full bg-slate-200/80 text-slate-900 shadow-sm shadow-slate-900/5 transition-all duration-200 hover:bg-slate-300 dark:bg-slate-800/80 dark:text-yellow-300 dark:hover:bg-slate-700/80"
+      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
-      {theme === "dark" ? (
-        <FiSun className="w-6 h-6 text-yellow-300" />
-      ) : (
-        <FiMoon className="w-6 h-6 text-indigo-300" />
-      )}
+      {theme === "dark" ? <FaSun className="w-6 h-6" /> : <FaMoon className="w-6 h-6" />}
     </button>
   );
 };

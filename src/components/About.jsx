@@ -26,9 +26,7 @@ const SkillBar = ({ skill, animate }) => (
         className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all ease-out group-hover:shadow-lg`}
         style={{
           width: animate ? `${skill.level}%` : "0%",
-          transition: animate
-            ? "width 1.2s cubic-bezier(0.4, 0, 0.2, 1)"
-            : "none",
+          transition: animate ? "width 1.2s cubic-bezier(0.4, 0, 0.2, 1)" : "none",
           boxShadow: "0 0 10px rgba(34, 211, 238, 0.3)",
         }}
       />
@@ -50,7 +48,7 @@ const About = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.25 },
+      { threshold: 0.25 }
     );
     if (skillsRef.current) observer.observe(skillsRef.current);
     return () => observer.disconnect();
@@ -148,7 +146,7 @@ const About = () => {
 
   return (
     <section
-      className="bg-gradient-to-b from-[#141e30] to-[#243b55] text-white py-20"
+      className="bg-gradient-to-b from-slate-100 to-slate-200 text-app-text py-20 dark:from-[#141e30] dark:to-[#243b55] dark:text-white"
       id="about"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
@@ -180,24 +178,21 @@ const About = () => {
                 <p>
                   Hi, I&apos;m Cesar A. Aguilar — a devoted husband to my wife
                   <span className="text-cyan-400 font-semibold"> Neha </span>
-                  for over six years, and proud &ldquo;pet dad&rdquo; to two
-                  spoiled guinea pigs,
+                  for over six years, and proud &ldquo;pet dad&rdquo; to two spoiled guinea pigs,
                   <span className="text-teal-400 font-semibold"> Munchie </span>
                   and
-                  <span className="text-teal-400 font-semibold"> Coco</span>.
-                  They keep me company (and occasionally steal my snacks) while
-                  I code late into the night.
+                  <span className="text-teal-400 font-semibold"> Coco</span>. They keep me company
+                  (and occasionally steal my snacks) while I code late into the night.
                 </p>
 
                 <p>
                   By day, I serve as a
                   <span className="text-blue-400 font-semibold">
                     {" "}
-                    Security Officer for Los Angeles Council District 14 in El
-                    Sereno
+                    Security Officer for Los Angeles Council District 14 in El Sereno
                   </span>
-                  , guarding Councilmember Ysabel Jurado&apos;s office and
-                  supporting community safety. I also work Saturdays for the
+                  , guarding Councilmember Ysabel Jurado&apos;s office and supporting community
+                  safety. I also work Saturdays for the
                   <span className="text-blue-400 font-semibold">
                     {" "}
                     Lincoln Heights Youth Center
@@ -208,16 +203,9 @@ const About = () => {
                     Hollenbeck LAPD Security Services Division
                   </span>
                   , serving LAPD posts including
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    PiperTech
-                  </span>{" "}
-                  and the
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Hyperion S.A.F.E. Center
-                  </span>
-                  — all while studying full time at
+                  <span className="text-blue-400 font-semibold"> PiperTech</span> and the
+                  <span className="text-blue-400 font-semibold"> Hyperion S.A.F.E. Center</span>—
+                  all while studying full time at
                   <span className="text-indigo-400 font-semibold">
                     {" "}
                     Western Governors University (WGU)
@@ -226,25 +214,19 @@ const About = () => {
                 </p>
 
                 <p>
-                  By passion, I volunteer my technical skills to local
-                  organizations like
+                  By passion, I volunteer my technical skills to local organizations like
                   <span className="text-purple-400 font-semibold">
                     {" "}
                     Barrio Action Youth &amp; Family Resource Center
                   </span>{" "}
                   and
-                  <span className="text-purple-400 font-semibold">
-                    {" "}
-                    College Bridge Academy
-                  </span>
-                  , building digital tools to help them grow and better serve
-                  the neighborhood.
+                  <span className="text-purple-400 font-semibold"> College Bridge Academy</span>,
+                  building digital tools to help them grow and better serve the neighborhood.
                 </p>
 
                 <p>
-                  When the uniform comes off, I turn to my other calling:
-                  becoming a world-class technologist. I&apos;m currently
-                  pursuing a
+                  When the uniform comes off, I turn to my other calling: becoming a world-class
+                  technologist. I&apos;m currently pursuing a
                   <span className="text-indigo-400 font-semibold">
                     {" "}
                     B.S. in Cloud &amp; Network Engineering
@@ -263,12 +245,11 @@ const About = () => {
                 </p>
 
                 <p>
-                  It&apos;s a full life — long workdays, overtime shifts,
-                  late-night coding sessions, and family time — but I
-                  wouldn&apos;t trade it. Every project I build, whether for a
-                  neighborhood non-profit or an AI-powered startup, is fueled by
-                  my belief that technology should strengthen communities and
-                  create opportunities for everyone.
+                  It&apos;s a full life — long workdays, overtime shifts, late-night coding
+                  sessions, and family time — but I wouldn&apos;t trade it. Every project I build,
+                  whether for a neighborhood non-profit or an AI-powered startup, is fueled by my
+                  belief that technology should strengthen communities and create opportunities for
+                  everyone.
                 </p>
               </div>
             </div>
@@ -332,9 +313,7 @@ const About = () => {
                       <div className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-300">
                         {achievement.icon}
                       </div>
-                      <h4 className="font-bold text-white text-sm">
-                        {achievement.title}
-                      </h4>
+                      <h4 className="font-bold text-white text-sm">{achievement.title}</h4>
                     </div>
                     <p className="text-gray-400 text-xs leading-relaxed">
                       {achievement.description}
@@ -353,8 +332,8 @@ const About = () => {
               Open to Full-Time &amp; Contract Roles
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Full Stack · Cloud · AI Integration · Los Angeles (open to
-              remote). Let&apos;s build something that actually matters.
+              Full Stack · Cloud · AI Integration · Los Angeles (open to remote). Let&apos;s build
+              something that actually matters.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
