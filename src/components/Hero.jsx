@@ -22,15 +22,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-app-background text-app-text min-h-screen px-4 py-10 md:py-14">
+    <section className="relative overflow-hidden bg-app-background dark:bg-[#080D1A] text-app-text dark:text-[#F0F4FF] transition-colors duration-500">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,212,170,0.16),transparent_28%)]" />
       <div className="relative mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row items-center justify-between px-4">
-
         {/* Left column */}
         <div className="w-full lg:w-6/12 space-y-6">
-
           {/* Available badge */}
-          <div className="inline-flex items-center gap-3 rounded-full border border-cyan-500/20 bg-app-surface/80 px-4 py-2 text-xs uppercase tracking-[0.24em] text-cyan-700 dark:text-cyan-200 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-3 rounded-full border border-cyan-500/20 bg-app-surface/80 dark:bg-[#0F1829]/80 px-4 py-2 text-xs uppercase tracking-[0.24em] text-cyan-700 dark:text-cyan-200 backdrop-blur-sm">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             Open to remote roles —{" "}
             <a href="mailto:blueavian9@gmail.com" className="underline">
@@ -42,7 +40,7 @@ export default function Hero() {
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.32em] text-cyan-400">Cesar A. Aguilar</p>
             <h1 className="text-4xl font-bold md:text-5xl xl:text-6xl leading-tight">
-              Full Stack Cloud &amp; AI Engineer
+              Full Stack AI Engineer
             </h1>
             <p className="max-w-2xl text-base leading-relaxed text-app-muted md:text-lg">
               I build production SaaS apps powered by AI — currently open to remote roles.
@@ -54,7 +52,7 @@ export default function Hero() {
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-app-border bg-app-pill px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-app-text"
+                className="rounded-full border border-app-border border-app-border dark: border-[#1E2D47]bg-app-pill dark:bg-[#1E2D47] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-app-text dark: text-slate-200"
               >
                 {tech}
               </span>
@@ -94,7 +92,6 @@ export default function Hero() {
             />
           </div>
         </div>
-
       </div>
     </section>
   );

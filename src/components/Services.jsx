@@ -1,38 +1,49 @@
 import { Bar } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Tooltip,
-  Legend,
-} from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip } from "chart.js";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip);
 
-const skillPills = [
-  { label: "React", group: "Frontend" },
-  { label: "TypeScript", group: "Frontend" },
-  { label: "Node.js", group: "Backend" },
-  { label: "Supabase", group: "Backend" },
-  { label: "OpenAI", group: "AI / Cloud" },
-  { label: "AWS", group: "AI / Cloud" },
-  { label: "Stripe", group: "AI / Cloud" },
-  { label: "GitHub Actions", group: "Dev Tools" },
-  { label: "Docker", group: "Dev Tools" },
-  { label: "Tailwind CSS", group: "Frontend" },
+const groups = [
+  {
+    label: "Frontend",
+    pills: ["React", "TypeScript", "Tailwind CSS", "Vite", "Next.js"],
+    color: "text-sky-500 dark:text-sky-400",
+    bar: "#38bdf8",
+    score: 92,
+  },
+  {
+    label: "Backend",
+    pills: ["Node.js", "Express", "Supabase", "PostgreSQL", "REST APIs"],
+    color: "text-emerald-500 dark:text-emerald-400",
+    bar: "#34d399",
+    score: 88,
+  },
+  {
+    label: "AI / Cloud",
+    pills: ["OpenAI", "AWS", "LangChain", "Stripe", "AWS Polly"],
+    color: "text-violet-500 dark:text-violet-400",
+    bar: "#a78bfa",
+    score: 84,
+  },
+  {
+    label: "Dev Tools",
+    pills: ["GitHub Actions", "Docker", "CI/CD", "Vercel", "Jest"],
+    color: "text-amber-500 dark:text-amber-400",
+    bar: "#fbbf24",
+    score: 79,
+  },
 ];
 
 const chartData = {
-  labels: ["Frontend", "Backend", "AI / Cloud", "Dev Tools"],
+  labels: groups.map((g) => g.label),
   datasets: [
     {
       label: "Proficiency",
-      data: [92, 88, 84, 79],
-      backgroundColor: ["#00D4AA", "#32d4ff", "#8b5cf6", "#f59e0b"],
-      borderRadius: 12,
+      data: groups.map((g) => g.score),
+      backgroundColor: groups.map((g) => g.bar),
+      borderRadius: 10,
       borderSkipped: false,
-      barThickness: 28,
+      barThickness: 32,
     },
   ],
 };
@@ -42,87 +53,85 @@ const chartOptions = {
   plugins: {
     legend: { display: false },
     tooltip: {
-      backgroundColor: "rgba(15, 24, 41, 0.95)",
+      backgroundColor: "rgba(8, 13, 26, 0.95)",
       titleColor: "#F0F4FF",
-      bodyColor: "#E2E8F0",
+      bodyColor: "#8B9BB4",
+      padding: 10,
+      callbacks: { label: (ctx) => ` ${ctx.parsed.y}% proficiency` },
     },
   },
   scales: {
     x: {
-      ticks: { color: "#94A3B8", font: { size: 12 } },
+      ticks: { color: "#8B9BB4", font: { size: 12, weight: "500" } },
       grid: { display: false },
+      border: { display: false },
     },
     y: {
       beginAtZero: true,
       max: 100,
-      ticks: { color: "#94A3B8", stepSize: 25, font: { size: 12 } },
-      grid: { color: "rgba(148, 163, 184, 0.12)" },
+      ticks: { color: "#8B9BB4", stepSize: 25, font: { size: 11 } },
+      grid: { color: "rgba(148, 163, 184, 0.08)" },
+      border: { display: false },
     },
   },
 };
-
-const skillsSummary = [
-  {
-    title: "Frontend",
-    description:
-      "React, TypeScript, Tailwind CSS, responsive UX patterns, component-driven design.",
-  },
-  {
-    title: "Backend",
-    description: "Node.js, Supabase, REST APIs, performance tuning, secure auth flows.",
-  },
-  {
-    title: "AI / Cloud",
-    description: "OpenAI, AWS services, RAG pipelines, cloud-native architecture and deployment.",
-  },
-  {
-    title: "Dev Tools",
-    description: "CI/CD, GitHub Actions, Docker workflows, monitoring, and release automation.",
-  },
-];
 
 export default function Skills() {
   return (
     <section
       id="skills"
-      className="bg-app-background py-20 text-app-text dark:bg-[#0F1829] dark:text-[#F0F4FF]"
+      className="bg-app-background text-app-text py-20 dark:bg-[#0F1829] dark:text-slate-100 transition-colors duration-500"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-[0.4em] text-cyan-300 mb-3">Skills</p>
-          <h2 className="text-4xl font-bold text-white">
-            Simplified skill visibility for recruiters.
+        {/* Header */}
+        <div className="text-center mb-14">
+          <p className="text-sm uppercase tracking-[0.4em] text-app-accent mb-3">Skills</p>
+          <h2 className="text-4xl font-bold text-app-text dark:text-white mb-4">
+            What I Build With
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
-            I keep the skill story direct: Frontend, Backend, AI / Cloud, and tooling you can trust.
+          <p className="mx-auto max-w-xl text-app-muted dark:text-slate-400 text-sm leading-relaxed">
+            Four skill groups, clearly organized for recruiters and hiring managers.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_0.95fr]">
-          <div className="rounded-[2rem] border border-cyan-500/10 bg-app-surface p-8 shadow-[0_25px_80px_rgba(0,212,170,0.08)] dark:bg-[#081924] dark:shadow-[0_25px_80px_rgba(0,212,170,0.12)]">
-            <div className="mb-6 flex flex-wrap gap-3">
-              {skillPills.map((skill) => (
-                <span
-                  key={skill.label}
-                  className="rounded-full border border-[#1E2D47] bg-[#112240] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-200"
-                >
-                  {skill.label}
-                </span>
-              ))}
-            </div>
-
-            <div className="rounded-[1.75rem] bg-app-background p-4 dark:bg-[#091726]">
-              <Bar data={chartData} options={chartOptions} />
-            </div>
-          </div>
-
-          <div className="space-y-6 rounded-[2rem] border border-cyan-500/10 bg-[#081924] p-8 shadow-[0_25px_80px_rgba(0,212,170,0.12)]">
-            {skillsSummary.map((skill) => (
-              <div key={skill.title} className="rounded-3xl border border-white/5 bg-white/5 p-6">
-                <h3 className="text-xl font-semibold text-white">{skill.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{skill.description}</p>
+        <div className="grid gap-8 lg:grid-cols-2">
+          {/* Left — pill groups */}
+          <div className="space-y-5">
+            {groups.map((g) => (
+              <div
+                key={g.label}
+                className="rounded-2xl border border-app-border bg-app-surface p-6 dark:border-slate-700/50 dark:bg-slate-800/60"
+              >
+                <h3 className={`text-sm font-bold uppercase tracking-widest mb-4 ${g.color}`}>
+                  {g.label}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {g.pills.map((pill) => (
+                    <span
+                      key={pill}
+                      className="rounded-full border border-app-border bg-app-card px-3 py-1.5 text-xs font-semibold text-app-text dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200"
+                    >
+                      {pill}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* Right — chart */}
+          <div className="rounded-2xl border border-app-border bg-app-surface p-8 flex flex-col justify-between dark:border-slate-700/50 dark:bg-slate-800/60">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-app-accent mb-1">
+                Proficiency by Category
+              </p>
+              <p className="text-xs text-app-muted dark:text-slate-400 mb-8">
+                Self-assessed based on production project experience.
+              </p>
+            </div>
+            <div className="flex-1">
+              <Bar data={chartData} options={chartOptions} />
+            </div>
           </div>
         </div>
       </div>
