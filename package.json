@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Personal portfolio website built with React, Tailwind CSS, and Vite.",
   "scripts": {
-    "dev": "npx vite",
+    "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
