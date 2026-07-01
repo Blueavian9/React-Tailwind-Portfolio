@@ -14,32 +14,30 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 
-/* ─── Animated skill bar ─────────────────────────────────────────── */
 const SkillBar = ({ skill, animate }) => (
   <div className="group">
-    <div className="flex justify-between items-center mb-2">
-      <span className="text-white font-semibold text-sm">{skill.name}</span>
-      <span className="text-gray-400 text-sm">{skill.level}%</span>
+    <div className="flex justify-between items-center mb-1.5">
+      <span className="text-app-text dark:text-slate-200 font-medium text-sm">{skill.name}</span>
+      <span className="text-app-muted dark:text-slate-400 text-xs tabular-nums">
+        {skill.level}%
+      </span>
     </div>
-    <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+    <div className="w-full bg-app-border dark:bg-slate-700 rounded-full h-2 overflow-hidden">
       <div
-        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all ease-out group-hover:shadow-lg`}
+        className={`h-full rounded-full ${skill.color}`}
         style={{
           width: animate ? `${skill.level}%` : "0%",
           transition: animate ? "width 1.2s cubic-bezier(0.4, 0, 0.2, 1)" : "none",
-          boxShadow: "0 0 10px rgba(34, 211, 238, 0.3)",
         }}
       />
     </div>
   </div>
 );
 
-/* ─── About ──────────────────────────────────────────────────────── */
 const About = () => {
   const skillsRef = useRef(null);
   const [barsVisible, setBarsVisible] = useState(false);
 
-  // Trigger bar animation when skills section scrolls into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -55,210 +53,133 @@ const About = () => {
   }, []);
 
   const skills = [
-    // ── Frontend ──────────────────────────────────────────
     {
       name: "JavaScript / React",
       level: 95,
-      color: "from-yellow-400 to-orange-500",
+      color: "bg-gradient-to-r from-yellow-400 to-orange-500",
     },
-    { name: "TypeScript", level: 85, color: "from-yellow-300 to-yellow-500" },
-    { name: "Next.js", level: 83, color: "from-gray-300 to-gray-500" },
-
-    // ── Backend ───────────────────────────────────────────
-    {
-      name: "Node.js / Express",
-      level: 90,
-      color: "from-lime-400 to-green-600",
-    },
-    { name: "Python", level: 82, color: "from-blue-300 to-indigo-500" },
-
-    // ── Cloud & DevOps ────────────────────────────────────
-    { name: "AWS / Cloud", level: 85, color: "from-blue-400 to-cyan-500" },
-    { name: "DevOps / CI-CD", level: 85, color: "from-indigo-400 to-blue-600" },
-    {
-      name: "Docker / Kubernetes",
-      level: 78,
-      color: "from-sky-400 to-blue-500",
-    },
-
-    // ── AI & Data ─────────────────────────────────────────
+    { name: "TypeScript", level: 85, color: "bg-gradient-to-r from-blue-400 to-blue-600" },
+    { name: "Node.js / Express", level: 90, color: "bg-gradient-to-r from-lime-400 to-green-600" },
+    { name: "AWS / Cloud", level: 85, color: "bg-gradient-to-r from-sky-400 to-cyan-500" },
     {
       name: "AI / ML Integration",
       level: 88,
-      color: "from-purple-400 to-pink-500",
+      color: "bg-gradient-to-r from-purple-400 to-pink-500",
     },
+    { name: "LangChain / RAG", level: 80, color: "bg-gradient-to-r from-violet-400 to-purple-600" },
     {
-      name: "LangChain / RAG",
-      level: 80,
-      color: "from-violet-400 to-purple-600",
-    },
-
-    // ── Database ──────────────────────────────────────────
-    { name: "Database Design", level: 88, color: "from-teal-400 to-cyan-600" },
-    {
-      name: "PostgreSQL / MongoDB",
+      name: "PostgreSQL / Supabase",
       level: 85,
-      color: "from-green-400 to-teal-500",
+      color: "bg-gradient-to-r from-teal-400 to-cyan-600",
     },
+    { name: "Docker / DevOps", level: 78, color: "bg-gradient-to-r from-indigo-400 to-blue-600" },
   ];
 
   const achievements = [
     {
-      icon: <FaCode className="text-cyan-400" />,
+      icon: <FaCode className="text-app-accent" />,
       title: "5+ Years Experience",
-      description: "Full Stack development with modern technologies",
+      desc: "Full Stack development with modern technologies",
     },
     {
       icon: <FaCloud className="text-blue-400" />,
       title: "Cloud Architecture",
-      description: "AWS, DevOps pipelines, and scalable solutions",
+      desc: "AWS, DevOps pipelines, and scalable solutions",
     },
     {
       icon: <FaRobot className="text-purple-400" />,
       title: "AI Integration",
-      description: "OpenAI, AWS Polly V3, LangChain implementations",
+      desc: "OpenAI, AWS Polly V3, LangChain implementations",
     },
     {
       icon: <FaGraduationCap className="text-green-400" />,
       title: "Advanced Education",
-      description: "B.S. Cloud Network Engineering · M.S. AI/ML (WGU)",
+      desc: "B.S. Cloud Network Engineering · M.S. AI/ML (WGU)",
     },
   ];
 
   const certifications = [
-    {
-      icon: <FaCloud className="text-blue-400" />,
-      label: "AWS Cloud Practitioner",
-    },
-    {
-      icon: <FaShieldAlt className="text-cyan-400" />,
-      label: "CompTIA Security+",
-    },
+    { icon: <FaCloud className="text-blue-400" />, label: "AWS Cloud Practitioner" },
+    { icon: <FaShieldAlt className="text-app-accent" />, label: "CompTIA Security+" },
     {
       icon: <FaCertificate className="text-purple-400" />,
       label: "WGU — B.S. Cloud & Network Eng.",
     },
-    {
-      icon: <FaRobot className="text-pink-400" />,
-      label: "M.S. AI/ML (In Progress)",
-    },
+    { icon: <FaRobot className="text-pink-400" />, label: "M.S. AI/ML (In Progress)" },
   ];
+
+  const card =
+    "rounded-2xl border border-app-border bg-app-surface p-8 dark:border-slate-700/50 dark:bg-slate-800/60";
 
   return (
     <section
-      className="bg-gradient-to-b from-slate-100 to-slate-200 text-app-text py-20 dark:from-[#141e30] dark:to-[#243b55] dark:text-white"
       id="about"
+      className="bg-app-background text-app-text py-20 dark:bg-[#0a1628] dark:text-slate-100 transition-colors duration-500"
     >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        {/* ── Section Header ── */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-blue-500">
-              About Me
-            </span>
+          <p className="text-sm uppercase tracking-[0.4em] text-app-accent mb-3">About</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-app-text dark:text-white mb-4">
+            About Me
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            I build Full-Stack Apps with Payments, Auth, and Automation.
+          <p className="text-lg text-app-muted dark:text-slate-400 max-w-2xl mx-auto">
+            Full Stack Cloud &amp; AI Engineer — building production systems that matter.
           </p>
         </div>
 
-        {/* ── Two-column layout ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left — Story */}
+        {/* Two-column */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          {/* Left — Story + Certs */}
           <div className="space-y-6">
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
-              <div className="flex items-center mb-6">
-                <FaLightbulb className="text-3xl text-yellow-400 mr-4" />
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                  My Odyssey
-                </h3>
+            <div className={card}>
+              <div className="flex items-center mb-5 gap-3">
+                <FaLightbulb className="text-2xl text-yellow-400" />
+                <h3 className="text-xl font-bold text-app-text dark:text-white">My Story</h3>
               </div>
-
-              <div className="space-y-4 text-gray-300 font-mono leading-relaxed text-sm">
+              <div className="space-y-4 text-app-muted dark:text-slate-300 text-sm leading-relaxed">
                 <p>
-                  Hi, I&apos;m Cesar A. Aguilar — a devoted husband to my wife
-                  <span className="text-cyan-400 font-semibold"> Neha </span>
-                  for over six years, and proud &ldquo;pet dad&rdquo; to two spoiled guinea pigs,
-                  <span className="text-teal-400 font-semibold"> Munchie </span>
-                  and
-                  <span className="text-teal-400 font-semibold"> Coco</span>. They keep me company
-                  (and occasionally steal my snacks) while I code late into the night.
-                </p>
-
-                <p>
-                  By day, I serve as a
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Security Officer for Los Angeles Council District 14 in El Sereno
-                  </span>
-                  , guarding Councilmember Ysabel Jurado&apos;s office and supporting community
-                  safety. I also work Saturdays for the
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Lincoln Heights Youth Center
-                  </span>{" "}
-                  and the
-                  <span className="text-blue-400 font-semibold">
-                    {" "}
-                    Hollenbeck LAPD Security Services Division
-                  </span>
-                  , serving LAPD posts including
-                  <span className="text-blue-400 font-semibold"> PiperTech</span> and the
-                  <span className="text-blue-400 font-semibold"> Hyperion S.A.F.E. Center</span>—
-                  all while studying full time at
-                  <span className="text-indigo-400 font-semibold">
-                    {" "}
-                    Western Governors University (WGU)
+                  I&apos;m <span className="text-app-accent font-semibold">Cesar A. Aguilar</span> —
+                  a devoted husband to my wife{" "}
+                  <span className="font-semibold text-app-text dark:text-white">Neha</span> and
+                  proud pet dad to guinea pigs{" "}
+                  <span className="font-semibold text-app-text dark:text-white">
+                    Munchie &amp; Coco
                   </span>
                   .
                 </p>
-
                 <p>
-                  By passion, I volunteer my technical skills to local organizations like
-                  <span className="text-purple-400 font-semibold">
-                    {" "}
-                    Barrio Action Youth &amp; Family Resource Center
-                  </span>{" "}
-                  and
-                  <span className="text-purple-400 font-semibold"> College Bridge Academy</span>,
-                  building digital tools to help them grow and better serve the neighborhood.
+                  By day I serve as a Security Officer for{" "}
+                  <span className="text-blue-500 dark:text-blue-400 font-medium">
+                    Los Angeles Council District 14
+                  </span>
+                  , supporting community safety across El Sereno, Lincoln Heights, and Hollenbeck.
                 </p>
-
                 <p>
-                  When the uniform comes off, I turn to my other calling: becoming a world-class
-                  technologist. I&apos;m currently pursuing a
-                  <span className="text-indigo-400 font-semibold">
-                    {" "}
+                  By passion, I volunteer technical skills to local organizations — building digital
+                  tools that help communities grow. Currently pursuing a{" "}
+                  <span className="text-app-accent font-medium">
                     B.S. in Cloud &amp; Network Engineering
                   </span>{" "}
-                  and a
-                  <span className="text-indigo-400 font-semibold">
-                    {" "}
-                    Master&apos;s in AI &amp; Machine Learning
-                  </span>
-                  , while refining my craft as a
-                  <span className="text-cyan-400 font-semibold">
-                    {" "}
-                    Full Stack AI Integrations Systems Architect
-                  </span>
-                  .
+                  and{" "}
+                  <span className="text-app-accent font-medium">
+                    M.S. in AI &amp; Machine Learning
+                  </span>{" "}
+                  at WGU.
                 </p>
-
                 <p>
-                  It&apos;s a full life — long workdays, overtime shifts, late-night coding
-                  sessions, and family time — but I wouldn&apos;t trade it. Every project I build,
-                  whether for a neighborhood non-profit or an AI-powered startup, is fueled by my
-                  belief that technology should strengthen communities and create opportunities for
-                  everyone.
+                  Every project I build — whether for a neighborhood non-profit or an AI-powered
+                  startup — is fueled by the belief that technology should strengthen communities
+                  and create opportunities for everyone.
                 </p>
               </div>
             </div>
 
-            {/* ── Certifications row ── */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30">
-              <div className="flex items-center mb-4">
-                <FaCertificate className="text-2xl text-yellow-400 mr-3" />
-                <h3 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+            {/* Certs */}
+            <div className={card}>
+              <div className="flex items-center mb-4 gap-3">
+                <FaCertificate className="text-xl text-yellow-400" />
+                <h3 className="text-lg font-bold text-app-text dark:text-white">
                   Certifications &amp; Education
                 </h3>
               </div>
@@ -266,10 +187,10 @@ const About = () => {
                 {certifications.map((cert, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-700/40 border border-gray-600/30 hover:border-cyan-400/60 hover:shadow-md hover:shadow-cyan-400/20 hover:-translate-y-0.5 transition-all duration-200"
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl border border-app-border bg-app-card hover:border-app-accent/40 transition-all duration-200 dark:border-slate-700 dark:bg-slate-700/30 dark:hover:border-app-accent/50"
                   >
-                    <span className="text-lg flex-shrink-0">{cert.icon}</span>
-                    <span className="text-gray-300 text-xs font-medium leading-tight">
+                    <span className="text-base flex-shrink-0">{cert.icon}</span>
+                    <span className="text-app-text dark:text-slate-300 text-xs font-medium leading-tight">
                       {cert.label}
                     </span>
                   </div>
@@ -278,14 +199,13 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right — Skills & Achievements */}
-          <div className="space-y-8" ref={skillsRef}>
-            {/* Technical Skills */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
-              <div className="flex items-center mb-6">
-                <FaChartLine className="text-3xl text-cyan-400 mr-4" />
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                  Technical Expertise
+          {/* Right — Skills + Achievements */}
+          <div className="space-y-6" ref={skillsRef}>
+            <div className={card}>
+              <div className="flex items-center mb-6 gap-3">
+                <FaChartLine className="text-2xl text-app-accent" />
+                <h3 className="text-xl font-bold text-app-text dark:text-white">
+                  Technical Skills
                 </h3>
               </div>
               <div className="space-y-4">
@@ -295,28 +215,27 @@ const About = () => {
               </div>
             </div>
 
-            {/* Key Achievements */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
-              <div className="flex items-center mb-6">
-                <FaAward className="text-3xl text-yellow-400 mr-4" />
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+            <div className={card}>
+              <div className="flex items-center mb-5 gap-3">
+                <FaAward className="text-2xl text-yellow-400" />
+                <h3 className="text-xl font-bold text-app-text dark:text-white">
                   Key Achievements
                 </h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {achievements.map((achievement, i) => (
+                {achievements.map((a, i) => (
                   <div
                     key={i}
-                    className="group p-4 rounded-xl bg-gray-700/30 border border-gray-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:-translate-y-1"
+                    className="group p-4 rounded-xl border border-app-border bg-app-card hover:border-app-accent/40 hover:-translate-y-0.5 transition-all duration-200 dark:border-slate-700 dark:bg-slate-700/30"
                   >
-                    <div className="flex items-center mb-3">
-                      <div className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-300">
-                        {achievement.icon}
-                      </div>
-                      <h4 className="font-bold text-white text-sm">{achievement.title}</h4>
+                    <div className="flex items-center mb-2 gap-2">
+                      <span className="text-xl">{a.icon}</span>
+                      <h4 className="font-semibold text-app-text dark:text-white text-sm">
+                        {a.title}
+                      </h4>
                     </div>
-                    <p className="text-gray-400 text-xs leading-relaxed">
-                      {achievement.description}
+                    <p className="text-app-muted dark:text-slate-400 text-xs leading-relaxed">
+                      {a.desc}
                     </p>
                   </div>
                 ))}
@@ -325,51 +244,38 @@ const About = () => {
           </div>
         </div>
 
-        {/* ── CTA — GitHub + LinkedIn + Resume Download ── */}
+        {/* CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+          <div className="rounded-2xl border border-app-accent/20 bg-app-surface p-8 dark:bg-slate-800/40">
+            <h3 className="text-2xl font-bold text-app-text dark:text-white mb-2">
               Open to Full-Time &amp; Contract Roles
             </h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Full Stack · Cloud · AI Integration · Los Angeles (open to remote). Let&apos;s build
-              something that actually matters.
+            <p className="text-app-muted dark:text-slate-400 mb-8 max-w-xl mx-auto text-sm">
+              Full Stack · Cloud · AI Integration · Los Angeles (open to remote).
             </p>
-
             <div className="flex flex-wrap justify-center gap-4">
-              {/* GitHub */}
               <a
                 href="https://github.com/Blueavian9"
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="GitHub Profile"
-                className="flex items-center gap-3 px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-cyan-400/50 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105"
+                className="flex items-center gap-2 px-6 py-3 rounded-full border border-app-border bg-app-card hover:border-app-accent/50 text-app-text dark:text-slate-200 dark:border-slate-600 dark:bg-slate-700/50 transition-all duration-200 text-sm font-medium"
               >
-                <FaGithub className="text-xl text-gray-300" />
-                <span className="text-gray-300">GitHub</span>
+                <FaGithub className="text-lg" /> GitHub
               </a>
-
-              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/cesaradrianaguilar/"
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="LinkedIn Profile"
-                className="flex items-center gap-3 px-6 py-3 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/40 hover:border-blue-400 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-400/30 hover:scale-105"
+                className="flex items-center gap-2 px-6 py-3 rounded-full border border-blue-500/40 bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-300 transition-all duration-200 text-sm font-medium"
               >
-                <FaLinkedin className="text-xl text-blue-400" />
-                <span className="text-blue-300">LinkedIn</span>
+                <FaLinkedin className="text-lg" /> LinkedIn
               </a>
-
-              {/* Resume Download */}
               <a
                 href="/assets/Cesar-Aguilar-Resume.pdf"
                 download="Cesar-Aguilar-Resume.pdf"
-                aria-label="Download Resume PDF"
-                className="flex items-center gap-3 px-6 py-3 bg-teal-600/20 hover:bg-teal-600/30 border border-teal-500/40 hover:border-teal-400 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-teal-400/30 hover:scale-105"
+                className="flex items-center gap-2 px-6 py-3 rounded-full border border-app-accent/40 bg-app-accent/10 hover:bg-app-accent/20 text-app-accent transition-all duration-200 text-sm font-medium"
               >
-                <FaDownload className="text-xl text-teal-400" />
-                <span className="text-teal-300">Resume PDF</span>
+                <FaDownload className="text-lg" /> Resume PDF
               </a>
             </div>
           </div>

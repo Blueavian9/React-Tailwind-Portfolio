@@ -6,16 +6,25 @@ export default {
     extend: {
       colors: {
         app: {
-          // Light-mode base tokens (components use `dark:` overrides where needed)
-          background: "#F8F9FA", // page base (light)
-          surface: "#FFFFFF", // card / surface (light)
-          text: "#1A1A1A", // headings / primary text (light)
-          muted: "#4A5568", // body / captions (light)
-          accent: "#00D4AA", // CTAs, active nav (shared)
+          // ── Light tokens ──────────────────────────────────────
+          background: "#F8F9FA",
+          surface: "#FFFFFF",
+          text: "#1A1A1A",
+          muted: "#4A5568",
+          accent: "#00D4AA",
           "accent-dim": "#00A882",
           border: "#CBD5E1",
           card: "#F1F5F9",
           pill: "#E2E8F0",
+
+          // ── Dark tokens (use as dark:bg-app-dark-background etc.) ──
+          "dark-background": "#080D1A",
+          "dark-surface": "#0F1829",
+          "dark-text": "#F0F4FF",
+          "dark-muted": "#94A3B8",
+          "dark-border": "#1E2D47",
+          "dark-card": "#112240",
+          "dark-pill": "#1E2D47",
         },
         neon: "#03e9f4",
       },
