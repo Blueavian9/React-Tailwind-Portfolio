@@ -51,9 +51,9 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div
         className={`backdrop-blur-lg transition-all duration-300 border-b ${
-        isScrolled
-  ? "bg-app-surface/95 dark:bg-[#0F1829]/95 border-app-border/10 dark:border-[#1E2D47]/10 shadow-lg"
-  : "bg-app-surface/80 dark:bg-[#080D1A]/80"
+          isScrolled
+            ? "bg-app-surface/95dark:bg-[#0F1829]/95 border-app-border/10 dark:border-[#1E2D47]/10 shadow-lg"
+            : "bg-app-surface/80 dark:bg-[#080D1A]/80"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

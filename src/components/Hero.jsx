@@ -52,7 +52,7 @@ export default function Hero() {
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-app-border border-app-border dark: border-[#1E2D47]bg-app-pill dark:bg-[#1E2D47] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-app-text dark: text-slate-200"
+                className="rounded-full border border-app-border dark: border-[#1E2D47]bg-app-pill dark:bg-[#1E2D47] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-app-text dark:text-slate-200"
               >
                 {tech}
               </span>
