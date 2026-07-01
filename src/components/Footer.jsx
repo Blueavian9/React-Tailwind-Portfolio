@@ -2,51 +2,53 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
-          <div className="flex-1 mb-4 md:mb-0">
-            <h3 className="text-2xl font-bold mb-2">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
-                Cesar Adrian Aguilar
-              </span>
+    <footer className="bg-app-surface text-app-text border-t border-app-border dark:bg-[#0F1829] dark:text-slate-400 dark:border-slate-700/50 transition-colors duration-500">
+      <div className="container mx-auto px-8 md:px-16 lg:px-24 py-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Brand */}
+          <div>
+            <h3 className="text-lg font-bold text-app-text dark:text-white">
+              Cesar Adrian Aguilar
             </h3>
-            <p className="text-gray-300 font-mono text-justify">
-              Hi, I'm a devoted husband to my wife for over eight years and counting. I am also a
-              proud “pet dad” to two spoiled guinea pigs, Munchie and Coco. They keep me company and
-              occasionally steal my snacks while I code late into the night. By day, I serve as a{" "}
-              <span className="text-indigo-400 font-semibold">Security Officer</span> for a Los
-              Angeles City Council office.
+            <p className="text-app-muted dark:text-slate-400 text-sm mt-1">
+              Full Stack Cloud &amp; AI Engineer · Los Angeles, CA
             </p>
           </div>
-        </div>
-      </div>
 
-      <div className="bg-blue-950 border-t border-gray-600 pt-4 flex justify-center items-center">
-        <div className="flex space-x-4 my-4">
-          <a
-            href="https://www.linkedin.com/in/cesar-aguilar-blueavian9/"
-            className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
-            aria-label="LinkedIn"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/Blueavian9"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
-            aria-label="GitHub"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <FaGithub />
-          </a>
+          {/* Social links */}
+          <div className="flex items-center gap-5">
+            <a
+              href="https://www.linkedin.com/in/cesaradrianaguilar/"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="LinkedIn"
+              className="text-app-muted hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
+            >
+              <FaLinkedin className="text-xl" />
+            </a>
+            <a
+              href="https://github.com/Blueavian9"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="GitHub"
+              className="text-app-muted hover:text-app-text dark:hover:text-white transition-colors duration-200"
+            >
+              <FaGithub className="text-xl" />
+            </a>
+            <a
+              href="mailto:cesar.aguilar.dev@gmail.com"
+              className="text-xs font-medium px-4 py-2 rounded-full border border-app-accent/40 text-app-accent hover:bg-app-accent/10 transition-all duration-200"
+            >
+              cesar.aguilar.dev@gmail.com
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div className="text-center text-gray-500 text-sm mt-4 pb-4">
-        &copy; {new Date().getFullYear()} Cesar Adrian Aguilar. All rights reserved.
+        <div className="border-t border-app-border dark:border-slate-700/50 mt-8 pt-6 text-center">
+          <p className="text-app-muted dark:text-slate-500 text-xs">
+            &copy; {new Date().getFullYear()} Cesar Adrian Aguilar. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
