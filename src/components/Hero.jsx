@@ -30,7 +30,7 @@ export default function Hero() {
           {/* Available badge */}
           <div className="inline-flex items-center gap-3 rounded-full border border-cyan-500/20 bg-app-surface/80 dark:bg-[#0F1829]/80 px-4 py-2 text-xs uppercase tracking-[0.24em] text-cyan-700 dark:text-cyan-200 backdrop-blur-sm">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            Open to remote roles —{" "}
+            Open to remote roles.{" "}
             <a href="mailto:blueavian9@gmail.com" className="underline">
               blueavian9@gmail.com
             </a>
@@ -43,7 +43,7 @@ export default function Hero() {
               Full Stack AI Engineer
             </h1>
             <p className="max-w-2xl text-base leading-relaxed text-app-muted md:text-lg">
-              I build production SaaS apps powered by AI — currently open to remote roles.
+              I build production SaaS apps powered by AI
             </p>
           </div>
 

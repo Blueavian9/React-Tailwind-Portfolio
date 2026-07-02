@@ -59,22 +59,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="hidden md:flex items-center gap-8 flex-1">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => smoothScrollTo(item.id)}
-                  className={`relative text-sm font-medium transition-colors duration-300 ${
-                    activeSection === item.id
-                      ? "text-app-accent"
-                      : "text-app-muted hover:text-app-text"
-                  }`}
-                >
-                  {item.label}
-                  {activeSection === item.id && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-app-accent rounded-full" />
-                  )}
-                </button>
-              ))}
+           
             </div>
 
             <div className="flex items-center gap-4">

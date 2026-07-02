@@ -120,9 +120,7 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm uppercase tracking-[0.4em] text-app-accent mb-3">About</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-app-text dark:text-white mb-4">
-            About Me
-          </h2>
+
           <p className="text-lg text-app-muted dark:text-slate-400 max-w-2xl mx-auto">
             Full Stack Cloud &amp; AI Engineer — building production systems that matter.
           </p>
