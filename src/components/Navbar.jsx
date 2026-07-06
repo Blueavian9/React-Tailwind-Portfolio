@@ -67,14 +67,12 @@ const Navbar = ({ theme, toggleTheme }) => {
       </div>
 
       {/* Main navbar */}
-      <div
-        className={`backdrop-blur-lg transition-all duration-300 border-b ${
-          isScrolled
-            ? "bg-app-surface/95 dark:bg-[#0F1829]/95 border-app-border/10 dark:border-[#1E2D47]/10 shadow-lg"
-            : "bg-app-surface/80 dark:bg-[#080D1A]/80"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className={`backdrop-blur-lg transition-all duration-300 border-b ${
+  isScrolled
+    ? "bg-app-surface/95 dark:bg-[#0F1829]/95 border-app-border/10 dark:border-[#1E2D47]/10 shadow-lg"
+    : "bg-app-surface/80 dark:bg-[#080D1A]/80" 
+}`}      
+  >      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo mark — left anchor */}
             <button

@@ -4,6 +4,19 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        app: {
+          surface: "#ffffff",
+          background: "#f8fafc",
+          text: "#0f172a",
+          muted: "#6b7280",
+          accent: "#00D4AA",
+          border: "#e6eef0",
+          "dark-surface": "#0F1829",
+          "dark-background": "#080D1A",
+          "dark-border": "#1E2D47",
+        },
+      },
       keyframes: {
         btnAnim1: { "0%": { left: "-100%" }, "50%,100%": { left: "100%" } },
         btnAnim2: { "0%": { top: "-100%" }, "50%,100%": { top: "100%" } },
