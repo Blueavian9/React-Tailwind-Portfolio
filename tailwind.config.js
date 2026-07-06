@@ -4,6 +4,22 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        app: {
+          accent: "#00d4aa",
+          "accent-dim": "#67f3cb",
+          surface: "#f8fbff",
+          "dark-surface": "#0f1829",
+          background: "#f8fbff",
+          "dark-background": "#080d1a",
+          border: "#dbe9f8",
+          "dark-border": "#1e2d47",
+          text: "#0f172a",
+          muted: "#64748b",
+          card: "#ffffff",
+          pill: "#fef3c7",
+        },
+      },
       keyframes: {
         btnAnim1: { "0%": { left: "-100%" }, "50%,100%": { left: "100%" } },
         btnAnim2: { "0%": { top: "-100%" }, "50%,100%": { top: "100%" } },
