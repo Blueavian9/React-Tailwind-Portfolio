@@ -18,9 +18,7 @@ const SkillBar = ({ skill, animate }) => (
   <div className="group">
     <div className="flex justify-between items-center mb-1.5">
       <span className="text-app-text dark:text-slate-200 font-medium text-sm">{skill.name}</span>
-      <span className="text-app-muted dark:text-slate-400 text-xs tabular-nums">
-        {skill.level}%
-      </span>
+      <span className="text-app-muted dark:text-slate-400 text-xs tabular-nums">{skill.level}%</span>
     </div>
     <div className="w-full bg-app-border dark:bg-slate-700 rounded-full h-2 overflow-hidden">
       <div
@@ -28,6 +26,7 @@ const SkillBar = ({ skill, animate }) => (
         style={{
           width: animate ? `${skill.level}%` : "0%",
           transition: animate ? "width 1.2s cubic-bezier(0.4, 0, 0.2, 1)" : "none",
+          boxShadow: "0 0 10px rgba(34, 211, 238, 0.3)",
         }}
       />
     </div>
@@ -48,30 +47,19 @@ const About = () => {
       },
       { threshold: 0.25 }
     );
+
     if (skillsRef.current) observer.observe(skillsRef.current);
     return () => observer.disconnect();
   }, []);
 
   const skills = [
-    {
-      name: "JavaScript / React",
-      level: 95,
-      color: "bg-gradient-to-r from-yellow-400 to-orange-500",
-    },
+    { name: "JavaScript / React", level: 95, color: "bg-gradient-to-r from-yellow-400 to-orange-500" },
     { name: "TypeScript", level: 85, color: "bg-gradient-to-r from-blue-400 to-blue-600" },
     { name: "Node.js / Express", level: 90, color: "bg-gradient-to-r from-lime-400 to-green-600" },
     { name: "AWS / Cloud", level: 85, color: "bg-gradient-to-r from-sky-400 to-cyan-500" },
-    {
-      name: "AI / ML Integration",
-      level: 88,
-      color: "bg-gradient-to-r from-purple-400 to-pink-500",
-    },
+    { name: "AI / ML Integration", level: 88, color: "bg-gradient-to-r from-purple-400 to-pink-500" },
     { name: "LangChain / RAG", level: 80, color: "bg-gradient-to-r from-violet-400 to-purple-600" },
-    {
-      name: "PostgreSQL / Supabase",
-      level: 85,
-      color: "bg-gradient-to-r from-teal-400 to-cyan-600",
-    },
+    { name: "PostgreSQL / Supabase", level: 85, color: "bg-gradient-to-r from-teal-400 to-cyan-600" },
     { name: "Docker / DevOps", level: 78, color: "bg-gradient-to-r from-indigo-400 to-blue-600" },
   ];
 
@@ -101,10 +89,7 @@ const About = () => {
   const certifications = [
     { icon: <FaCloud className="text-blue-400" />, label: "AWS Cloud Practitioner" },
     { icon: <FaShieldAlt className="text-app-accent" />, label: "CompTIA Security+" },
-    {
-      icon: <FaCertificate className="text-purple-400" />,
-      label: "WGU — B.S. Cloud & Network Eng.",
-    },
+    { icon: <FaCertificate className="text-purple-400" />, label: "WGU — B.S. Cloud & Network Eng." },
     { icon: <FaRobot className="text-pink-400" />, label: "M.S. AI/ML (In Progress)" },
   ];
 
@@ -120,9 +105,8 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm uppercase tracking-[0.4em] text-app-accent mb-3">About</p>
-
           <p className="text-lg text-app-muted dark:text-slate-400 max-w-2xl mx-auto">
-            Full Stack Cloud &amp; AI Engineer — building production systems that matter.
+            Full Stack Cloud & AI Engineer — building production systems that matter.
           </p>
         </div>
 
@@ -137,38 +121,26 @@ const About = () => {
               </div>
               <div className="space-y-4 text-app-muted dark:text-slate-300 text-sm leading-relaxed">
                 <p>
-                  I&apos;m <span className="text-app-accent font-semibold">Cesar A. Aguilar</span> —
-                  a devoted husband to my wife{" "}
-                  <span className="font-semibold text-app-text dark:text-white">Neha</span> and
-                  proud pet dad to guinea pigs{" "}
-                  <span className="font-semibold text-app-text dark:text-white">
-                    Munchie &amp; Coco
-                  </span>
-                  .
+                  Hi, I&apos;m <span className="text-app-accent font-semibold">Cesar A. Aguilar</span> — a devoted husband
+                  to my wife <span className="text-app-text dark:text-white font-semibold">Neha</span> and proud pet dad to
+                  guinea pigs <span className="text-app-text dark:text-white font-semibold">Munchie</span> and
+                  <span className="text-app-text dark:text-white font-semibold"> Coco</span>.
                 </p>
                 <p>
-                  By day I serve as a Security Officer for{" "}
-                  <span className="text-blue-500 dark:text-blue-400 font-medium">
-                    Los Angeles Council District 14
-                  </span>
-                  , supporting community safety across El Sereno, Lincoln Heights, and Hollenbeck.
+                  By day, I serve as a <span className="text-app-accent font-semibold">Security Officer</span> for Los Angeles
+                  Council District 14 in El Sereno, and I support community safety through weekend work
+                  with local organizations.
                 </p>
                 <p>
-                  By passion, I volunteer technical skills to local organizations — building digital
-                  tools that help communities grow. Currently pursuing a{" "}
-                  <span className="text-app-accent font-medium">
-                    B.S. in Cloud &amp; Network Engineering
-                  </span>{" "}
-                  and{" "}
-                  <span className="text-app-accent font-medium">
-                    M.S. in AI &amp; Machine Learning
-                  </span>{" "}
-                  at WGU.
+                  When the uniform comes off, I turn to my other calling: becoming a world-class
+                  technologist. I&apos;m currently pursuing a <span className="text-app-accent font-semibold">B.S. in
+                  Cloud & Network Engineering</span> and a <span className="text-app-accent font-semibold">M.S. in AI &
+                  Machine Learning</span> at WGU.
                 </p>
                 <p>
-                  Every project I build — whether for a neighborhood non-profit or an AI-powered
-                  startup — is fueled by the belief that technology should strengthen communities
-                  and create opportunities for everyone.
+                  Every project I build — whether for a neighborhood nonprofit or an AI-powered startup — is
+                  fueled by the belief that technology should strengthen communities and create opportunities
+                  for everyone.
                 </p>
               </div>
             </div>
@@ -177,9 +149,7 @@ const About = () => {
             <div className={card}>
               <div className="flex items-center mb-4 gap-3">
                 <FaCertificate className="text-xl text-yellow-400" />
-                <h3 className="text-lg font-bold text-app-text dark:text-white">
-                  Certifications &amp; Education
-                </h3>
+                <h3 className="text-lg font-bold text-app-text dark:text-white">Certifications &amp; Education</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {certifications.map((cert, i) => (
@@ -202,9 +172,7 @@ const About = () => {
             <div className={card}>
               <div className="flex items-center mb-6 gap-3">
                 <FaChartLine className="text-2xl text-app-accent" />
-                <h3 className="text-xl font-bold text-app-text dark:text-white">
-                  Technical Skills
-                </h3>
+                <h3 className="text-xl font-bold text-app-text dark:text-white">Technical Skills</h3>
               </div>
               <div className="space-y-4">
                 {skills.map((skill, i) => (
@@ -216,9 +184,7 @@ const About = () => {
             <div className={card}>
               <div className="flex items-center mb-5 gap-3">
                 <FaAward className="text-2xl text-yellow-400" />
-                <h3 className="text-xl font-bold text-app-text dark:text-white">
-                  Key Achievements
-                </h3>
+                <h3 className="text-xl font-bold text-app-text dark:text-white">Key Achievements</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {achievements.map((a, i) => (
@@ -228,13 +194,9 @@ const About = () => {
                   >
                     <div className="flex items-center mb-2 gap-2">
                       <span className="text-xl">{a.icon}</span>
-                      <h4 className="font-semibold text-app-text dark:text-white text-sm">
-                        {a.title}
-                      </h4>
+                      <h4 className="font-semibold text-app-text dark:text-white text-sm">{a.title}</h4>
                     </div>
-                    <p className="text-app-muted dark:text-slate-400 text-xs leading-relaxed">
-                      {a.desc}
-                    </p>
+                    <p className="text-app-muted dark:text-slate-400 text-xs leading-relaxed">{a.desc}</p>
                   </div>
                 ))}
               </div>

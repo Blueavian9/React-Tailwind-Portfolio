@@ -40,9 +40,9 @@ const ContactForm = () => {
   return (
     <section
       id="contact"
-      className="bg-app-background text-app-text py-20 dark:bg-[#080D1A] dark:text-slate-100 transition-colors duration-500"
+      className="bg-app-background text-app-text py-20 dark:bg-app-dark-background dark:text-slate-100 transition-colors duration-500"
     >
-      {/* Toast */}
+      {/* Toast notification */}
       {toast && (
         <div
           className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-xl shadow-lg text-white text-sm font-semibold transition-all duration-300 ${toast.type === "success" ? "bg-emerald-500" : "bg-red-500"}`}

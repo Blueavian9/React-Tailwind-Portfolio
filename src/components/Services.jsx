@@ -78,10 +78,7 @@ const chartOptions = {
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="bg-app-background text-app-text py-20 dark:bg-[#0F1829] dark:text-slate-100 transition-colors duration-500"
-    >
+    <section id="skills" className="bg-[#0F1829] py-20 text-[#F0F4FF]">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         {/* Header */}
         <div className="text-center mb-14">
@@ -94,42 +91,20 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
-          {/* Left — pill groups */}
-          <div className="space-y-5">
-            {groups.map((g) => (
-              <div
-                key={g.label}
-                className="rounded-2xl border border-app-border bg-app-surface p-6 dark:border-slate-700/50 dark:bg-slate-800/60"
-              >
-                <h3 className={`text-sm font-bold uppercase tracking-widest mb-4 ${g.color}`}>
-                  {g.label}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {g.pills.map((pill) => (
-                    <span
-                      key={pill}
-                      className="rounded-full border border-app-border bg-app-card px-3 py-1.5 text-xs font-semibold text-app-text dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200"
-                    >
-                      {pill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Right — chart */}
-          <div className="rounded-2xl border border-app-border bg-app-surface p-8 flex flex-col justify-between dark:border-slate-700/50 dark:bg-slate-800/60">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-app-accent mb-1">
-                Proficiency by Category
-              </p>
-              <p className="text-xs text-app-muted dark:text-slate-400 mb-8">
-                Self-assessed based on production project experience.
-              </p>
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_0.95fr]">
+          <div className="rounded-[2rem] border border-cyan-500/10 bg-[#081924] p-8 shadow-[0_25px_80px_rgba(0,212,170,0.12)]">
+            <div className="mb-6 flex flex-wrap gap-3">
+              {skillPills.map((skill) => (
+                <span
+                  key={skill.label}
+                  className="rounded-full border border-[#1E2D47] bg-[#112240] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-200"
+                >
+                  {skill.label}
+                </span>
+              ))}
             </div>
-            <div className="flex-1">
+
+            <div className="rounded-[1.75rem] bg-[#091726] p-4">
               <Bar data={chartData} options={chartOptions} />
             </div>
           </div>
