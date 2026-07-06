@@ -4,30 +4,6 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        app: {
-          // ── Light tokens ──────────────────────────────────────
-          background: "#F8F9FA",
-          surface: "#FFFFFF",
-          text: "#1A1A1A",
-          muted: "#4A5568",
-          accent: "#00D4AA",
-          "accent-dim": "#00A882",
-          border: "#CBD5E1",
-          card: "#F1F5F9",
-          pill: "#E2E8F0",
-
-          // ── Dark tokens (use as dark:bg-app-dark-background etc.) ──
-          "dark-background": "#080D1A",
-          "dark-surface": "#0F1829",
-          "dark-text": "#F0F4FF",
-          "dark-muted": "#94A3B8",
-          "dark-border": "#1E2D47",
-          "dark-card": "#112240",
-          "dark-pill": "#1E2D47",
-        },
-        neon: "#03e9f4",
-      },
       keyframes: {
         btnAnim1: { "0%": { left: "-100%" }, "50%,100%": { left: "100%" } },
         btnAnim2: { "0%": { top: "-100%" }, "50%,100%": { top: "100%" } },

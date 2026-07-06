@@ -49,10 +49,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="bg-app-surface text-app-text py-20 dark:bg-[#080D1A] dark:text-slate-100 transition-colors duration-500"
-    >
+    <section id="projects" className="bg-[#080D1A] py-20 text-[#F0F4FF]">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         {/* Header */}
         <div className="text-center mb-14">
@@ -70,10 +67,9 @@ const Projects = () => {
           {projects.map((project) => (
             <article
               key={project.id}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-app-border bg-app-background transition-all duration-300 hover:-translate-y-1 hover:border-app-accent/30 hover:shadow-[0_20px_60px_rgba(0,212,170,0.08)] dark:border-slate-700/50 dark:bg-[#0F1829] dark:hover:border-cyan-500/30 dark:hover:shadow-[0_20px_60px_rgba(0,212,170,0.1)]"
+              className="group overflow-hidden rounded-[2rem] border border-[#1E2D47] bg-[#0F1829]/95 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 hover:border-cyan-400/30"
             >
-              {/* Image */}
-              <div className="overflow-hidden bg-app-card dark:bg-slate-800">
+              <div className="overflow-hidden rounded-3xl border border-cyan-500/10 bg-[#091724] mb-6">
                 <img
                   src={`https://images.pexels.com/photos/${[577585, 163064, 2159, 5668858][project.id - 1]}/pexels-photo-${[577585, 163064, 2159, 5668858][project.id - 1]}.jpeg?auto=compress&cs=tinysrgb&w=800`}
                   alt={project.name}
@@ -102,8 +98,8 @@ const Projects = () => {
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
                     <span
-                      key={t}
-                      className="rounded-full border border-app-border bg-app-surface px-3 py-1 text-xs font-medium text-app-muted dark:border-slate-600 dark:bg-slate-800 dark:text-slate-300"
+                      key={skill}
+                      className="rounded-full bg-[#112240] px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-slate-200"
                     >
                       {t}
                     </span>
