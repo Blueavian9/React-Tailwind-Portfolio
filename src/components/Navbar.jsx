@@ -54,25 +54,27 @@ const Navbar = ({ theme, toggleTheme }) => {
         <div className="inline-flex items-center gap-2">
           <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
           <span>Available for remote roles —</span>
-          <a
+          
             href="mailto:blueavian9@gmail.com"
             className="underline text-cyan-700 dark:text-cyan-200"
           >
             blueavian9@gmail.com
           </a>
-        <div
-          className={`backdrop-blur-lg transition-all duration-300 border-b ${
-            isScrolled
-              ? "bg-app-surface/95 dark:bg-app-dark-surface/95 border-app-border/10 dark:border-app-dark-border/10 shadow-lg"
-              : "bg-app-surface/80 dark:bg-app-dark-background/80"
-          }`}
-        >
-      <div className={`backdrop-blur-lg transition-all duration-300 border-b ${
-  isScrolled
-    ? "bg-app-surface/95 dark:bg-[#0F1829]/95 border-app-border/10 dark:border-[#1E2D47]/10 shadow-lg"
-    : "bg-app-surface/80 dark:bg-[#080D1A]/80" 
-}`}      
-  >      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        </div>
+        <span className="text-slate-500 dark:text-gray-400">
+          Remote-ready Full Stack Cloud & AI Engineer
+        </span>
+      </div>
+
+      {/* Main navbar */}
+      <div
+        className={`backdrop-blur-lg transition-all duration-300 border-b ${
+          isScrolled
+            ? "bg-app-surface/95 dark:bg-app-dark-surface/95 border-app-border/10 dark:border-app-dark-border/10 shadow-lg"
+            : "bg-app-surface/80 dark:bg-app-dark-background/80"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo mark — left anchor */}
             <button
@@ -154,7 +156,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
             {/* Right side: Resume pill + ThemeToggle + Hamburger */}
             <div className="flex items-center gap-3">
-              <a
+              
                 href="/CesarAguilar_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -202,7 +204,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                 </button>
               ))}
               <div className="pt-3 px-4">
-                <a
+                
                   href="/CesarAguilar_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
