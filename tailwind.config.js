@@ -6,15 +6,18 @@ export default {
     extend: {
       colors: {
         app: {
-          surface: "#ffffff",
-          background: "#f8fafc",
+          accent: "#00d4aa",
+          "accent-dim": "#67f3cb",
+          surface: "#f8fbff",
+          "dark-surface": "#0f1829",
+          background: "#f8fbff",
+          "dark-background": "#080d1a",
+          border: "#dbe9f8",
+          "dark-border": "#1e2d47",
           text: "#0f172a",
-          muted: "#6b7280",
-          accent: "#00D4AA",
-          border: "#e6eef0",
-          "dark-surface": "#0F1829",
-          "dark-background": "#080D1A",
-          "dark-border": "#1E2D47",
+          muted: "#64748b",
+          card: "#ffffff",
+          pill: "#fef3c7",
         },
       },
       keyframes: {
