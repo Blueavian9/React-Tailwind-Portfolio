@@ -54,6 +54,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         <div className="inline-flex items-center gap-2">
           <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
           <span>Available for remote roles —</span>
+          
           <a
             href="mailto:blueavian9@gmail.com"
             className="underline text-cyan-700 dark:text-cyan-200"
@@ -156,6 +157,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
             {/* Right side: Resume pill + ThemeToggle + Hamburger */}
             <div className="flex items-center gap-3">
+              
               <a
                 href="/CesarAguilar_Resume.pdf"
                 target="_blank"
@@ -204,7 +206,8 @@ const Navbar = ({ theme, toggleTheme }) => {
                 </button>
               ))}
               <div className="pt-3 px-4">
-                <a
+                
+              <a
                   href="/CesarAguilar_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"

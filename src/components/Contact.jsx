@@ -76,7 +76,7 @@ const ContactForm = () => {
                 <div className="flex items-center gap-3">
                   <FaEnvelope className="text-app-accent flex-shrink-0" />
                   <span className="text-app-text dark:text-slate-200 text-sm select-all">
-                    cesar.aguilar.dev@gmail.com
+                   blueavian9@gmail.com
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
