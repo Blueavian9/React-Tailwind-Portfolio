@@ -78,7 +78,7 @@ const chartOptions = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-[#0F1829] py-20 text-[#F0F4FF]">
+    <section id="skills" className="bg-app-background dark:bg-app-dark-surface py-20 text-app-text dark:text-[#F0F4FF] transition-colors duration-500">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         {/* Header */}
         <div className="text-center mb-14">

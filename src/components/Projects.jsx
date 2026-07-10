@@ -49,7 +49,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-[#080D1A] py-20 text-[#F0F4FF]">
+    <section id="projects" className="bg-app-background dark:bg-app-dark-background py-20 text-app-text dark:text-[#F0F4FF] transition-colors duration-500">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         {/* Header */}
         <div className="text-center mb-14">
