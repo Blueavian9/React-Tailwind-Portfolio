@@ -29,7 +29,7 @@ export default function Hero() {
                  bg-app-background dark:bg-[#080D1A]
                  text-app-text dark:text-[#F0F4FF]
                  transition-colors duration-500
-                 pt-24 pb-16 lg:pt-28 lg:pb-20 min-h-[90vh] flex items-center"
+                 pt-28 pb-16 md:pt-32 lg:pb-20 min-h-[90vh] flex items-center"
     >
       {/* Radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,212,170,0.14),transparent_30%)]" />

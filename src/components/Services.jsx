@@ -94,14 +94,16 @@ export default function Skills() {
         <div className="grid gap-8 lg:grid-cols-[0.95fr_0.95fr]">
           <div className="rounded-[2rem] border border-cyan-500/10 bg-[#081924] p-8 shadow-[0_25px_80px_rgba(0,212,170,0.12)]">
             <div className="mb-6 flex flex-wrap gap-3">
-              {skillPills.map((skill) => (
-                <span
-                  key={skill.label}
-                  className="rounded-full border border-[#1E2D47] bg-[#112240] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-200"
-                >
-                  {skill.label}
-                </span>
-              ))}
+              {groups
+                .flatMap((g) => g.pills)
+                .map((pill) => (
+                  <span
+                    key={pill}
+                    className="rounded-full border border-[#1E2D47] bg-[#112240] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-200"
+                  >
+                    {pill}
+                  </span>
+                ))}
             </div>
 
             <div className="rounded-[1.75rem] bg-[#091726] p-4">

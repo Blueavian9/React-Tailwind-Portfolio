@@ -71,7 +71,7 @@ const Projects = () => {
             >
               <div className="overflow-hidden rounded-3xl border border-cyan-500/10 bg-[#091724] mb-6">
                 <img
-                  src={`https://images.pexels.com/photos/${[577585, 163064, 2159, 5668858][project.id - 1]}/pexels-photo-${[577585, 163064, 2159, 5668858][project.id - 1]}.jpeg?auto=compress&cs=tinysrgb&w=800`}
+                  src={`https://picsum.photos/seed/project-${project.id}/800/600`}
                   alt={project.name}
                   className="h-48 w-full object-cover transition duration-500 group-hover:scale-105"
                   loading="lazy"
@@ -98,7 +98,7 @@ const Projects = () => {
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
                     <span
-                      key={skill}
+                      key={t}
                       className="rounded-full bg-[#112240] px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-slate-200"
                     >
                       {t}
