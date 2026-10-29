@@ -139,7 +139,7 @@ export default function Hero() {
                        transition-shadow duration-500"
           >
             <img
-              src="/assets/Cesar-Cover.webp"
+              src="/assets/Cesar-Cover.png"
               alt="Cesar Aguilar — Full Stack Cloud & AI Engineer"
               className="w-full h-full object-cover"
               loading="eager"
