@@ -88,7 +88,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-3 pt-1">
             {/* Primary — always teal fill */}
             <a
-              href="/CesarAguilar_Resume.pdf"
+              href="/assets/Cesar-Aguilar-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full
