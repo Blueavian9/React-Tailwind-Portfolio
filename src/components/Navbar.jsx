@@ -159,7 +159,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <div className="flex items-center gap-3">
               
               <a
-                href="/CesarAguilar_Resume.pdf"
+                href="/assets/Cesar-Aguilar-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold border border-app-accent/50 text-app-accent hover:bg-app-accent hover:text-[#080D1A] transition-all duration-200"
@@ -208,7 +208,7 @@ const Navbar = ({ theme, toggleTheme }) => {
               <div className="pt-3 px-4">
                 
               <a
-                  href="/CesarAguilar_Resume.pdf"
+                  href="/assets/Cesar-Aguilar-Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold border border-app-accent/50 text-app-accent hover:bg-app-accent hover:text-[#080D1A] transition-all duration-200"
