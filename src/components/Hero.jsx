@@ -1,69 +1,40 @@
-import React, { useEffect, useRef } from "react";
 import { FaDownload, FaArrowRight } from "react-icons/fa";
 
-const techStack = ["React", "Node", "OpenAI", "AWS", "Supabase", "Stripe"];
+const techStack = ["React", "Node", "OpenAI", "AWS"];
 
 export default function Hero() {
-  const spotlightRef = useRef(null);
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (!spotlightRef.current) return;
-      const rect = spotlightRef.current.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      spotlightRef.current.style.setProperty("--x", x);
-      spotlightRef.current.style.setProperty("--y", y);
-    };
-    const element = spotlightRef.current;
-    if (element) {
-      element.addEventListener("mousemove", handleMouseMove);
-      return () => element.removeEventListener("mousemove", handleMouseMove);
-    }
-  }, []);
-
   return (
     <section
       id="home"
-      className="relative overflow-hidden
-                 bg-app-background dark:bg-[#080D1A]
-                 text-app-text dark:text-[#F0F4FF]
-                 transition-colors duration-500
-                 pt-28 pb-16 md:pt-32 lg:pb-20 min-h-[90vh] flex items-center"
+      className="relative flex items-center overflow-hidden bg-[rgb(8,13,26)]
+                 pt-20 pb-12 md:pt-28 md:pb-16 lg:min-h-[90vh] lg:pt-32 lg:pb-20"
     >
-      {/* Radial glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,212,170,0.14),transparent_30%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:40px_40px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_78%_48%,rgba(0,212,170,0.15),transparent_38%)]" />
 
-      <div className="relative w-full mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-8 px-4 sm:px-6 lg:flex-row lg:gap-16 lg:px-8">
         {/* Left column */}
-        <div className="w-full lg:w-6/12 space-y-7">
+        <div className="w-full min-w-0 space-y-7 lg:w-6/12">
           {/* Availability badge */}
           <div
-            className="inline-flex items-center gap-3 rounded-full
-                          border border-cyan-500/20
-                          bg-app-surface/80 dark:bg-[#0F1829]/80
-                          px-4 py-2 text-xs uppercase tracking-[0.24em]
-                          text-cyan-700 dark:text-cyan-200
-                          backdrop-blur-sm"
+            className="inline-flex items-center gap-3 rounded-full border border-[#00D4AA]/30
+                       bg-[#00D4AA]/[0.08] px-4 py-2 text-xs font-medium uppercase tracking-[0.24em]
+                       text-[#D4E5E2]"
           >
-            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            Open to remote roles —{" "}
-            <a
-              href="mailto:blueavian9@gmail.com"
-              className="underline underline-offset-2 hover:text-cyan-500 transition-colors"
-            >
-              blueavian9@gmail.com
-            </a>
+            <span className="h-2 w-2 rounded-full bg-[#00D4AA]" />
+            OPEN TO REMOTE ROLES
           </div>
 
           {/* Name + title + tagline */}
           <div className="space-y-4">
-            <p className="text-sm uppercase tracking-[0.32em] text-cyan-400">Cesar A. Aguilar</p>
-            <h1 className="text-4xl font-bold md:text-5xl xl:text-6xl leading-tight">
-              Full Stack AI Engineer
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00D4AA]">
+              CESAR A. AGUILAR
+            </p>
+            <h1 className="max-w-[15ch] text-4xl font-extrabold leading-[1.05] text-[#F5F7FF] sm:text-5xl xl:text-7xl">
+              Full Stack Cloud &amp; AI Engineer
             </h1>
-            <p className="max-w-xl text-base leading-relaxed text-app-muted dark:text-slate-400 md:text-lg">
-              I build production SaaS apps powered by AI — currently open to remote roles.
+            <p className="max-w-xl text-xl leading-relaxed text-[#94A3B8] sm:text-2xl">
+              I build production SaaS apps powered by AI.
             </p>
           </div>
 
@@ -72,12 +43,8 @@ export default function Hero() {
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full
-                           border border-app-border dark:border-[#1E2D47]
-                           bg-app-surface dark:bg-[#1E2D47]
-                           px-4 py-1.5
-                           text-xs font-semibold uppercase tracking-[0.2em]
-                           text-app-text dark:text-slate-200"
+                className="rounded-full border border-[#26344F] bg-[#131B33]
+                           px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#C5D0E0]"
               >
                 {tech}
               </span>
@@ -97,7 +64,8 @@ export default function Hero() {
                          shadow-[0_0_24px_rgba(0,212,170,0.22)]
                          hover:bg-app-accent-dim
                          hover:shadow-[0_0_32px_rgba(0,212,170,0.38)]
-                         transition-all duration-200"
+                         transition-all duration-200 focus-visible:outline focus-visible:outline-2
+                         focus-visible:outline-offset-4 focus-visible:outline-[#00D4AA]"
             >
               <FaDownload className="text-xs opacity-80" />
               Download Resume
@@ -111,12 +79,13 @@ export default function Hero() {
                 document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
               }}
               className="inline-flex items-center gap-2 rounded-full
-                         border border-app-accent/50
+                         border border-[#00D4AA]
                          bg-transparent
                          px-6 py-3 text-sm font-semibold
-                         text-app-accent
-                         hover:bg-app-accent/10
-                         transition-all duration-200"
+                         text-[#00D4AA]
+                         hover:bg-[#00D4AA]/10
+                         transition-all duration-200 focus-visible:outline focus-visible:outline-2
+                         focus-visible:outline-offset-4 focus-visible:outline-[#00D4AA]"
             >
               See My Work
               <FaArrowRight className="text-xs opacity-80" />
@@ -125,24 +94,17 @@ export default function Hero() {
         </div>
 
         {/* Right column — photo card */}
-        <div className="w-full lg:w-5/12 flex justify-center lg:justify-end">
+        <div className="flex w-full justify-center lg:w-5/12 lg:justify-end">
           <div
-            ref={spotlightRef}
-            className="relative
-                       w-56 h-56
-                       sm:w-64 sm:h-64
-                       lg:w-72 lg:h-72
-                       rounded-[2rem] overflow-hidden
-                       border border-app-border dark:border-[#1E2D47]
-                       shadow-[0_30px_80px_rgba(0,212,170,0.10)]
-                       hover:shadow-[0_30px_100px_rgba(0,212,170,0.18)]
-                       transition-shadow duration-500"
+            className="relative aspect-square w-60 rounded-full bg-[linear-gradient(135deg,#00D4AA_0%,#1E293B_100%)] p-[7px]
+                       shadow-[0_0_60px_rgba(0,212,170,0.14)] sm:w-64 lg:w-[22rem]"
           >
             <img
               src="/assets/Cesar-Cover.png"
               alt="Cesar Aguilar — Full Stack Cloud & AI Engineer"
-              className="w-full h-full object-cover"
+              className="h-full w-full rounded-full object-cover"
               loading="eager"
+              fetchpriority="high"
             />
           </div>
         </div>
