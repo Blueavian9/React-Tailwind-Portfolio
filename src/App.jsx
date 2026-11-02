@@ -1,7 +1,6 @@
 // src/App.jsx
 import { useEffect, useState, useCallback } from "react";
 import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
@@ -34,13 +33,8 @@ export default function App() {
     <div className="relative min-h-screen bg-app-background text-app-text transition-colors duration-500">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="pt-16">
-      
-          <Hero />
-        </section>
-        {/* About + Skills are merged: About.jsx contains the #skills anchor */}
-        <section id="about">
-          <About />
-        </section>
+        {/* About.jsx renders the #home, #about and #skills sections itself */}
+        <About />
         <section id="projects">
           <Projects />
         </section>
