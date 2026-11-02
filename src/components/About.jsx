@@ -381,7 +381,6 @@ export default function About() {
                 alt="Cesar Aguilar, Full Stack Cloud & AI Engineer"
                 className="ab-photo-mask absolute inset-0 h-full w-full object-contain object-bottom contrast-[1.05] lg:object-right-bottom"
                 loading="eager"
-                fetchpriority="high"
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                 }}
