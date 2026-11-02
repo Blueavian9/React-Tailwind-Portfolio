@@ -34,7 +34,7 @@ export default function App() {
     <div className="relative min-h-screen bg-app-background text-app-text transition-colors duration-500">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="pt-16">
-        <section id="home">
+      
           <Hero />
         </section>
         {/* About + Skills are merged: About.jsx contains the #skills anchor */}
