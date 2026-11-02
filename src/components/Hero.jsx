@@ -100,7 +100,7 @@ export default function Hero() {
                        shadow-[0_0_60px_rgba(0,212,170,0.14)] sm:w-64 lg:w-[22rem]"
           >
             <img
-              src="/assets/Cesar-Cover.png"
+              src="/assets/Cesar-Cover2.webp"
               alt="Cesar Aguilar — Full Stack Cloud & AI Engineer"
               className="h-full w-full rounded-full object-cover"
               loading="eager"
