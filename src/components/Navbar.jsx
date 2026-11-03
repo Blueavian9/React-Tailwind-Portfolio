@@ -81,23 +81,6 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   return (
     <nav ref={navRef} className="absolute top-0 left-0 right-0 z-50">
-      {/* Top availability bar (desktop) */}
-      <div className="hidden md:flex justify-between items-center bg-app-surface/95 border-b border-cyan-500/10 px-6 py-2 text-xs text-cyan-700 backdrop-blur-md dark:bg-[#06111d]/95 dark:text-cyan-200">
-        <div className="inline-flex items-center gap-2">
-          <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>Available for remote roles —</span>
-
-          <a
-            href="mailto:blueavian9@gmail.com"
-            className="underline text-cyan-700 dark:text-cyan-200"
-          >
-            blueavian9@gmail.com
-          </a>
-        </div>
-        <span className="text-slate-500 dark:text-gray-400">
-          Remote-ready Full Stack Cloud & AI Engineer
-        </span>
-      </div>
 
       {/* Main navbar */}
       <div
