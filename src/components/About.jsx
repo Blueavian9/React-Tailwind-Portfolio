@@ -1,7 +1,7 @@
 // src/components/About.jsx
 // Single merged section: Hero + About (Ivo-style card) + Skills.
 // Renders three sibling <section>s so the Navbar anchors #home, #about, #skills all work.
-// Photo: expects a transparent cutout at /public/assets/Cesar-Cutout.png (see PHOTO_SRC).
+// Photo: expects a transparent cutout at /public/assets/Cesar-Cover2.webp (see PHOTO_SRC).
 import { useEffect, useRef, useState } from "react";
 import {
   FaArrowRight,
@@ -24,7 +24,7 @@ import {
 /* Data                                                                */
 /* ------------------------------------------------------------------ */
 
-const PHOTO_SRC = "/assets/Cesar-Cutout.png";
+const PHOTO_SRC = "/assets/Cesar-Cover2.webp";
 const RESUME_HREF = "/assets/Cesar-Aguilar-Resume.pdf";
 const LINKEDIN = "https://www.linkedin.com/in/cesaradrianaguilar/";
 const GITHUB = "https://github.com/Blueavian9";
