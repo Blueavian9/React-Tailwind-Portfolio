@@ -283,7 +283,7 @@ export default function About() {
             </p>
           </header>
 
-          <div className="relative overflow-hidden rounded-3xl border border-app-border bg-app-surface shadow-[0_24px_60px_-20px_rgba(15,23,42,0.25)] lg:-rotate-[0.8deg] dark:border-slate-700/50 dark:bg-slate-800/60 dark:shadow-[0_24px_80px_-20px_rgba(0,212,170,0.12)]">
+          <div className="relative overflow-hidden rounded-3xl border border-app-border bg-app-surface shadow-[0_24px_60px_-20px_rgba(15,23,42,0.25)] lg:-rotate-[0.8deg] dark:border-slate-700/50 dark:bg-slate-800 dark:shadow-[0_24px_80px_-20px_rgba(0,212,170,0.12)]">
             <div className="p-8 md:p-12 lg:w-[58%] lg:pb-14">
               <h3 className="text-4xl font-semibold tracking-tight text-app-text dark:text-white">
                 Hello <span aria-hidden="true">👋</span>
