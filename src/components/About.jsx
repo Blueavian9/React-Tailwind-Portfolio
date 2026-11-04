@@ -112,7 +112,9 @@ const achievements = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* Signature: Cesar's own signature image, /public/assets/CA-Signature.webp. */
+/* Signature: Cesar's own signature image, /public/assets/CA-Signature.webp.
+image2, /public/assets/CA-Signature-Transparent.png */
+
 /* It is black on white, so blend modes make the white disappear:         */
 /* light = multiply, dark = invert + screen.                              */
 /* ------------------------------------------------------------------ */
