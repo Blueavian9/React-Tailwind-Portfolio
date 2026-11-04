@@ -112,21 +112,30 @@ const achievements = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* Signature: Cesar's own signature image, /public/assets/CA-Signature-Dark-Transparent.webp.
-image2, /public/assets/CA-Signature-White-Transparent.png */
-
-/* It is black on white, so blend modes make the white disappear:         */
-/* light = multiply, dark = invert + screen.                              */
+/* Signature: Cesar's own artwork as transparent cutouts (no filters needed). */
+/* light mode = dark ink, dark mode = soft-white ink.                         */
+/* Files: /public/assets/CA-Signature-Dark-Transparent.png                    */
+/*        /public/assets/CA-Signature-White-Transparent.png                   */
 /* ------------------------------------------------------------------ */
 
+const SIG_SIZE = "block h-auto w-40 max-w-full object-contain object-left sm:w-44 md:w-52";
+
 const Signature = ({ className = "" }) => (
-  <img
-    src="/assets/CA-Signature.webp"
-    alt="Cesar Aguilar signature featuring a horse illustration"
-    loading="eager"
-    decoding="async"
-    className={`block h-auto w-36 max-w-full object-contain object-left sm:w-44 md:w-48 invert grayscale contrast-[2] mix-blend-screen ${className}`}
-  />
+  <>
+    <img
+      src="/assets/CA-Signature-Dark-Transparent.png"
+      alt="Cesar Aguilar signature featuring a horse illustration"
+      decoding="async"
+      className={`${SIG_SIZE} dark:hidden ${className}`}
+    />
+    <img
+      src="/assets/CA-Signature-White-Transparent.png"
+      alt=""
+      aria-hidden="true"
+      decoding="async"
+      className={`${SIG_SIZE} hidden dark:block ${className}`}
+    />
+  </>
 );
 
 /* ------------------------------------------------------------------ */
