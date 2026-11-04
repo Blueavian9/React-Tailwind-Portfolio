@@ -119,14 +119,13 @@ image2, /public/assets/CA-Signature-Transparent.png */
 /* light = multiply, dark = invert + screen.                              */
 /* ------------------------------------------------------------------ */
 
-const Signature = ({ className = "h-14 sm:h-16" }) => (
+const Signature = ({ className = "" }) => (
   <img
     src="/assets/CA-Signature.webp"
-    alt="Cesar Aguilar signature"
-    width="400"
-    height="133"
-    loading="lazy"
-    className={`w-auto -rotate-2 mix-blend-multiply dark:mix-blend-screen dark:invert ${className}`}
+    alt="Cesar Aguilar signature featuring a horse illustration"
+    loading="eager"
+    decoding="async"
+    className={`block h-auto w-36 max-w-full object-contain object-left sm:w-44 md:w-48 invert grayscale contrast-[2] mix-blend-screen ${className}`}
   />
 );
 
