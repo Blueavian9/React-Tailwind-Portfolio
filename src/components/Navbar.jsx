@@ -81,13 +81,12 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   return (
     <nav ref={navRef} className="absolute top-0 left-0 right-0 z-50">
-
       {/* Main navbar */}
       <div
         className={`backdrop-blur-lg transition-all duration-300 border-b ${
           isScrolled
             ? "bg-app-surface/95 dark:bg-app-dark-surface/95 border-app-border/10 dark:border-app-dark-border/10 shadow-lg"
-            : "bg-app-surface/80 dark:bg-app-dark-background/80"
+            : "bg-app-surface/80 dark:bg-app-dark-surface/80"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

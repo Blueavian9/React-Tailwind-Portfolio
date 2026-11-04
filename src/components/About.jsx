@@ -112,14 +112,14 @@ const achievements = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* Signature: Cesar's own signature image, /public/assets/Signature.webp. */
+/* Signature: Cesar's own signature image, /public/assets/CA-Signature.webp. */
 /* It is black on white, so blend modes make the white disappear:         */
 /* light = multiply, dark = invert + screen.                              */
 /* ------------------------------------------------------------------ */
 
 const Signature = ({ className = "h-14 sm:h-16" }) => (
   <img
-    src="/assets/Signature.webp"
+    src="/assets/CA-Signature.webp"
     alt="Cesar Aguilar signature"
     width="400"
     height="133"
@@ -286,7 +286,7 @@ export default function About() {
           <div className="relative overflow-hidden rounded-3xl border border-app-border bg-app-surface shadow-[0_24px_60px_-20px_rgba(15,23,42,0.25)] lg:-rotate-[0.8deg] dark:border-slate-700/50 dark:bg-slate-800 dark:shadow-[0_24px_80px_-20px_rgba(0,212,170,0.12)]">
             <div className="p-8 md:p-12 lg:w-[58%] lg:pb-14">
               <h3 className="text-4xl font-semibold tracking-tight text-app-text dark:text-white">
-                Hello <span aria-hidden="true">👋</span>
+                Hey <span aria-hidden="true">👋</span>
               </h3>
               <p className="mt-4 text-base font-semibold text-app-text dark:text-slate-100">
                 I&apos;m Cesar{" "}
