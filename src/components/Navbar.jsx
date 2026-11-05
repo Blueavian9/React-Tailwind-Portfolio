@@ -97,23 +97,20 @@ const Navbar = ({ theme, toggleTheme }) => {
               className="group flex items-center gap-2.5 flex-shrink-0"
               aria-label="Scroll to top"
             >
-             <img
-  src="/assets/CA-Logo-Dark-Transparent.png"
-  alt="Cesar Aguilar CA monogram"
-  width="42"
-  height="32"
-  decoding="async"
-  className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 dark:hidden"
-/>
-<img
-  src="/assets/CA-Logo-White-Transparent.png"
-  alt=""
-  aria-hidden="true"
-  width="42"
-  height="32"
-  decoding="async"
-  className="hidden h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 dark:block"
-/> 
+              <span className="relative flex items-center">
+                <span
+                  aria-hidden="true"
+                  className="logo-halo pointer-events-none absolute inset-0 rounded-full bg-sky-500/25 blur-xl transition-colors duration-300 group-hover:bg-sky-400/50 dark:bg-sky-400/40"
+                />
+                <img
+                  src="/assets/CA-Logo-Full.webp"
+                  alt="Cesar Aguilar CA logo"
+                  width="72"
+                  height="57"
+                  decoding="async"
+                  className="logo-img relative h-14 w-auto rounded-lg bg-black object-contain transition-transform duration-300 group-hover:scale-105 dark:rounded-none dark:bg-transparent dark:mix-blend-screen"
+                />
+              </span>
             </button>
 
             {/* Desktop nav links */}
