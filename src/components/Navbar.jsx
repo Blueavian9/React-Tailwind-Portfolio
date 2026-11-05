@@ -97,56 +97,23 @@ const Navbar = ({ theme, toggleTheme }) => {
               className="group flex items-center gap-2.5 flex-shrink-0"
               aria-label="Scroll to top"
             >
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
-              >
-                <path
-                  d="M18 3L31 10.5V25.5L18 33L5 25.5V10.5L18 3Z"
-                  fill="rgba(0,212,170,0.10)"
-                  stroke="#00D4AA"
-                  strokeWidth="1"
-                  strokeOpacity="0.45"
-                />
-                <circle cx="18" cy="18" r="3" fill="#00D4AA" />
-                <line
-                  x1="18"
-                  y1="15"
-                  x2="18"
-                  y2="9"
-                  stroke="#00D4AA"
-                  strokeWidth="1.2"
-                  strokeOpacity="0.5"
-                  strokeLinecap="round"
-                />
-                <line
-                  x1="15.4"
-                  y1="19.5"
-                  x2="10"
-                  y2="22.5"
-                  stroke="#00D4AA"
-                  strokeWidth="1.2"
-                  strokeOpacity="0.5"
-                  strokeLinecap="round"
-                />
-                <line
-                  x1="20.6"
-                  y1="19.5"
-                  x2="26"
-                  y2="22.5"
-                  stroke="#00D4AA"
-                  strokeWidth="1.2"
-                  strokeOpacity="0.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <span className="hidden sm:block text-sm font-semibold tracking-widest text-app-accent opacity-90 group-hover:opacity-100 transition-opacity duration-200">
-                C·A
-              </span>
+             <img
+  src="/assets/CA-Logo-Dark-Transparent.png"
+  alt="Cesar Aguilar CA monogram"
+  width="42"
+  height="32"
+  decoding="async"
+  className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 dark:hidden"
+/>
+<img
+  src="/assets/CA-Logo-White-Transparent.png"
+  alt=""
+  aria-hidden="true"
+  width="42"
+  height="32"
+  decoding="async"
+  className="hidden h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 dark:block"
+/> 
             </button>
 
             {/* Desktop nav links */}
