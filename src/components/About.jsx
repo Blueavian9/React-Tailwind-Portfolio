@@ -254,7 +254,29 @@ export default function About() {
               </span>
             ))}
           </div>
-     
+
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <a
+              href={RESUME_HREF}
+         
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-app-accent px-6 py-3 text-sm font-semibold text-[#080D1A] shadow-[0_0_24px_rgba(0,212,170,0.22)] transition-all duration-200 hover:bg-app-accent-dim hover:shadow-[0_0_32px_rgba(0,212,170,0.38)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-app-accent"
+            >
+              <FaDownload className="text-xs opacity-80" />
+              Download Resume
+            </a>
+            <button
+              type="button"
+              onClick={goTo("projects")}
+              className="inline-flex items-center gap-2 rounded-full border border-app-accent bg-transparent px-6 py-3 text-sm font-semibold text-app-accent transition-all duration-200 hover:bg-app-accent/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-app-accent"
+            >
+              See My Work
+              <FaArrowRight className="text-xs opacity-80" />
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* ====================== ABOUT (Ivo-style card) ====================== */}
       <section
