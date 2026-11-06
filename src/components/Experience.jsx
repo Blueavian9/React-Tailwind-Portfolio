@@ -182,8 +182,6 @@ const Experience = () => {
             ))}
           </div>
         </div>
-
-       
       </div>
     </section>
   );

@@ -1,19 +1,29 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
 const Footer = () => {
   return (
     <footer className="bg-app-surface text-app-text border-t border-app-border dark:bg-[#0F1829] dark:text-slate-400 dark:border-slate-700/50 transition-colors duration-500">
       <div className="container mx-auto px-8 md:px-16 lg:px-24 py-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* Brand */}
-          <div>
-            <h3 className="text-lg font-bold text-app-text dark:text-white">
-              Cesar Adrian Aguilar
-            </h3>
-            <p className="text-app-muted dark:text-slate-400 text-sm mt-1">
-              Full Stack Cloud &amp; AI Engineer · Los Angeles, CA
-            </p>
-          </div>
+         {/* Brand */}
+<div className="flex items-center gap-4">
+  <span className="flex h-10 items-center rounded-xl bg-[#05070D] px-2 ring-1 ring-sky-400/30">
+    <img
+      src="/assets/CA-Logo-Full.webp"
+      alt=""
+      aria-hidden="true"
+      width="40"
+      height="32"
+      loading="lazy"
+      decoding="async"
+      className="h-8 w-auto object-contain"
+    />
+  </span>
+  <div>
+    <h3 className="text-lg font-bold text-app-text dark:text-white">Cesar Adrian Aguilar</h3>
+    <p className="text-app-muted dark:text-slate-400 text-sm mt-1">
+      Full Stack Cloud &amp; AI Engineer · Open to remote roles
+    </p>
+  </div>
+</div>
 
           {/* Social links */}
           <div className="flex items-center gap-5">
@@ -36,10 +46,10 @@ const Footer = () => {
               <FaGithub className="text-xl" />
             </a>
             <a
-              href="mailto:cesar.aguilar.dev@gmail.com"
+              href="mailto:blueavian9@gmail.com"
               className="text-xs font-medium px-4 py-2 rounded-full border border-app-accent/40 text-app-accent hover:bg-app-accent/10 transition-all duration-200"
             >
-              cesar.aguilar.dev@gmail.com
+              blueavian9@gmail.com
             </a>
           </div>
         </div>
