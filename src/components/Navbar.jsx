@@ -1,8 +1,7 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = ({ theme, toggleTheme }) => {
-  const navRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -66,7 +65,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   const smoothScrollTo = useCallback((id) => {
     const target = document.getElementById(id);
-    if (target) window.scrollTo({ top: target.offsetTop - 16, behavior: "smooth" });
+    if (target) window.scrollTo({ top: target.offsetTop - 64, behavior: "smooth" });
     setIsMobileMenuOpen(false);
   }, []);
 
@@ -90,14 +89,16 @@ const Navbar = ({ theme, toggleTheme }) => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div
+            classsName={`flex justify-between items-center transition-[height] duration-300 ${isScrolled ? "h-14" : "h-16"}`}
+          >
             {/* Logo mark — left anchor */}
             <button
               onClick={() => smoothScrollTo("home")}
               className="group flex items-center gap-2.5 flex-shrink-0"
               aria-label="Scroll to top"
             >
-              <span className="relative flex items-center">
+              <span className="logo-badge flex h-12 items-center rounded-xl bg-[#05070D] px-2 ring-1 ring-sky-400/30 transition-transform duration-300 group-hover:scale-105">
                 <span
                   aria-hidden="true"
                   className="logo-halo pointer-events-none absolute inset-0 rounded-full bg-sky-500/25 blur-xl transition-colors duration-300 group-hover:bg-sky-400/50 dark:bg-sky-400/40"

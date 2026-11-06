@@ -168,18 +168,26 @@
     filter: brightness(1.25) saturate(1.2);
   }
 }
-@keyframes logo-halo-pulse {
+@keyframes logo-glow {
   0%,
   100% {
-    opacity: 0.25;
-    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
   }
   50% {
-    opacity: 0.8;
-    transform: scale(1.2);
+    box-shadow: 0 0 24px rgba(56, 189, 248, 0.6);
   }
 }
 
+.logo-badge {
+  animation: logo-glow 4s ease-in-out 1.4s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-img,
+  .logo-badge {
+    animation: none;
+  }
+}
 .logo-img {
   animation:
     logo-lightup 1.4s ease-out both,
