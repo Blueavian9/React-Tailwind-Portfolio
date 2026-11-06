@@ -98,7 +98,7 @@ const Navbar = ({ theme, toggleTheme }) => {
               className="group flex items-center gap-2.5 flex-shrink-0"
               aria-label="Scroll to top"
             >
-              <span className="logo-badge flex h-12 items-center rounded-xl bg-[#05070D] px-2 ring-1 ring-sky-400/30 transition-transform duration-300 group-hover:scale-105">
+              <span className="logo-badge flex h-10 items-center rounded-xl bg-[#05070D] px-2 ring-1 ring-sky-400/30 transition-transform duration-300 group-hover:scale-105">
                 <span
                   aria-hidden="true"
                   className="logo-halo pointer-events-none absolute inset-0 rounded-full bg-sky-500/25 blur-xl transition-colors duration-300 group-hover:bg-sky-400/50 dark:bg-sky-400/40"
@@ -106,16 +106,16 @@ const Navbar = ({ theme, toggleTheme }) => {
                 <img
                   src="/assets/CA-Logo-Full.webp"
                   alt="Cesar Aguilar CA logo"
-                  width="72"
-                  height="57"
+                  width="40"
+                  height="32"
                   decoding="async"
-                  className="logo-img relative h-14 w-auto rounded-lg bg-black object-contain transition-transform duration-300 group-hover:scale-105 dark:rounded-none dark:bg-transparent dark:mix-blend-screen"
+                  className="logo-img relative h-8 w-auto rounded-lg bg-black object-contain transition-transform duration-300 group-hover:scale-105 dark:rounded-none dark:bg-transparent dark:mix-blend-screen"
                 />
               </span>
             </button>
 
             {/* Desktop nav links */}
-            <div className="hidden md:flex items-center gap-7">
+            <div className="relative z-10 hidden md:flex items-center gap-7">
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -136,14 +136,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
             {/* Right side: Resume pill + ThemeToggle + Hamburger */}
             <div className="flex items-center gap-3">
-              <a
-                href="/assets/Cesar-Aguilar-Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold border border-app-accent/50 text-app-accent hover:bg-app-accent hover:text-[#080D1A] transition-all duration-200"
-              >
-                Resume ↗
-              </a>
+              
 
               <div className="flex items-center gap-4">
                 <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
@@ -183,16 +176,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                   {item.label}
                 </button>
               ))}
-              <div className="pt-3 px-4">
-                <a
-                  href="/assets/Cesar-Aguilar-Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold border border-app-accent/50 text-app-accent hover:bg-app-accent hover:text-[#080D1A] transition-all duration-200"
-                >
-                  Download Resume ↗
-                </a>
-              </div>
+             
             </div>
           )}
         </div>

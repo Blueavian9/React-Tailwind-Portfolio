@@ -171,10 +171,14 @@
 @keyframes logo-glow {
   0%,
   100% {
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+    box-shadow:
+      0 0 0 1px rgba(56, 189, 248, 0.25),
+      0 0 5px rgba(56, 189, 248, 0.2);
   }
   50% {
-    box-shadow: 0 0 24px rgba(56, 189, 248, 0.6);
+    box-shadow:
+      0 0 0 1px rgba(56, 189, 248, 0.5),
+      0 0 8px rgba(56, 189, 248, 0.45);
   }
 }
 
