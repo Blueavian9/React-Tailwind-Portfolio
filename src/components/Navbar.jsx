@@ -136,8 +136,6 @@ const Navbar = ({ theme, toggleTheme }) => {
 
             {/* Right side: Resume pill + ThemeToggle + Hamburger */}
             <div className="flex items-center gap-3">
-              
-
               <div className="flex items-center gap-4">
                 <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
 
@@ -176,7 +174,6 @@ const Navbar = ({ theme, toggleTheme }) => {
                   {item.label}
                 </button>
               ))}
-             
             </div>
           )}
         </div>
