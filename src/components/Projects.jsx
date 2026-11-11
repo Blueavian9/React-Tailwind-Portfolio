@@ -3,15 +3,20 @@ import { FaUpRightFromSquare, FaGithub } from "react-icons/fa6";
 const projects = [
   {
     id: 1,
-    name: "Valerie's Psychological Wellness",
+    name: "Therapy Online Booking Platform",
+    description:
+      "Booking site built for a real therapy practice. React, Vite and Tailwind front end on Vercel with magic-link sign-in, a Neon Postgres backend, and a Stripe checkout flow running in test mode.",
     impact:
       "Live therapy booking SaaS — real Stripe payments, Supabase auth, AI-powered intake workflows, and RBAC. Production app with paying users.",
-    tech: ["React", "Supabase", "Stripe", "Vercel", "Tailwind"],
-    badge: "Live · Paying Users",
-    badgeColor:
-      "bg-emerald-500/10 text-emerald-700 border-emerald-500/30 dark:text-emerald-400",
-    github: "https://github.com/Blueavian9/Text2SpeechAPIPollyV3",
-    liveDemo: "https://valerie.u.netlify.app/",
+    tech: ["React", "Vite",
+    "Tailwind"
+    "Neon"
+    "Stripe", 
+    "Vercel"],
+    badge: "Client MVP",
+    badgeColor: "bg-emerald-500/10 text-emerald-700 border-emerald-500/30 dark:text-emerald-400",
+    github: "https://github.com/Blueavian9/valeries-psychological-wellness",
+    liveDemo: "https://valeries-psychological-wellness-jwcdpcex0-blueavian9s-projects.vercel.app/",
   },
   {
     id: 2,
@@ -22,7 +27,7 @@ const projects = [
     badge: "AI / LangChain",
     badgeColor: "bg-violet-500/10 text-violet-700 border-violet-500/30 dark:text-violet-400",
     github: "https://github.com/Blueavian9/ai-groq-rpg",
-    liveDemo: "https://ai-groq-rpg.netlify.app/",
+    liveDemo: "https://www.valeriemunozpsyc.com",
   },
   {
     id: 3,
@@ -50,7 +55,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-app-background dark:bg-app-dark-background py-20 text-app-text dark:text-[#F0F4FF] transition-colors duration-500">
+    <section
+      id="projects"
+      className="bg-app-background dark:bg-app-dark-background py-20 text-app-text dark:text-[#F0F4FF] transition-colors duration-500"
+    >
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         {/* Header */}
         <div className="text-center mb-14">
@@ -135,12 +143,6 @@ const Projects = () => {
 };
 
 export default Projects;
-
-
-
-
-
-
 
 //MOCK 1: import { FaUpRightFromSquare, FaGithub } from "react-icons/fa6";
 
