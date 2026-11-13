@@ -8,11 +8,7 @@ const projects = [
       "Booking site built for a real therapy practice. React, Vite and Tailwind front end on Vercel with magic-link sign-in, a Neon Postgres backend, and a Stripe checkout flow running in test mode.",
     impact:
       "Live therapy booking SaaS — real Stripe payments, Supabase auth, AI-powered intake workflows, and RBAC. Production app with paying users.",
-    tech: ["React", "Vite",
-    "Tailwind",
-    "Neon",
-    "Stripe", 
-    "Vercel"]
+    tech: ["React", "Vite", "Tailwind", "Neon", "Stripe", "Vercel"],
     badge: "Client MVP",
     badgeColor: "bg-emerald-500/10 text-emerald-700 border-emerald-500/30 dark:text-emerald-400",
     github: "https://github.com/Blueavian9/valeries-psychological-wellness",
