@@ -9,10 +9,10 @@ const projects = [
     impact:
       "Live therapy booking SaaS — real Stripe payments, Supabase auth, AI-powered intake workflows, and RBAC. Production app with paying users.",
     tech: ["React", "Vite",
-    "Tailwind"
-    "Neon"
+    "Tailwind",
+    "Neon",
     "Stripe", 
-    "Vercel"],
+    "Vercel"]
     badge: "Client MVP",
     badgeColor: "bg-emerald-500/10 text-emerald-700 border-emerald-500/30 dark:text-emerald-400",
     github: "https://github.com/Blueavian9/valeries-psychological-wellness",
