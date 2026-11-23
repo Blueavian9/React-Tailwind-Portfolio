@@ -109,4 +109,9 @@ Tools: Git Bash (MINGW64), GitHub (PRs via browser, `gh` not installed), VS Code
 
 ## Session Log (newest at bottom)
 
+
+- **[2026-11-19]** Phase 0 docs cleanup done (commit d942619): archived merge prompt and booking-app PRD, replaced Continue_Prompt.md, added AGENT_PROMPT_project-cards.md. PORTFOLIO_PRD.md added in a follow-up commit. Next: capture 4 card screenshots (task 1.1).
+
+
 - **[2026-11-19]** Pushed 53976f6. Inspected repo: clean, tokens present, picsum only in Projects.jsx. Chose "fix first" path. Reviewed Projects.jsx and found: doubled padding, dead `description` field with a contradicting Stripe claim, deployment-specific demo URL, mismatched links on cards 2 and 3. Reorganized this doc into phases. Next: capture screenshots (task 1.1).
+
