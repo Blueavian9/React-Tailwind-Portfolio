@@ -1,76 +1,112 @@
-# React-Tailwind-Portfolio — Agent Continuation Prompt
+# React-Tailwind-Portfolio — Agent Handoff (Project Memory Bank)
 
-> Paste this entire file as your first message to any LLM session (VS Code agent, Claude Code, or Claude.ai) to resume work with zero re-explaining. At the end of a session, update **Current State** and add a **Session Log** entry before you stop — that's what makes the next session pick up cleanly.
+> This file is the single source of truth. Read it first in every session. Update **Current State**, the **Roadmap** checkboxes, and add a **Session Log** entry before you stop.
+> Last updated: 2026-11-19
 
----
+## Roles
 
-## Role
+- **Cesar (owner / engineer in training):** supplies files, screenshots, and decisions. Runs commands. Approves every phase.
+- **Claude (mentor / project manager):** plans, explains the "why", reviews output, writes prompts for the agent.
+- **VS Code Cursor agent (builder):** edits repo files inside the rules below. Reports back after every task.
 
-You are acting as an engineering agent on Cesar Aguilar's (GitHub: Blueavian9) personal portfolio site — a React + Vite + Tailwind v4 project used as his primary vehicle for landing remote Full Stack Cloud & AI Engineer roles. Treat this as a real product, not a demo: recruiter conversion and code quality both matter.
+## Goal
 
-## Non-negotiable workflow rules
+Land a remote Full Stack / AI Engineer role. The portfolio (`react-tailwind-portfolio-murex.vercel.app`) must show the current design with real project images, honest copy, and working links.
 
-- **Never commit directly to `main`.** All changes go through a feature branch + PR. `main` has branch protection requiring PRs.
-- **One atomic task per commit/PR.** Don't bundle unrelated fixes.
-- **Always verify before marking a task done**: run `npm run build`, check the Problems/lint panel, and re-check the acceptance criterion for that specific task.
-- **If you touch a merge conflict**, resolve it fully — delete `<<<<<<<`, `=======`, `>>>>>>>` markers, keep the intended code, save, then re-run a repo-wide grep for leftover markers before staging. Staging a file does NOT mean it's syntactically valid — always verify.
-- **Retry limit: 3 iterations per task.** If still failing after 3 attempts, stop and log the blocker instead of continuing to guess.
-- Rollback plan: `git reset --soft HEAD~1` is the standard "undo last commit, keep changes" move used on this project.
+## Stack (trust package.json over older docs)
 
-## PLAN → EXECUTE → VERIFY → CRITIQUE loop
+React 18.3.1, Vite 7, Tailwind CSS 3.4.17 (`darkMode: "class"`, `tailwind.config.js` with `app-*` color tokens), react-icons, Formspree, clsx, tailwind-merge.
+Tools: Git Bash (MINGW64), GitHub (PRs via browser, `gh` not installed), VS Code + Cursor agent, Vercel (deploys from `main`), Namecheap (domains/hosting), Neon (Postgres, replaces Supabase), Stripe (payments).
 
-For every atomic task:
-1. **PLAN**: state which single checklist item you're doing next.
-2. **EXECUTE**: make the minimal change needed.
-3. **VERIFY**: `npm run build`, lint/Problems panel, grep for conflict markers if relevant.
-4. **CRITIQUE**: compare against the PRD acceptance criteria below. Pass → move on. Fail → log why, adjust, retry (max 3x total).
+## Non-negotiable rules
 
----
+1. Never commit to `main`. Branch, push, PR, merge.
+2. One atomic task per commit.
+3. Before every commit: `npm run build` passes, `npx eslint src` clean, Problems panel clean.
+4. Read a file fresh before editing it; re-read it after saving.
+5. Max 3 retries per task, then stop and log the blocker.
+6. Ask before deleting files or changing dependencies. Do not edit files outside the current task.
+7. Never invent facts about Cesar or his projects. Ask.
+8. Never publish client or patient data in screenshots, copy, or commits.
+9. Rollback: `git reset --soft HEAD~1`.
 
 ## Current State
-*(update this block every session — delete stale info, don't just append)*
 
-- **Branch:** `fix/navbar-clsx-lint`
-- **Merge status:** mid-merge. Conflicts resolved so far: `About.jsx` (staged, clean). **Still unresolved / need conflict markers removed:** `App.jsx`, `Contact.jsx`, `Projects.jsx`, `Services.jsx`, `ThemeToggle.jsx`, `tailwind.config.js`. `Navbar.jsx` was staged but still had markers in it as of last check — re-verify before trusting its staged state.
-- **Immediate next step:** open `Navbar.jsx`, confirm whether conflict markers are actually gone (grep it), then work through the remaining 6 unmerged files one at a time, `git add`-ing each only after markers are confirmed removed.
-- **After merge is clean:** run `grep -rn "<<<<<<<\|=======\|>>>>>>>" src/ public/` repo-wide, confirm empty, then `git commit` to finish the merge, push, open PR.
-- **Then resume PRD atomic tasks** (see checklist below) — none confirmed complete yet as of this handoff.
+- **Branch:** `style/hero-redesign`, pushed. Latest commit `53976f6` (moved agent prompt from `public/` to `docs/`). Working tree clean.
+- **PR:** #54 open to `main`, no description yet.
+- **Production (Vercel):** still the Oct 29 build from `main` (PR #53). It shows the old design.
+- **Decision:** "Fix first". Replace placeholder card images before merging PR #54.
+- **In progress:** capturing four 16:9 project screenshots (1280x720, dark mode) into `src/assets/projects/_incoming/` (folder exists, empty).
+- **Known facts from repo inspection (2026-11-19):**
+  - `picsum.photos` appears only in `src/components/Projects.jsx` (line ~79 live, line ~216 in the commented MOCK 1 block).
+  - No conflict markers anywhere.
+  - All `app-*` tokens needed for a fallback panel exist in `tailwind.config.js`.
+  - `vercel.json` rewrite skips `/assets/`, so imported images serve correctly.
+  - `fetchPriority` caused an eslint issue in About.jsx. Do not use it.
 
-## PRD Atomic Task Checklist
-*(check these off as they pass VERIFY + CRITIQUE)*
+## Docs map (docs/ folder)
 
-- [ ] Fix Navbar scroll background for both light and dark modes (`bg-app-surface/95 dark:bg-app-dark-surface/95`)
-- [ ] Add a left-side identity anchor in the Navbar (logo or name) that scrolls to top
-- [ ] Add a persistent `Resume` pill button in the Navbar next to ThemeToggle
-- [ ] Add hero top padding (`pt-24` or `pt-28`) so availability badge isn't hidden by Navbar
-- [ ] Add mobile hero min-height + responsive photo card sizing (`sm:w-64 sm:h-64`)
-- [ ] Ensure the therapy app (Valerie) is the first card in the Projects grid
-- [ ] Add Open Graph meta tags to `index.html`
-- [ ] Verify recruiter conversion test passes on a live preview (identity, availability, contact path all visible without scrolling)
+| File                            | Job                                                             |
+| ------------------------------- | --------------------------------------------------------------- |
+| `AGENT_HANDOFF.md`              | State and roadmap. Read first, update every session.            |
+| `PORTFOLIO_PRD.md`              | What "done" means for this site (acceptance criteria).          |
+| `AGENT_PROMPT_project-cards.md` | The current agent task prompt.                                  |
+| `Continue_Prompt.md`            | Paste into a new chat to resume after running out of tokens.    |
+| `archive/`                      | Finished or unrelated docs (old merge prompt, booking-app PRD). |
 
-## Acceptance Criteria (branch is "done" when ALL true)
+## Roadmap
 
-- Navbar has left identity anchor + right Resume pill
-- Scrolled Navbar readable in both light/dark mode
-- Hero has `pt-24`/`pt-28`, badge visible on load
-- Valerie (therapy app) is first Projects card
-- Dark mode consistent across components
-- CTA recoverable from UI even if hero isn't in view
-- Recruiter can answer "what/available/contact" in under 10 seconds, no scroll
+### Phase 0 — Docs cleanup (do first, one commit)
 
-## Success Metrics
-- Resume CTA visible desktop + mobile
-- First project card is the live, production-ready Valerie app
-- Navbar stays legible after scroll
+- [ ] 0.1 Put the four new docs above into `docs/`
+- [ ] 0.2 Move old `VSCode_Agent_Prompt.md` (merge task, finished) to `docs/archive/`
+- [ ] 0.3 Move the booking-app `PRD.md` to `docs/archive/booking-app-PRD.md` (or to that project's own repo). It describes a different product and lists a stale stack (Firebase, Hono, Cloudflare).
+- [ ] 0.4 Commit: `docs: reorganize project docs and add portfolio PRD`
 
-## Backlog (after this branch merges)
-- `npm audit fix`, verify no high-severity vulns
-- Open Graph meta + preview image in `index.html`
-- Expand one more production case study in project copy
+### Phase 1 — Real project card images (current)
 
----
+- [ ] 1.1 Capture 4 screenshots (booking landing page, AI agent app, OpenAI demo, auth login). No private data.
+- [ ] 1.2 Copy into `_incoming/` as `online-booking-platform`, `ai-agent-rag`, `openai-api-demo`, `secure-auth-system`
+- [ ] 1.3 Claude reviews screenshots for privacy and consistency
+- [ ] 1.4 Agent Phase 0 audit (read-only) and Claude reviews the report
+- [ ] 1.5 Agent Task A: move/rename assets (WebP 1280x720, ~150 KB, only if convertible without touching package.json)
+- [ ] 1.6 Agent Task B: add `image` / `imageAlt` to project data (relative imports with extension, no `@` alias)
+- [ ] 1.7 Agent Task C: swap the picsum `<img>` for the real one: `aspect-video` wrapper, `h-full w-full object-cover`, `width={1280} height={720}`, `decoding="async"`, `loading="lazy"` on all cards, NO fetchPriority; fallback panel when image is missing
+- [ ] 1.8 Agent Task D: delete the commented MOCK 1 block (separate commit)
+- [ ] 1.9 Verify: `npm run dev`, light + dark, phone width, `npm run build`, no picsum left
 
-## Session Log
-*(append one entry per session, newest at bottom — don't delete history)*
+### Phase 2 — Card credibility (copy and links)
 
-- **[2026-07-06]** Handoff file created. Repo was mid-merge on `fix/navbar-clsx-lint`: `About.jsx` cleanly resolved and staged; `Navbar.jsx` staged but still contained conflict markers (24 problems flagged — false-positive "resolved" state); 6 other files still unmerged (`App.jsx`, `Contact.jsx`, `Projects.jsx`, `Services.jsx`, `ThemeToggle.jsx`, `tailwind.config.js`). No PRD atomic tasks confirmed complete yet. Next session should start by un-staging and properly re-resolving `Navbar.jsx`.
+- [ ] 2.1 Booking platform `impact` text matches reality (Stripe live vs test mode, Neon vs Supabase). **Needs Cesar's answer.**
+- [ ] 2.2 Booking platform Live Demo uses the stable production domain, not a deployment-specific Vercel URL
+- [ ] 2.3 AI Agent card: correct Live Demo (currently points at the therapy site)
+- [ ] 2.4 OpenAI card: correct Live Demo + GitHub pair (currently NASA app + Polly repo)
+- [ ] 2.5 Tech tags and badges match each real repo
+
+### Phase 3 — Ship
+
+- [ ] 3.1 Push branch, check Vercel preview
+- [ ] 3.2 Write PR #54 description
+- [ ] 3.3 Merge PR #54, confirm Production deployment Ready, hard refresh the live site
+- [ ] 3.4 Update this file and log the session
+
+### Phase 4 — Polish backlog (separate branches, one PR each)
+
+- [ ] Remove doubled padding on cards (`p-6` on both article and content div)
+- [ ] Pin card buttons to the bottom (make article `flex flex-col`)
+- [ ] favicon.ico 404
+- [ ] Open Graph meta tags in `index.html`
+- [ ] `npm audit fix`
+- [ ] Decide on `portfolio-src.zip` and `portfolio-static.html` in the repo root
+- [ ] `require()` in `tailwind.config.js` (ES module file); switch to import if it ever errors
+
+## Open Questions (Cesar to answer)
+
+1. Booking platform: is Stripe live with real payments, or test mode? Are there paying users today? Supabase or Neon for auth/data?
+2. What is the stable production URL for the booking platform?
+3. Correct Live Demo + GitHub repo for the AI Agent and OpenAI cards?
+4. Which app should the OpenAI card's screenshot show?
+
+## Session Log (newest at bottom)
+
+- **[2026-11-19]** Pushed 53976f6. Inspected repo: clean, tokens present, picsum only in Projects.jsx. Chose "fix first" path. Reviewed Projects.jsx and found: doubled padding, dead `description` field with a contradicting Stripe claim, deployment-specific demo URL, mismatched links on cards 2 and 3. Reorganized this doc into phases. Next: capture screenshots (task 1.1).
