@@ -32,7 +32,7 @@ Tools: Git Bash (MINGW64), GitHub (PRs via browser, `gh` not installed), VS Code
 
 ## Current State
 
-- **Branch:** `style/hero-redesign`, pushed. Latest commit `53976f6` (moved agent prompt from `public/` to `docs/`). Working tree clean.
+- **Branch:** `style/hero-redesign`, pushed, working tree clean. Latest commit: see `git log --oneline -1`.
 - **PR:** #54 open to `main`, no description yet.
 - **Production (Vercel):** still the Oct 29 build from `main` (PR #53). It shows the old design.
 - **Decision:** "Fix first". Replace placeholder card images before merging PR #54.
@@ -58,10 +58,10 @@ Tools: Git Bash (MINGW64), GitHub (PRs via browser, `gh` not installed), VS Code
 
 ### Phase 0 — Docs cleanup (do first, one commit)
 
-- [ ] 0.1 Put the four new docs above into `docs/`
-- [ ] 0.2 Move old `VSCode_Agent_Prompt.md` (merge task, finished) to `docs/archive/`
-- [ ] 0.3 Move the booking-app `PRD.md` to `docs/archive/booking-app-PRD.md` (or to that project's own repo). It describes a different product and lists a stale stack (Firebase, Hono, Cloudflare).
-- [ ] 0.4 Commit: `docs: reorganize project docs and add portfolio PRD`
+- [x] 0.1 Put the four new docs above into `docs/`
+- [x] 0.2 Move old `VSCode_Agent_Prompt.md` (merge task, finished) to `docs/archive/`
+- [x] 0.3 Move the booking-app `PRD.md` to `docs/archive/booking-app-PRD.md` (or to that project's own repo). It describes a different product and lists a stale stack (Firebase, Hono, Cloudflare).
+- [x] 0.4 Commit: `docs: reorganize project docs and add portfolio PRD`
 
 ### Phase 1 — Real project card images (current)
 
@@ -109,9 +109,6 @@ Tools: Git Bash (MINGW64), GitHub (PRs via browser, `gh` not installed), VS Code
 
 ## Session Log (newest at bottom)
 
-
 - **[2026-11-19]** Phase 0 docs cleanup done (commit d942619): archived merge prompt and booking-app PRD, replaced Continue_Prompt.md, added AGENT_PROMPT_project-cards.md. PORTFOLIO_PRD.md added in a follow-up commit. Next: capture 4 card screenshots (task 1.1).
 
-
 - **[2026-11-19]** Pushed 53976f6. Inspected repo: clean, tokens present, picsum only in Projects.jsx. Chose "fix first" path. Reviewed Projects.jsx and found: doubled padding, dead `description` field with a contradicting Stripe claim, deployment-specific demo URL, mismatched links on cards 2 and 3. Reorganized this doc into phases. Next: capture screenshots (task 1.1).
-
